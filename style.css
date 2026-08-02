@@ -255,7 +255,19 @@ h2 { font-weight: 600; }
 .top-contact {
   display: flex;
   align-items: center;
+  gap: 1.25rem;
 }
+
+.top-email-link {
+  color: var(--text-muted);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: color var(--transition-fast);
+}
+
+.top-email-link:hover { color: var(--primary); }
 
 .top-phone-link {
   color: var(--primary);
@@ -829,6 +841,10 @@ h2 { font-weight: 600; }
 .footer-col ul li a:hover::after { width: 100%; }
 .footer-phone { color: var(--primary); font-size: 1rem; font-weight: 600; }
 .footer-wa-link { color: var(--whatsapp-green); font-size: 0.95rem; font-weight: 600; }
+.footer-email-link { color: var(--primary); font-size: 0.9rem; font-weight: 600; transition: opacity var(--transition-fast); }
+.footer-email-link:hover { opacity: 0.8; }
+.contact-email-inline { color: var(--primary); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; transition: opacity var(--transition-fast); }
+.contact-email-inline:hover { opacity: 0.8; }
 .footer-bottom-inner { display: flex; justify-content: space-between; align-items: center; padding-top: 1.5rem; border-top: 1px solid var(--border-subtle); color: var(--text-subtle); font-size: 0.8rem; }
 .tomcool-credit a { color: var(--primary); font-weight: 600; }
 
