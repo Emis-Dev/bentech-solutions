@@ -289,6 +289,9 @@ h2 { font-weight: 600; }
   height: 72px;
   width: auto;
   display: block;
+  border-radius: 0;
+  /* Boost 'BenTech' text visibility on dark bg */
+  filter: drop-shadow(0 0 1px rgba(255,255,255,0.4));
 }
 
 .main-nav {
@@ -597,8 +600,12 @@ h2 { font-weight: 600; }
 
 .bento-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.25rem;
+}
+
+.bento-grid-focused {
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .bento-card {
@@ -863,7 +870,12 @@ h2 { font-weight: 600; }
 /* Footer */
 .site-footer { background-color: #030610; border-top: 1px solid var(--border-subtle); padding: 3.5rem 0 1.5rem; font-size: 0.85rem; }
 .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr; gap: 2.5rem; margin-bottom: 2.5rem; }
-.footer-logo { height: 56px; margin-bottom: 0.75rem; }
+.footer-logo {
+  height: 56px;
+  margin-bottom: 0.75rem;
+  border-radius: 0;
+  filter: drop-shadow(0 0 1px rgba(255,255,255,0.4));
+}
 .footer-desc { color: var(--text-muted); font-size: 0.85rem; line-height: 1.6; }
 .footer-col h4 { font-size: 0.9rem; font-weight: 600; margin-bottom: 1rem; }
 .footer-col ul { list-style: none; }
@@ -913,7 +925,7 @@ h2 { font-weight: 600; }
 
 /* Responsive */
 @media (max-width: 992px) {
-  .bento-grid { grid-template-columns: 1fr; }
+  .bento-grid, .bento-grid-focused { grid-template-columns: 1fr; }
   .bento-hero-card { grid-column: span 1; }
   .about-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
