@@ -286,12 +286,9 @@ h2 { font-weight: 600; }
 }
 
 .brand-logo .logo-img {
-  height: 72px;
+  height: 50px;
   width: auto;
   display: block;
-  border-radius: 0;
-  /* Boost 'BenTech' text visibility on dark bg */
-  filter: drop-shadow(0 0 1px rgba(255,255,255,0.4));
 }
 
 .main-nav {
@@ -871,10 +868,9 @@ h2 { font-weight: 600; }
 .site-footer { background-color: #030610; border-top: 1px solid var(--border-subtle); padding: 3.5rem 0 1.5rem; font-size: 0.85rem; }
 .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr; gap: 2.5rem; margin-bottom: 2.5rem; }
 .footer-logo {
-  height: 56px;
+  height: 52px;
+  width: auto;
   margin-bottom: 0.75rem;
-  border-radius: 0;
-  filter: drop-shadow(0 0 1px rgba(255,255,255,0.4));
 }
 .footer-desc { color: var(--text-muted); font-size: 0.85rem; line-height: 1.6; }
 .footer-col h4 { font-size: 0.9rem; font-weight: 600; margin-bottom: 1rem; }
