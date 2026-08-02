@@ -4,7 +4,7 @@
    ---------------------------------------------------- */
 
 :root {
-  /* Color Tokens - Tinted Midnight Slate & Emerald Green */
+  /* Color Tokens - Tinted Midnight Slate, Emerald Green & WhatsApp Brand Green */
   --bg-main: #050a15;
   --bg-secondary: #0a1124;
   --bg-card: #0f1b33;
@@ -19,6 +19,10 @@
   --primary-light: #33d491;
   --primary-dark: #009959;
   --primary-glow: rgba(0, 200, 117, 0.4);
+
+  --whatsapp-green: #25D366;
+  --whatsapp-dark: #128C7E;
+  --whatsapp-glow: rgba(37, 211, 102, 0.5);
 
   --accent-cyan: #38bdf8;
   --accent-danger: #ef4444;
@@ -79,6 +83,10 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+.mr-2 { margin-right: 0.5rem; }
+.mr-4 { margin-right: 1rem; }
+.mt-8 { margin-top: 2rem; }
 
 /* Layout Container */
 .container {
@@ -151,6 +159,20 @@ h1, h2, h3, h4 {
   box-shadow: var(--shadow-glow);
 }
 
+.btn-whatsapp {
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  color: #FFFFFF;
+}
+
+.btn-whatsapp:hover {
+  background: linear-gradient(135deg, #20ba5a 0%, #0e786b 100%);
+  box-shadow: 0 0 30px var(--whatsapp-glow);
+}
+
+.btn-glow-wa {
+  box-shadow: 0 0 25px var(--whatsapp-glow);
+}
+
 .btn-outline {
   background: rgba(15, 27, 51, 0.7);
   backdrop-filter: blur(12px);
@@ -206,6 +228,21 @@ h1, h2, h3, h4 {
   display: flex;
   align-items: center;
   gap: 0.6rem;
+}
+
+.top-contact {
+  display: flex;
+  align-items: center;
+}
+
+.top-wa-link {
+  color: var(--whatsapp-green);
+  font-weight: 700;
+  transition: opacity var(--transition-fast);
+}
+
+.top-wa-link:hover {
+  opacity: 0.85;
 }
 
 .top-phone-link {
@@ -278,9 +315,7 @@ h1, h2, h3, h4 {
   background-color: var(--text-main);
 }
 
-/* ----------------------------------------------------
-   LAMP HERO COMPONENT (hero.tsx Architecture)
-   ---------------------------------------------------- */
+/* LAMP HERO COMPONENT */
 .lamp-hero-section {
   position: relative;
   z-index: 0;
@@ -294,7 +329,6 @@ h1, h2, h3, h4 {
   padding: 4rem 0 5rem;
 }
 
-/* Conic Lamp Container */
 .lamp-container {
   position: absolute;
   top: 0;
@@ -358,7 +392,6 @@ h1, h2, h3, h4 {
   z-index: 50;
 }
 
-/* Conic Gradient Light Beams */
 .conic-cone {
   position: absolute;
   top: 18px;
@@ -379,7 +412,6 @@ h1, h2, h3, h4 {
   mask-image: linear-gradient(to bottom, #000 60%, transparent 100%);
 }
 
-/* Lamp Hero Content */
 .lamp-hero-content {
   position: relative;
   z-index: 60;
@@ -435,7 +467,6 @@ h1, h2, h3, h4 {
   margin-bottom: 2.5rem;
 }
 
-/* Yassir Head Portrait Circle Visual Under Spotlight */
 .lamp-portrait-wrapper {
   position: relative;
   display: inline-flex;
@@ -459,7 +490,7 @@ h1, h2, h3, h4 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 50% 26%; /* Tight crop focusing strictly on Yassir's head & shoulders */
+  object-position: 50% 26%;
 }
 
 .portrait-light-overlay {
@@ -470,7 +501,6 @@ h1, h2, h3, h4 {
   pointer-events: none;
 }
 
-/* Floating Badges Around Head Portrait */
 .floating-badge {
   position: absolute;
   background: rgba(5, 10, 21, 0.9);
@@ -641,7 +671,7 @@ h1, h2, h3, h4 {
   font-weight: 800;
 }
 
-.inline-btn { align-self: flex-start; margin-top: 0.5rem; }
+.bento-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 0.5rem; }
 
 /* About Section */
 .about-section {
@@ -709,6 +739,7 @@ h1, h2, h3, h4 {
 .tab-content.active { display: block; }
 .emergency-dispatch-banner { background: linear-gradient(135deg, #1b0a0a 0%, #2a1111 100%); border: 1px solid rgba(239, 68, 68, 0.4); border-radius: 12px; padding: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 2rem; }
 .dispatch-info h3 { color: #fca5a5; font-size: 1.1rem; margin-bottom: 0.25rem; }
+.dispatch-banner-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; }
 .contact-form .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 1.5rem; }
 .form-group.full-width { grid-column: span 2; }
 .form-group label { display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.4rem; color: var(--text-main); }
@@ -746,18 +777,121 @@ h1, h2, h3, h4 {
 .footer-col ul li a { color: var(--text-muted); }
 .footer-col ul li a:hover { color: var(--primary); }
 .footer-phone { color: var(--primary); font-size: 1.1rem; font-weight: 700; }
+.footer-wa-link { color: var(--whatsapp-green); font-size: 1rem; font-weight: 700; }
 .footer-bottom-inner { display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; border-top: 1px solid var(--border-subtle); color: var(--text-subtle); font-size: 0.85rem; }
 .tomcool-credit a { color: var(--primary); font-weight: 600; }
 
 /* Mobile Sticky Call Bar */
-.mobile-sticky-bar { position: fixed; bottom: 0; left: 0; right: 0; z-index: 900; padding: 0.75rem 1rem; background: rgba(5, 10, 21, 0.95); backdrop-filter: blur(14px); border-top: 1px solid var(--border-emerald); }
-.btn-sticky { width: 100%; box-shadow: 0 -5px 25px rgba(0, 200, 117, 0.45); }
+.mobile-sticky-bar { 
+  position: fixed; 
+  bottom: 0; 
+  left: 0; 
+  right: 0; 
+  z-index: 900; 
+  padding: 0.75rem 1rem; 
+  background: rgba(5, 10, 21, 0.95); 
+  backdrop-filter: blur(14px); 
+  border-top: 1px solid var(--border-emerald);
+  display: flex;
+  gap: 0.75rem;
+}
+.btn-sticky { flex: 1; padding: 0.8rem; font-size: 0.9rem; box-shadow: 0 -5px 25px rgba(0, 200, 117, 0.35); }
 
 @media (min-width: 769px) {
   .mobile-sticky-bar { display: none; }
 }
 
+/* ----------------------------------------------------
+   FLOATING HOVERING WHATSAPP CTA WIDGET
+   ---------------------------------------------------- */
+.whatsapp-float-widget {
+  position: fixed;
+  bottom: 2.25rem;
+  right: 2.25rem;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.whatsapp-icon-circle {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(37, 211, 102, 0.55), 0 0 0 4px rgba(37, 211, 102, 0.2);
+  position: relative;
+  z-index: 2;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+}
+
+.whatsapp-svg-icon {
+  width: 34px;
+  height: 34px;
+}
+
+.whatsapp-badge-pulse {
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  background: rgba(37, 211, 102, 0.4);
+  z-index: 1;
+  animation: waPulse 2.5s infinite cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+@keyframes waPulse {
+  0% { transform: scale(0.9); opacity: 0.9; }
+  70% { transform: scale(1.4); opacity: 0; }
+  100% { transform: scale(0.9); opacity: 0; }
+}
+
+.whatsapp-hover-label {
+  background: rgba(15, 27, 51, 0.95);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(37, 211, 102, 0.6);
+  padding: 0.55rem 1.1rem;
+  border-radius: 50px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6), 0 0 20px rgba(37, 211, 102, 0.2);
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+
+.wa-label-main {
+  font-size: 0.875rem;
+  font-weight: 800;
+  color: #FFFFFF;
+}
+
+.wa-label-sub {
+  font-size: 0.725rem;
+  font-weight: 600;
+  color: var(--whatsapp-green);
+}
+
+.whatsapp-float-widget:hover {
+  transform: translateY(-4px);
+}
+
+.whatsapp-float-widget:hover .whatsapp-icon-circle {
+  transform: scale(1.1);
+  box-shadow: 0 15px 40px rgba(37, 211, 102, 0.75);
+}
+
+.whatsapp-float-widget:hover .whatsapp-hover-label {
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7), 0 0 30px rgba(37, 211, 102, 0.4);
+}
+
 @media (max-width: 992px) {
+  .header-wa-btn { display: none; }
   .bento-grid { grid-template-columns: 1fr; }
   .bento-hero-card { grid-column: span 1; }
   .about-grid { grid-template-columns: 1fr; }
@@ -779,6 +913,15 @@ h1, h2, h3, h4 {
   .badge-lamp-name { left: -10px; }
   .badge-lamp-speed { right: -10px; }
   .hidden-mobile { display: none; }
+
+  /* Mobile WhatsApp Floating Position */
+  .whatsapp-float-widget {
+    bottom: 85px;
+    right: 1rem;
+  }
+  .whatsapp-hover-label {
+    display: none; /* Icon-only on small mobile screens to keep view clean */
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
