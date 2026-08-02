@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initSmoothScroll();
   initScrollReveal();
+  initVantaHero();
 });
 
 // Mobile Navigation Toggle
@@ -158,4 +159,31 @@ function handleFormSubmit(event, formType) {
 
   const encoded = encodeURIComponent(message);
   window.open(`https://wa.me/${phone}?text=${encoded}`, '_blank');
+}
+
+// Vanta Topology Hero Background Animation
+function initVantaHero() {
+  const heroEl = document.getElementById('home');
+  if (!heroEl) return;
+
+  function tryInitVanta() {
+    if (typeof VANTA !== 'undefined' && typeof VANTA.TOPOLOGY === 'function' && typeof p5 !== 'undefined') {
+      VANTA.TOPOLOGY({
+        el: "#home",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        color: 0x00c875,
+        backgroundColor: 0x050a15
+      });
+    } else {
+      setTimeout(tryInitVanta, 100);
+    }
+  }
+
+  tryInitVanta();
 }
