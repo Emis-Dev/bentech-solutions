@@ -1,3 +1,6 @@
-deploy-bentech.ps1
 node_modules/
+deploy-bentech.ps1
+remove-bg.js
+package.json
+package-lock.json
 .DS_Store

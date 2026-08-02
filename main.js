@@ -1,4 +1,4 @@
-// BenTech Solutions - Main JavaScript Application
+// BenTech Solutions - Main JavaScript
 
 document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
@@ -12,38 +12,35 @@ function initMobileMenu() {
 
   if (mobileToggle && mainNav) {
     mobileToggle.addEventListener('click', () => {
-      const isNavOpen = mainNav.style.display === 'flex';
-      mainNav.style.display = isNavOpen ? 'none' : 'flex';
-      mainNav.style.flexDirection = 'column';
-      mainNav.style.position = 'absolute';
-      mainNav.style.top = '100%';
-      mainNav.style.left = '0';
-      mainNav.style.right = '0';
-      mainNav.style.backgroundColor = '#060b17';
-      mainNav.style.padding = '1.5rem';
-      mainNav.style.borderBottom = '1px solid rgba(0, 200, 117, 0.2)';
+      mainNav.classList.toggle('open');
+    });
+
+    // Close menu when clicking a nav link
+    mainNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mainNav.classList.remove('open');
+      });
     });
   }
 }
 
 // Smooth Scrolling for Anchors
 function initSmoothScroll() {
-  const links = document.querySelectorAll('a[href^="#"]');
-  links.forEach(link => {
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', (e) => {
       const href = link.getAttribute('href');
       if (href && href !== '#') {
-        const targetElement = document.querySelector(href);
-        if (targetElement) {
+        const target = document.querySelector(href);
+        if (target) {
           e.preventDefault();
-          targetElement.scrollIntoView({ behavior: 'smooth' });
+          target.scrollIntoView({ behavior: 'smooth' });
         }
       }
     });
   });
 }
 
-// Interactive Request Tab Switching (Spoed vs Offerte)
+// Tab Switching (Spoed vs Offerte)
 function switchTab(tabName) {
   const emergencyTab = document.getElementById('tabEmergency');
   const quoteTab = document.getElementById('tabQuote');
@@ -63,25 +60,30 @@ function switchTab(tabName) {
   }
 }
 
-// Contact & Emergency Form Handler
+// Form Handler — Redirects to WhatsApp
 function handleFormSubmit(event, formType) {
   event.preventDefault();
-  const feedbackEl = document.getElementById('formFeedback');
 
-  if (!feedbackEl) return;
+  const phone = '32486328645';
+  let message = '';
 
   if (formType === 'spoed') {
     const name = document.getElementById('em-name').value;
-    const phone = document.getElementById('em-phone').value;
-    
-    feedbackEl.className = 'form-feedback-message success';
-    feedbackEl.innerHTML = `🚨 <strong>Oproep Ontvangen!</strong> Bedankt ${name}. Onze technicus belt u direct terug op <strong>${phone}</strong>! Probeer bij acuut gevaar ook direct te bellen op <a href="tel:+32470000000" style="text-decoration:underline;">+32 470 00 00 00</a>.`;
-    event.target.reset();
+    const tel = document.getElementById('em-phone').value;
+    const location = document.getElementById('em-location').value;
+    const issue = document.getElementById('em-issue').value;
+
+    message = `🚨 SPOEDMELDING\n\nNaam: ${name}\nTelefoon: ${tel}\nLocatie: ${location}\nProbleem: ${issue}`;
   } else {
     const name = document.getElementById('q-name').value;
-    
-    feedbackEl.className = 'form-feedback-message success';
-    feedbackEl.innerHTML = `📋 <strong>Offerte-aanvraag ontvangen!</strong> Bedankt ${name}, wij verwerken uw aanvraag en nemen binnen 24 uur contact met u op.`;
-    event.target.reset();
+    const tel = document.getElementById('q-phone').value;
+    const email = document.getElementById('q-email').value;
+    const service = document.getElementById('q-service').value;
+    const details = document.getElementById('q-details').value;
+
+    message = `📋 OFFERTE AANVRAAG\n\nNaam: ${name}\nTelefoon: ${tel}\nE-mail: ${email}\nDienst: ${service}\nDetails: ${details || 'Geen extra details'}`;
   }
+
+  const encoded = encodeURIComponent(message);
+  window.open(`https://wa.me/${phone}?text=${encoded}`, '_blank');
 }
