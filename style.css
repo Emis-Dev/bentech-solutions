@@ -1,6 +1,6 @@
 /* ----------------------------------------------------
-   BenTech Solutions - Refined Design System
-   Impeccable Quieter + Distill Pass Applied
+   BenTech Solutions - Premium Design System
+   Impeccable Polish + Delight Pass
    ---------------------------------------------------- */
 
 :root {
@@ -47,6 +47,35 @@
   margin: 0;
   padding: 0;
 }
+
+/* Custom Scrollbar — Thin emerald track */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-main); }
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 200, 117, 0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover { background: rgba(0, 200, 117, 0.5); }
+html { scrollbar-width: thin; scrollbar-color: rgba(0, 200, 117, 0.3) var(--bg-main); }
+
+/* Selection color */
+::selection {
+  background: rgba(0, 200, 117, 0.25);
+  color: #fff;
+}
+
+/* Lucide Icon Sizing */
+.icon-xs { width: 14px; height: 14px; }
+.icon-sm { width: 16px; height: 16px; }
+.icon-md { width: 20px; height: 20px; }
+.icon-lg { width: 28px; height: 28px; color: var(--primary); }
+.icon-badge { width: 16px; height: 16px; color: var(--primary); }
+.icon-star { color: #f59e0b; }
+.icon-star-fill { width: 16px; height: 16px; color: #f59e0b; fill: #f59e0b; }
+
+/* Scroll Reveal — elements start hidden, anime.js animates them in */
+.reveal { opacity: 0; transform: translateY(20px); }
+.reveal.revealed { opacity: 1; transform: translateY(0); }
 
 html {
   scroll-behavior: smooth;
@@ -118,7 +147,18 @@ h2 { font-weight: 600; }
   border-radius: 8px;
   border: 1px solid transparent;
   cursor: pointer;
-  transition: background-color var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+  transition: background-color var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast), transform 0.1s ease;
+}
+
+/* Satisfying button press */
+.btn:active {
+  transform: translateY(1px);
+}
+
+/* Focus ring for accessibility */
+.btn:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
 }
 
 .btn.rounded-full { border-radius: 9999px; }
@@ -545,7 +585,16 @@ h2 { font-weight: 600; }
   border-radius: 4px;
 }
 
-.bento-icon { font-size: 1.75rem; }
+.bento-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 200, 117, 0.06);
+  border-radius: 8px;
+  padding: 6px;
+}
 
 .bento-feature-list { list-style: none; margin: 0.5rem 0; }
 .bento-feature-list li {
@@ -749,6 +798,11 @@ h2 { font-weight: 600; }
   }
   .mobile-toggle { display: flex; }
   .brand-logo .logo-img { height: 52px; }
+
+  /* Hide duplicate CTAs on mobile — sticky bar handles call + WhatsApp */
+  .header-actions .btn-emerald { display: none; }
+  .lamp-hero-actions .btn-emerald { display: none; }
+  .dispatch-banner-actions { display: none; }
 
   .contact-form .form-grid { grid-template-columns: 1fr; }
   .form-group.full-width { grid-column: span 1; }
