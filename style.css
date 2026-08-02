@@ -210,12 +210,12 @@ h1, h2, h3, h4 {
   100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 200, 117, 0); }
 }
 
-/* Top Emergency Bar */
+/* Top Emergency Bar - Ultra Clean */
 .top-bar {
   background-color: var(--bg-secondary);
   border-bottom: 1px solid var(--border-subtle);
   font-size: 0.85rem;
-  padding: 0.5rem 0;
+  padding: 0.45rem 0;
 }
 
 .top-bar-content {
@@ -233,6 +233,12 @@ h1, h2, h3, h4 {
 .top-contact {
   display: flex;
   align-items: center;
+  gap: 0.8rem;
+}
+
+.top-divider {
+  color: var(--text-subtle);
+  font-weight: 300;
 }
 
 .top-wa-link {
@@ -801,9 +807,7 @@ h1, h2, h3, h4 {
   .mobile-sticky-bar { display: none; }
 }
 
-/* ----------------------------------------------------
-   FLOATING HOVERING WHATSAPP CTA WIDGET
-   ---------------------------------------------------- */
+/* FLOATING HOVERING WHATSAPP CTA WIDGET */
 .whatsapp-float-widget {
   position: fixed;
   bottom: 2.25rem;
@@ -898,7 +902,23 @@ h1, h2, h3, h4 {
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
 
+/* Clean Mobile Adjustments */
 @media (max-width: 768px) {
+  .top-bar-content {
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* Hide cluttered extra text links in top bar on small screens */
+  .top-bar .top-contact {
+    display: none;
+  }
+
+  .top-bar .live-status {
+    font-size: 0.775rem;
+    white-space: nowrap;
+  }
+
   .main-nav { display: none; }
   .mobile-toggle { display: flex; }
   .brand-logo .logo-img { height: 60px; }
@@ -920,7 +940,7 @@ h1, h2, h3, h4 {
     right: 1rem;
   }
   .whatsapp-hover-label {
-    display: none; /* Icon-only on small mobile screens to keep view clean */
+    display: none; /* Keep clean icon view on mobile screens */
   }
 }
 
