@@ -1,6 +1,6 @@
 /* ----------------------------------------------------
    BenTech Solutions - Master Design System & Stylesheet
-   Gedesigned volgens Impeccable Design Laws & 21st.dev hero-1 Component Architecture
+   Gedesigned volgens Impeccable Design Laws & Hero Lamp Conic Architecture
    ---------------------------------------------------- */
 
 :root {
@@ -87,10 +87,6 @@ a {
   margin: 0 auto;
 }
 
-.relative { position: relative; }
-.w-full { width: 100%; }
-.overflow-hidden { overflow: hidden; }
-
 /* Typography */
 h1, h2, h3, h4 {
   font-weight: 700;
@@ -141,7 +137,7 @@ h1, h2, h3, h4 {
 }
 
 .btn-lg {
-  padding: 0.9rem 2.2rem;
+  padding: 0.95rem 2.25rem;
   font-size: 1.05rem;
 }
 
@@ -156,8 +152,8 @@ h1, h2, h3, h4 {
 }
 
 .btn-outline {
-  background: rgba(15, 27, 51, 0.6);
-  backdrop-filter: blur(10px);
+  background: rgba(15, 27, 51, 0.7);
+  backdrop-filter: blur(12px);
   border-color: var(--border-subtle);
   color: var(--text-main);
 }
@@ -168,7 +164,7 @@ h1, h2, h3, h4 {
 }
 
 .btn-glow {
-  box-shadow: 0 0 25px rgba(0, 200, 117, 0.4);
+  box-shadow: 0 0 30px rgba(0, 200, 117, 0.45);
 }
 
 .btn-icon {
@@ -222,7 +218,7 @@ h1, h2, h3, h4 {
 
 .icon-phone { width: 1em; height: 1em; }
 
-/* Header & Nav - Large Original Transparent Logo */
+/* Header & Nav - Original Transparent Logo */
 .site-header {
   position: sticky;
   top: 0;
@@ -282,200 +278,221 @@ h1, h2, h3, h4 {
   background-color: var(--text-main);
 }
 
-/* 21st.dev hero-1 Component Exact Styling */
-.hero-1-section {
+/* ----------------------------------------------------
+   LAMP HERO COMPONENT (hero.tsx Architecture)
+   ---------------------------------------------------- */
+.lamp-hero-section {
   position: relative;
+  z-index: 0;
+  min-height: 82vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
   background-color: var(--bg-main);
+  padding: 4rem 0 5rem;
 }
 
-.hero-radial-shade {
+/* Conic Lamp Container */
+.lamp-container {
   position: absolute;
-  inset: 0;
-  top: -3.5rem;
-  background: radial-gradient(35% 80% at 49% 0%, rgba(255, 255, 255, 0.08), transparent);
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 380px;
+  display: flex;
+  justify-content: center;
   pointer-events: none;
+  overflow: hidden;
 }
 
-/* X Bold Faded Side Borders */
-.faded-border-left, .faded-border-right {
+.top-blur-strip {
   position: absolute;
   top: 0;
-  bottom: 0;
-  width: 1px;
-  background: rgba(248, 250, 252, 0.12);
-  mask-image: linear-gradient(to bottom, transparent, #000 20%, #000 80%, transparent);
+  width: 100vw;
+  height: 140px;
+  background: transparent;
+  opacity: 0.15;
+  backdrop-filter: blur(16px);
+  z-index: 50;
 }
 
-.faded-border-left { left: 0; }
-.faded-border-right { right: 0; }
+.main-glow-orb {
+  position: absolute;
+  top: 15px;
+  width: 440px;
+  height: 150px;
+  background: rgba(0, 200, 117, 0.55);
+  border-radius: 50%;
+  filter: blur(55px);
+  opacity: 0.85;
+  z-index: 40;
+}
 
-/* Grid Lines */
-.grid-line {
+.lamp-light-core {
   position: absolute;
   top: 0;
-  bottom: 0;
-  width: 1px;
+  width: 260px;
+  height: 140px;
+  background: rgba(0, 200, 117, 0.7);
+  border-radius: 50%;
+  filter: blur(35px);
+  z-index: 30;
+  animation: lampPulse 4s infinite ease-in-out;
 }
 
-.line-l1 { left: 1rem; background: linear-gradient(to bottom, transparent, var(--border-subtle), var(--border-subtle)); }
-.line-r1 { right: 1rem; background: linear-gradient(to bottom, transparent, var(--border-subtle), var(--border-subtle)); }
-.line-l2 { left: 2rem; background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.04), rgba(255,255,255,0.04)); }
-.line-r2 { right: 2rem; background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.04), rgba(255,255,255,0.04)); }
-
-@media (min-width: 768px) {
-  .line-l1 { left: 2rem; }
-  .line-r1 { right: 2rem; }
-  .line-l2 { left: 3rem; }
-  .line-r2 { right: 3rem; }
+@keyframes lampPulse {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.1); opacity: 1; }
 }
 
-/* 21st.dev Pill Link Badge */
-.hero-pill-badge {
+.lamp-top-line {
+  position: absolute;
+  top: 18px;
+  width: 520px;
+  height: 2px;
+  background: rgba(0, 200, 117, 0.8);
+  box-shadow: 0 0 25px rgba(0, 200, 117, 0.9);
+  z-index: 50;
+}
+
+/* Conic Gradient Light Beams */
+.conic-cone {
+  position: absolute;
+  top: 18px;
+  width: 520px;
+  height: 240px;
+  z-index: 20;
+}
+
+.cone-left {
+  right: 50%;
+  background-image: conic-gradient(from 70deg at 100% 0%, rgba(0, 200, 117, 0.5) 0%, transparent 60%);
+  mask-image: linear-gradient(to bottom, #000 60%, transparent 100%);
+}
+
+.cone-right {
+  left: 50%;
+  background-image: conic-gradient(from 290deg at 0% 0%, transparent 40%, rgba(0, 200, 117, 0.5) 100%);
+  mask-image: linear-gradient(to bottom, #000 60%, transparent 100%);
+}
+
+/* Lamp Hero Content */
+.lamp-hero-content {
+  position: relative;
+  z-index: 60;
+  margin-top: 1.5rem;
+}
+
+.lamp-pill-badge {
   display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
-  background-color: var(--bg-card);
+  gap: 0.6rem;
+  background: rgba(15, 27, 51, 0.9);
   border: 1px solid var(--border-emerald);
-  padding: 0.35rem 1.1rem;
-  border-radius: 9999px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  padding: 0.45rem 1.25rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--primary);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 20px rgba(0, 200, 117, 0.2);
+  margin-bottom: 1.25rem;
   transition: all var(--transition-fast);
 }
 
-.hero-pill-badge:hover {
-  border-color: var(--primary);
+.lamp-pill-badge:hover {
   box-shadow: var(--shadow-glow);
+  border-color: var(--primary);
 }
 
-.text-emerald { color: var(--primary); }
-
-.badge-separator {
-  display: block;
-  height: 1.25rem;
-  border-left: 1px solid var(--border-subtle);
+.pill-arrow {
+  color: var(--accent-cyan);
+  font-weight: 800;
 }
 
-.arrow-icon {
-  color: var(--text-muted);
-  transition: transform var(--transition-fast);
-}
-
-.hero-pill-badge:hover .arrow-icon {
-  transform: translateX(3px);
-  color: var(--primary);
-}
-
-/* 21st.dev Hero Typography & Shadows */
-.hero-1-title {
-  font-size: clamp(2.4rem, 5.5vw, 4rem);
+.lamp-hero-title {
+  font-size: clamp(2.3rem, 5.2vw, 4.2rem);
   font-weight: 800;
   letter-spacing: -0.025em;
-  text-shadow: 0 0 50px rgba(255, 255, 255, 0.15);
+  margin-bottom: 1.25rem;
 }
 
-.hero-1-subtitle {
+.lamp-hero-subtitle {
   font-size: clamp(1.05rem, 2vw, 1.25rem);
   color: var(--text-muted);
-  max-width: 32rem;
-  letter-spacing: 0.02em;
+  max-width: 44rem;
+  margin: 0 auto 2rem;
 }
 
-.hero-1-actions {
+.lamp-hero-actions {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  gap: 1.25rem;
   justify-content: center;
-  gap: 1rem;
-  padding-top: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
 }
 
-/* Yassir Head Portrait Circle Visual (No Background Shelves) */
-.yassir-head-hero-wrapper {
+/* Yassir Head Portrait Circle Visual Under Spotlight */
+.lamp-portrait-wrapper {
   position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  margin-top: 1rem;
 }
 
-.yassir-head-circle {
-  width: 280px;
-  height: 280px;
+.lamp-portrait-circle {
+  width: 320px;
+  height: 320px;
   border-radius: 50%;
   overflow: hidden;
   border: 4px solid var(--primary);
-  box-shadow: 0 0 50px rgba(0, 200, 117, 0.45), 0 0 0 8px rgba(0, 200, 117, 0.15);
+  box-shadow: 0 0 60px rgba(0, 200, 117, 0.5), 0 0 0 8px rgba(0, 200, 117, 0.15);
   background: var(--bg-card);
+  position: relative;
 }
 
-.yassir-crop-img {
+.yassir-head-crop {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: 50% 26%; /* Tight crop focusing strictly on Yassir's head & shoulders */
 }
 
-.floating-tag {
+.portrait-light-overlay {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  box-shadow: inset 0 0 25px rgba(6, 11, 23, 0.5);
+  pointer-events: none;
+}
+
+/* Floating Badges Around Head Portrait */
+.floating-badge {
   position: absolute;
   background: rgba(5, 10, 21, 0.9);
   backdrop-filter: blur(12px);
   border: 1px solid var(--border-emerald);
-  padding: 0.5rem 1rem;
+  padding: 0.55rem 1.1rem;
   border-radius: 50px;
-  font-size: 0.8rem;
-  font-weight: 700;
+  font-size: 0.825rem;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.6rem;
   box-shadow: var(--shadow-card);
+  text-align: left;
 }
 
-.tag-left { top: 20px; left: -30px; }
-.tag-right { bottom: 20px; right: -30px; }
-.tag-right .star-rating { color: #f59e0b; }
+.badge-lamp-name { top: 15px; left: -35px; }
+.badge-lamp-speed { top: 55px; right: -35px; }
+.badge-lamp-reviews { bottom: -15px; left: 50%; transform: translateX(-50%); white-space: nowrap; }
 
-/* 21st.dev LogosSection / Infinite Slider */
-.logos-section-container {
-  border-top: 1px solid var(--border-subtle);
-  background: rgba(10, 17, 36, 0.5);
-  overflow: hidden;
-}
-
-.logos-title {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--text-subtle);
-  letter-spacing: -0.01em;
-  margin-bottom: 1rem;
-}
-
-.logo-cloud-track {
-  overflow: hidden;
-  mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
-}
-
-.logo-cloud-items {
-  display: flex;
-  gap: 2rem;
-  justify-content: center;
-  align-items: center;
-  white-space: nowrap;
-  animation: logoSlide 25s linear infinite;
-}
-
-@keyframes logoSlide {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-.partner-badge {
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: var(--text-muted);
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
-  padding: 0.4rem 1rem;
-  border-radius: 8px;
-}
+.badge-subtext { display: block; font-size: 0.725rem; color: var(--text-muted); }
+.badge-lamp-name .badge-subtext { color: var(--primary); }
+.badge-lamp-reviews .star-rating { color: #f59e0b; }
 
 /* Emergency Selector Section */
 .emergency-selector-section {
@@ -757,10 +774,11 @@ h1, h2, h3, h4 {
   .form-tabs { flex-direction: column; }
   .footer-grid { grid-template-columns: 1fr; }
   .footer-bottom-inner { flex-direction: column; gap: 0.5rem; text-align: center; }
-  .yassir-head-circle { width: 230px; height: 230px; }
-  .tag-left, .tag-right { font-size: 0.725rem; padding: 0.35rem 0.75rem; }
-  .tag-left { left: -10px; }
-  .tag-right { right: -10px; }
+  .lamp-portrait-circle { width: 250px; height: 250px; }
+  .badge-lamp-name, .badge-lamp-speed, .badge-lamp-reviews { font-size: 0.725rem; padding: 0.35rem 0.75rem; }
+  .badge-lamp-name { left: -10px; }
+  .badge-lamp-speed { right: -10px; }
+  .hidden-mobile { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
