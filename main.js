@@ -161,14 +161,16 @@ function handleFormSubmit(event, formType) {
   window.open(`https://wa.me/${phone}?text=${encoded}`, '_blank');
 }
 
-// Vanta Topology Hero Background Animation
+// Vanta Topology Hero Background Animation (Perpetual Flow & Smooth Line Decay)
 function initVantaHero() {
   const heroEl = document.getElementById('home');
   if (!heroEl) return;
 
+  let vantaEffect = null;
+
   function tryInitVanta() {
     if (typeof VANTA !== 'undefined' && typeof VANTA.TOPOLOGY === 'function' && typeof p5 !== 'undefined') {
-      VANTA.TOPOLOGY({
+      vantaEffect = VANTA.TOPOLOGY({
         el: "#home",
         mouseControls: true,
         touchControls: true,
@@ -180,6 +182,24 @@ function initVantaHero() {
         color: 0x00c875,
         backgroundColor: 0x050a15
       });
+
+      // Hook into p5 draw loop to smoothly fade old trails and maintain perpetual, calm motion
+      setTimeout(() => {
+        if (vantaEffect && vantaEffect.p5 && vantaEffect.p5.draw) {
+          const originalDraw = vantaEffect.p5.draw;
+          vantaEffect.p5.draw = function() {
+            // Apply subtle semi-transparent background overlay to fade old lines smoothly
+            vantaEffect.p5.push();
+            vantaEffect.p5.resetMatrix();
+            vantaEffect.p5.noStroke();
+            vantaEffect.p5.fill(5, 10, 21, 10); // #050a15 with ~4% opacity
+            vantaEffect.p5.rect(0, 0, vantaEffect.p5.width, vantaEffect.p5.height);
+            vantaEffect.p5.pop();
+
+            originalDraw.call(this);
+          };
+        }
+      }, 100);
     } else {
       setTimeout(tryInitVanta, 100);
     }
