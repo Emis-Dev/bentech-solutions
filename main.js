@@ -1,6 +1,133 @@
 // BenTech Solutions - Premium JavaScript
 // Anime.js scroll-reveal + Lucide icons + Mobile menu + WhatsApp forms
 
+const SERVICE_DETAILS = {
+  depannage: {
+    anchor: 'dienst-depannage',
+    icon: 'siren',
+    kicker: '24/7 storingsdienst',
+    title: 'Dringende depannage & herstellingen',
+    intro: 'Bij een plotse stroomuitval, kortsluiting of een onveilige elektrische situatie helpt BenTech Solutions u snel weer op een veilige manier verder.',
+    image: 'assets/video_scene1_dark_fusebox.jpg',
+    imageAlt: 'Controle van een elektrische zekeringkast tijdens een storing',
+    visualLabel: 'Snel en veilig ter plaatse',
+    chips: ['24/7 bereikbaar', 'Gerichte diagnose', 'Duidelijke prijsafspraak'],
+    scope: [
+      'Telefonische inschatting van de urgentie en eerste veiligheidsadvies',
+      'Opsporen van kortsluiting, verliesstroom en defecte kringen',
+      'Veilig herstellen of tijdelijk beveiligen wanneer een definitieve oplossing later volgt'
+    ],
+    fit: [
+      'Volledige of gedeeltelijke stroomuitval',
+      'Zekeringen of differentieel die blijven uitschakelen',
+      'Vonken, brandgeur, warme stopcontacten of zichtbare schade'
+    ],
+    note: 'Ruikt u verbranding of ziet u vonken? Raak de installatie niet aan, schakel alleen uit wanneer dat veilig kan en bel meteen de spoedlijn.',
+    primaryLabel: 'Bel de spoedlijn',
+    primaryHref: 'tel:+32486328645'
+  },
+  zekeringkasten: {
+    anchor: 'dienst-zekeringkasten',
+    icon: 'cable',
+    kicker: 'Veilig & AREI-conform',
+    title: 'Zekeringkasten & AREI-keuring',
+    intro: 'Een overzichtelijke en correct beveiligde verdeelkast vormt het hart van uw elektrische installatie. Ik breng de situatie in kaart en werk toe naar een veilige, keuringsklare oplossing.',
+    image: 'assets/video_scene3_electrical_work.jpg',
+    imageAlt: 'Elektricien die metingen uitvoert aan een verdeelkast',
+    visualLabel: 'Keuringsklaar afgewerkt',
+    chips: ['Analyse ter plaatse', 'Correcte beveiliging', 'Heldere documentatie'],
+    scope: [
+      'Controle van kringen, differentieelschakelaars, aarding en beveiligingen',
+      'Vernieuwing, uitbreiding of overzichtelijke herindeling van de zekeringkast',
+      'Labeling en voorbereiding van de nodige schema’s voor de keuring'
+    ],
+    fit: [
+      'Een verouderde, onoverzichtelijke of afgekeurde installatie',
+      'Renovatie, verzwaring of toevoeging van nieuwe elektrische verbruikers',
+      'Voorbereiding op verkoop, verhuur of een geplande AREI-keuring'
+    ],
+    note: 'U krijgt vooraf een duidelijke aanpak. Na de werken wordt alles getest en krijgt u uitleg over de vernieuwde installatie.',
+    primaryLabel: 'Vraag een plaatsbezoek aan',
+    primaryHref: '#offerte',
+    formValue: 'Zekeringkast vernieuwen / AREI Keuring'
+  },
+  herstellingen: {
+    anchor: 'dienst-herstellingen',
+    icon: 'wrench',
+    kicker: 'Gericht opgelost',
+    title: 'Elektrische herstellingen',
+    intro: 'Van een defect stopcontact tot verlichting die blijft flikkeren: BenTech Solutions zoekt de oorzaak, herstelt zorgvuldig en controleert de werking voor vertrek.',
+    image: 'assets/video_scene2_yassir_van.jpg',
+    imageAlt: 'Yassir van BenTech Solutions naast zijn interventiewagen',
+    visualLabel: 'Vakman rechtstreeks bereikbaar',
+    chips: ['Woning & zaak', 'Meten voor herstellen', 'Netjes opgeleverd'],
+    scope: [
+      'Foutzoeken aan stopcontacten, schakelaars, verlichting en bedrading',
+      'Vervangen van beschadigde onderdelen en herstellen van slechte verbindingen',
+      'Controle en functietest na de herstelling'
+    ],
+    fit: [
+      'Stopcontacten, schakelaars of lichtpunten die niet meer werken',
+      'Terugkerende kleine storingen of onverklaarbare uitval',
+      'Beschadigde bekabeling of uitbreidingen die veilig moeten worden afgewerkt'
+    ],
+    note: 'Door eerst te meten en de oorzaak vast te stellen, vermijden we onnodige vervangingen en krijgt u een duurzame oplossing.',
+    primaryLabel: 'Beschrijf uw herstelling',
+    primaryHref: '#offerte',
+    formValue: 'Elektrische herstellingen'
+  },
+  installaties: {
+    anchor: 'dienst-installaties',
+    icon: 'hard-hat',
+    kicker: 'Van plan tot oplevering',
+    title: 'Volledige elektriciteitsinstallaties',
+    intro: 'Voor nieuwbouw, renovatie en uitbreiding verzorg ik een samenhangende elektrische installatie met aandacht voor veiligheid, toekomstig gebruik en een nette afwerking.',
+    image: 'assets/video_scene4_bright_home.jpg',
+    imageAlt: 'Moderne woning met professioneel uitgewerkte verlichting',
+    visualLabel: 'Eén aanspreekpunt van A tot Z',
+    chips: ['Nieuwbouw & renovatie', 'Doordachte planning', 'Getest bij oplevering'],
+    scope: [
+      'Plan en praktische indeling van stopcontacten, verlichting en vaste aansluitingen',
+      'Leidingwerk, bekabeling, verdeelkast, aarding en differentieelbeveiliging',
+      'Test, afwerking en voorbereiding van de installatie voor keuring'
+    ],
+    fit: [
+      'Een volledige nieuwbouw- of renovatie-installatie',
+      'Uitbreiding van woonruimte, kantoor, keuken of bijgebouw',
+      'Modernisering met extra comfort, capaciteit en overzicht'
+    ],
+    note: 'We stemmen de uitvoering en betalingsmomenten vooraf helder af, zodat materiaalbestellingen en planning zonder verrassingen verlopen.',
+    primaryLabel: 'Bespreek uw project',
+    primaryHref: '#offerte',
+    formValue: 'Volledige elektriciteitsinstallatie'
+  },
+  energie: {
+    anchor: 'dienst-energie',
+    icon: 'plug-zap',
+    kicker: 'Slimmer met energie',
+    title: 'Laadpalen & zonnepanelen',
+    intro: 'Maak uw woning of zaak klaar voor elektrisch rijden en eigen energieproductie met een veilige installatie die past bij uw verbruik en bestaande elektrische aansluiting.',
+    image: 'assets/video_scene4_bright_home.jpg',
+    imageAlt: 'Energiezuinige woning die klaar is voor slimme energieoplossingen',
+    visualLabel: 'Afgestemd op uw installatie',
+    chips: ['Thuis & kleine zaak', 'Veilige beveiliging', 'Uitleg bij oplevering'],
+    scope: [
+      'Analyse van aansluiting, beschikbare capaciteit, verbruik en gewenste plaatsing',
+      'Plaatsing en aansluiting van laadpunt, zonnepanelen, omvormer en beveiligingen',
+      'Inregeling, functietest en duidelijke uitleg over het dagelijkse gebruik'
+    ],
+    fit: [
+      'Thuis of op het werk veilig en praktisch elektrisch laden',
+      'Eigen stroom opwekken als aanvulling op uw energieverbruik',
+      'Een bestaande installatie uitbreiden met nieuwe energieverbruikers of productie'
+    ],
+    note: 'Elke installatie start met een technische controle. Zo sluiten vermogen, bekabeling en beveiligingen correct aan op de bestaande situatie.',
+    primaryLabel: 'Vraag energieadvies aan',
+    primaryHref: '#offerte',
+    formValue: 'Laadpaal en/of zonnepanelen'
+  }
+};
+
 document.addEventListener('DOMContentLoaded', () => {
   // Initialize Lucide icons
   if (typeof lucide !== 'undefined') {
@@ -8,6 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   initMobileMenu();
+  initServiceExperience();
   initSmoothScroll();
   initScrollReveal();
   initVantaHero();
@@ -37,6 +165,8 @@ function initMobileMenu() {
 // Smooth Scrolling
 function initSmoothScroll() {
   document.querySelectorAll('a[href^="#"]').forEach(link => {
+    if (link.hasAttribute('data-service-link') || link.closest('#serviceModal')) return;
+
     link.addEventListener('click', (e) => {
       const href = link.getAttribute('href');
       if (href && href !== '#') {
@@ -48,6 +178,176 @@ function initSmoothScroll() {
       }
     });
   });
+}
+
+// Services dropdown, shareable anchors and dynamic detail dialog
+function initServiceExperience() {
+  const dialog = document.getElementById('serviceModal');
+  const dropdown = document.querySelector('.nav-dropdown');
+  const dropdownToggle = document.getElementById('servicesDropdownToggle');
+  const closeButton = document.getElementById('serviceModalClose');
+  const serviceLinks = document.querySelectorAll('[data-service-link]');
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (!dialog || !serviceLinks.length) return;
+
+  const modalImage = document.getElementById('serviceModalImage');
+  const modalVisualLabel = document.getElementById('serviceModalVisualLabel');
+  const modalIcon = document.getElementById('serviceModalIcon');
+  const modalKicker = document.getElementById('serviceModalKicker');
+  const modalTitle = document.getElementById('serviceModalTitle');
+  const modalIntro = document.getElementById('serviceModalIntro');
+  const modalChips = document.getElementById('serviceModalChips');
+  const modalScope = document.getElementById('serviceModalScope');
+  const modalFit = document.getElementById('serviceModalFit');
+  const modalNote = document.getElementById('serviceModalNote');
+  const modalPrimary = document.getElementById('serviceModalPrimary');
+  const modalPrimaryLabel = document.getElementById('serviceModalPrimaryLabel');
+  const mainNav = document.getElementById('mainNav');
+  const mobileToggle = document.getElementById('mobileToggle');
+  let lastTrigger = null;
+  let openingTimer = null;
+  let preserveHashOnClose = false;
+
+  const closeDropdown = () => {
+    if (!dropdown || !dropdownToggle) return;
+    dropdown.classList.remove('is-open');
+    dropdownToggle.setAttribute('aria-expanded', 'false');
+  };
+
+  if (dropdown && dropdownToggle) {
+    dropdownToggle.addEventListener('click', (event) => {
+      event.stopPropagation();
+      const isOpen = dropdown.classList.toggle('is-open');
+      dropdownToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    document.addEventListener('click', (event) => {
+      if (!dropdown.contains(event.target)) closeDropdown();
+    });
+  }
+
+  const renderList = (container, items) => {
+    container.replaceChildren(...items.map(item => {
+      const listItem = document.createElement('li');
+      listItem.textContent = item;
+      return listItem;
+    }));
+  };
+
+  const populateDialog = (key) => {
+    const detail = SERVICE_DETAILS[key];
+    if (!detail) return;
+
+    dialog.dataset.service = key;
+    modalImage.src = detail.image;
+    modalImage.alt = detail.imageAlt;
+    modalVisualLabel.textContent = detail.visualLabel;
+    modalIcon.innerHTML = `<i data-lucide="${detail.icon}" class="icon-sm"></i>`;
+    modalKicker.textContent = detail.kicker;
+    modalTitle.textContent = detail.title;
+    modalIntro.textContent = detail.intro;
+    modalChips.replaceChildren(...detail.chips.map(chip => {
+      const item = document.createElement('span');
+      item.className = 'service-modal-chip';
+      item.textContent = chip;
+      return item;
+    }));
+    renderList(modalScope, detail.scope);
+    renderList(modalFit, detail.fit);
+    modalNote.textContent = detail.note;
+    modalPrimary.href = detail.primaryHref;
+    modalPrimary.dataset.formValue = detail.formValue || '';
+    modalPrimaryLabel.textContent = detail.primaryLabel;
+
+    if (typeof lucide !== 'undefined') lucide.createIcons();
+  };
+
+  const openService = (key, trigger = null, updateHistory = true) => {
+    const detail = SERVICE_DETAILS[key];
+    if (!detail) return;
+
+    const matchingCard = document.getElementById(detail.anchor);
+    lastTrigger = trigger?.closest('#servicesDropdown') ? matchingCard : (trigger || lastTrigger);
+    closeDropdown();
+    if (mainNav) mainNav.classList.remove('open');
+    if (mobileToggle) mobileToggle.classList.remove('is-active');
+
+    const nextHash = `#${detail.anchor}`;
+    if (updateHistory && window.location.hash !== nextHash) {
+      window.history.pushState({ service: key }, '', nextHash);
+    }
+
+    const target = document.getElementById(detail.anchor);
+    if (target) {
+      target.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'center' });
+    }
+
+    window.clearTimeout(openingTimer);
+    openingTimer = window.setTimeout(() => {
+      populateDialog(key);
+      if (!dialog.open) dialog.showModal();
+      document.body.classList.add('service-modal-open');
+    }, prefersReducedMotion ? 0 : 320);
+  };
+
+  serviceLinks.forEach(link => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      openService(link.dataset.serviceLink, link, true);
+    });
+  });
+
+  closeButton?.addEventListener('click', () => dialog.close());
+  dialog.addEventListener('click', (event) => {
+    if (event.target === dialog) dialog.close();
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && dialog.open) {
+      event.preventDefault();
+      dialog.close();
+    }
+  });
+
+  dialog.addEventListener('close', () => {
+    document.body.classList.remove('service-modal-open');
+    if (!preserveHashOnClose && SERVICE_DETAILS[dialog.dataset.service]) {
+      window.history.replaceState({}, '', '#diensten');
+    }
+    preserveHashOnClose = false;
+    lastTrigger?.focus({ preventScroll: true });
+  });
+
+  modalPrimary.addEventListener('click', (event) => {
+    const href = modalPrimary.getAttribute('href');
+    if (!href || !href.startsWith('#')) return;
+
+    const target = document.querySelector(href);
+    if (!target) return;
+
+    event.preventDefault();
+    const formValue = modalPrimary.dataset.formValue;
+    const serviceSelect = document.getElementById('q-service');
+    if (formValue && serviceSelect) serviceSelect.value = formValue;
+
+    preserveHashOnClose = true;
+    dialog.close();
+    window.history.pushState({}, '', href);
+    target.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'start' });
+  });
+
+  window.addEventListener('hashchange', () => {
+    const entry = Object.entries(SERVICE_DETAILS).find(([, detail]) => `#${detail.anchor}` === window.location.hash);
+    if (entry) {
+      if (!dialog.open || dialog.dataset.service !== entry[0]) openService(entry[0], null, false);
+    } else if (dialog.open) {
+      preserveHashOnClose = true;
+      dialog.close();
+    }
+  });
+
+  const initialEntry = Object.entries(SERVICE_DETAILS).find(([, detail]) => `#${detail.anchor}` === window.location.hash);
+  if (initialEntry) requestAnimationFrame(() => openService(initialEntry[0], null, false));
 }
 
 // Scroll Reveal with anime.js

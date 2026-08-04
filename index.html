@@ -66,7 +66,19 @@
       <nav class="main-nav" id="mainNav">
         <a href="#home">Home</a>
         <a href="#spoed">Spoedhulp</a>
-        <a href="#diensten">Diensten</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-toggle" id="servicesDropdownToggle" type="button" aria-expanded="false" aria-controls="servicesDropdown">
+            Diensten
+            <i data-lucide="chevron-down" class="icon-xs" aria-hidden="true"></i>
+          </button>
+          <div class="services-dropdown" id="servicesDropdown" aria-label="Elektrische diensten">
+            <a href="#dienst-depannage" data-service-link="depannage">24/7 depannage</a>
+            <a href="#dienst-zekeringkasten" data-service-link="zekeringkasten">Zekeringkasten &amp; AREI</a>
+            <a href="#dienst-herstellingen" data-service-link="herstellingen">Elektrische herstellingen</a>
+            <a href="#dienst-installaties" data-service-link="installaties">Volledige installaties</a>
+            <a href="#dienst-energie" data-service-link="energie">Laadpalen &amp; zonnepanelen</a>
+          </div>
+        </div>
         <a href="#over">Over Mij</a>
         <a href="#werkwijze">Werkwijze</a>
         <a href="#offerte">Contact</a>
@@ -209,32 +221,35 @@
       </div>
 
       <div class="bento-grid bento-grid-focused">
-        <div class="bento-card bento-hero-card">
+        <a href="#dienst-depannage" id="dienst-depannage" class="bento-card bento-hero-card service-card-link" data-service-link="depannage" aria-haspopup="dialog">
           <div class="bento-badge"><i data-lucide="zap" class="icon-xs"></i> Meest Gevraagd</div>
-          <h3>24/7 Dringende Depannage & Herstellingen</h3>
+          <h3>24/7 Dringende Depannage &amp; Herstellingen</h3>
           <p>
             BenTech Solutions garandeert een snelle, veilige en duurzame interventie bij alle acute elektrische problemen in woning, zaak of appartementsgebouw.
           </p>
           <ul class="bento-feature-list">
-            <li>Opsporen & verhelpen van kabelbreuken en lekstromen</li>
+            <li>Opsporen &amp; verhelpen van kabelbreuken en lekstromen</li>
             <li>Vervanging van verbrande stopcontacten en zekeringen</li>
             <li>Noodvoedingen en tijdelijke stroomvoorziening</li>
           </ul>
-        </div>
+          <span class="service-card-action">Bekijk de spoedservice <i data-lucide="arrow-up-right" class="icon-xs" aria-hidden="true"></i></span>
+        </a>
 
-        <div class="bento-card">
+        <a href="#dienst-zekeringkasten" id="dienst-zekeringkasten" class="bento-card service-card-link" data-service-link="zekeringkasten" aria-haspopup="dialog">
           <div class="bento-icon"><i data-lucide="cable" class="icon-lg"></i></div>
-          <h3>Zekeringkasten & AREI Keuring</h3>
+          <h3>Zekeringkasten &amp; AREI Keuring</h3>
           <p>Verouderde of afgekeurde elektriciteitskast? Ik vernieuw en verzwaar kasten conform de nieuwste AREI-veiligheidsnormen inclusief eendraadsschema's.</p>
-        </div>
+          <span class="service-card-action">Ontdek deze dienst <i data-lucide="arrow-up-right" class="icon-xs" aria-hidden="true"></i></span>
+        </a>
 
-        <div class="bento-card">
+        <a href="#dienst-herstellingen" id="dienst-herstellingen" class="bento-card service-card-link" data-service-link="herstellingen" aria-haspopup="dialog">
           <div class="bento-icon"><i data-lucide="wrench" class="icon-lg"></i></div>
           <h3>Elektrische Herstellingen</h3>
           <p>Defecte stopcontacten, kapotte schakelaars, slecht werkende verlichting of problemen met uw bedrading — ik los het vakkundig op.</p>
-        </div>
+          <span class="service-card-action">Ontdek deze dienst <i data-lucide="arrow-up-right" class="icon-xs" aria-hidden="true"></i></span>
+        </a>
 
-        <div class="bento-card bento-hero-card">
+        <a href="#dienst-installaties" id="dienst-installaties" class="bento-card service-card-link" data-service-link="installaties" aria-haspopup="dialog">
           <div class="bento-icon"><i data-lucide="hard-hat" class="icon-lg"></i></div>
           <h3>Volledige Elektriciteitsinstallaties</h3>
           <p>
@@ -245,10 +260,79 @@
             <li>Verdeelkasten, aardingssystemen en differentieelschakelaars</li>
             <li>Oplevering met AREI-keuring en eendraadsschema</li>
           </ul>
-        </div>
+          <span class="service-card-action">Plan uw installatie <i data-lucide="arrow-up-right" class="icon-xs" aria-hidden="true"></i></span>
+        </a>
+
+        <a href="#dienst-energie" id="dienst-energie" class="bento-card service-card-link energy-service-card" data-service-link="energie" aria-haspopup="dialog">
+          <div class="bento-icon bento-icon-cluster" aria-hidden="true">
+            <i data-lucide="plug-zap" class="icon-lg"></i>
+            <i data-lucide="sun" class="icon-sm"></i>
+          </div>
+          <h3>Laadpalen &amp; Zonnepanelen</h3>
+          <p>Maak uw woning of zaak klaar voor elektrisch rijden en eigen energieproductie met een veilige installatie afgestemd op uw verbruik en elektrische aansluiting.</p>
+          <ul class="bento-feature-list">
+            <li>Laadoplossingen voor thuis en kleine ondernemingen</li>
+            <li>Zonnepanelen, omvormer en elektrische beveiliging</li>
+            <li>Inregeling, test en heldere uitleg bij oplevering</li>
+          </ul>
+          <span class="service-card-action">Bekijk energieoplossingen <i data-lucide="arrow-up-right" class="icon-xs" aria-hidden="true"></i></span>
+        </a>
       </div>
     </div>
   </section>
+
+  <!-- Service details: one modal keeps every service on this one-page website -->
+  <dialog class="service-modal" id="serviceModal" aria-labelledby="serviceModalTitle" aria-describedby="serviceModalIntro">
+    <div class="service-modal-shell">
+      <button class="service-modal-close" id="serviceModalClose" type="button" aria-label="Dienstvenster sluiten">
+        <i data-lucide="x" class="icon-md" aria-hidden="true"></i>
+      </button>
+
+      <div class="service-modal-visual">
+        <img id="serviceModalImage" src="assets/video_scene1_dark_fusebox.jpg" alt="" width="768" height="1024">
+        <div class="service-modal-visual-shade"></div>
+        <span class="service-modal-visual-label" id="serviceModalVisualLabel">24/7 bereikbaar</span>
+      </div>
+
+      <div class="service-modal-content">
+        <div class="service-modal-kicker">
+          <span class="service-modal-kicker-icon" id="serviceModalIcon" aria-hidden="true"></span>
+          <span id="serviceModalKicker">Elektrische service</span>
+        </div>
+        <h2 id="serviceModalTitle">Dienst</h2>
+        <p class="service-modal-intro" id="serviceModalIntro"></p>
+
+        <div class="service-modal-chips" id="serviceModalChips" aria-label="Belangrijkste eigenschappen"></div>
+
+        <div class="service-modal-detail-grid">
+          <section aria-labelledby="serviceModalScopeTitle">
+            <h3 id="serviceModalScopeTitle">Wat ik voor u doe</h3>
+            <ul class="service-modal-list" id="serviceModalScope"></ul>
+          </section>
+          <section aria-labelledby="serviceModalFitTitle">
+            <h3 id="serviceModalFitTitle">Wanneer deze dienst past</h3>
+            <ul class="service-modal-list" id="serviceModalFit"></ul>
+          </section>
+        </div>
+
+        <div class="service-modal-note">
+          <i data-lucide="shield-check" class="icon-md" aria-hidden="true"></i>
+          <p id="serviceModalNote"></p>
+        </div>
+
+        <div class="service-modal-actions">
+          <a href="#offerte" class="btn btn-emerald" id="serviceModalPrimary">
+            <span id="serviceModalPrimaryLabel">Vraag een offerte aan</span>
+            <i data-lucide="arrow-right" class="icon-sm" aria-hidden="true"></i>
+          </a>
+          <a href="tel:+32486328645" class="btn btn-outline">
+            <i data-lucide="phone" class="icon-sm" aria-hidden="true"></i>
+            Bel +32 486 32 86 45
+          </a>
+        </div>
+      </div>
+    </div>
+  </dialog>
 
   <!-- Google Reviews Section (High Visibility) -->
   <section class="reviews-section" id="reviews">
@@ -594,6 +678,7 @@
                   <option value="Zekeringkast vernieuwen / AREI Keuring">Zekeringkast / AREI Keuring</option>
                   <option value="Elektrische herstellingen">Elektrische Herstellingen</option>
                   <option value="Volledige elektriciteitsinstallatie">Nieuwe Installatie</option>
+                  <option value="Laadpaal en/of zonnepanelen">Laadpaal / Zonnepanelen</option>
                   <option value="Andere elektrische werken">Andere Werken</option>
                 </select>
               </div>
@@ -679,11 +764,11 @@
       <div class="footer-col">
         <h4>Diensten</h4>
         <ul>
-          <li><a href="#diensten">Stroompanne & Depannage</a></li>
-          <li><a href="#diensten">Zekeringkast Vernieuwen</a></li>
-          <li><a href="#diensten">AREI Keuring</a></li>
-          <li><a href="#diensten">Elektrische Herstellingen</a></li>
-          <li><a href="#diensten">Nieuwe Installaties</a></li>
+          <li><a href="#dienst-depannage" data-service-link="depannage">Stroompanne &amp; Depannage</a></li>
+          <li><a href="#dienst-zekeringkasten" data-service-link="zekeringkasten">Zekeringkasten &amp; AREI</a></li>
+          <li><a href="#dienst-herstellingen" data-service-link="herstellingen">Elektrische Herstellingen</a></li>
+          <li><a href="#dienst-installaties" data-service-link="installaties">Nieuwe Installaties</a></li>
+          <li><a href="#dienst-energie" data-service-link="energie">Laadpalen &amp; Zonnepanelen</a></li>
         </ul>
       </div>
 
