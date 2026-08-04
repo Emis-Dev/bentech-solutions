@@ -32,8 +32,8 @@ const SERVICE_DETAILS = {
     kicker: 'Veilig & AREI-conform',
     title: 'Zekeringkasten & AREI-keuring',
     intro: 'Een overzichtelijke en correct beveiligde verdeelkast vormt het hart van uw elektrische installatie. Ik breng de situatie in kaart en werk toe naar een veilige, keuringsklare oplossing.',
-    image: 'assets/video_scene3_electrical_work.jpg',
-    imageAlt: 'Elektricien die metingen uitvoert aan een verdeelkast',
+    image: 'assets/service-zekeringkast-arei-v2.webp',
+    imageAlt: 'Elektricien die een AREI-controle uitvoert aan een moderne verdeelkast',
     visualLabel: 'Keuringsklaar afgewerkt',
     chips: ['Analyse ter plaatse', 'Correcte beveiliging', 'Heldere documentatie'],
     scope: [
@@ -82,8 +82,8 @@ const SERVICE_DETAILS = {
     kicker: 'Van plan tot oplevering',
     title: 'Volledige elektriciteitsinstallaties',
     intro: 'Voor nieuwbouw, renovatie en uitbreiding verzorg ik een samenhangende elektrische installatie met aandacht voor veiligheid, toekomstig gebruik en een nette afwerking.',
-    image: 'assets/video_scene4_bright_home.jpg',
-    imageAlt: 'Moderne woning met professioneel uitgewerkte verlichting',
+    image: 'assets/service-elektriciteitsinstallatie-v2.webp',
+    imageAlt: 'Elektricien die een volledige installatie afwerkt tijdens een woningrenovatie',
     visualLabel: 'Eén aanspreekpunt van A tot Z',
     chips: ['Nieuwbouw & renovatie', 'Doordachte planning', 'Getest bij oplevering'],
     scope: [
@@ -132,8 +132,8 @@ const SERVICE_DETAILS = {
     kicker: 'Meer eigen energie gebruiken',
     title: 'Thuisbatterijen op maat van uw verbruik',
     intro: 'Bewaar de energie die uw zonnepanelen overdag produceren en gebruik ze wanneer uw woning ze nodig heeft. Zo haalt u meer uit uw eigen productie en beheert u energie slimmer.',
-    image: 'assets/video_scene3_electrical_work.jpg',
-    imageAlt: 'Technische controle van een elektrische installatie voor slimme energieopslag',
+    image: 'assets/service-thuisbatterij-v2.webp',
+    imageAlt: 'Elektricien die een professioneel geplaatste thuisbatterij in gebruik neemt',
     visualLabel: 'Capaciteit correct berekend',
     chips: ['Verbruiksanalyse', 'Slim energiebeheer', 'Nazorg inbegrepen'],
     scope: [
@@ -157,8 +157,8 @@ const SERVICE_DETAILS = {
     kicker: 'Duurzaam zelf opwekken',
     title: 'Zonnepanelen voor woning of onderneming',
     intro: 'Verlaag uw afhankelijkheid van het elektriciteitsnet met een correct gedimensioneerde zonne-installatie. BenTech Solutions begeleidt u van persoonlijk advies tot veilige aansluiting en oplevering.',
-    image: 'assets/video_scene4_bright_home.jpg',
-    imageAlt: 'Moderne woning die klaar is voor duurzame zonne-energie',
+    image: 'assets/service-zonnepanelen-v2.webp',
+    imageAlt: 'Elektricien die zonnepanelen installeert op een Vlaamse woning',
     visualLabel: 'Van advies tot oplevering',
     chips: ['Correct gedimensioneerd', 'Kwaliteitsmaterialen', 'Veilig getest'],
     scope: [
