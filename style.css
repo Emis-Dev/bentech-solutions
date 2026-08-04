@@ -348,7 +348,12 @@ h2 { font-weight: 600; }
   gap: 0.15rem;
 }
 
-.nav-dropdown-link { display: inline-flex; align-items: center; }
+.main-nav > a,
+.nav-dropdown-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+}
 
 .nav-dropdown-toggle {
   display: inline-flex;
