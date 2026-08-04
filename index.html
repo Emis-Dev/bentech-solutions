@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BenTech Solutions | 24/7 Spoed Elektricien Vlaanderen</title>
-  <meta name="description" content="Dringend elektricien nodig? BenTech Solutions is 24/7 bereikbaar en binnen 45 minuten ter plaatse bij kortsluiting, stroompanne, zekeringkast problemen en elektrische storingen in heel Vlaanderen.">
-  <meta name="keywords" content="elektricien spoed, stroompanne, kortsluiting, 24/7 elektricien vlaanderen, zekeringkast, depannage elektriciteit, bentech solutions">
+  <meta name="description" content="BenTech Solutions helpt 24/7 bij elektrische storingen en installeert laadpalen, thuisbatterijen en zonnepanelen in heel Vlaanderen.">
+  <meta name="keywords" content="elektricien spoed, stroompanne, kortsluiting, laadpaal installeren, thuisbatterij, zonnepanelen, 24/7 elektricien vlaanderen, bentech solutions">
 
   <!-- Open Graph -->
   <meta property="og:title" content="BenTech Solutions | 24/7 Spoed Elektricien Vlaanderen">
-  <meta property="og:description" content="Binnen 45 min ter plaatse voor dringende elektrische storingen. Erkend elektricien voor depannage, zekeringkasten en herstellingen.">
+  <meta property="og:description" content="24/7 elektrische hulp en complete energieoplossingen met laadpalen, thuisbatterijen en zonnepanelen in heel Vlaanderen.">
   <meta property="og:image" content="https://bentechsolutions.be/assets/hero-profile.jpeg">
   <meta property="og:url" content="https://bentechsolutions.be/">
   <meta property="og:type" content="website">
@@ -33,7 +33,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.topology.min.js" defer></script>
 
-  <link rel="stylesheet" href="style.css?v=services-20260804">
+  <link rel="stylesheet" href="style.css?v=energy-20260804">
 </head>
 <body>
 
@@ -72,12 +72,14 @@
             Diensten
             <i data-lucide="chevron-down" class="icon-xs" aria-hidden="true"></i>
           </button>
-          <div class="services-dropdown" id="servicesDropdown" aria-label="Elektrische diensten">
+          <div class="services-dropdown" id="servicesDropdown" aria-label="Elektrische en slimme energiediensten">
             <a href="#dienst-depannage" data-service-link="depannage">24/7 depannage</a>
             <a href="#dienst-zekeringkasten" data-service-link="zekeringkasten">Zekeringkasten &amp; AREI</a>
             <a href="#dienst-herstellingen" data-service-link="herstellingen">Elektrische herstellingen</a>
             <a href="#dienst-installaties" data-service-link="installaties">Volledige installaties</a>
-            <a href="#dienst-energie" data-service-link="energie">Laadpalen &amp; zonnepanelen</a>
+            <a href="#dienst-laadpalen" data-service-link="laadpalen">Laadpalen</a>
+            <a href="#dienst-thuisbatterijen" data-service-link="thuisbatterijen">Thuisbatterijen</a>
+            <a href="#dienst-zonnepanelen" data-service-link="zonnepanelen">Zonnepanelen</a>
           </div>
         </div>
         <a href="#over">Over Mij</a>
@@ -213,12 +215,12 @@
     </div>
   </section>
 
-  <!-- Services — Focused on electrical services only -->
+  <!-- Electrical and smart-energy services -->
   <section class="services-section" id="diensten">
     <div class="container">
       <div class="section-header text-center">
-        <h2 class="section-title">Mijn Elektrische Diensten</h2>
-        <p class="section-subtitle">Van noodinterventie tot volledige zekeringkastvernieuwing — alles uit één hand.</p>
+        <h2 class="section-title">Elektrische &amp; Slimme Energiediensten</h2>
+        <p class="section-subtitle">Van noodinterventie tot een complete energieoplossing — veilig geïnstalleerd en persoonlijk opgevolgd.</p>
       </div>
 
       <div class="bento-grid bento-grid-focused">
@@ -250,7 +252,7 @@
           <span class="service-card-action">Ontdek deze dienst <i data-lucide="arrow-up-right" class="icon-xs" aria-hidden="true"></i></span>
         </a>
 
-        <a href="#dienst-installaties" id="dienst-installaties" class="bento-card service-card-link" data-service-link="installaties" aria-haspopup="dialog">
+        <a href="#dienst-installaties" id="dienst-installaties" class="bento-card bento-wide-card service-card-link" data-service-link="installaties" aria-haspopup="dialog">
           <div class="bento-icon"><i data-lucide="hard-hat" class="icon-lg"></i></div>
           <h3>Volledige Elektriciteitsinstallaties</h3>
           <p>
@@ -264,20 +266,53 @@
           <span class="service-card-action">Plan uw installatie <i data-lucide="arrow-up-right" class="icon-xs" aria-hidden="true"></i></span>
         </a>
 
-        <a href="#dienst-energie" id="dienst-energie" class="bento-card service-card-link energy-service-card" data-service-link="energie" aria-haspopup="dialog">
-          <div class="bento-icon bento-icon-cluster" aria-hidden="true">
-            <i data-lucide="plug-zap" class="icon-lg"></i>
-            <i data-lucide="sun" class="icon-sm"></i>
+        <section class="energy-services-group" aria-labelledby="energy-services-title">
+          <div class="energy-services-heading">
+            <div>
+              <span class="energy-services-label"><i data-lucide="leaf" class="icon-xs" aria-hidden="true"></i> Energieoplossingen</span>
+              <h3 id="energy-services-title">Laden, opslaan en zelf opwekken</h3>
+            </div>
+            <p>Combineer laadpaal, thuisbatterij en zonnepanelen tot één slim systeem dat past bij uw verbruik, woning en toekomstplannen.</p>
           </div>
-          <h3>Laadpalen &amp; Zonnepanelen</h3>
-          <p>Maak uw woning of zaak klaar voor elektrisch rijden en eigen energieproductie met een veilige installatie afgestemd op uw verbruik en elektrische aansluiting.</p>
-          <ul class="bento-feature-list">
-            <li>Laadoplossingen voor thuis en kleine ondernemingen</li>
-            <li>Zonnepanelen, omvormer en elektrische beveiliging</li>
-            <li>Inregeling, test en heldere uitleg bij oplevering</li>
-          </ul>
-          <span class="service-card-action">Bekijk energieoplossingen <i data-lucide="arrow-up-right" class="icon-xs" aria-hidden="true"></i></span>
-        </a>
+
+          <div class="energy-service-grid">
+            <a href="#dienst-laadpalen" id="dienst-laadpalen" class="bento-card service-card-link energy-service-card" data-service-link="laadpalen" aria-haspopup="dialog">
+              <div class="bento-icon"><i data-lucide="plug-zap" class="icon-lg"></i></div>
+              <h3>Laadpalen</h3>
+              <p>Slim en veilig laden bij u thuis of op het werk, inclusief professioneel advies, load balancing en app-configuratie.</p>
+              <ul class="bento-feature-list">
+                <li>Advies en correcte dimensionering</li>
+                <li>Veilige aansluiting en keuring</li>
+                <li>Configuratie en uitleg bij oplevering</li>
+              </ul>
+              <span class="service-card-action">Ontdek laadoplossingen <i data-lucide="arrow-up-right" class="icon-xs" aria-hidden="true"></i></span>
+            </a>
+
+            <a href="#dienst-thuisbatterijen" id="dienst-thuisbatterijen" class="bento-card service-card-link energy-service-card" data-service-link="thuisbatterijen" aria-haspopup="dialog">
+              <div class="bento-icon"><i data-lucide="battery-charging" class="icon-lg"></i></div>
+              <h3>Thuisbatterijen</h3>
+              <p>Bewaar meer van uw eigen zonne-energie en gebruik die wanneer uw woning of onderneming ze werkelijk nodig heeft.</p>
+              <ul class="bento-feature-list">
+                <li>Analyse van verbruik en productie</li>
+                <li>Advies over passende batterijcapaciteit</li>
+                <li>Configuratie, ingebruikname en nazorg</li>
+              </ul>
+              <span class="service-card-action">Bekijk batterijoplossingen <i data-lucide="arrow-up-right" class="icon-xs" aria-hidden="true"></i></span>
+            </a>
+
+            <a href="#dienst-zonnepanelen" id="dienst-zonnepanelen" class="bento-card service-card-link energy-service-card" data-service-link="zonnepanelen" aria-haspopup="dialog">
+              <div class="bento-icon energy-solar-icon"><i data-lucide="sun" class="icon-lg"></i></div>
+              <h3>Zonnepanelen</h3>
+              <p>Verlaag uw afhankelijkheid van het net met een correct gedimensioneerde zonne-installatie, veilig aangesloten en getest.</p>
+              <ul class="bento-feature-list">
+                <li>Persoonlijk advies en dimensionering</li>
+                <li>Professionele montage en aansluiting</li>
+                <li>Testen en duidelijke oplevering</li>
+              </ul>
+              <span class="service-card-action">Ontdek zonne-energie <i data-lucide="arrow-up-right" class="icon-xs" aria-hidden="true"></i></span>
+            </a>
+          </div>
+        </section>
       </div>
     </div>
   </section>
@@ -534,6 +569,17 @@
           <p>Grondig testen met professionele meetapparatuur en kraaknet opleveren.</p>
         </div>
       </div>
+
+      <div class="process-project-note">
+        <div class="process-project-icon" aria-hidden="true">
+          <i data-lucide="route" class="icon-lg"></i>
+        </div>
+        <div>
+          <h3>Bij een energie-totaalproject begint alles met één helder plan</h3>
+          <p>Voor zonnepanelen, een thuisbatterij en een laadpaal bekijken we eerst uw verbruik, elektrische installatie, prioriteiten en budget. Daarna ontvangt u een duidelijke projectaanpak met planning, technische keuzes en mogelijke betalingsspreiding.</p>
+        </div>
+        <a href="#betalingsvoorwaarden" class="btn btn-outline">Bekijk betaalmogelijkheden <i data-lucide="arrow-down" class="icon-sm" aria-hidden="true"></i></a>
+      </div>
     </div>
   </section>
 
@@ -579,6 +625,30 @@
           </div>
         </li>
       </ol>
+
+      <aside class="payment-spread" aria-labelledby="spread-payment-title">
+        <div class="payment-spread-heading">
+          <div class="payment-spread-icon" aria-hidden="true">
+            <i data-lucide="calendar-range" class="icon-lg"></i>
+          </div>
+          <div>
+            <span class="payment-spread-label">Voor grotere energieprojecten</span>
+            <h3 id="spread-payment-title">Gespreid betalen bij totaalprojecten</h3>
+          </div>
+        </div>
+        <div class="payment-spread-body">
+          <div class="payment-spread-copy">
+            <p>Een totaalproject met zonnepanelen, een thuisbatterij en een laadpaal is een belangrijke investering. Daarom bekijken we samen hoe de betaling, afhankelijk van de opdracht en de geldende voorwaarden, over meerdere termijnen kan worden gespreid.</p>
+            <p>Zo kunt u meteen kiezen voor een complete, duurzame installatie zonder het volledige projectbedrag in één keer te betalen. Tijdens een vrijblijvend adviesgesprek zoeken we naar een aanpak die technisch én financieel bij uw situatie past.</p>
+          </div>
+          <ul class="payment-spread-points" aria-label="Voordelen van betalingsspreiding">
+            <li>Eén plan voor laadpaal, batterij en zonnepanelen</li>
+            <li>Heldere afspraken vóór de start van de werken</li>
+            <li>Mogelijkheden afgestemd op project en budget</li>
+          </ul>
+        </div>
+        <a href="#offerte" class="btn btn-emerald payment-spread-cta" data-quote-service="Energie-totaalproject">Vraag vrijblijvend uw mogelijkheden aan <i data-lucide="arrow-right" class="icon-sm" aria-hidden="true"></i></a>
+      </aside>
 
       <aside class="payment-emergency" aria-labelledby="emergency-payment-title">
         <div class="payment-emergency-icon" aria-hidden="true">
@@ -679,7 +749,10 @@
                   <option value="Zekeringkast vernieuwen / AREI Keuring">Zekeringkast / AREI Keuring</option>
                   <option value="Elektrische herstellingen">Elektrische Herstellingen</option>
                   <option value="Volledige elektriciteitsinstallatie">Nieuwe Installatie</option>
-                  <option value="Laadpaal en/of zonnepanelen">Laadpaal / Zonnepanelen</option>
+                  <option value="Laadpaal">Laadpaal</option>
+                  <option value="Thuisbatterij">Thuisbatterij</option>
+                  <option value="Zonnepanelen">Zonnepanelen</option>
+                  <option value="Energie-totaalproject">Energie-totaalproject</option>
                   <option value="Andere elektrische werken">Andere Werken</option>
                 </select>
               </div>
@@ -746,7 +819,7 @@
         <p class="footer-company-name"><strong>BenTech Solutions CommV</strong></p>
         <p class="footer-vat">BTW: BE 1025.714.523</p>
         <p class="footer-desc">
-          Uw 24/7 expert in elektrische depannages, zekeringkasten, AREI-keuringen en elektrische herstellingen.
+          Uw 24/7 expert in elektrische depannages, installaties en slimme energieoplossingen met laadpalen, thuisbatterijen en zonnepanelen.
         </p>
       </div>
 
@@ -769,7 +842,9 @@
           <li><a href="#dienst-zekeringkasten" data-service-link="zekeringkasten">Zekeringkasten &amp; AREI</a></li>
           <li><a href="#dienst-herstellingen" data-service-link="herstellingen">Elektrische Herstellingen</a></li>
           <li><a href="#dienst-installaties" data-service-link="installaties">Nieuwe Installaties</a></li>
-          <li><a href="#dienst-energie" data-service-link="energie">Laadpalen &amp; Zonnepanelen</a></li>
+          <li><a href="#dienst-laadpalen" data-service-link="laadpalen">Laadpalen</a></li>
+          <li><a href="#dienst-thuisbatterijen" data-service-link="thuisbatterijen">Thuisbatterijen</a></li>
+          <li><a href="#dienst-zonnepanelen" data-service-link="zonnepanelen">Zonnepanelen</a></li>
         </ul>
       </div>
 
@@ -814,6 +889,6 @@
     </a>
   </div>
 
-  <script src="main.js?v=services-20260804"></script>
+  <script src="main.js?v=energy-20260804"></script>
 </body>
 </html>

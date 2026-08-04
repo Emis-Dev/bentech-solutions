@@ -101,30 +101,80 @@ const SERVICE_DETAILS = {
     primaryHref: '#offerte',
     formValue: 'Volledige elektriciteitsinstallatie'
   },
-  energie: {
-    anchor: 'dienst-energie',
+  laadpalen: {
+    anchor: 'dienst-laadpalen',
     icon: 'plug-zap',
-    kicker: 'Slimmer met energie',
-    title: 'Laadpalen & zonnepanelen',
-    intro: 'Maak uw woning of zaak klaar voor elektrisch rijden en eigen energieproductie met een veilige installatie die past bij uw verbruik en bestaande elektrische aansluiting.',
-    image: 'assets/video_scene4_bright_home.jpg',
-    imageAlt: 'Energiezuinige woning die klaar is voor slimme energieoplossingen',
-    visualLabel: 'Afgestemd op uw installatie',
-    chips: ['Thuis & kleine zaak', 'Veilige beveiliging', 'Uitleg bij oplevering'],
+    kicker: 'Slim & veilig laden',
+    title: 'Laadpalen voor thuis en op het werk',
+    intro: 'Laad uw elektrische wagen snel, veilig en efficiënt met een professioneel geplaatste laadoplossing die is afgestemd op uw elektrische installatie en dagelijkse gebruik.',
+    image: 'assets/yassir-laadpaal-installatie.jpeg',
+    imageAlt: 'Yassir van BenTech Solutions tijdens de installatie van een laadpaal',
+    visualLabel: 'Echte installatie door BenTech',
+    chips: ['Advies op maat', 'Load balancing', 'App ingesteld'],
     scope: [
-      'Analyse van aansluiting, beschikbare capaciteit, verbruik en gewenste plaatsing',
-      'Plaatsing en aansluiting van laadpunt, zonnepanelen, omvormer en beveiligingen',
-      'Inregeling, functietest en duidelijke uitleg over het dagelijkse gebruik'
+      'Advies over vermogen, plaatsing en de beste laadoplossing voor uw situatie',
+      'Professionele montage, veilige aansluiting en voorbereiding voor keuring',
+      'Load balancing, slimme functies en configuratie van de mobiele app'
     ],
     fit: [
-      'Thuis of op het werk veilig en praktisch elektrisch laden',
-      'Eigen stroom opwekken als aanvulling op uw energieverbruik',
-      'Een bestaande installatie uitbreiden met nieuwe energieverbruikers of productie'
+      'U wilt thuis of op het werk comfortabel elektrisch laden',
+      'Uw elektrische aansluiting moet slim over het beschikbare vermogen verdelen',
+      'U wilt laadpaal, zonnepanelen en thuisbatterij later kunnen combineren'
     ],
-    note: 'Elke installatie start met een technische controle. Zo sluiten vermogen, bekabeling en beveiligingen correct aan op de bestaande situatie.',
-    primaryLabel: 'Vraag energieadvies aan',
+    note: 'U krijgt een nette installatie met kwaliteitsmaterialen, een volledige functietest en duidelijke uitleg over het laden en de app.',
+    primaryLabel: 'Vraag laadpaaladvies aan',
     primaryHref: '#offerte',
-    formValue: 'Laadpaal en/of zonnepanelen'
+    formValue: 'Laadpaal'
+  },
+  thuisbatterijen: {
+    anchor: 'dienst-thuisbatterijen',
+    icon: 'battery-charging',
+    kicker: 'Meer eigen energie gebruiken',
+    title: 'Thuisbatterijen op maat van uw verbruik',
+    intro: 'Bewaar de energie die uw zonnepanelen overdag produceren en gebruik ze wanneer uw woning ze nodig heeft. Zo haalt u meer uit uw eigen productie en beheert u energie slimmer.',
+    image: 'assets/video_scene3_electrical_work.jpg',
+    imageAlt: 'Technische controle van een elektrische installatie voor slimme energieopslag',
+    visualLabel: 'Capaciteit correct berekend',
+    chips: ['Verbruiksanalyse', 'Slim energiebeheer', 'Nazorg inbegrepen'],
+    scope: [
+      'Analyse van uw energieverbruik, zonneproductie en dagelijkse verbruikspieken',
+      'Advies over de batterijcapaciteit die past bij uw huidige of toekomstige installatie',
+      'Professionele plaatsing, configuratie, ingebruikname en ondersteuning'
+    ],
+    fit: [
+      'U wilt meer van uw zelf opgewekte zonne-energie gebruiken',
+      'Uw verbruik ligt vaak buiten de uren met de meeste zonneproductie',
+      'U zoekt een toekomstgerichte uitbreiding voor bestaande of geplande zonnepanelen'
+    ],
+    note: 'Een passende batterij begint bij correcte data. Daarom kijken we eerst naar verbruik, productie en installatie voor we een capaciteit adviseren.',
+    primaryLabel: 'Bespreek uw thuisbatterij',
+    primaryHref: '#offerte',
+    formValue: 'Thuisbatterij'
+  },
+  zonnepanelen: {
+    anchor: 'dienst-zonnepanelen',
+    icon: 'sun',
+    kicker: 'Duurzaam zelf opwekken',
+    title: 'Zonnepanelen voor woning of onderneming',
+    intro: 'Verlaag uw afhankelijkheid van het elektriciteitsnet met een correct gedimensioneerde zonne-installatie. BenTech Solutions begeleidt u van persoonlijk advies tot veilige aansluiting en oplevering.',
+    image: 'assets/video_scene4_bright_home.jpg',
+    imageAlt: 'Moderne woning die klaar is voor duurzame zonne-energie',
+    visualLabel: 'Van advies tot oplevering',
+    chips: ['Correct gedimensioneerd', 'Kwaliteitsmaterialen', 'Veilig getest'],
+    scope: [
+      'Persoonlijk advies en dimensionering op basis van dak, installatie en verbruik',
+      'Professionele montage van zonnepanelen, omvormer en elektrische beveiliging',
+      'Veilige aansluiting, functietest en duidelijke uitleg bij oplevering'
+    ],
+    fit: [
+      'U wilt uw energiekosten structureel verlagen met eigen productie',
+      'U zoekt een duurzame investering voor uw woning of onderneming',
+      'U wilt zonnepanelen combineren met een laadpaal of thuisbatterij'
+    ],
+    note: 'BenTech Solutions werkt met duurzame kwaliteitsmaterialen en stemt elk onderdeel af op een veilige, betrouwbare en nette installatie.',
+    primaryLabel: 'Vraag zonne-energieadvies aan',
+    primaryHref: '#offerte',
+    formValue: 'Zonnepanelen'
   }
 };
 
@@ -136,6 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   initMobileMenu();
   initServiceExperience();
+  initQuoteShortcuts();
   initSmoothScroll();
   initScrollReveal();
   initVantaHero();
@@ -208,6 +259,11 @@ function initServiceExperience() {
   let lastTrigger = null;
   let openingTimer = null;
   let preserveHashOnClose = false;
+  const findServiceEntryForHash = () => {
+    const directMatch = Object.entries(SERVICE_DETAILS).find(([, detail]) => `#${detail.anchor}` === window.location.hash);
+    if (directMatch) return directMatch;
+    return window.location.hash === '#dienst-energie' ? ['laadpalen', SERVICE_DETAILS.laadpalen] : null;
+  };
 
   const closeDropdown = () => {
     if (!dropdown || !dropdownToggle) return;
@@ -329,6 +385,7 @@ function initServiceExperience() {
     const formValue = modalPrimary.dataset.formValue;
     const serviceSelect = document.getElementById('q-service');
     if (formValue && serviceSelect) serviceSelect.value = formValue;
+    switchTab('quote');
 
     preserveHashOnClose = true;
     dialog.close();
@@ -337,7 +394,7 @@ function initServiceExperience() {
   });
 
   window.addEventListener('hashchange', () => {
-    const entry = Object.entries(SERVICE_DETAILS).find(([, detail]) => `#${detail.anchor}` === window.location.hash);
+    const entry = findServiceEntryForHash();
     if (entry) {
       if (!dialog.open || dialog.dataset.service !== entry[0]) openService(entry[0], null, false);
     } else if (dialog.open) {
@@ -346,8 +403,20 @@ function initServiceExperience() {
     }
   });
 
-  const initialEntry = Object.entries(SERVICE_DETAILS).find(([, detail]) => `#${detail.anchor}` === window.location.hash);
+  const initialEntry = findServiceEntryForHash();
   if (initialEntry) requestAnimationFrame(() => openService(initialEntry[0], null, false));
+}
+
+function initQuoteShortcuts() {
+  const serviceSelect = document.getElementById('q-service');
+
+  document.querySelectorAll('[data-quote-service]').forEach(link => {
+    link.addEventListener('click', () => {
+      const service = link.dataset.quoteService;
+      if (service && serviceSelect) serviceSelect.value = service;
+      switchTab('quote');
+    });
+  });
 }
 
 // Scroll Reveal with anime.js
@@ -355,6 +424,7 @@ function initScrollReveal() {
   const revealElements = document.querySelectorAll(
     '.section-header, .emergency-card, .bento-card, .step-card, ' +
     '.review-card, .faq-item, .about-grid, .request-box-wrapper, ' +
+    '.process-project-note, .payment-spread, ' +
     '.lamp-portrait-wrapper, .floating-badge'
   );
 
