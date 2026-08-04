@@ -309,6 +309,7 @@ h2 { font-weight: 600; }
 }
 
 .main-nav > a,
+.nav-dropdown-link,
 .nav-dropdown-toggle {
   color: var(--text-muted);
   transition: color var(--transition-fast);
@@ -316,7 +317,7 @@ h2 { font-weight: 600; }
 }
 
 .main-nav > a::after,
-.nav-dropdown-toggle::after {
+.nav-dropdown-link::after {
   content: '';
   position: absolute;
   bottom: -4px;
@@ -330,28 +331,44 @@ h2 { font-weight: 600; }
 }
 
 .main-nav > a:hover,
+.nav-dropdown-link:hover,
+.nav-dropdown:focus-within .nav-dropdown-link,
+.nav-dropdown:hover .nav-dropdown-link,
 .nav-dropdown-toggle:hover,
 .nav-dropdown-toggle[aria-expanded="true"] { color: var(--primary); }
 .main-nav > a:hover::after,
-.nav-dropdown-toggle:hover::after,
-.nav-dropdown-toggle[aria-expanded="true"]::after { transform: scaleX(1); }
+.nav-dropdown-link:hover::after,
+.nav-dropdown:focus-within .nav-dropdown-link::after,
+.nav-dropdown:hover .nav-dropdown-link::after { transform: scaleX(1); }
 
 .nav-dropdown {
   position: relative;
   display: flex;
   align-items: center;
+  gap: 0.15rem;
 }
+
+.nav-dropdown-link { display: inline-flex; align-items: center; }
 
 .nav-dropdown-toggle {
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
   padding: 0;
   border: 0;
+  border-radius: 6px;
   background: none;
   color: var(--text-muted);
   font: inherit;
   cursor: pointer;
+}
+
+.nav-dropdown-toggle:hover,
+.nav-dropdown-toggle:focus-visible,
+.nav-dropdown-toggle[aria-expanded="true"] {
+  background: rgba(0, 200, 117, 0.08);
 }
 
 .nav-dropdown-toggle svg {
@@ -1635,15 +1652,23 @@ body.service-modal-open { overflow: hidden; }
     z-index: 200;
   }
   .nav-dropdown {
-    display: block;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 44px;
+    align-items: center;
+    gap: 0;
     width: 100%;
   }
-  .nav-dropdown-toggle {
+  .nav-dropdown-link {
     width: 100%;
-    justify-content: space-between;
-    padding: 0.3rem 0;
+    padding: 0.55rem 0;
+  }
+  .nav-dropdown-link::after { display: none; }
+  .nav-dropdown-toggle {
+    width: 44px;
+    height: 44px;
   }
   .services-dropdown {
+    grid-column: 1 / -1;
     position: static;
     display: none;
     width: 100%;

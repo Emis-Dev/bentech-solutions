@@ -33,7 +33,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.topology.min.js" defer></script>
 
-  <link rel="stylesheet" href="style.css?v=energy-20260804">
+  <link rel="stylesheet" href="style.css?v=navflow-20260804">
 </head>
 <body>
 
@@ -68,8 +68,8 @@
         <a href="#home">Home</a>
         <a href="#spoed">Spoedhulp</a>
         <div class="nav-dropdown">
-          <button class="nav-dropdown-toggle" id="servicesDropdownToggle" type="button" aria-expanded="false" aria-controls="servicesDropdown">
-            Diensten
+          <a href="#diensten" class="nav-dropdown-link">Diensten</a>
+          <button class="nav-dropdown-toggle" id="servicesDropdownToggle" type="button" aria-label="Toon submenu met diensten" aria-expanded="false" aria-controls="servicesDropdown">
             <i data-lucide="chevron-down" class="icon-xs" aria-hidden="true"></i>
           </button>
           <div class="services-dropdown" id="servicesDropdown" aria-label="Elektrische en slimme energiediensten">
@@ -889,6 +889,6 @@
     </a>
   </div>
 
-  <script src="main.js?v=energy-20260804"></script>
+  <script src="main.js?v=navflow-20260804"></script>
 </body>
 </html>

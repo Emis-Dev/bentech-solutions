@@ -224,6 +224,9 @@ function initSmoothScroll() {
         const target = document.querySelector(href);
         if (target) {
           e.preventDefault();
+          if (window.location.hash !== href) {
+            window.history.pushState({}, '', href);
+          }
           target.scrollIntoView({ behavior: 'smooth' });
         }
       }
@@ -235,6 +238,7 @@ function initSmoothScroll() {
 function initServiceExperience() {
   const dialog = document.getElementById('serviceModal');
   const dropdown = document.querySelector('.nav-dropdown');
+  const dropdownLink = document.querySelector('.nav-dropdown-link');
   const dropdownToggle = document.getElementById('servicesDropdownToggle');
   const closeButton = document.getElementById('serviceModalClose');
   const serviceLinks = document.querySelectorAll('[data-service-link]');
@@ -258,6 +262,7 @@ function initServiceExperience() {
   const mobileToggle = document.getElementById('mobileToggle');
   let lastTrigger = null;
   let openingTimer = null;
+  let scrollEndHandler = null;
   let preserveHashOnClose = false;
   const findServiceEntryForHash = () => {
     const directMatch = Object.entries(SERVICE_DETAILS).find(([, detail]) => `#${detail.anchor}` === window.location.hash);
@@ -269,6 +274,16 @@ function initServiceExperience() {
     if (!dropdown || !dropdownToggle) return;
     dropdown.classList.remove('is-open');
     dropdownToggle.setAttribute('aria-expanded', 'false');
+    dropdownToggle.setAttribute('aria-label', 'Toon submenu met diensten');
+  };
+
+  const clearPendingOpen = () => {
+    window.clearTimeout(openingTimer);
+    openingTimer = null;
+    if (scrollEndHandler) {
+      window.removeEventListener('scrollend', scrollEndHandler);
+      scrollEndHandler = null;
+    }
   };
 
   if (dropdown && dropdownToggle) {
@@ -276,6 +291,12 @@ function initServiceExperience() {
       event.stopPropagation();
       const isOpen = dropdown.classList.toggle('is-open');
       dropdownToggle.setAttribute('aria-expanded', String(isOpen));
+      dropdownToggle.setAttribute('aria-label', isOpen ? 'Verberg submenu met diensten' : 'Toon submenu met diensten');
+    });
+
+    dropdownLink?.addEventListener('click', (event) => {
+      closeDropdown();
+      if (event.detail > 0) dropdownLink.blur();
     });
 
     document.addEventListener('click', (event) => {
@@ -334,17 +355,36 @@ function initServiceExperience() {
       window.history.pushState({ service: key }, '', nextHash);
     }
 
-    const target = document.getElementById(detail.anchor);
-    if (target) {
-      target.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'center' });
+    clearPendingOpen();
+    populateDialog(key);
+
+    const revealDialog = () => {
+      clearPendingOpen();
+      openingTimer = window.setTimeout(() => {
+        if (!dialog.open) dialog.showModal();
+        document.body.classList.add('service-modal-open');
+        openingTimer = null;
+      }, prefersReducedMotion ? 0 : 110);
+    };
+
+    const target = matchingCard;
+    if (!target || prefersReducedMotion) {
+      target?.scrollIntoView({ behavior: 'auto', block: 'center' });
+      revealDialog();
+      return;
     }
 
-    window.clearTimeout(openingTimer);
-    openingTimer = window.setTimeout(() => {
-      populateDialog(key);
-      if (!dialog.open) dialog.showModal();
-      document.body.classList.add('service-modal-open');
-    }, prefersReducedMotion ? 0 : 320);
+    const targetRect = target.getBoundingClientRect();
+    const scrollDistance = Math.abs((targetRect.top + targetRect.height / 2) - window.innerHeight / 2);
+    if (scrollDistance < 24) {
+      revealDialog();
+      return;
+    }
+
+    scrollEndHandler = revealDialog;
+    window.addEventListener('scrollend', scrollEndHandler, { once: true });
+    openingTimer = window.setTimeout(revealDialog, 1600);
+    target.scrollIntoView({ behavior: 'smooth', block: 'center' });
   };
 
   serviceLinks.forEach(link => {
