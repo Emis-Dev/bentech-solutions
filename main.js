@@ -571,24 +571,25 @@ function handleFormSubmit(event, formType) {
   window.open(`https://wa.me/${phone}?text=${encoded}`, '_blank');
 }
 
-// Vanta Topology Hero Background Animation (Perpetual Flow & Smooth Line Decay)
+// Vanta Topology Hero Background Animation (Mobile Optimized & Auto-Paused on Scroll)
 function initVantaHero() {
   const heroEl = document.getElementById('home');
   if (!heroEl) return;
 
   let vantaEffect = null;
+  const isMobile = window.innerWidth <= 768 || ('ontouchstart' in window);
 
   function tryInitVanta() {
     if (typeof VANTA !== 'undefined' && typeof VANTA.TOPOLOGY === 'function' && typeof p5 !== 'undefined') {
       vantaEffect = VANTA.TOPOLOGY({
         el: "#home",
-        mouseControls: true,
-        touchControls: true,
+        mouseControls: !isMobile,
+        touchControls: false,
         gyroControls: false,
         minHeight: 200.00,
         minWidth: 200.00,
         scale: 1.00,
-        scaleMobile: 1.00,
+        scaleMobile: 3.00,
         color: 0x00c875,
         backgroundColor: 0x050a15
       });
@@ -608,6 +609,22 @@ function initVantaHero() {
 
             originalDraw.call(this);
           };
+
+          // Auto-pause Vanta p5 loop when hero section is not visible to maximize mobile scroll performance
+          if ('IntersectionObserver' in window) {
+            const observer = new IntersectionObserver((entries) => {
+              entries.forEach(entry => {
+                if (vantaEffect && vantaEffect.p5) {
+                  if (entry.isIntersecting) {
+                    vantaEffect.p5.loop();
+                  } else {
+                    vantaEffect.p5.noLoop();
+                  }
+                }
+              });
+            }, { threshold: 0.05 });
+            observer.observe(heroEl);
+          }
         }
       }, 100);
     } else {
