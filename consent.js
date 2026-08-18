@@ -5,6 +5,7 @@
 
   const CONSENT_STORAGE_KEY = 'bentech_marketing_consent_v1';
   const GOOGLE_TAG_ID = 'GT-KDD6ZCX8';
+  const PHONE_CONVERSION_DESTINATION = 'AW-17549753857/w1BTCIOH_-McEIH8r7BB';
   const CONSENT_GRANTED = 'granted';
   const CONSENT_DENIED = 'denied';
 
@@ -76,6 +77,32 @@
     });
 
     if (!consentState) showBanner(false);
+  });
+
+  // Track every current and future telephone link only after marketing consent.
+  // Event delegation also covers the telephone CTA populated in the service dialog.
+  document.addEventListener('click', (event) => {
+    const phoneLink = event.target.closest?.('a[href^="tel:"]');
+    if (!phoneLink || event.defaultPrevented || consentState !== CONSENT_GRANTED) return;
+
+    const phoneUrl = phoneLink.href;
+    let navigationStarted = false;
+    const continueToPhone = () => {
+      if (navigationStarted) return;
+      navigationStarted = true;
+      window.location.href = phoneUrl;
+    };
+
+    event.preventDefault();
+    window.gtag('event', 'conversion', {
+      send_to: PHONE_CONVERSION_DESTINATION,
+      value: 1.0,
+      currency: 'EUR',
+      event_callback: continueToPhone
+    });
+
+    // Never leave a visitor waiting if Google is unavailable or blocked.
+    window.setTimeout(continueToPhone, 1000);
   });
 
   function setConsent(nextState) {
