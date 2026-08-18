@@ -1150,6 +1150,7 @@ body.service-modal-open { overflow: hidden; }
   background-color: var(--bg-secondary);
   border-top: 1px solid var(--border-subtle);
 }
+.payment-section .section-title { font-size: clamp(1.5rem, 7.8vw, 2.5rem); }
 
 .payment-container { max-width: 960px; }
 
@@ -1607,7 +1608,44 @@ body.service-modal-open { overflow: hidden; }
 .contact-email-inline { color: var(--primary); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; transition: opacity var(--transition-fast); }
 .contact-email-inline:hover { opacity: 0.8; }
 .footer-bottom-inner { display: flex; justify-content: space-between; align-items: center; padding-top: 1.5rem; border-top: 1px solid var(--border-subtle); color: var(--text-subtle); font-size: 0.8rem; }
+.footer-meta-actions { display: flex; align-items: center; gap: 1rem; }
+.footer-consent-button {
+  border: 0;
+  padding: 0.2rem 0;
+  background: transparent;
+  color: var(--text-muted);
+  font: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+.footer-consent-button:hover { color: var(--primary); }
+.footer-consent-button:focus-visible { outline: 2px solid var(--primary); outline-offset: 4px; border-radius: 2px; }
 .tomcool-credit a { color: var(--primary); font-weight: 600; }
+
+/* Marketing consent — Google Ads stays blocked until the visitor opts in */
+.consent-banner[hidden] { display: none; }
+.consent-banner {
+  position: fixed;
+  inset-inline: max(1rem, calc((100vw - 1200px) / 2));
+  bottom: 1rem;
+  z-index: 10050;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.25rem;
+  border: 1px solid var(--border-emerald);
+  border-radius: 14px;
+  background: #0d1629;
+  box-shadow: 0 18px 48px -12px rgba(0, 0, 0, 0.72);
+}
+.consent-banner__copy { min-width: 0; max-width: 72ch; }
+.consent-banner__copy h2 { margin-bottom: 0.35rem; font-size: 1.05rem; }
+.consent-banner__copy p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.55; text-wrap: pretty; }
+.consent-banner__actions { display: flex; gap: 0.65rem; }
+.consent-banner__actions .btn { min-height: 44px; white-space: nowrap; }
 
 /* Mobile Sticky Bar */
 .mobile-sticky-bar {
@@ -1729,6 +1767,17 @@ body.service-modal-open { overflow: hidden; }
   .payment-emergency { padding: 1.25rem; }
   .footer-grid { grid-template-columns: 1fr; }
   .footer-bottom-inner { flex-direction: column; gap: 0.4rem; text-align: center; }
+  .footer-meta-actions { flex-direction: column; gap: 0.4rem; }
+
+  .consent-banner {
+    inset-inline: 0.75rem;
+    bottom: calc(4.7rem + env(safe-area-inset-bottom));
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  .consent-banner__actions { display: grid; grid-template-columns: 1fr; }
+  .consent-banner__actions .btn { min-height: 48px; width: 100%; }
 
   .lamp-portrait-circle { width: 220px; height: 220px; }
   .floating-badge { font-size: 0.7rem; padding: 0.3rem 0.65rem; }

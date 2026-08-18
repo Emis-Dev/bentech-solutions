@@ -15,6 +15,9 @@
   <meta property="og:type" content="website">
   <link rel="canonical" href="https://bentechsolutions.be/">
 
+  <!-- Google Ads tag: loaded only after explicit marketing consent -->
+  <script src="consent.js?v=googleads-20260818"></script>
+
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/logo.png">
 
@@ -873,7 +876,10 @@
     <div class="footer-bottom">
       <div class="container footer-bottom-inner">
         <p>&copy; 2026 BenTech Solutions CommV (BTW BE 1025.714.523). Alle rechten voorbehouden.</p>
-        <p class="tomcool-credit">Website door <a href="https://web.tom.cool" target="_blank" rel="noopener">web.tom.cool</a></p>
+        <div class="footer-meta-actions">
+          <button type="button" class="footer-consent-button" id="manageMarketingConsent">Cookievoorkeuren</button>
+          <p class="tomcool-credit">Website door <a href="https://web.tom.cool" target="_blank" rel="noopener">web.tom.cool</a></p>
+        </div>
       </div>
     </div>
   </footer>
@@ -889,6 +895,17 @@
       WhatsApp
     </a>
   </div>
+
+  <aside class="consent-banner" id="marketingConsentBanner" aria-labelledby="marketingConsentTitle" hidden>
+    <div class="consent-banner__copy">
+      <h2 id="marketingConsentTitle">Uw privacy, uw keuze</h2>
+      <p>Met uw toestemming gebruikt BenTech Solutions een Google Ads-tag om campagnes en websitebezoek te meten. Weigeren heeft geen invloed op de werking van deze website.</p>
+    </div>
+    <div class="consent-banner__actions">
+      <button type="button" class="btn btn-outline" id="rejectMarketingConsent">Alles weigeren</button>
+      <button type="button" class="btn btn-emerald" id="acceptMarketingConsent">Marketing toestaan</button>
+    </div>
+  </aside>
 
   <script src="main.js?v=servicephotos-20260804"></script>
 </body>
