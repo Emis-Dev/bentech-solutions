@@ -9,3 +9,6 @@
 
 /main.js
   Cache-Control: no-cache
+
+/consent.js
+  Cache-Control: no-cache
