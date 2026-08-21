@@ -571,66 +571,144 @@ function handleFormSubmit(event, formType) {
   window.open(`https://wa.me/${phone}?text=${encoded}`, '_blank');
 }
 
-// Vanta Topology Hero Background Animation (Mobile Optimized & Auto-Paused on Scroll)
+// Vanta Topology hero: restore the original desktop effect without shipping its
+// p5/Vanta runtime to mobile visitors. Keep this breakpoint aligned with CSS.
+const VANTA_DESKTOP_QUERY = '(min-width: 769px) and (hover: hover) and (pointer: fine)';
+const VANTA_P5_SRC = 'https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js';
+const VANTA_TOPOLOGY_SRC = 'https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.topology.min.js';
+
+function loadScriptOnce(id, src, isReady) {
+  if (isReady()) return Promise.resolve();
+
+  const existingScript = document.getElementById(id);
+  if (existingScript) {
+    return new Promise((resolve, reject) => {
+      if (existingScript.dataset.loaded === 'true' || isReady()) {
+        resolve();
+        return;
+      }
+      existingScript.addEventListener('load', resolve, { once: true });
+      existingScript.addEventListener('error', reject, { once: true });
+    });
+  }
+
+  return new Promise((resolve, reject) => {
+    const script = document.createElement('script');
+    script.id = id;
+    script.src = src;
+    script.async = true;
+    script.addEventListener('load', () => {
+      script.dataset.loaded = 'true';
+      resolve();
+    }, { once: true });
+    script.addEventListener('error', reject, { once: true });
+    document.head.append(script);
+  });
+}
+
+function createP5Topology(options) {
+  const vantaBasePrototype = window.VANTA?.VantaBase?.prototype;
+  const originalInitThree = vantaBasePrototype?.initThree;
+
+  // Vanta's shared base tries to initialize THREE even for p5-only effects.
+  // Bypass that irrelevant step only while constructing Topology; never fake a
+  // renderer, because its missing canvas caused the original desktop failure.
+  if (originalInitThree) vantaBasePrototype.initThree = function() {};
+  try {
+    return window.VANTA.TOPOLOGY(options);
+  } finally {
+    if (originalInitThree) vantaBasePrototype.initThree = originalInitThree;
+  }
+}
+
 function initVantaHero() {
   const heroEl = document.getElementById('home');
   if (!heroEl) return;
 
+  const desktopMedia = window.matchMedia(VANTA_DESKTOP_QUERY);
+  const reducedMotionMedia = window.matchMedia('(prefers-reduced-motion: reduce)');
   let vantaEffect = null;
-  const isMobile = window.innerWidth <= 768 || ('ontouchstart' in window);
+  let visibilityObserver = null;
+  let loadPromise = null;
+  let lifecycle = 0;
 
-  function tryInitVanta() {
-    if (typeof VANTA !== 'undefined' && typeof VANTA.TOPOLOGY === 'function' && typeof p5 !== 'undefined') {
-      vantaEffect = VANTA.TOPOLOGY({
-        el: "#home",
-        mouseControls: !isMobile,
-        touchControls: false,
+  const shouldRun = () => desktopMedia.matches && !reducedMotionMedia.matches;
+
+  const stopVanta = () => {
+    lifecycle += 1;
+    visibilityObserver?.disconnect();
+    visibilityObserver = null;
+    vantaEffect?.destroy();
+    vantaEffect = null;
+  };
+
+  const startVanta = () => {
+    if (vantaEffect || loadPromise || !shouldRun()) return;
+
+    const requestedLifecycle = lifecycle;
+    loadPromise = (async () => {
+      await loadScriptOnce('bentech-p5', VANTA_P5_SRC, () => typeof window.p5 !== 'undefined');
+      if (!shouldRun() || requestedLifecycle !== lifecycle) return;
+
+      await loadScriptOnce(
+        'bentech-vanta-topology',
+        VANTA_TOPOLOGY_SRC,
+        () => typeof window.VANTA?.TOPOLOGY === 'function'
+      );
+      if (!shouldRun() || requestedLifecycle !== lifecycle) return;
+
+      vantaEffect = createP5Topology({
+        el: '#home',
+        mouseControls: true,
+        touchControls: true,
         gyroControls: false,
         minHeight: 200.00,
         minWidth: 200.00,
         scale: 1.00,
-        scaleMobile: 3.00,
+        scaleMobile: 1.00,
         color: 0x00c875,
         backgroundColor: 0x050a15
       });
 
-      // Hook into p5 draw loop to smoothly fade old trails and maintain perpetual, calm motion
-      setTimeout(() => {
-        if (vantaEffect && vantaEffect.p5 && vantaEffect.p5.draw) {
-          const originalDraw = vantaEffect.p5.draw;
-          vantaEffect.p5.draw = function() {
-            // Apply subtle semi-transparent background overlay to fade old lines smoothly
-            vantaEffect.p5.push();
-            vantaEffect.p5.resetMatrix();
-            vantaEffect.p5.noStroke();
-            vantaEffect.p5.fill(5, 10, 21, 10); // #050a15 with ~4% opacity
-            vantaEffect.p5.rect(0, 0, vantaEffect.p5.width, vantaEffect.p5.height);
-            vantaEffect.p5.pop();
+      const effectForHook = vantaEffect;
+      window.setTimeout(() => {
+        if (vantaEffect !== effectForHook || !effectForHook?.p5?.draw) return;
 
-            originalDraw.call(this);
-          };
+        const originalDraw = effectForHook.p5.draw;
+        effectForHook.p5.draw = function() {
+          effectForHook.p5.push();
+          effectForHook.p5.resetMatrix();
+          effectForHook.p5.noStroke();
+          effectForHook.p5.fill(5, 10, 21, 10);
+          effectForHook.p5.rect(0, 0, effectForHook.p5.width, effectForHook.p5.height);
+          effectForHook.p5.pop();
+          originalDraw.call(this);
+        };
 
-          // Auto-pause Vanta p5 loop when hero section is not visible to maximize mobile scroll performance
-          if ('IntersectionObserver' in window) {
-            const observer = new IntersectionObserver((entries) => {
-              entries.forEach(entry => {
-                if (vantaEffect && vantaEffect.p5) {
-                  if (entry.isIntersecting) {
-                    vantaEffect.p5.loop();
-                  } else {
-                    vantaEffect.p5.noLoop();
-                  }
-                }
-              });
-            }, { threshold: 0.05 });
-            observer.observe(heroEl);
-          }
+        if ('IntersectionObserver' in window) {
+          visibilityObserver = new IntersectionObserver(([entry]) => {
+            if (vantaEffect !== effectForHook) return;
+            if (entry.isIntersecting) effectForHook.p5.loop();
+            else effectForHook.p5.noLoop();
+          }, { threshold: 0.05 });
+          visibilityObserver.observe(heroEl);
         }
       }, 100);
-    } else {
-      setTimeout(tryInitVanta, 100);
-    }
-  }
+    })().catch(() => {
+      // The solid hero background is the intentional resilient fallback.
+      stopVanta();
+    }).finally(() => {
+      loadPromise = null;
+    });
+  };
 
-  tryInitVanta();
+  const syncVanta = () => {
+    if (shouldRun()) startVanta();
+    else stopVanta();
+  };
+
+  desktopMedia.addEventListener('change', syncVanta);
+  reducedMotionMedia.addEventListener('change', syncVanta);
+  window.addEventListener('pagehide', stopVanta, { once: true });
+  syncVanta();
 }
