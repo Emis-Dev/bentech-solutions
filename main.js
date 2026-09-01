@@ -185,6 +185,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   initMobileMenu();
+  initServicesDropdown();
   initServiceExperience();
   initQuoteShortcuts();
   initSmoothScroll();
@@ -213,6 +214,41 @@ function initMobileMenu() {
   }
 }
 
+// Services dropdown is shared by the homepage and the dedicated service pages.
+function initServicesDropdown() {
+  const dropdown = document.querySelector('.nav-dropdown');
+  const dropdownLink = document.querySelector('.nav-dropdown-link');
+  const dropdownToggle = document.getElementById('servicesDropdownToggle');
+
+  if (!dropdown || !dropdownToggle) return;
+
+  const closeDropdown = () => {
+    dropdown.classList.remove('is-open');
+    dropdownToggle.setAttribute('aria-expanded', 'false');
+    dropdownToggle.setAttribute('aria-label', 'Toon submenu met diensten');
+  };
+
+  dropdownToggle.addEventListener('click', (event) => {
+    event.stopPropagation();
+    const isOpen = dropdown.classList.toggle('is-open');
+    dropdownToggle.setAttribute('aria-expanded', String(isOpen));
+    dropdownToggle.setAttribute('aria-label', isOpen ? 'Verberg submenu met diensten' : 'Toon submenu met diensten');
+  });
+
+  dropdownLink?.addEventListener('click', (event) => {
+    closeDropdown();
+    if (event.detail > 0) dropdownLink.blur();
+  });
+
+  dropdown.querySelectorAll('.services-dropdown a').forEach(link => {
+    link.addEventListener('click', closeDropdown);
+  });
+
+  document.addEventListener('click', (event) => {
+    if (!dropdown.contains(event.target)) closeDropdown();
+  });
+}
+
 // Smooth Scrolling
 function initSmoothScroll() {
   document.querySelectorAll('a[href^="#"]').forEach(link => {
@@ -237,9 +273,6 @@ function initSmoothScroll() {
 // Services dropdown, shareable anchors and dynamic detail dialog
 function initServiceExperience() {
   const dialog = document.getElementById('serviceModal');
-  const dropdown = document.querySelector('.nav-dropdown');
-  const dropdownLink = document.querySelector('.nav-dropdown-link');
-  const dropdownToggle = document.getElementById('servicesDropdownToggle');
   const closeButton = document.getElementById('serviceModalClose');
   const serviceLinks = document.querySelectorAll('[data-service-link]');
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -270,13 +303,6 @@ function initServiceExperience() {
     return window.location.hash === '#dienst-energie' ? ['laadpalen', SERVICE_DETAILS.laadpalen] : null;
   };
 
-  const closeDropdown = () => {
-    if (!dropdown || !dropdownToggle) return;
-    dropdown.classList.remove('is-open');
-    dropdownToggle.setAttribute('aria-expanded', 'false');
-    dropdownToggle.setAttribute('aria-label', 'Toon submenu met diensten');
-  };
-
   const clearPendingOpen = () => {
     window.clearTimeout(openingTimer);
     openingTimer = null;
@@ -285,24 +311,6 @@ function initServiceExperience() {
       scrollEndHandler = null;
     }
   };
-
-  if (dropdown && dropdownToggle) {
-    dropdownToggle.addEventListener('click', (event) => {
-      event.stopPropagation();
-      const isOpen = dropdown.classList.toggle('is-open');
-      dropdownToggle.setAttribute('aria-expanded', String(isOpen));
-      dropdownToggle.setAttribute('aria-label', isOpen ? 'Verberg submenu met diensten' : 'Toon submenu met diensten');
-    });
-
-    dropdownLink?.addEventListener('click', (event) => {
-      closeDropdown();
-      if (event.detail > 0) dropdownLink.blur();
-    });
-
-    document.addEventListener('click', (event) => {
-      if (!dropdown.contains(event.target)) closeDropdown();
-    });
-  }
 
   const renderList = (container, items) => {
     container.replaceChildren(...items.map(item => {
@@ -346,7 +354,6 @@ function initServiceExperience() {
 
     const matchingCard = document.getElementById(detail.anchor);
     lastTrigger = trigger?.closest('#servicesDropdown') ? matchingCard : (trigger || lastTrigger);
-    closeDropdown();
     if (mainNav) mainNav.classList.remove('open');
     if (mobileToggle) mobileToggle.classList.remove('is-active');
 
