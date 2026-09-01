@@ -4,3 +4,6 @@ remove-bg.js
 package.json
 package-lock.json
 .DS_Store
+.impeccable/mocks/
+.impeccable/qa/
+.impeccable/generate-og.cjs

@@ -1,0 +1,131 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-02T00:00:00+02:00",
+  "title": "Design System: BenTech Solutions",
+  "extensions": {
+    "colorMeta": {
+      "midnight": { "role": "neutral", "displayName": "Midnight Canvas", "canonical": "#050a15", "tonalRamp": ["#020409", "#050a15", "#0b1425", "#17243a", "#34445d", "#68778b", "#aab4c1", "#eef2f7"] },
+      "navy-surface": { "role": "neutral", "displayName": "Navy Section", "canonical": "#0a1124", "tonalRamp": ["#030611", "#0a1124", "#121d36", "#20304a", "#3c4b64", "#6d7b90", "#adb7c5", "#eef2f7"] },
+      "navy-card": { "role": "neutral", "displayName": "Navy Card", "canonical": "#0d1629", "tonalRamp": ["#040711", "#0d1629", "#17233a", "#26354e", "#42516a", "#728096", "#b1bbc8", "#eff3f8"] },
+      "navy-card-hover": { "role": "neutral", "displayName": "Lifted Navy", "canonical": "#111e3a", "tonalRamp": ["#050813", "#111e3a", "#1b2b49", "#2c3d5a", "#485870", "#77859a", "#b4bdca", "#f0f3f8"] },
+      "emerald": { "role": "primary", "displayName": "Circuit Emerald", "canonical": "#00c875", "tonalRamp": ["#00301c", "#005232", "#007d4a", "#00a861", "#00c875", "#40dc9b", "#8bedc1", "#dcfaec"] },
+      "emerald-light": { "role": "primary", "displayName": "Signal Emerald", "canonical": "#33d491", "tonalRamp": ["#073622", "#0b5b39", "#138456", "#22ad73", "#33d491", "#65e4ae", "#9ff0ce", "#e0faef"] },
+      "emerald-dark": { "role": "primary", "displayName": "Deep Emerald", "canonical": "#009959", "tonalRamp": ["#002f1b", "#004c2d", "#006b3e", "#00864f", "#009959", "#3abd82", "#83dfb1", "#d7f5e8"] },
+      "proof-rail-surface": { "role": "neutral", "displayName": "Proof Rail Navy", "canonical": "#071022", "tonalRamp": ["#02050d", "#071022", "#111c34", "#202e47", "#3d4b63", "#6d7a8e", "#adb7c4", "#eef2f7"] },
+      "review-star": { "role": "secondary", "displayName": "Review Amber", "canonical": "#f59e0b", "tonalRamp": ["#3d2400", "#684000", "#985f00", "#c77e00", "#f59e0b", "#ffbd4a", "#ffda91", "#fff3da"] },
+      "text-main": { "role": "neutral", "displayName": "Cool White", "canonical": "#e8edf5", "tonalRamp": ["#20242a", "#3b414a", "#5b626d", "#7e8794", "#a3acb8", "#c3cad3", "#e8edf5", "#f8fafc"] },
+      "text-muted": { "role": "neutral", "displayName": "Steel Text", "canonical": "#8896ab", "tonalRamp": ["#1b2028", "#303946", "#495668", "#667489", "#8896ab", "#aab5c4", "#cdd4de", "#f1f4f7"] },
+      "text-subtle": { "role": "neutral", "displayName": "Deep Steel", "canonical": "#576b83", "tonalRamp": ["#12171d", "#222c37", "#344454", "#465b70", "#576b83", "#8292a5", "#b4bfcb", "#edf1f5"] },
+      "danger": { "role": "primary", "displayName": "Safety Red", "canonical": "#ef4444", "tonalRamp": ["#3a0b0b", "#681313", "#982020", "#c82e2e", "#ef4444", "#f87878", "#fbb0b0", "#fee5e5"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Large homepage and service hero headlines." },
+      "headline": { "displayName": "Headline", "purpose": "Section titles and decisive content headings." },
+      "body": { "displayName": "Body", "purpose": "Readable service explanations and form guidance." },
+      "label": { "displayName": "Label", "purpose": "Navigation, proof metadata and compact action labels." }
+    },
+    "shadows": [
+      { "name": "card", "value": "0 8px 24px -8px rgba(0, 0, 0, 0.5)", "purpose": "Restrained separation for important cards." },
+      { "name": "proof-rail", "value": "0 28px 80px -36px rgba(0, 0, 0, 0.9)", "purpose": "Ambient separation of the Google Proof Rail from the Vanta field." }
+    ],
+    "motion": [
+      { "name": "ease-out", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Default state and reveal easing." },
+      { "name": "fast", "value": "0.2s cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Hover and focus feedback." }
+    ],
+    "breakpoints": [
+      { "name": "mobile", "value": "768px" },
+      { "name": "vanta-desktop", "value": "769px" },
+      { "name": "editorial-stack", "value": "992px" },
+      { "name": "wide-shell", "value": "1200px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Direct, high-priority action for calls and submissions.",
+      "html": "<button class=\"ds-btn-primary\">Bel spoedlijn</button>",
+      "css": ".ds-btn-primary { min-height: 44px; padding: 0.7rem 1.4rem; border: 1px solid transparent; border-radius: 8px; background: var(--primary, #00c875); color: #041009; font: 600 0.9rem 'Plus Jakarta Sans', system-ui, sans-serif; cursor: pointer; transition: background-color 0.2s, box-shadow 0.2s, transform 0.1s; } .ds-btn-primary:hover { background: var(--primary-light, #33d491); box-shadow: 0 4px 20px rgba(0, 200, 117, 0.25); } .ds-btn-primary:focus-visible { outline: 2px solid var(--primary, #00c875); outline-offset: 2px; } .ds-btn-primary:active { transform: translateY(1px); }"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Calmer secondary action beside a primary conversion path.",
+      "html": "<button class=\"ds-btn-outline\">Vraag offerte aan</button>",
+      "css": ".ds-btn-outline { min-height: 44px; padding: 0.7rem 1.4rem; border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; background: rgba(13,22,41,0.8); color: var(--text-main, #e8edf5); font: 600 0.9rem 'Plus Jakarta Sans', system-ui, sans-serif; cursor: pointer; transition: background-color 0.2s, border-color 0.2s; } .ds-btn-outline:hover { border-color: var(--primary, #00c875); background: rgba(0,200,117,0.08); } .ds-btn-outline:focus-visible { outline: 2px solid var(--primary, #00c875); outline-offset: 2px; }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": null,
+      "description": "Dark, bounded input for quote and contact forms.",
+      "html": "<label class=\"ds-field\">Naam<input type=\"text\" placeholder=\"Uw naam\"></label>",
+      "css": ".ds-field { display: grid; gap: 0.45rem; color: var(--text-main, #e8edf5); font: 600 0.85rem 'Plus Jakarta Sans', system-ui, sans-serif; } .ds-field input { width: 100%; padding: 0.65rem 0.9rem; border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; background: var(--bg-main, #050a15); color: var(--text-main, #e8edf5); font: 400 0.9rem 'Plus Jakarta Sans', system-ui, sans-serif; } .ds-field input:focus-visible { outline: none; border-color: var(--primary, #00c875); box-shadow: 0 0 0 3px rgba(0,200,117,0.1); }"
+    },
+    {
+      "name": "Service Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Tonal service container with restrained interactive lift.",
+      "html": "<article class=\"ds-service-card\"><span>Elektrische hulp</span><h3>Gerichte diagnose</h3><p>Helder advies en een veilige volgende stap.</p></article>",
+      "css": ".ds-service-card { display: grid; gap: 0.65rem; padding: 1.5rem; border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; background: var(--bg-card, #0d1629); color: var(--text-main, #e8edf5); font-family: 'Plus Jakarta Sans', system-ui, sans-serif; transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s; } .ds-service-card span { color: var(--primary-light, #33d491); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; } .ds-service-card h3 { margin: 0; font-size: 1.1rem; } .ds-service-card p { margin: 0; color: var(--text-muted, #8896ab); line-height: 1.6; } .ds-service-card:hover { transform: translateY(-3px); border-color: rgba(0,200,117,0.25); box-shadow: 0 8px 24px -8px rgba(0,0,0,0.5); } .ds-service-card:focus-within { outline: 2px solid var(--primary, #00c875); outline-offset: 3px; }"
+    },
+    {
+      "name": "Navigation Link",
+      "kind": "nav",
+      "refersTo": null,
+      "description": "Quiet shell navigation with an emerald orientation rule.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Voorbeeld\"><a href=\"#\">Diensten</a></nav>",
+      "css": ".ds-nav { display: flex; align-items: center; min-height: 54px; background: var(--bg-main, #050a15); font-family: 'Plus Jakarta Sans', system-ui, sans-serif; } .ds-nav a { position: relative; padding: 0.8rem 0.2rem; color: var(--text-muted, #8896ab); font-size: 0.9rem; text-decoration: none; transition: color 0.2s; } .ds-nav a::after { content: ''; position: absolute; right: 0; bottom: 0.45rem; left: 0; height: 1px; background: var(--primary, #00c875); transform: scaleX(0); transform-origin: left; transition: transform 0.2s; } .ds-nav a:hover { color: var(--text-main, #e8edf5); } .ds-nav a:hover::after { transform: scaleX(1); } .ds-nav a:focus-visible { outline: 2px solid var(--primary, #00c875); outline-offset: 3px; }"
+    },
+    {
+      "name": "Google Proof Rail",
+      "kind": "custom",
+      "refersTo": "google-proof-rail",
+      "description": "Option A signature trust rail: sourced rating, manually controlled review and official Maps path.",
+      "html": "<aside class=\"ds-proof\" aria-label=\"Google-reviews\"><div class=\"ds-proof-rating\"><strong>4,9/5 op Google</strong><span>12 van 13 zijn vijf sterren</span></div><figure><blockquote>“Enorm dankbaar! Top vakman”</blockquote><figcaption>Bouchra Abali · 5 sterren</figcaption></figure><a href=\"#\">Bekijk alle 13 reviews</a></aside>",
+      "css": ".ds-proof { display: grid; grid-template-columns: minmax(210px,.78fr) minmax(0,1.35fr) minmax(190px,.66fr); overflow: hidden; border-block: 1px solid rgba(0,200,117,.72); border-inline: 1px solid rgba(255,255,255,.08); border-radius: 2px; background: var(--proof-rail-surface, #071022); color: var(--text-main, #e8edf5); font-family: 'Plus Jakarta Sans', system-ui, sans-serif; box-shadow: 0 28px 80px -36px rgba(0,0,0,.9); } .ds-proof-rating, .ds-proof figure, .ds-proof a { min-width: 0; padding: 1.25rem 1.4rem; } .ds-proof-rating { display: flex; flex-direction: column; justify-content: center; } .ds-proof-rating strong { font-size: 1.05rem; } .ds-proof-rating span, .ds-proof figcaption { color: var(--text-muted, #8896ab); font-size: .75rem; } .ds-proof figure { margin: 0; border-inline: 1px solid rgba(255,255,255,.08); } .ds-proof blockquote { margin: 0 0 .6rem; font-weight: 600; } .ds-proof a { display: flex; align-items: center; color: var(--primary-light, #33d491); font-size: .82rem; font-weight: 700; text-decoration: none; } .ds-proof a:hover { color: #68e5ac; } .ds-proof a:focus-visible { outline: 2px solid var(--primary, #00c875); outline-offset: -3px; } @media (max-width: 768px) { .ds-proof { grid-template-columns: 1fr; } .ds-proof figure { border-block: 1px solid rgba(255,255,255,.08); border-inline: 0; } }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Green Circuit Editorial",
+    "overview": "BenTech combines a technical midnight-navy foundation with a deliberately scarce emerald signal color. The visual world should feel competent, direct and local: polished enough for planned energy projects, but fast and legible enough for visitors who need an electrician now.\n\nThe dedicated service pages extend the incumbent brand rather than redesign it. Their editorial split layouts pair concise decision-oriented copy with one strong image, followed by structured proof, process, audience, related-service and quote sections. The decorative grid explored during implementation was removed because it competed with the content. Detector warnings about the incumbent Plus Jakarta Sans family were consciously accepted to preserve the established BenTech brand world.\n\nThe homepage extends that same world with the user-selected **Option A Google Proof Rail** as its signature trust component. The wide, solid navy rail places the current Google rating on the left, one manually swipeable attributed review in the middle and the official Google Maps link on the right. It replaces the hero portrait entirely while preserving the existing header identity and the canonical `assets/logo-horizontal.svg` artwork unchanged.",
+    "keyCharacteristics": [
+      "Dark navy tonal layers with emerald used for action, orientation and focus.",
+      "Large, compact headlines balanced by calm, readable body copy.",
+      "Editorial two-column layouts that collapse cleanly to one column.",
+      "A wide Google Proof Rail that makes sourced reputation evidence part of the first viewport.",
+      "Direct contact paths by phone, WhatsApp and quote form.",
+      "Factual, situation-led copy without unverified commercial claims."
+    ],
+    "rules": [
+      { "name": "The Signal Rule", "body": "Emerald identifies action or orientation; it must not become a decorative wash across every surface.", "section": "colors" },
+      { "name": "The One-Family Rule", "body": "Preserve Plus Jakarta Sans across headings, controls and body copy; the detector font warning is an accepted incumbent-brand exception.", "section": "typography" },
+      { "name": "The Flat-By-Default Rule", "body": "Use shadow only when hierarchy or interaction requires it; do not turn every card into a floating tile.", "section": "elevation" },
+      { "name": "The Manual Proof Rule", "body": "The centre review changes only through explicit visitor input; the Proof Rail never autoplays.", "section": "components" }
+    ],
+    "dos": [
+      "**Do** preserve the navy/emerald palette, Plus Jakarta Sans and existing shared shell.",
+      "**Do** write from the visitor's situation and explain that advice follows an assessment of their installation and needs.",
+      "**Do** keep new service imagery explicitly classified as authentic or illustrative.",
+      "**Do** retain semantic HTML, visible keyboard focus, readable contrast and `prefers-reduced-motion` support.",
+      "**Do** preserve `assets/logo-horizontal.svg` and the existing header identity exactly; Option A changes the hero proof area, not the logo.",
+      "**Do** keep the Google Proof Rail manually swipeable, source-linked and free of autoplay.",
+      "**Do** use `--text-muted` or a lighter token for review authors, star counts and dates.",
+      "**Do** keep Google Ads and other marketing tracking consent-gated through `/consent.js`.",
+      "**Do** use root-relative assets and shared files on every nested route."
+    ],
+    "donts": [
+      "**Don't** invent brands, prices, subsidies, guarantees, certifications, product capacities, case studies or scope commitments.",
+      "**Don't** describe generic battery or solar artwork as BenTech's own installation work.",
+      "**Don't** reintroduce the removed decorative grid or let background effects compete with conversion content.",
+      "**Don't** reintroduce a profile photograph in the homepage hero or replace the established BenTech logo.",
+      "**Don't** label Google reviews as verified, autoplay the review rail or hide its controls from keyboard users.",
+      "**Don't** use `--text-subtle` for review metadata on the Proof Rail.",
+      "**Don't** add a new font merely to satisfy an automated detector; the incumbent Plus Jakarta Sans choice is intentional.",
+      "**Don't** bypass consent for call-conversion or other marketing scripts."
+    ]
+  }
+}

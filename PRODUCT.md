@@ -50,6 +50,8 @@ BenTech combines electrical troubleshooting with planned energy solutions and of
 - Real charging-station installation image at `assets/yassir-laadpaal-installatie.jpeg`.
 - Illustrative service images for home batteries and solar panels.
 - Existing quote form, telephone links, WhatsApp links, consent controls, and Google Ads call-conversion implementation.
+- Official Google Business Profile checked on 2 September 2026 at `https://www.google.com/maps?cid=5783644159230400203`: 4.9 out of 5 from 13 reviews, comprising twelve five-star reviews and one four-star review.
+- Short attributed review excerpts may be shown as a dated snapshot when they link back to the official Google listing; reviewer names and relative dates must match the source at the time of the check.
 
 ## Product principles
 
@@ -72,4 +74,4 @@ BenTech combines electrical troubleshooting with planned energy solutions and of
 - Preferred equipment brands and product ranges.
 - Financing, grants, warranties, maintenance plans, and exact lead times.
 - Whether BenTech performs every installation entirely in-house or uses partners for parts of the work.
-- Verified testimonials, certifications, and project case studies for these services.
+- Reviewer permission for broader testimonial reuse, an automated Google review feed, certifications, and project case studies for these services.
