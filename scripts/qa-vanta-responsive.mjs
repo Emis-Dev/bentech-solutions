@@ -5,7 +5,7 @@ const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
 const javascript = readFileSync(new URL('../main.js', import.meta.url), 'utf8');
 
 assert.doesNotMatch(html, /window\.THREE|vanta@latest|p5\.min\.js|vanta\.topology\.min\.js/);
-assert.match(html, /main\.js\?v=vanta-desktop-20260821/);
+assert.match(html, /main\.js\?v=energy-pages-20260902/);
 
 assert.match(javascript, /VANTA_DESKTOP_QUERY = '\(min-width: 769px\) and \(hover: hover\) and \(pointer: fine\)'/);
 assert.match(javascript, /vanta@0\.5\.24\/dist\/vanta\.topology\.min\.js/);
