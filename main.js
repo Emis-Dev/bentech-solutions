@@ -188,6 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initServicesDropdown();
   initServiceExperience();
   initQuoteShortcuts();
+  initReviewCarousel();
   initSmoothScroll();
   initScrollReveal();
   initVantaHero();
@@ -466,13 +467,73 @@ function initQuoteShortcuts() {
   });
 }
 
+function initReviewCarousel() {
+  document.querySelectorAll('[data-review-carousel]').forEach(carousel => {
+    const viewport = carousel.querySelector('[data-review-viewport]');
+    const slides = [...carousel.querySelectorAll('[data-review-slide]')];
+    const previous = carousel.querySelector('[data-review-prev]');
+    const next = carousel.querySelector('[data-review-next]');
+    const position = carousel.querySelector('[data-review-position]');
+
+    if (!viewport || slides.length < 2 || !previous || !next || !position) return;
+
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let activeIndex = 0;
+    let animationFrame = 0;
+
+    slides.forEach((slide, index) => {
+      slide.setAttribute('role', 'group');
+      slide.setAttribute('aria-roledescription', 'review');
+      slide.setAttribute('aria-label', `${index + 1} van ${slides.length}`);
+    });
+
+    const updatePosition = () => {
+      const nextIndex = Math.min(
+        slides.length - 1,
+        Math.max(0, Math.round(viewport.scrollLeft / Math.max(viewport.clientWidth, 1)))
+      );
+      activeIndex = nextIndex;
+      position.textContent = `${activeIndex + 1} / ${slides.length}`;
+    };
+
+    const goTo = index => {
+      activeIndex = (index + slides.length) % slides.length;
+      viewport.scrollTo({
+        left: slides[activeIndex].offsetLeft,
+        behavior: reducedMotion.matches ? 'auto' : 'smooth'
+      });
+      position.textContent = `${activeIndex + 1} / ${slides.length}`;
+    };
+
+    previous.addEventListener('click', () => goTo(activeIndex - 1));
+    next.addEventListener('click', () => goTo(activeIndex + 1));
+
+    viewport.addEventListener('keydown', event => {
+      if (event.key === 'ArrowLeft') {
+        event.preventDefault();
+        goTo(activeIndex - 1);
+      }
+      if (event.key === 'ArrowRight') {
+        event.preventDefault();
+        goTo(activeIndex + 1);
+      }
+    });
+
+    viewport.addEventListener('scroll', () => {
+      window.cancelAnimationFrame(animationFrame);
+      animationFrame = window.requestAnimationFrame(updatePosition);
+    }, { passive: true });
+
+    window.addEventListener('resize', () => goTo(activeIndex), { passive: true });
+  });
+}
+
 // Scroll Reveal with anime.js
 function initScrollReveal() {
   const revealElements = document.querySelectorAll(
     '.section-header, .emergency-card, .bento-card, .step-card, ' +
     '.review-card, .faq-item, .about-grid, .request-box-wrapper, ' +
-    '.process-project-note, .payment-spread, ' +
-    '.lamp-portrait-wrapper, .floating-badge'
+    '.process-project-note, .payment-spread'
   );
 
   // Set initial state

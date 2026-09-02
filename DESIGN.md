@@ -9,6 +9,8 @@ colors:
   emerald: "#00c875"
   emerald-light: "#33d491"
   emerald-dark: "#009959"
+  proof-rail-surface: "#071022"
+  review-star: "#f59e0b"
   text-main: "#e8edf5"
   text-muted: "#8896ab"
   text-subtle: "#576b83"
@@ -39,6 +41,7 @@ rounded:
   button: "8px"
   card: "16px"
   media: "22px 22px 96px 22px"
+  proof-rail: "2px"
   pill: "9999px"
 spacing:
   xs: "0.5rem"
@@ -61,6 +64,10 @@ components:
     backgroundColor: "{colors.navy-card}"
     textColor: "{colors.text-main}"
     rounded: "{rounded.card}"
+  google-proof-rail:
+    backgroundColor: "{colors.proof-rail-surface}"
+    textColor: "{colors.text-main}"
+    rounded: "{rounded.proof-rail}"
 ---
 
 # Design System: BenTech Solutions
@@ -73,11 +80,14 @@ BenTech combines a technical midnight-navy foundation with a deliberately scarce
 
 The dedicated service pages extend the incumbent brand rather than redesign it. Their editorial split layouts pair concise decision-oriented copy with one strong image, followed by structured proof, process, audience, related-service and quote sections. The decorative grid explored during implementation was removed because it competed with the content. Detector warnings about the incumbent Plus Jakarta Sans family were consciously accepted to preserve the established BenTech brand world.
 
+The homepage extends that same world with the user-selected **Option A Google Proof Rail** as its signature trust component. The wide, solid navy rail places the current Google rating on the left, one manually swipeable attributed review in the middle and the official Google Maps link on the right. It replaces the hero portrait entirely while preserving the existing header identity and the canonical `assets/logo-horizontal.svg` artwork unchanged.
+
 **Key Characteristics:**
 
 - Dark navy tonal layers with emerald used for action, orientation and focus.
 - Large, compact headlines balanced by calm, readable body copy.
 - Editorial two-column layouts that collapse cleanly to one column.
+- A wide Google Proof Rail that makes sourced reputation evidence part of the first viewport.
 - Direct contact paths by phone, WhatsApp and quote form.
 - Factual, situation-led copy without unverified commercial claims.
 
@@ -91,11 +101,16 @@ The palette is a tinted midnight hierarchy with one energetic emerald accent; su
 - **Signal Emerald** (`#33d491`): Hover states and highlighted labels on dark surfaces.
 - **Deep Emerald** (`#009959`): Darker supporting state; do not use as a second competing accent.
 
+### Secondary
+
+- **Review Amber** (`#f59e0b`): Star symbols inside Google review evidence only; it is not a second call-to-action color.
+
 ### Neutral
 
 - **Midnight Canvas** (`#050a15`): Page background and deepest visual field.
 - **Navy Section** (`#0a1124`): Alternating sections and quieter grouped content.
 - **Navy Card** (`#0d1629`): Cards, forms and framed surfaces.
+- **Proof Rail Navy** (`#071022`): Solid homepage review rail; never turn it into glass or a photographic backdrop.
 - **Lifted Navy** (`#111e3a`): Hovered or subtly elevated cards.
 - **Cool White** (`#e8edf5`): Primary headings and high-priority text.
 - **Steel Text** (`#8896ab`): Secondary copy and supporting descriptions.
@@ -123,13 +138,19 @@ The palette is a tinted midnight hierarchy with one energetic emerald accent; su
 
 The base container is `90%` wide with a `1200px` maximum. Dedicated service pages use editorial split grids: a near-even hero, a narrow context column beside a wider content column, and the same relationship for quote and FAQ sections. Section rhythm is generous (`clamp(4.5rem, 8vw, 7.25rem)`) and bounded by subtle borders rather than decorative separators.
 
-At `992px` and below, editorial grids become a single column and sticky quote copy returns to normal flow. At `768px` and below, primary actions become full-width, process steps become a vertical sequence, hero media returns to a portrait crop, and the persistent call/WhatsApp bar owns the mobile conversion path. Content must remain usable above the sticky bar.
+On wide screens the homepage Google Proof Rail is one horizontal, three-part composition: rating left, review carousel centre and source link right. At the mobile breakpoint (`768px` and below) those regions stack in that order, keeping the review controls and source link fully visible. The hero contains no portrait or other profile photograph.
+
+At `992px` and below, editorial grids become a single column and sticky quote copy returns to normal flow. At `768px` and below, primary actions become full-width, process steps become a vertical sequence, service-page hero media returns to a portrait crop, and the persistent call/WhatsApp bar owns the mobile conversion path. Content must remain usable above the sticky bar.
+
+The homepage Vanta Topology runtime remains gated to capable desktop contexts from `769px`; mobile keeps the intentionally lean solid-background fallback. The review rail must not alter that boundary.
 
 The shipped public routes are `/laadpalen/`, `/thuisbatterijen/` and `/zonnepanelen/`. They share `/style.css`, `/service-pages.css`, `/main.js`, `/consent.js` and `/assets/`. Nested pages must always use root-relative references so routes resolve identically in local QA and on Cloudflare Pages.
 
 ## Elevation & Depth
 
 Depth is restrained and structural: tonal surface changes, one-pixel translucent borders and soft dark shadows separate important layers. The large hero photograph and quote form may carry deeper ambient shadows; routine sections remain flat. Emerald glow is reserved for interaction feedback.
+
+The Google Proof Rail is a solid navy plane bounded by one-pixel emerald top and bottom rules plus quiet inline borders. Its single ambient shadow may separate the rail from the Vanta field, but the component must never use glass blur, a photograph or a decorative glow wash.
 
 - **Card shadow** (`0 8px 24px -8px rgba(0, 0, 0, 0.5)`): General elevated cards.
 - **Hero-media shadow** (`20px 28px 70px -28px rgba(0, 0, 0, 0.8)`): Large service image only.
@@ -140,6 +161,8 @@ Depth is restrained and structural: tonal surface changes, one-pixel translucent
 ## Shapes
 
 Buttons use an `8px` radius, cards and forms generally use `16px`, and pills are reserved for compact statuses or intentional rounded controls. Service hero images use an asymmetric cropped frame (`22px 22px 96px 22px`, reduced responsively) as the signature silhouette. Thin translucent borders keep shapes legible without bright outlines.
+
+The Google Proof Rail deliberately contrasts with the softer cards: it uses an almost square `2px` radius, emerald block-axis rules and restrained internal dividers. Its broad, technical silhouette—not an oversized rounded card—is the signature.
 
 ## Components
 
@@ -168,6 +191,15 @@ Buttons use an `8px` radius, cards and forms generally use `16px`, and pills are
 - Mobile navigation and the bottom sticky bar remain shared site behavior.
 - Telephone, WhatsApp and quote actions must remain immediately distinguishable.
 
+### Google Proof Rail (Option A)
+
+- **Composition:** A wide three-region rail with the current Google rating at left, one attributed review in the centre and the official Maps link at right. The existing BenTech logo remains `assets/logo-horizontal.svg`; the hero uses no profile photo.
+- **Interaction:** The middle region uses native horizontal overflow and scroll snapping. Visitors move between reviews by touch or trackpad swipe, previous/next buttons or the left/right arrow keys. There is no autoplay.
+- **Accessibility:** The viewport and controls remain keyboard operable with a visible emerald focus ring. Reduced-motion preferences disable smooth animated movement. Review metadata—including author, star count and relative date—uses at least Steel Text (`--text-muted`); never Deep Steel, so supporting text remains WCAG AA legible on the solid navy surface.
+- **Responsive:** The three regions stack at `768px` and below. The desktop-only Vanta gate begins at `769px` and remains independent from the review interaction.
+
+**The Manual Proof Rule.** The centre review changes only through explicit visitor input; the Proof Rail never autoplays.
+
 ### Service Hero
 
 - Pair a bounded headline and short factual lead with one dominant image and a small explanatory caption.
@@ -182,6 +214,9 @@ Buttons use an `8px` radius, cards and forms generally use `16px`, and pills are
 - **Do** write from the visitor's situation and explain that advice follows an assessment of their installation and needs.
 - **Do** keep new service imagery explicitly classified as authentic or illustrative.
 - **Do** retain semantic HTML, visible keyboard focus, readable contrast and `prefers-reduced-motion` support.
+- **Do** preserve `assets/logo-horizontal.svg` and the existing header identity exactly; Option A changes the hero proof area, not the logo.
+- **Do** keep the Google Proof Rail manually swipeable, source-linked and free of autoplay.
+- **Do** use `--text-muted` or a lighter token for review authors, star counts and dates.
 - **Do** keep Google Ads and other marketing tracking consent-gated through `/consent.js`.
 - **Do** use root-relative assets and shared files on every nested route.
 
@@ -190,5 +225,8 @@ Buttons use an `8px` radius, cards and forms generally use `16px`, and pills are
 - **Don't** invent brands, prices, subsidies, guarantees, certifications, product capacities, case studies or scope commitments.
 - **Don't** describe generic battery or solar artwork as BenTech's own installation work.
 - **Don't** reintroduce the removed decorative grid or let background effects compete with conversion content.
+- **Don't** reintroduce a profile photograph in the homepage hero or replace the established BenTech logo.
+- **Don't** label Google reviews as verified, autoplay the review rail or hide its controls from keyboard users.
+- **Don't** use `--text-subtle` for review metadata on the Proof Rail.
 - **Don't** add a new font merely to satisfy an automated detector; the incumbent Plus Jakarta Sans choice is intentional.
 - **Don't** bypass consent for call-conversion or other marketing scripts.
