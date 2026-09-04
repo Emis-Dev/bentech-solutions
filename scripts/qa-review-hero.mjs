@@ -50,7 +50,7 @@ assert.doesNotMatch(visibleText, /\b5[.,]0(?:\s*\/\s*5)?\b/, 'homepage must not 
 
 assert.match(hero, /<aside class="hero-review-showcase"\s+aria-labelledby="hero-review-title">/, 'hero review proof must be an aside');
 assert.doesNotMatch(hero, /<img\b|hero-profile\.jpeg/, 'hero must not contain a profile photo or other raster image');
-assert.match(about, /<img\s+[^>]*src="assets\/hero-profile\.jpeg"[^>]*>/, 'profile photo may remain in the later About section');
+assert.match(about, /<img\s+[^>]*src="assets\/installateur-sfeerbeeld-20260904\.webp"[^>]*>/, 'About section must use the illustrative company image');
 
 assert.match(hero, /data-review-carousel[^>]*role="region"[^>]*aria-roledescription="carrousel"/, 'hero proof rail must expose carousel region semantics');
 assert.match(hero, /data-review-viewport[^>]*tabindex="0"/, 'review rail must be keyboard focusable');

@@ -35,7 +35,7 @@ BenTech combines electrical troubleshooting with planned energy solutions and of
 - Preserve the desktop-only Vanta homepage effect and the lean mobile runtime.
 - Known contact details: BenTech Solutions CommV, +32 486 32 86 45, info@bentechsolutions.be.
 - Do not invent brands, prices, grants, guarantees, accreditations, product specifications, installation ownership, or completed-project claims.
-- A real charging-station installation photo is available. Battery and solar images are illustrative and must not be presented as BenTech case studies.
+- Public imagery is illustrative and must not be presented as a real founder, employee portrait or BenTech case study. Personal founder and charging-station photos are removed from this proposed presentation.
 
 ## Brand commitments
 
@@ -47,7 +47,7 @@ BenTech combines electrical troubleshooting with planned energy solutions and of
 ## Evidence on hand
 
 - Existing homepage content and service descriptions.
-- Real charging-station installation image at `assets/yassir-laadpaal-installatie.jpeg`.
+- Illustrative installer image at `assets/installateur-sfeerbeeld-20260904.webp` (AI-generated on 4 September 2026).
 - Illustrative service images for home batteries and solar panels.
 - Existing quote form, telephone links, WhatsApp links, consent controls, and Google Ads call-conversion implementation.
 - Official Google Business Profile checked on 2 September 2026 at `https://www.google.com/maps?cid=5783644159230400203`: 4.9 out of 5 from 13 reviews, comprising twelve five-star reviews and one four-star review.
@@ -75,3 +75,10 @@ BenTech combines electrical troubleshooting with planned energy solutions and of
 - Financing, grants, warranties, maintenance plans, and exact lead times.
 - Whether BenTech performs every installation entirely in-house or uses partners for parts of the work.
 - Reviewer permission for broader testimonial reuse, an automated Google review feed, certifications, and project case studies for these services.
+
+## Company presentation - proposed 4 September 2026
+
+- Tom requested removal of personal photos and name references on behalf of the client.
+- This implementation uses BenTech as the public speaker and labels the new installer visual as illustrative.
+- A fictional Joris is not asserted to be the real founder. That part of the requested identity substitution remains unimplemented.
+- Existing source-attributed reviews and legal company details remain intact.
