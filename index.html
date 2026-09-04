@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BenTech Solutions | Elektricien &amp; energieprojecten in Antwerpen</title>
-  <meta name="description" content="BenTech Solutions helpt bij elektrische storingen, installaties, laadpalen, thuisbatterijen en zonnepanelen in Antwerpen en binnen 60 km.">
+  <meta name="description" content="BenTech Solutions helpt bij elektrische storingen, installaties, laadpalen, thuisbatterijen en zonnepanelen in Antwerpen en omgeving, verder weg op aanvraag.">
   <meta name="keywords" content="elektricien Antwerpen, stroompanne, kortsluiting, laadpaal installeren, thuisbatterij, zonnepanelen, BenTech Solutions">
 
   <!-- Open Graph -->
   <meta property="og:title" content="BenTech Solutions | Elektricien &amp; energieprojecten in Antwerpen">
-  <meta property="og:description" content="Elektrische hulp en energieoplossingen voor particulieren en kmo’s in Antwerpen en binnen 60 km.">
+  <meta property="og:description" content="Elektrische hulp en energieoplossingen voor particulieren en kmo’s in Antwerpen en omgeving, verder weg op aanvraag.">
   <meta property="og:image" content="https://bentechsolutions.be/assets/og-bentech-reviews.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -37,7 +37,7 @@
 
   <!-- The desktop-only Vanta hero runtime is loaded conditionally by main.js. -->
 
-  <link rel="stylesheet" href="style.css?v=review-hero-20260902">
+  <link rel="stylesheet" href="style.css?v=site-clarity-20260905">
 </head>
 <body>
 
@@ -46,7 +46,7 @@
     <div class="container top-bar-content">
       <div class="live-status">
         <span class="pulse-dot"></span>
-        <span class="status-text"><strong>24/7 bereikbaar</strong> — Antwerpen en omgeving binnen 60 km</span>
+        <span class="status-text"><strong>24/7 bereikbaar</strong> — Spoed binnen 60 km · Projecten op aanvraag</span>
       </div>
       <div class="top-contact">
         <a href="mailto:info@bentechsolutions.be" class="top-email-link">
@@ -126,9 +126,10 @@
         </h1>
 
         <p class="lamp-hero-subtitle">
-          Rechtstreeks contact bij stroomuitval, kortsluiting of zekeringproblemen, én advies voor laadpalen, thuisbatterijen en zonnepanelen. Voor particulieren en kmo’s binnen 60 km van Antwerpen.
+          Rechtstreeks contact bij stroomuitval, kortsluiting of zekeringproblemen, én advies voor laadpalen, thuisbatterijen en zonnepanelen. Voor particulieren en kmo’s in Antwerpen en daarbuiten op aanvraag.
         </p>
 
+        <p class="hero-area-note">Spoed: Antwerpen en omgeving binnen 60 km. Een project verder weg? Vraag naar de mogelijkheden. De haalbare aankomsttijd bespreken we telefonisch.</p>
         <div class="lamp-hero-actions">
           <a href="tel:+32486328645" class="btn btn-lg btn-emerald rounded-full">
             <i data-lucide="phone" class="icon-sm"></i>
@@ -399,6 +400,7 @@
           <p id="serviceModalNote"></p>
         </div>
 
+        <div id="serviceModalFaq" class="service-modal-faq"></div>
         <div class="service-modal-actions">
           <a href="#offerte" class="btn btn-emerald" id="serviceModalPrimary">
             <span id="serviceModalPrimaryLabel">Vraag een offerte aan</span>
@@ -631,41 +633,14 @@
         <p class="section-subtitle">Transparant, duidelijk en zonder verrassingen</p>
       </div>
 
-      <p class="payment-intro">
-        Bij BenTech Solutions geloven we in een heldere samenwerking. Daarom werken wij voor volledige installaties en grotere projecten met een vaste betalingsregeling. Zo kunnen materialen tijdig worden besteld en kunnen de werken volgens planning worden uitgevoerd.
-      </p>
-
-      <ol class="payment-timeline" aria-label="Betalingsregeling voor volledige installaties en grotere projecten">
-        <li class="payment-stage">
-          <div class="payment-marker" aria-hidden="true">35%</div>
-          <div class="payment-copy">
-            <h3>Voorschot</h3>
-            <p>Na goedkeuring van de offerte vragen wij een voorschot van 35%. Hiermee bevestigt u de opdracht en kunnen wij de benodigde materialen bestellen en uw project inplannen.</p>
-          </div>
-        </li>
-        <li class="payment-stage">
-          <div class="payment-marker" aria-hidden="true">20%</div>
-          <div class="payment-copy">
-            <h3>Start van de werken</h3>
-            <p>Bij de aanvang van de werkzaamheden en levering van de materialen wordt een tweede betaling van 20% gefactureerd.</p>
-          </div>
-        </li>
-        <li class="payment-stage">
-          <div class="payment-marker" aria-hidden="true">25%</div>
-          <div class="payment-copy">
-            <h3>Tussentijdse oplevering</h3>
-            <p>Wanneer een belangrijk deel van de installatie is afgerond, wordt een tussentijdse factuur van 25% opgesteld.</p>
-          </div>
-        </li>
-        <li class="payment-stage">
-          <div class="payment-marker" aria-hidden="true">20%</div>
-          <div class="payment-copy">
-            <h3>Eindoplevering</h3>
-            <p>De resterende 20% wordt gefactureerd na de oplevering van het project en de uitvoering van de overeengekomen werkzaamheden.</p>
-          </div>
-        </li>
+      <p class="payment-intro">Voor volledige installaties en grotere projecten: vier heldere betaalmomenten.</p>
+      <ol class="payment-overview">
+        <li><details class="payment-step"><summary><span class="payment-step-number">Stap 1</span><strong>35%</strong><span>Voorschot</span><span class="payment-step-hint">Bekijk uitleg +</span></summary><p>Na goedkeuring van de offerte vragen wij een voorschot van 35%. Hiermee bevestigt u de opdracht en kunnen wij de benodigde materialen bestellen en uw project inplannen.</p></details></li>
+        <li><details class="payment-step"><summary><span class="payment-step-number">Stap 2</span><strong>20%</strong><span>Start van de werken</span><span class="payment-step-hint">Bekijk uitleg +</span></summary><p>Bij de aanvang van de werkzaamheden en levering van de materialen wordt een tweede betaling van 20% gefactureerd.</p></details></li>
+        <li><details class="payment-step"><summary><span class="payment-step-number">Stap 3</span><strong>25%</strong><span>Tussentijdse oplevering</span><span class="payment-step-hint">Bekijk uitleg +</span></summary><p>Wanneer een belangrijk deel van de installatie is afgerond, wordt een tussentijdse factuur van 25% opgesteld.</p></details></li>
+        <li><details class="payment-step"><summary><span class="payment-step-number">Stap 4</span><strong>20%</strong><span>Eindoplevering</span><span class="payment-step-hint">Bekijk uitleg +</span></summary><p>De resterende 20% wordt gefactureerd na de oplevering van het project en de uitvoering van de overeengekomen werkzaamheden.</p></details></li>
       </ol>
-
+      <details class="payment-more"><summary>Meer over betalingsspreiding en voorwaarden</summary>
       <aside class="payment-spread" aria-labelledby="spread-payment-title">
         <div class="payment-spread-heading">
           <div class="payment-spread-icon" aria-hidden="true">
@@ -700,11 +675,8 @@
         </div>
       </aside>
 
-      <div class="payment-contact text-center">
-        <h3>Veilige en transparante samenwerking</h3>
-        <p>Onze betalingsvoorwaarden zorgen voor een duidelijke planning, een vlotte uitvoering van uw project en volledige transparantie gedurende het volledige traject.</p>
-        <a href="#offerte" class="payment-contact-link">Vragen over onze betalingsvoorwaarden? Neem gerust contact op.</a>
-      </div>
+      </details>
+      <p class="payment-short-note">Spoedinterventies en kleine werken: betaling na uitvoering, tenzij vooraf schriftelijk anders afgesproken.</p>
     </div>
   </section>
 
@@ -744,15 +716,15 @@
             <div class="form-grid">
               <div class="form-group">
                 <label for="em-name">Uw Naam *</label>
-                <input type="text" id="em-name" required placeholder="Jan Peeters">
+                <input type="text" id="em-name" autocomplete="name" required placeholder="Jan Peeters">
               </div>
               <div class="form-group">
                 <label for="em-phone">Telefoonnummer *</label>
-                <input type="tel" id="em-phone" required placeholder="0486 32 86 45">
+                <input type="tel" id="em-phone" autocomplete="tel" required placeholder="0486 32 86 45">
               </div>
               <div class="form-group full-width">
                 <label for="em-location">Adres / Gemeente *</label>
-                <input type="text" id="em-location" required placeholder="Straat + Gemeente">
+                <input type="text" id="em-location" autocomplete="street-address" required placeholder="Straat + Gemeente">
               </div>
               <div class="form-group full-width">
                 <label for="em-issue">Omschrijf het probleem *</label>
@@ -760,8 +732,9 @@
               </div>
             </div>
             <button type="submit" class="btn btn-lg btn-emerald form-submit-btn">
-              <i data-lucide="send" class="icon-sm"></i> Verstuur via WhatsApp
+              <i data-lucide="send" class="icon-sm"></i> Open aanvraag in WhatsApp
             </button>
+            <p class="form-handoff-note">WhatsApp opent met uw ingevulde bericht. Controleer het daar en tik zelf op verzenden. Er is nog niets verstuurd wanneer u op deze knop klikt.</p>
           </form>
         </div>
 
@@ -771,15 +744,15 @@
             <div class="form-grid">
               <div class="form-group">
                 <label for="q-name">Uw Naam *</label>
-                <input type="text" id="q-name" required placeholder="Sarah Devos">
+                <input type="text" id="q-name" autocomplete="name" required placeholder="Sarah Devos">
               </div>
               <div class="form-group">
                 <label for="q-phone">Telefoonnummer *</label>
-                <input type="tel" id="q-phone" required placeholder="0486 32 86 45">
+                <input type="tel" id="q-phone" autocomplete="tel" required placeholder="0486 32 86 45">
               </div>
               <div class="form-group">
                 <label for="q-email">E-mailadres *</label>
-                <input type="email" id="q-email" required placeholder="sarah@example.com">
+                <input type="email" id="q-email" autocomplete="email" required placeholder="sarah@example.com">
               </div>
               <div class="form-group">
                 <label for="q-service">Type Dienst *</label>
@@ -802,8 +775,9 @@
               </div>
             </div>
             <button type="submit" class="btn btn-lg btn-emerald form-submit-btn">
-              <i data-lucide="send" class="icon-sm"></i> Verstuur via WhatsApp
+              <i data-lucide="send" class="icon-sm"></i> Open aanvraag in WhatsApp
             </button>
+            <p class="form-handoff-note">WhatsApp opent met uw ingevulde bericht. Controleer het daar en tik zelf op verzenden. Er is nog niets verstuurd wanneer u op deze knop klikt.</p>
           </form>
         </div>
       </div>
@@ -904,7 +878,7 @@
         </p>
         <p>
           <strong>Werkgebied:</strong><br>
-          Antwerpen en omgeving binnen 60 km
+          Antwerpen en omgeving. Projecten verder weg op aanvraag; spoed binnen 60 km.
         </p>
       </div>
     </div>
@@ -943,6 +917,6 @@
     </div>
   </aside>
 
-  <script src="main.js?v=review-hero-20260902"></script>
+  <script src="main.js?v=site-clarity-20260905"></script>
 </body>
 </html>

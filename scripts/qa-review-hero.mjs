@@ -24,7 +24,7 @@ const about = capture(
 );
 const visibleText = stripMarkup(homepage);
 const mapsUrl = 'https://www.google.com/maps?cid=5783644159230400203';
-const cacheVersion = 'review-hero-20260902';
+const cacheVersion = 'site-clarity-20260905';
 const carouselJavascript = capture(
   javascript,
   /function initReviewCarousel\(\) \{([\s\S]*?)\n\}\n\n\/\/ Scroll Reveal/,

@@ -8,7 +8,7 @@ assert.doesNotMatch(html, /window\.THREE|vanta@latest|p5\.min\.js|vanta\.topolog
 assert.match(html, /<section class="lamp-hero-section" id="home">/);
 assert.match(html, /<aside class="hero-review-showcase"\s+aria-labelledby="hero-review-title">/);
 assert.doesNotMatch(html, /lamp-portrait-wrapper|lamp-portrait-circle|floating-badge|yassir-head-crop/);
-assert.match(html, /main\.js\?v=review-hero-20260902/);
+assert.match(html, /main\.js\?v=site-clarity-20260905/);
 
 assert.match(javascript, /VANTA_DESKTOP_QUERY = '\(min-width: 769px\) and \(hover: hover\) and \(pointer: fine\)'/);
 assert.match(javascript, /p5\.js\/1\.1\.9\/p5\.min\.js/);
