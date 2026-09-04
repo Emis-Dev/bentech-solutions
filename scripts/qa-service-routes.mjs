@@ -71,6 +71,17 @@ for (const page of routes) {
   headings.add(h1);
 }
 
+assert.match(
+  read('zonnepanelen/index.html'),
+  /<h2>Bespreek uw project<\/h2>/,
+  'solar quote heading must fit its narrow desktop column'
+);
+assert.match(
+  read('service-pages.css'),
+  /\.service-quote-copy h2\s*\{[^}]*overflow-wrap:\s*break-word;/s,
+  'service quote headings need a safe wrapping fallback'
+);
+
 assert.equal(titles.size, routes.length, 'service-page titles must be unique');
 assert.equal(canonicals.size, routes.length, 'service-page canonicals must be unique');
 assert.equal(headings.size, routes.length, 'service-page H1 headings must be unique');

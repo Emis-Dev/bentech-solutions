@@ -493,6 +493,8 @@
 
 .service-quote-copy h2 {
   margin-bottom: 1rem;
+  max-width: 100%;
+  overflow-wrap: break-word;
 }
 
 .service-quote-copy > p {
