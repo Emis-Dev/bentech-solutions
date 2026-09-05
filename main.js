@@ -1,6 +1,8 @@
 // BenTech Solutions - Premium JavaScript
 // Anime.js scroll-reveal + Lucide icons + Mobile menu + WhatsApp forms
 
+const SERVICE_FAQS = {"depannage": [["Wat vermeld ik wanneer ik bel?", "Geef uw gemeente, wat er is uitgevallen en sinds wanneer. BenTech bespreekt de urgentie en haalbare aankomsttijd telefonisch."], ["Geldt de straal van 60 km voor elke opdracht?", "De straal rond Antwerpen geldt voor spoedinterventies. Voor geplande projecten verder weg kunt u de mogelijkheden aanvragen."]], "zekeringkasten": [["Wat stuur ik mee bij mijn aanvraag?", "Vermeld uw gemeente en wat u wilt laten aanpassen. Hebt u een keuringsverslag of bestaande schema’s, vermeld dat dan bij uw aanvraag."], ["Is de keuring automatisch inbegrepen?", "Laat in uw offerte bevestigen welke aanpassingen, schema’s en keuring zijn inbegrepen. Zo zijn de werkzaamheden vooraf duidelijk."]], "herstellingen": [["Kan ik eerst mijn probleem beschrijven?", "Ja. Vermeld wat niet meer werkt, sinds wanneer en in welke gemeente. Bij een dringende storing belt u rechtstreeks."], ["Wordt de prijs vooraf besproken?", "BenTech bespreekt de situatie en prijsafspraak voordat de werken starten. De benodigde herstelling wordt na beoordeling bepaald."]], "installaties": [["Welke informatie is nuttig voor een renovatie?", "Vermeld uw gemeente, de ruimtes die veranderen en uw gewenste timing. Bestaande plannen en uw wensen voor stopcontacten, verlichting en toekomstige uitbreidingen helpen bij de bespreking."], ["Kan ik de werken in fasen bespreken?", "Vermeld de gewenste fasering bij uw aanvraag. De uitvoerbaarheid, planning en betaalmomenten worden vooraf afgestemd."]]};
+
 const SERVICE_DETAILS = {
   depannage: {
     anchor: 'dienst-depannage',
@@ -342,6 +344,26 @@ function initServiceExperience() {
     renderList(modalScope, detail.scope);
     renderList(modalFit, detail.fit);
     modalNote.textContent = detail.note;
+    const faqContainer = document.getElementById('serviceModalFaq');
+    faqContainer.replaceChildren();
+    const faqItems = SERVICE_FAQS[Object.keys(SERVICE_DETAILS).find(key => SERVICE_DETAILS[key] === detail)] || [];
+    if (faqItems.length) {
+      const heading = document.createElement('h3');
+      heading.textContent = 'Veelgestelde vragen';
+      faqContainer.append(heading);
+      faqItems.forEach(([question, answer]) => {
+        const item = document.createElement('details');
+        item.className = 'faq-item';
+        const summary = document.createElement('summary');
+        summary.className = 'faq-question';
+        summary.textContent = question;
+        const body = document.createElement('div');
+        body.className = 'faq-answer';
+        body.textContent = answer;
+        item.append(summary, body);
+        faqContainer.append(item);
+      });
+    }
     modalPrimary.href = detail.primaryHref;
     modalPrimary.dataset.formValue = detail.formValue || '';
     modalPrimaryLabel.textContent = detail.primaryLabel;
@@ -636,7 +658,22 @@ function handleFormSubmit(event, formType) {
   }
 
   const encoded = encodeURIComponent(message);
-  window.open(`https://wa.me/${phone}?text=${encoded}`, '_blank');
+  const url = `https://wa.me/${phone}?text=${encoded}`;
+  const form = event.currentTarget;
+  let status = form.querySelector('.form-handoff-status');
+  if (!status) {
+    status = document.createElement('p');
+    status.className = 'form-handoff-status';
+    status.setAttribute('role', 'status');
+    form.append(status);
+  }
+  const retry = document.createElement('a');
+  retry.href = url;
+  retry.target = '_blank';
+  retry.rel = 'noopener noreferrer';
+  retry.textContent = 'Open uw bericht opnieuw';
+  status.replaceChildren('Uw bericht staat klaar. Verstuur het zelf in WhatsApp. Opent WhatsApp niet? ', retry, '. U kunt ook bellen of mailen via de contactgegevens op deze pagina.');
+  window.open(url, '_blank', 'noopener,noreferrer');
 }
 
 // Vanta Topology hero: restore the original desktop effect without shipping its
