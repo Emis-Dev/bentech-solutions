@@ -50,7 +50,7 @@ for (const page of routes) {
   assert.doesNotMatch(html, /id="home"/, `${page.path}: service pages must not activate the Vanta homepage runtime`);
   assert.doesNotMatch(html, /(?:src|href)="(?:assets|style\.css|service-pages\.css|main\.js|consent\.js)/, `${page.path}: nested routes need root-relative local assets`);
   assert.match(html, /<script src="\/consent\.js\?v=googleads-call-20260819"><\/script>/, `${page.path}: consent loader missing`);
-  assert.match(html, /<link rel="stylesheet" href="\/style\.css\?v=site-clarity-20260905">/, `${page.path}: current base stylesheet missing`);
+  assert.match(html, /<link rel="stylesheet" href="\/style\.css\?v=work-imagery-20260905">/, `${page.path}: current base stylesheet missing`);
   assert.match(html, /<link rel="stylesheet" href="\/service-pages\.css\?v=energy-pages-20260902">/, `${page.path}: service stylesheet missing`);
   assert.match(html, /<script src="\/main\.js\?v=site-clarity-20260905"><\/script>/, `${page.path}: current shared JavaScript missing`);
   assert.match(html, /href="tel:\+32486328645"/, `${page.path}: telephone CTA missing`);
@@ -90,7 +90,7 @@ for (const page of routes) {
   assert.match(homepage, new RegExp(`href="${escapeRegex(page.route)}"`), `homepage must link to ${page.route}`);
 }
 assert.doesNotMatch(homepage, /id="dienst-(?:laadpalen|thuisbatterijen|zonnepanelen)"[^>]+data-service-link/, 'energy cards must navigate to dedicated pages');
-assert.match(homepage, /style\.css\?v=site-clarity-20260905/, 'homepage must use the current base stylesheet version');
+assert.match(homepage, /style\.css\?v=work-imagery-20260905/, 'homepage must use the current base stylesheet version');
 assert.match(homepage, /main\.js\?v=site-clarity-20260905/, 'homepage must use the current shared JavaScript version');
 assert.match(homepage, /Antwerpen en omgeving/, 'homepage must communicate the current work area');
 
