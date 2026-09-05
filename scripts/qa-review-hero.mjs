@@ -24,6 +24,7 @@ const about = capture(
 );
 const visibleText = stripMarkup(homepage);
 const mapsUrl = 'https://www.google.com/maps?cid=5783644159230400203';
+const styleCacheVersion = 'work-imagery-20260905';
 const cacheVersion = 'site-clarity-20260905';
 const carouselJavascript = capture(
   javascript,
@@ -97,7 +98,7 @@ assertPngDimensions('assets/og-bentech-reviews.png', 1200, 630);
 for (const htmlPath of ['index.html', 'laadpalen/index.html', 'thuisbatterijen/index.html', 'zonnepanelen/index.html']) {
   const html = read(htmlPath);
   const prefix = htmlPath === 'index.html' ? '' : '/';
-  assert.match(html, new RegExp(`href="${escapeRegex(prefix)}style\\.css\\?v=${cacheVersion}"`), `${htmlPath}: current stylesheet cache marker missing`);
+  assert.match(html, new RegExp(`href="${escapeRegex(prefix)}style\\.css\\?v=${styleCacheVersion}"`), `${htmlPath}: current stylesheet cache marker missing`);
   assert.match(html, new RegExp(`src="${escapeRegex(prefix)}main\\.js\\?v=${cacheVersion}"`), `${htmlPath}: current JavaScript cache marker missing`);
 }
 
