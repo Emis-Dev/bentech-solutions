@@ -22,15 +22,15 @@
 /* 1. KlimaatPlus Theme: Flame Orange & Ice Blue */
 body.theme-klimaatplus,
 .theme-klimaatplus {
-  --brand-primary: #ea580c;
-  --brand-primary-light: #f97316;
+  --brand-primary: #c2410c;
+  --brand-primary-light: #ea580c;
   --brand-primary-dark: #9a3412;
   --brand-secondary: #0284c7;
   --brand-secondary-light: #0369a1;
-  --brand-glow: rgba(234, 88, 12, 0.12);
-  --brand-border: rgba(234, 88, 12, 0.22);
-  --brand-badge-bg: rgba(234, 88, 12, 0.08);
-  --brand-hero-bg: radial-gradient(circle at 15% 20%, rgba(234, 88, 12, 0.08), transparent 34rem),
+  --brand-glow: rgba(194, 65, 12, 0.12);
+  --brand-border: rgba(194, 65, 12, 0.22);
+  --brand-badge-bg: rgba(194, 65, 12, 0.08);
+  --brand-hero-bg: radial-gradient(circle at 15% 20%, rgba(194, 65, 12, 0.08), transparent 34rem),
                    radial-gradient(circle at 85% 70%, rgba(2, 132, 199, 0.06), transparent 34rem),
                    linear-gradient(135deg, #ffffff 0%, #f8fafc 58%, #f1f5f9 100%);
 }
@@ -68,14 +68,14 @@ body.theme-laadplus,
 /* 4. ServicePlus Theme: 24/7 Storingsblauw & Alert Amber/Red */
 body.theme-serviceplus,
 .theme-serviceplus {
-  --brand-primary: #0284c7;
-  --brand-primary-light: #0369a1;
+  --brand-primary: #0369a1;
+  --brand-primary-light: #0284c7;
   --brand-primary-dark: #075985;
   --brand-secondary: #dc2626;
-  --brand-glow: rgba(2, 132, 199, 0.12);
-  --brand-border: rgba(2, 132, 199, 0.22);
-  --brand-badge-bg: rgba(2, 132, 199, 0.08);
-  --brand-hero-bg: radial-gradient(circle at 18% 22%, rgba(2, 132, 199, 0.08), transparent 34rem),
+  --brand-glow: rgba(3, 105, 161, 0.12);
+  --brand-border: rgba(3, 105, 161, 0.22);
+  --brand-badge-bg: rgba(3, 105, 161, 0.08);
+  --brand-hero-bg: radial-gradient(circle at 18% 22%, rgba(3, 105, 161, 0.08), transparent 34rem),
                    radial-gradient(circle at 85% 70%, rgba(220, 38, 38, 0.06), transparent 30rem),
                    linear-gradient(135deg, #ffffff 0%, #f8fafc 58%, #f1f5f9 100%);
 }
@@ -83,14 +83,14 @@ body.theme-serviceplus,
 /* 5. SolarPlus Theme: Sun Gold/Amber & Deep Solar Navy */
 body.theme-solarplus,
 .theme-solarplus {
-  --brand-primary: #d97706;
-  --brand-primary-light: #b45309;
+  --brand-primary: #b45309;
+  --brand-primary-light: #d97706;
   --brand-primary-dark: #92400e;
   --brand-secondary: #2563eb;
-  --brand-glow: rgba(217, 119, 6, 0.12);
-  --brand-border: rgba(217, 119, 6, 0.22);
-  --brand-badge-bg: rgba(217, 119, 6, 0.08);
-  --brand-hero-bg: radial-gradient(circle at 18% 22%, rgba(217, 119, 6, 0.08), transparent 34rem),
+  --brand-glow: rgba(180, 83, 9, 0.12);
+  --brand-border: rgba(180, 83, 9, 0.22);
+  --brand-badge-bg: rgba(180, 83, 9, 0.08);
+  --brand-hero-bg: radial-gradient(circle at 18% 22%, rgba(180, 83, 9, 0.08), transparent 34rem),
                    radial-gradient(circle at 82% 70%, rgba(37, 99, 235, 0.06), transparent 32rem),
                    linear-gradient(135deg, #ffffff 0%, #f8fafc 58%, #f1f5f9 100%);
 }
