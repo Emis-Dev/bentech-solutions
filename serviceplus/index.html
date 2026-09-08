@@ -22,9 +22,9 @@
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
   <script src="/consent.js?v=serviceplus-20260908"></script>
   
-  <link rel="stylesheet" href="/style.css?v=navalign-20260804">
-  <link rel="stylesheet" href="/service-pages.css?v=energy-pages-20260902">
-  <link rel="stylesheet" href="/brand-themes.css?v=multi-brand-20260908">
+  <link rel="stylesheet" href="/style.css?v=form-light-20260908b">
+  <link rel="stylesheet" href="/service-pages.css?v=form-light-20260908b">
+  <link rel="stylesheet" href="/brand-themes.css?v=form-light-20260908b">
   
   <script type="application/ld+json">
   {
@@ -266,23 +266,23 @@
             <input type="hidden" name="brand" value="ServicePlus 24/7">
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem;">
               <div>
-                <label for="name">Uw Naam *</label>
-                <input type="text" id="name" name="name" required placeholder="bv. Anja Vandevelde">
+                <label for="name" style="display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 0.45rem; color: #090d16;">Uw Naam *</label>
+                <input type="text" id="name" name="name" required placeholder="bv. Anja Vandevelde" style="display: block; width: 100%; padding: 0.85rem 1rem; border-radius: 10px; border: 1.5px solid #cbd5e1; background: #ffffff; color: #090d16; font-size: 0.95rem; font-family: inherit; box-sizing: border-box;">
               </div>
               <div>
-                <label for="phone">Telefoonnummer (voor direct terugbellen) *</label>
-                <input type="tel" id="phone" name="phone" required placeholder="bv. 0486 00 00 00">
+                <label for="phone" style="display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 0.45rem; color: #090d16;">Telefoonnummer (voor direct terugbellen) *</label>
+                <input type="tel" id="phone" name="phone" required placeholder="bv. 0486 00 00 00" style="display: block; width: 100%; padding: 0.85rem 1rem; border-radius: 10px; border: 1.5px solid #cbd5e1; background: #ffffff; color: #090d16; font-size: 0.95rem; font-family: inherit; box-sizing: border-box;">
               </div>
             </div>
 
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem;">
               <div>
-                <label for="postcode">Postcode / Gemeente *</label>
-                <input type="text" id="postcode" name="postcode" required placeholder="bv. 2000 Antwerpen">
+                <label for="postcode" style="display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 0.45rem; color: #090d16;">Postcode / Gemeente *</label>
+                <input type="text" id="postcode" name="postcode" required placeholder="bv. 2000 Antwerpen" style="display: block; width: 100%; padding: 0.85rem 1rem; border-radius: 10px; border: 1.5px solid #cbd5e1; background: #ffffff; color: #090d16; font-size: 0.95rem; font-family: inherit; box-sizing: border-box;">
               </div>
               <div>
-                <label for="urgentie">Urgentieniveau *</label>
-                <select id="urgentie" name="urgentie">
+                <label for="urgentie" style="display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 0.45rem; color: #090d16;">Urgentieniveau *</label>
+                <select id="urgentie" name="urgentie" style="display: block; width: 100%; padding: 0.85rem 2.5rem 0.85rem 1rem; border-radius: 10px; border: 1.5px solid #cbd5e1; background: #ffffff url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'16\' height=\'16\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'%23475569\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-linejoin=\'round\'%3E%3Cpath d=\'m6 9 6 6 6-6\'/%3E%3C/svg%3E') no-repeat right 1rem center / 1rem; color: #090d16; font-size: 0.95rem; font-family: inherit; box-sizing: border-box; -webkit-appearance: none; appearance: none; cursor: pointer;">
                   <option value="Zeer dringend (vandaag / direct)">Zeer dringend (direct ter plaatse nodig)</option>
                   <option value="Dringend (binnen 24 uur)">Dringend (binnen 24 uur)</option>
                   <option value="Niet dringend (afspraak inplannen)">Niet dringend (reguliere herstelling)</option>
@@ -291,8 +291,8 @@
             </div>
 
             <div>
-              <label for="message">Wat is het exacte probleem?</label>
-              <textarea id="message" name="message" rows="4" placeholder="bv. Differentieel schakelt direct uit bij aanzetten van groep 3, verbrande geur bij meterkast..."></textarea>
+              <label for="message" style="display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 0.45rem; color: #090d16;">Wat is het exacte probleem?</label>
+              <textarea id="message" name="message" rows="4" placeholder="bv. Differentieel schakelt direct uit bij aanzetten van groep 3, verbrande geur bij meterkast..." style="display: block; width: 100%; padding: 0.85rem 1rem; border-radius: 10px; border: 1.5px solid #cbd5e1; background: #ffffff; color: #090d16; font-size: 0.95rem; font-family: inherit; line-height: 1.5; box-sizing: border-box; min-height: 110px; resize: vertical;"></textarea>
             </div>
 
             <button type="submit" class="btn-brand-primary btn-emergency-pulse" style="justify-content: center; width: 100%; font-size: 1.05rem; padding: 1rem;">

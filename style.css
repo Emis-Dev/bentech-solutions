@@ -1728,6 +1728,59 @@ body.service-modal-open { overflow: hidden; }
   color: var(--text-muted);
   font-size: 0.78rem;
 }
+
+/* Brand Contact Forms (Divisions) */
+.brand-contact-form label {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 600;
+  margin-bottom: 0.45rem;
+  color: var(--text-main);
+}
+
+.brand-contact-form input,
+.brand-contact-form select,
+.brand-contact-form textarea {
+  display: block;
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border-radius: 10px;
+  border: 1.5px solid var(--border-subtle);
+  background: #ffffff;
+  color: var(--text-main);
+  font-family: inherit;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  box-sizing: border-box;
+  transition: all var(--transition-fast);
+}
+
+.brand-contact-form select {
+  padding-right: 2.5rem;
+  background: #ffffff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23475569' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat right 1rem center / 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.brand-contact-form textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.brand-contact-form input:focus,
+.brand-contact-form select:focus,
+.brand-contact-form textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(4, 120, 87, 0.1);
+}
+
+.brand-contact-form input::placeholder,
+.brand-contact-form textarea::placeholder {
+  color: #94a3b8;
+}
 .review-author cite {
   color: var(--text-main);
   font-size: 0.84rem;

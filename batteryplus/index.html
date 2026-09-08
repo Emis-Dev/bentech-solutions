@@ -22,9 +22,9 @@
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
   <script src="/consent.js?v=batteryplus-20260908"></script>
   
-  <link rel="stylesheet" href="/style.css?v=navalign-20260804">
-  <link rel="stylesheet" href="/service-pages.css?v=energy-pages-20260902">
-  <link rel="stylesheet" href="/brand-themes.css?v=multi-brand-20260908">
+  <link rel="stylesheet" href="/style.css?v=form-light-20260908b">
+  <link rel="stylesheet" href="/service-pages.css?v=form-light-20260908b">
+  <link rel="stylesheet" href="/brand-themes.css?v=form-light-20260908b">
   
   <script type="application/ld+json">
   {
@@ -245,23 +245,23 @@
             <input type="hidden" name="brand" value="BatteryPlus">
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem;">
               <div>
-                <label for="name">Uw Naam *</label>
-                <input type="text" id="name" name="name" required placeholder="bv. Sophie De Smet">
+                <label for="name" style="display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 0.45rem; color: #090d16;">Uw Naam *</label>
+                <input type="text" id="name" name="name" required placeholder="bv. Sophie De Smet" style="display: block; width: 100%; padding: 0.85rem 1rem; border-radius: 10px; border: 1.5px solid #cbd5e1; background: #ffffff; color: #090d16; font-size: 0.95rem; font-family: inherit; box-sizing: border-box;">
               </div>
               <div>
-                <label for="phone">Telefoonnummer *</label>
-                <input type="tel" id="phone" name="phone" required placeholder="bv. 0486 00 00 00">
+                <label for="phone" style="display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 0.45rem; color: #090d16;">Telefoonnummer *</label>
+                <input type="tel" id="phone" name="phone" required placeholder="bv. 0486 00 00 00" style="display: block; width: 100%; padding: 0.85rem 1rem; border-radius: 10px; border: 1.5px solid #cbd5e1; background: #ffffff; color: #090d16; font-size: 0.95rem; font-family: inherit; box-sizing: border-box;">
               </div>
             </div>
 
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem;">
               <div>
-                <label for="email">E-mailadres</label>
-                <input type="email" id="email" name="email" placeholder="bv. sophie@voorbeeld.be">
+                <label for="email" style="display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 0.45rem; color: #090d16;">E-mailadres</label>
+                <input type="email" id="email" name="email" placeholder="bv. sophie@voorbeeld.be" style="display: block; width: 100%; padding: 0.85rem 1rem; border-radius: 10px; border: 1.5px solid #cbd5e1; background: #ffffff; color: #090d16; font-size: 0.95rem; font-family: inherit; box-sizing: border-box;">
               </div>
               <div>
-                <label for="situation">Huidige situatie *</label>
-                <select id="situation" name="situation">
+                <label for="situation" style="display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 0.45rem; color: #090d16;">Huidige situatie *</label>
+                <select id="situation" name="situation" style="display: block; width: 100%; padding: 0.85rem 2.5rem 0.85rem 1rem; border-radius: 10px; border: 1.5px solid #cbd5e1; background: #ffffff url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'16\' height=\'16\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'%23475569\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-linejoin=\'round\'%3E%3Cpath d=\'m6 9 6 6 6-6\'/%3E%3C/svg%3E') no-repeat right 1rem center / 1rem; color: #090d16; font-size: 0.95rem; font-family: inherit; box-sizing: border-box; -webkit-appearance: none; appearance: none; cursor: pointer;">
                   <option value="Heb al zonnepanelen">Ik heb al zonnepanelen</option>
                   <option value="Wil zonnepanelen + batterij">Ik wil zonnepanelen én een batterij</option>
                   <option value="Bedrijfspand batterij">Thuisbatterij / opslag voor bedrijf</option>
@@ -271,8 +271,8 @@
             </div>
 
             <div>
-              <label for="message">Bijkomende informatie (vermogen zonnepanelen, jaarverbruik)</label>
-              <textarea id="message" name="message" rows="4" placeholder="bv. 14 zonnepanelen aanwezig, omvormer merk SolarEdge/Huawei, geschat jaarverbruik 4.000 kWh..."></textarea>
+              <label for="message" style="display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 0.45rem; color: #090d16;">Bijkomende informatie (vermogen zonnepanelen, jaarverbruik)</label>
+              <textarea id="message" name="message" rows="4" placeholder="bv. 14 zonnepanelen aanwezig, omvormer merk SolarEdge/Huawei, geschat jaarverbruik 4.000 kWh..." style="display: block; width: 100%; padding: 0.85rem 1rem; border-radius: 10px; border: 1.5px solid #cbd5e1; background: #ffffff; color: #090d16; font-size: 0.95rem; font-family: inherit; line-height: 1.5; box-sizing: border-box; min-height: 110px; resize: vertical;"></textarea>
             </div>
 
             <button type="submit" class="btn-brand-primary" style="justify-content: center; width: 100%; font-size: 1.05rem; padding: 1rem;">

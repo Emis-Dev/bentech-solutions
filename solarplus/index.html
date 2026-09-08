@@ -22,9 +22,9 @@
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
   <script src="/consent.js?v=solarplus-20260908"></script>
   
-  <link rel="stylesheet" href="/style.css?v=navalign-20260804">
-  <link rel="stylesheet" href="/service-pages.css?v=energy-pages-20260902">
-  <link rel="stylesheet" href="/brand-themes.css?v=multi-brand-20260908">
+  <link rel="stylesheet" href="/style.css?v=form-light-20260908b">
+  <link rel="stylesheet" href="/service-pages.css?v=form-light-20260908b">
+  <link rel="stylesheet" href="/brand-themes.css?v=form-light-20260908b">
   
   <script type="application/ld+json">
   {
@@ -245,23 +245,23 @@
             <input type="hidden" name="brand" value="SolarPlus">
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem;">
               <div>
-                <label for="name">Uw Naam *</label>
-                <input type="text" id="name" name="name" required placeholder="bv. Kevin Janssens">
+                <label for="name" style="display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 0.45rem; color: #090d16;">Uw Naam *</label>
+                <input type="text" id="name" name="name" required placeholder="bv. Kevin Janssens" style="display: block; width: 100%; padding: 0.85rem 1rem; border-radius: 10px; border: 1.5px solid #cbd5e1; background: #ffffff; color: #090d16; font-size: 0.95rem; font-family: inherit; box-sizing: border-box;">
               </div>
               <div>
-                <label for="phone">Telefoonnummer *</label>
-                <input type="tel" id="phone" name="phone" required placeholder="bv. 0486 00 00 00">
+                <label for="phone" style="display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 0.45rem; color: #090d16;">Telefoonnummer *</label>
+                <input type="tel" id="phone" name="phone" required placeholder="bv. 0486 00 00 00" style="display: block; width: 100%; padding: 0.85rem 1rem; border-radius: 10px; border: 1.5px solid #cbd5e1; background: #ffffff; color: #090d16; font-size: 0.95rem; font-family: inherit; box-sizing: border-box;">
               </div>
             </div>
 
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem;">
               <div>
-                <label for="email">E-mailadres</label>
-                <input type="email" id="email" name="email" placeholder="bv. kevin@voorbeeld.be">
+                <label for="email" style="display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 0.45rem; color: #090d16;">E-mailadres</label>
+                <input type="email" id="email" name="email" placeholder="bv. kevin@voorbeeld.be" style="display: block; width: 100%; padding: 0.85rem 1rem; border-radius: 10px; border: 1.5px solid #cbd5e1; background: #ffffff; color: #090d16; font-size: 0.95rem; font-family: inherit; box-sizing: border-box;">
               </div>
               <div>
-                <label for="daktype">Type dak *</label>
-                <select id="daktype" name="daktype">
+                <label for="daktype" style="display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 0.45rem; color: #090d16;">Type dak *</label>
+                <select id="daktype" name="daktype" style="display: block; width: 100%; padding: 0.85rem 2.5rem 0.85rem 1rem; border-radius: 10px; border: 1.5px solid #cbd5e1; background: #ffffff url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'16\' height=\'16\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'%23475569\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-linejoin=\'round\'%3E%3Cpath d=\'m6 9 6 6 6-6\'/%3E%3C/svg%3E') no-repeat right 1rem center / 1rem; color: #090d16; font-size: 0.95rem; font-family: inherit; box-sizing: border-box; -webkit-appearance: none; appearance: none; cursor: pointer;">
                   <option value="Hellend dak met pannen">Hellend dak (dakpannen)</option>
                   <option value="Hellend dak leien / zink">Hellend dak (leien of metaal)</option>
                   <option value="Plat dak">Plat dak (EPDM of roofing)</option>
@@ -271,8 +271,8 @@
             </div>
 
             <div>
-              <label for="message">Huidig stroomverbruik en wensen (bv. wens voor combinatie met thuisbatterij)</label>
-              <textarea id="message" name="message" rows="4" placeholder="bv. Jaarlijks verbruik ca. 4.500 kWh, interesse in combinatie met thuisbatterij en laadpaal..."></textarea>
+              <label for="message" style="display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 0.45rem; color: #090d16;">Huidig stroomverbruik en wensen (bv. wens voor combinatie met thuisbatterij)</label>
+              <textarea id="message" name="message" rows="4" placeholder="bv. Jaarlijks verbruik ca. 4.500 kWh, interesse in combinatie met thuisbatterij en laadpaal..." style="display: block; width: 100%; padding: 0.85rem 1rem; border-radius: 10px; border: 1.5px solid #cbd5e1; background: #ffffff; color: #090d16; font-size: 0.95rem; font-family: inherit; line-height: 1.5; box-sizing: border-box; min-height: 110px; resize: vertical;"></textarea>
             </div>
 
             <button type="submit" class="btn-brand-primary" style="justify-content: center; width: 100%; font-size: 1.05rem; padding: 1rem;">
