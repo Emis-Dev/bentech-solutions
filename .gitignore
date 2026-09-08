@@ -7,3 +7,4 @@ package-lock.json
 .impeccable/mocks/
 .impeccable/qa/
 .impeccable/generate-og.cjs
+.wrangler/
