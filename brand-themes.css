@@ -1,0 +1,490 @@
+/* ==========================================================================
+   BenTech Solutions - Multi-Brand Design System & Service Themes
+   Divisions: KlimaatPlus, BatteryPlus, LaadPlus, ServicePlus, SolarPlus
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Theme Variables per Division
+   -------------------------------------------------------------------------- */
+
+/* Base Defaults */
+:root {
+  --brand-primary: #00c875;
+  --brand-primary-light: #33d491;
+  --brand-primary-dark: #009959;
+  --brand-glow: rgba(0, 200, 117, 0.22);
+  --brand-border: rgba(0, 200, 117, 0.28);
+  --brand-badge-bg: rgba(0, 200, 117, 0.1);
+  --brand-hero-bg: radial-gradient(circle at 18% 25%, rgba(0, 200, 117, 0.14), transparent 34rem),
+                   linear-gradient(135deg, #050a15 0%, #07101f 58%, #0b1727 100%);
+}
+
+/* 1. KlimaatPlus Theme: Flame Orange & Ice Blue */
+body.theme-klimaatplus,
+.theme-klimaatplus {
+  --brand-primary: #f97316;
+  --brand-primary-light: #fb923c;
+  --brand-primary-dark: #ea580c;
+  --brand-secondary: #0284c7;
+  --brand-secondary-light: #38bdf8;
+  --brand-glow: rgba(249, 115, 22, 0.25);
+  --brand-border: rgba(249, 115, 22, 0.32);
+  --brand-badge-bg: rgba(249, 115, 22, 0.12);
+  --brand-hero-bg: radial-gradient(circle at 15% 20%, rgba(249, 115, 22, 0.18), transparent 34rem),
+                   radial-gradient(circle at 85% 70%, rgba(2, 132, 199, 0.15), transparent 34rem),
+                   linear-gradient(135deg, #070912 0%, #0c1322 55%, #080f1d 100%);
+}
+
+/* 2. BatteryPlus Theme: Power Green & High-Tech Slate */
+body.theme-batteryplus,
+.theme-batteryplus {
+  --brand-primary: #22c55e;
+  --brand-primary-light: #4ade80;
+  --brand-primary-dark: #16a34a;
+  --brand-secondary: #10b981;
+  --brand-glow: rgba(34, 197, 94, 0.25);
+  --brand-border: rgba(34, 197, 94, 0.32);
+  --brand-badge-bg: rgba(34, 197, 94, 0.12);
+  --brand-hero-bg: radial-gradient(circle at 18% 22%, rgba(34, 197, 94, 0.16), transparent 32rem),
+                   radial-gradient(circle at 80% 65%, rgba(16, 185, 129, 0.12), transparent 30rem),
+                   linear-gradient(135deg, #050a12 0%, #08141d 58%, #050d15 100%);
+}
+
+/* 3. LaadPlus Theme: Dynamic EV Emerald & Volt Blue */
+body.theme-laadplus,
+.theme-laadplus {
+  --brand-primary: #00c875;
+  --brand-primary-light: #33d491;
+  --brand-primary-dark: #009959;
+  --brand-secondary: #2563eb;
+  --brand-glow: rgba(0, 200, 117, 0.25);
+  --brand-border: rgba(0, 200, 117, 0.32);
+  --brand-badge-bg: rgba(0, 200, 117, 0.12);
+  --brand-hero-bg: radial-gradient(circle at 17% 24%, rgba(0, 200, 117, 0.16), transparent 34rem),
+                   radial-gradient(circle at 85% 65%, rgba(37, 99, 235, 0.14), transparent 32rem),
+                   linear-gradient(135deg, #050a15 0%, #07101f 58%, #0b1727 100%);
+}
+
+/* 4. ServicePlus Theme: 24/7 Storingsblauw & Alert Amber/Red */
+body.theme-serviceplus,
+.theme-serviceplus {
+  --brand-primary: #38bdf8;
+  --brand-primary-light: #7dd3fc;
+  --brand-primary-dark: #0284c7;
+  --brand-secondary: #ef4444;
+  --brand-glow: rgba(56, 189, 248, 0.28);
+  --brand-border: rgba(56, 189, 248, 0.32);
+  --brand-badge-bg: rgba(56, 189, 248, 0.12);
+  --brand-hero-bg: radial-gradient(circle at 18% 22%, rgba(2, 132, 199, 0.22), transparent 34rem),
+                   radial-gradient(circle at 85% 70%, rgba(239, 68, 68, 0.16), transparent 30rem),
+                   linear-gradient(135deg, #050b18 0%, #071224 55%, #050a15 100%);
+}
+
+/* 5. SolarPlus Theme: Sun Gold/Amber & Deep Solar Navy */
+body.theme-solarplus,
+.theme-solarplus {
+  --brand-primary: #f59e0b;
+  --brand-primary-light: #fbbf24;
+  --brand-primary-dark: #d97706;
+  --brand-secondary: #3b82f6;
+  --brand-glow: rgba(245, 158, 11, 0.25);
+  --brand-border: rgba(245, 158, 11, 0.32);
+  --brand-badge-bg: rgba(245, 158, 11, 0.12);
+  --brand-hero-bg: radial-gradient(circle at 18% 22%, rgba(245, 158, 11, 0.18), transparent 34rem),
+                   radial-gradient(circle at 82% 70%, rgba(59, 130, 246, 0.12), transparent 32rem),
+                   linear-gradient(135deg, #0a0b12 0%, #121320 55%, #080a15 100%);
+}
+
+/* --------------------------------------------------------------------------
+   2. Brand Header & Parent Company Indicator
+   -------------------------------------------------------------------------- */
+.brand-header-wrap {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.brand-main-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.brand-main-logo .brand-logo-img {
+  height: 48px;
+  width: auto;
+  max-width: 220px;
+  object-fit: contain;
+  display: block;
+}
+
+.parent-company-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+}
+
+.parent-company-tag:hover {
+  color: var(--text-main);
+  border-color: var(--brand-primary);
+  background: var(--brand-badge-bg);
+}
+
+.parent-company-tag svg {
+  width: 12px;
+  height: 12px;
+  color: var(--brand-primary);
+}
+
+/* --------------------------------------------------------------------------
+   3. Brand Hero Layout & Overrides
+   -------------------------------------------------------------------------- */
+.brand-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 680px;
+  display: grid;
+  align-items: center;
+  padding: clamp(3.5rem, 6vw, 5.5rem) 0;
+  border-bottom: 1px solid var(--border-subtle);
+  background: var(--brand-hero-bg);
+}
+
+.brand-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.85rem;
+  border-radius: 9999px;
+  border: 1px solid var(--brand-border);
+  background: var(--brand-badge-bg);
+  color: var(--brand-primary-light);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.brand-kicker-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--brand-primary);
+  box-shadow: 0 0 8px var(--brand-primary);
+}
+
+.brand-hero h1 {
+  font-size: clamp(2.4rem, 5.2vw, 4.8rem);
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  margin-bottom: 1.25rem;
+}
+
+.brand-hero h1 .text-highlight {
+  color: var(--brand-primary);
+}
+
+.brand-hero-lead {
+  max-width: 60ch;
+  color: #c0cddf;
+  font-size: clamp(1.05rem, 1.4vw, 1.2rem);
+  line-height: 1.75;
+  margin-bottom: 2rem;
+}
+
+/* Brand Actions */
+.brand-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.btn-brand-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.85rem 1.65rem;
+  border-radius: 8px;
+  background-color: var(--brand-primary);
+  color: #050a15;
+  font-weight: 700;
+  font-size: 0.98rem;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  box-shadow: 0 4px 18px var(--brand-glow);
+}
+
+.btn-brand-primary:hover {
+  background-color: var(--brand-primary-light);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px var(--brand-glow);
+  color: #050a15;
+}
+
+.btn-brand-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.85rem 1.5rem;
+  border-radius: 8px;
+  background: rgba(13, 22, 41, 0.85);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-main);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all var(--transition-fast);
+}
+
+.btn-brand-outline:hover {
+  border-color: var(--brand-primary);
+  background: var(--brand-badge-bg);
+  color: var(--text-main);
+}
+
+/* Emergency Button for ServicePlus */
+.btn-emergency-pulse {
+  background: #ef4444 !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.4) !important;
+  animation: urgentPulse 2s infinite ease-in-out;
+}
+
+.btn-emergency-pulse:hover {
+  background: #dc2626 !important;
+  color: #ffffff !important;
+}
+
+@keyframes urgentPulse {
+  0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.5); }
+  70% { box-shadow: 0 0 0 12px rgba(239, 68, 68, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+}
+
+/* --------------------------------------------------------------------------
+   4. Media Card & Framing
+   -------------------------------------------------------------------------- */
+.brand-hero-media {
+  position: relative;
+}
+
+.brand-media-frame {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid var(--brand-border);
+  box-shadow: 0 20px 45px -15px rgba(0, 0, 0, 0.7), 0 0 30px var(--brand-glow);
+  background: var(--bg-card);
+}
+
+.brand-media-frame img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  display: block;
+}
+
+.brand-media-badge {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 1.25rem;
+  right: 1.25rem;
+  padding: 0.85rem 1.15rem;
+  border-radius: 14px;
+  background: rgba(8, 14, 28, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.brand-media-badge-text {
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.brand-media-badge-sub {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   5. Distinct Division Navigation Strip
+   -------------------------------------------------------------------------- */
+.divisions-nav-strip {
+  background: #040812;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  padding: 0.5rem 0;
+  font-size: 0.82rem;
+}
+
+.divisions-nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.divisions-list {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.divisions-list::-webkit-scrollbar { display: none; }
+
+.division-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 9999px;
+  color: var(--text-muted);
+  font-weight: 500;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.division-chip:hover {
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.division-chip.active {
+  color: var(--brand-primary);
+  background: var(--brand-badge-bg);
+  border: 1px solid var(--brand-border);
+  font-weight: 700;
+}
+
+/* --------------------------------------------------------------------------
+   6. Service Content & What We Do Sections
+   -------------------------------------------------------------------------- */
+.brand-content-section {
+  padding: clamp(4rem, 7vw, 6.5rem) 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.brand-grid-2col {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.brand-card {
+  padding: 2rem;
+  border-radius: 18px;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-card);
+  transition: all var(--transition-normal);
+}
+
+.brand-card:hover {
+  border-color: var(--brand-border);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px -10px var(--brand-glow);
+}
+
+.brand-card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--brand-badge-bg);
+  border: 1px solid var(--brand-border);
+  color: var(--brand-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.brand-card-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.brand-card h3 {
+  font-size: 1.35rem;
+  margin-bottom: 0.75rem;
+}
+
+.brand-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+/* Checkmark List */
+.brand-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 1.25rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.brand-checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  color: #cfd9e6;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.brand-checklist li svg {
+  color: var(--brand-primary);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   7. Dedicated Quote & Contact Box
+   -------------------------------------------------------------------------- */
+.brand-quote-section {
+  padding: clamp(4.5rem, 8vw, 7rem) 0;
+  background: radial-gradient(circle at 50% 10%, var(--brand-glow), transparent 38rem),
+              var(--bg-secondary);
+}
+
+.brand-quote-box {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: clamp(2rem, 4vw, 3.25rem);
+  border-radius: 24px;
+  border: 1px solid var(--brand-border);
+  background: var(--bg-card);
+  box-shadow: var(--shadow-card);
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .service-hero-grid,
+  .brand-hero-grid {
+    grid-template-columns: 1fr;
+  }
+  .brand-media-frame img {
+    height: 340px;
+  }
+}
