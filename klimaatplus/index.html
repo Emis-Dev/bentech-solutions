@@ -178,7 +178,7 @@
             </ul>
           </div>
 
-          <div class="brand-card">
+          <div class="brand-card" id="voordelen">
             <div class="brand-card-icon"><i data-lucide="award"></i></div>
             <h3>Wat onderscheidt KlimaatPlus?</h3>
             <p>
@@ -222,6 +222,42 @@
       </div>
     </section>
 
+    <!-- Werkwijze & Aanpak Section -->
+    <section class="brand-content-section" id="werkwijze">
+      <div class="container">
+        <div class="section-heading text-center" style="margin-bottom: 2rem;">
+          <span class="brand-kicker"><span class="brand-kicker-dot"></span>Transparant Traject</span>
+          <h2>Onze Werkwijze &amp; Aanpak</h2>
+          <p style="max-width: 68ch; margin: 0 auto; color: var(--text-muted);">
+            Van eerste inspectie tot gecertificeerde inbedrijfstelling: u weet vooraf exact waar u aan toe bent.
+          </p>
+        </div>
+
+        <div class="brand-steps-grid">
+          <div class="brand-step-card">
+            <div class="brand-step-num">01</div>
+            <h3>Situatie- &amp; Koellastanalyse</h3>
+            <p>We bekijken uw ruimtes, isolatiegraad en oriëntatie om exact het benodigde koel- en verwarmingsvermogen (kW) te bepalen.</p>
+          </div>
+          <div class="brand-step-card">
+            <div class="brand-step-num">02</div>
+            <h3>Voorstel op Maat</h3>
+            <p>U ontvangt een heldere, gespecificeerde offerte met hoogwaardige A-merk toestellen (A+++) zonder verborgen kosten.</p>
+          </div>
+          <div class="brand-step-card">
+            <div class="brand-step-num">03</div>
+            <h3>Vakkundige Installatie</h3>
+            <p>Plaatsing en koudemiddelaansluiting conform alle veiligheids- en milieunormen, met zorg voor een schone afwerking.</p>
+          </div>
+          <div class="brand-step-card">
+            <div class="brand-step-num">04</div>
+            <h3>Uitleg &amp; Nazorg</h3>
+            <p>Volledige inbedrijfstelling, duidelijke instructie van afstandsbediening of app en blijvende service en onderhoud.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Advies & Offerte Formulier -->
     <section class="brand-quote-section" id="offerte">
       <div class="container">
@@ -234,7 +270,7 @@
             </p>
           </div>
 
-          <form id="klimaatForm" action="https://formspree.io/f/xyzkqabp" method="POST" style="display: flex; flex-direction: column; gap: 1.25rem;">
+          <form id="klimaatForm" class="brand-contact-form" onsubmit="handleBrandFormSubmit(event, 'KlimaatPlus')" style="display: flex; flex-direction: column; gap: 1.25rem;">
             <input type="hidden" name="brand" value="KlimaatPlus">
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem;">
               <div>
@@ -269,10 +305,10 @@
             </div>
 
             <button type="submit" class="btn-brand-primary" style="justify-content: center; width: 100%; font-size: 1.05rem; padding: 1rem;">
-              <i data-lucide="send" class="icon-sm"></i>Verstuur Aanvraag
+              <i data-lucide="send" class="icon-sm"></i>Verstuur Aanvraag via WhatsApp
             </button>
-            <p style="text-align: center; font-size: 0.78rem; color: var(--text-subtle); margin-top: 0.25rem;">
-              Geen verplichtingen. Wij behandelen uw gegevens strikt vertrouwelijk.
+            <p class="form-handoff-note">
+              Direct contact met vakman Yassir. Geen verplichtingen &bull; Strikt vertrouwelijk.
             </p>
           </form>
         </div>
@@ -307,13 +343,84 @@
           </ul>
         </div>
       </div>
-      <div style="border-top: 1px solid rgba(255, 255, 255, 0.06); padding-top: 1.5rem; text-align: center; color: var(--text-subtle); font-size: 0.8rem;">
-        &copy; 2026 KlimaatPlus &bull; Een divisie van BenTech Solutions CommV &bull; Alle rechten voorbehouden.
+      <div style="border-top: 1px solid rgba(255, 255, 255, 0.06); padding-top: 1.5rem; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; color: var(--text-subtle); font-size: 0.8rem;">
+        <p>&copy; 2026 KlimaatPlus &bull; Een divisie van BenTech Solutions CommV (BTW BE 1025.714.523). Alle rechten voorbehouden.</p>
+        <div style="display: flex; align-items: center; gap: 1.25rem;">
+          <button type="button" class="footer-consent-button" id="manageMarketingConsent">Cookievoorkeuren</button>
+          <p class="tomcool-credit">Website door <a href="https://web.tom.cool" target="_blank" rel="noopener">web.tom.cool</a></p>
+        </div>
       </div>
     </div>
   </footer>
 
+  <!-- Mobile Sticky Bar -->
+  <div class="mobile-sticky-bar">
+    <a href="tel:+32486328645" class="btn btn-sticky btn-brand-primary">
+      <i data-lucide="phone" class="icon-sm"></i>
+      Bel KlimaatPlus
+    </a>
+    <a href="https://wa.me/32486328645?text=Hallo%20Yassir%2C%20ik%20heb%20een%20vraag%20over%20KlimaatPlus" target="_blank" rel="noopener" class="btn btn-whatsapp btn-sticky">
+      <i data-lucide="message-circle" class="icon-sm"></i>
+      WhatsApp
+    </a>
+  </div>
+
+  <!-- Marketing Consent Banner (Consent Mode v2) -->
+  <aside class="consent-banner" id="marketingConsentBanner" aria-labelledby="marketingConsentTitle" hidden>
+    <div class="consent-banner__copy">
+      <h2 id="marketingConsentTitle">Uw privacy, uw keuze</h2>
+      <p>Met uw toestemming gebruikt BenTech Solutions een Google Ads-tag om campagnes en websitebezoek te meten. Weigeren heeft geen invloed op de werking van deze website.</p>
+    </div>
+    <div class="consent-banner__actions">
+      <button type="button" class="btn btn-outline" id="rejectMarketingConsent">Alles weigeren</button>
+      <button type="button" class="btn btn-brand-primary" id="acceptMarketingConsent">Marketing toestaan</button>
+    </div>
+  </aside>
+
   <script>
+    function handleBrandFormSubmit(event, brandName) {
+      event.preventDefault();
+      const form = event.currentTarget;
+      const name = form.querySelector('[name="name"]')?.value || '';
+      const phone = form.querySelector('[name="phone"]')?.value || '';
+      const email = form.querySelector('[name="email"]')?.value || '';
+      const option = form.querySelector('[name="type"], [name="situation"], [name="locatie"], [name="urgentie"], [name="daktype"]')?.value || '';
+      const message = form.querySelector('[name="message"]')?.value || '';
+
+      const textLines = [
+        `AANVRAAG VIA ${brandName.toUpperCase()}`,
+        '',
+        `Naam: ${name}`,
+        `Telefoon: ${phone}`,
+        `E-mail: ${email || 'Niet opgegeven'}`,
+        `Type project: ${option}`,
+        `Toelichting: ${message || 'Geen extra details'}`
+      ];
+      const text = textLines.join('\n');
+      const waUrl = `https://wa.me/32486328645?text=${encodeURIComponent(text)}`;
+
+      let status = form.querySelector('.form-handoff-status');
+      if (!status) {
+        status = document.createElement('div');
+        status.className = 'form-handoff-status';
+        status.setAttribute('role', 'status');
+        form.appendChild(status);
+      }
+      const retry = document.createElement('a');
+      retry.href = waUrl;
+      retry.target = '_blank';
+      retry.rel = 'noopener noreferrer';
+      retry.textContent = 'Klik hier om direct door te gaan naar WhatsApp';
+
+      status.replaceChildren(
+        'Uw aanvraag staat klaar! ',
+        retry,
+        '. Heeft u geen WhatsApp? Bel ons gerust direct op +32 486 32 86 45.'
+      );
+
+      window.open(waUrl, '_blank', 'noopener,noreferrer');
+    }
+
     document.addEventListener('DOMContentLoaded', () => {
       if (window.lucide) {
         window.lucide.createIcons();
@@ -323,7 +430,13 @@
       if (mobileToggle && mainNav) {
         mobileToggle.addEventListener('click', () => {
           mainNav.classList.toggle('open');
-          mobileToggle.classList.toggle('active');
+          mobileToggle.classList.toggle('is-active');
+        });
+        mainNav.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            mainNav.classList.remove('open');
+            mobileToggle.classList.remove('is-active');
+          });
         });
       }
     });

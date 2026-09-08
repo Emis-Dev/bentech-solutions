@@ -78,8 +78,36 @@ for (const brand of brands) {
     assert.match(html, new RegExp(`href="https://${b.subdomain}\\.bentechsolutions\\.be"`), `${brand.name}: missing link to sibling division ${b.name}`);
   }
   
-  // Form presence with brand tag
+  // Form presence with brand tag and WhatsApp handler
   assert.match(html, new RegExp(`name="brand" value="${brand.name}`), `${brand.name}: form missing brand identification input`);
+  assert.doesNotMatch(html, /formspree\.io/, `${brand.name}: must NOT contain dummy formspree.io endpoint`);
+  assert.match(html, /onsubmit="handleBrandFormSubmit\(event,/, `${brand.name}: missing handleBrandFormSubmit handler`);
+
+  // Mobile Sticky Bar
+  assert.match(html, /class="mobile-sticky-bar"/, `${brand.name}: missing mobile-sticky-bar`);
+  assert.match(html, /href="tel:\+32486328645"/, `${brand.name}: mobile-sticky-bar missing telephone link`);
+  assert.match(html, /href="https:\/\/wa\.me\/32486328645/, `${brand.name}: mobile-sticky-bar missing WhatsApp link`);
+
+  // Google Consent Mode v2 elements
+  assert.match(html, /id="marketingConsentBanner"/, `${brand.name}: missing marketingConsentBanner element`);
+  assert.match(html, /id="acceptMarketingConsent"/, `${brand.name}: missing acceptMarketingConsent button`);
+  assert.match(html, /id="rejectMarketingConsent"/, `${brand.name}: missing rejectMarketingConsent button`);
+  assert.match(html, /id="manageMarketingConsent"/, `${brand.name}: missing manageMarketingConsent footer button`);
+
+  // Legal & Web Credit
+  assert.match(html, /1025\.714\.523/, `${brand.name}: missing VAT number in footer`);
+  assert.match(html, /web\.tom\.cool/, `${brand.name}: missing web.tom.cool credit in footer`);
+
+  // Mobile hamburger animation class
+  assert.match(html, /is-active/, `${brand.name}: script missing is-active toggle for hamburger animation`);
+
+  // Zero broken nav anchors
+  const navMatch = html.match(/<nav class="main-nav"[^>]*>([\s\S]*?)<\/nav>/);
+  assert.ok(navMatch, `${brand.name}: missing main-nav`);
+  const navAnchors = [...navMatch[1].matchAll(/href="#([^"]+)"/g)].map(m => m[1]);
+  for (const anchor of navAnchors) {
+    assert.ok(html.includes(`id="${anchor}"`), `${brand.name}: broken anchor #${anchor} has no matching id in DOM`);
+  }
 }
 
 // 2. Verify Cloudflare Edge Router

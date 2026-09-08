@@ -488,3 +488,119 @@ body.theme-solarplus,
     height: 340px;
   }
 }
+
+/* --------------------------------------------------------------------------
+   8. Form WhatsApp Handoff, Steps Process & Mobile Sticky Bar
+   -------------------------------------------------------------------------- */
+.form-handoff-status {
+  margin-top: 1.25rem;
+  padding: 1rem 1.15rem;
+  border-radius: 12px;
+  background: var(--brand-badge-bg);
+  border: 1px solid var(--brand-border);
+  color: var(--text-main);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.form-handoff-status a {
+  color: var(--brand-primary-light);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.form-handoff-note {
+  font-size: 0.8rem;
+  color: var(--text-subtle);
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+/* Steps Grid */
+.brand-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.brand-step-card {
+  position: relative;
+  padding: 2rem 1.75rem;
+  border-radius: 18px;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-card);
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-step-card:hover {
+  border-color: var(--brand-border);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px -10px var(--brand-glow);
+}
+
+.brand-step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--brand-badge-bg);
+  border: 1px solid var(--brand-border);
+  color: var(--brand-primary);
+  font-weight: 800;
+  font-size: 1.2rem;
+  margin-bottom: 1.25rem;
+}
+
+.brand-step-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+}
+
+.brand-step-card p {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+/* Mobile Sticky Bar Theme Alignments */
+.mobile-sticky-bar {
+  border-top-color: var(--brand-border);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.mobile-sticky-bar .btn-brand-primary {
+  flex: 1;
+  padding: 0.7rem;
+  font-size: 0.85rem;
+  justify-content: center;
+}
+
+.mobile-sticky-bar .btn-sticky {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.footer-consent-button:hover {
+  color: var(--brand-primary-light);
+}
+
+.tomcool-credit a {
+  color: var(--brand-primary-light);
+  text-decoration: none;
+}
+
+.tomcool-credit a:hover {
+  text-decoration: underline;
+}
+

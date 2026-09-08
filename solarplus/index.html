@@ -177,7 +177,7 @@
             </ul>
           </div>
 
-          <div class="brand-card">
+          <div class="brand-card" id="onderscheid">
             <div class="brand-card-icon"><i data-lucide="check-check"></i></div>
             <h3>Wat onderscheidt SolarPlus?</h3>
             <p>
@@ -188,6 +188,42 @@
               <li><i data-lucide="check-circle-2"></i><strong>Batterij- en laadpaal-ready:</strong> Direct voorbereid op combinatie met thuisbatterij en slimme laadpaal.</li>
               <li><i data-lucide="check-circle-2"></i><strong>Blijvende bereikbaarheid:</strong> Ook na de oplevering blijven we bereikbaar voor onderhoud, opvolging en service.</li>
             </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dak & Rendement Section -->
+    <section class="brand-content-section" id="dak" style="background: var(--bg-secondary);">
+      <div class="container">
+        <div class="section-heading text-center" style="margin-bottom: 2rem;">
+          <span class="brand-kicker"><span class="brand-kicker-dot"></span>Optimale Opbrengst</span>
+          <h2>Dak &amp; Rendement: De Juiste Oplossing voor Elk Type Dak</h2>
+          <p style="max-width: 68ch; margin: 0 auto; color: var(--text-muted);">
+            Geen dak is hetzelfde. We berekenen de ideale dakbelasting, hellingshoek en paneeloriëntatie voor maximaal rendement.
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.75rem;">
+          <div class="brand-card">
+            <div class="brand-card-icon"><i data-lucide="home"></i></div>
+            <h3>Hellend Dak (Pannen &amp; Leien)</h3>
+            <p>Stormvaste dakhaken bevestigd aan de kepers, zonder pannen te beschadigen. Esthetisch afgewerkt met all-black zonnepanelen.</p>
+          </div>
+          <div class="brand-card">
+            <div class="brand-card-icon"><i data-lucide="layout-grid"></i></div>
+            <h3>Plat Dak (EPDM of Roofing)</h3>
+            <p>Aerodynamische oost-west of zuidopstelling met veilige ballastberekening zonder doorboring van uw waterdichte dakbedekking.</p>
+          </div>
+          <div class="brand-card">
+            <div class="brand-card-icon"><i data-lucide="cpu"></i></div>
+            <h3>Optimizers &amp; Schaduwbeheersing</h3>
+            <p>Heeft u een schoorsteen of bomen nabij? Met SolarEdge of Enphase micro-omvormers presteert elk paneel individueel op piekniveau.</p>
+          </div>
+          <div class="brand-card">
+            <div class="brand-card-icon"><i data-lucide="battery-charging"></i></div>
+            <h3>Batterij- &amp; Laadpaal-Klaar</h3>
+            <p>Hybride omvormers die direct klaarstaan voor een toekomstige thuisbatterij en slimme sturing naar uw elektrische wagen.</p>
           </div>
         </div>
       </div>
@@ -205,7 +241,7 @@
             </p>
           </div>
 
-          <form id="solarForm" action="https://formspree.io/f/xyzkqabp" method="POST" style="display: flex; flex-direction: column; gap: 1.25rem;">
+          <form id="solarForm" class="brand-contact-form" onsubmit="handleBrandFormSubmit(event, 'SolarPlus')" style="display: flex; flex-direction: column; gap: 1.25rem;">
             <input type="hidden" name="brand" value="SolarPlus">
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem;">
               <div>
@@ -240,8 +276,11 @@
             </div>
 
             <button type="submit" class="btn-brand-primary" style="justify-content: center; width: 100%; font-size: 1.05rem; padding: 1rem;">
-              <i data-lucide="send" class="icon-sm"></i>Vraag Vrijblijvende Zonnepanelenofferte
+              <i data-lucide="send" class="icon-sm"></i>Vraag Vrijblijvende Zonnepanelenofferte via WhatsApp
             </button>
+            <p class="form-handoff-note">
+              Direct persoonlijk advies van erkend installateur Yassir. Vrijblijvend &bull; Binnen 24u reactie.
+            </p>
           </form>
         </div>
       </div>
@@ -275,13 +314,84 @@
           </ul>
         </div>
       </div>
-      <div style="border-top: 1px solid rgba(255, 255, 255, 0.06); padding-top: 1.5rem; text-align: center; color: var(--text-subtle); font-size: 0.8rem;">
-        &copy; 2026 SolarPlus &bull; Een divisie van BenTech Solutions CommV &bull; Alle rechten voorbehouden.
+      <div style="border-top: 1px solid rgba(255, 255, 255, 0.06); padding-top: 1.5rem; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; color: var(--text-subtle); font-size: 0.8rem;">
+        <p>&copy; 2026 SolarPlus &bull; Een divisie van BenTech Solutions CommV (BTW BE 1025.714.523). Alle rechten voorbehouden.</p>
+        <div style="display: flex; align-items: center; gap: 1.25rem;">
+          <button type="button" class="footer-consent-button" id="manageMarketingConsent">Cookievoorkeuren</button>
+          <p class="tomcool-credit">Website door <a href="https://web.tom.cool" target="_blank" rel="noopener">web.tom.cool</a></p>
+        </div>
       </div>
     </div>
   </footer>
 
+  <!-- Mobile Sticky Bar -->
+  <div class="mobile-sticky-bar">
+    <a href="tel:+32486328645" class="btn btn-sticky btn-brand-primary">
+      <i data-lucide="phone" class="icon-sm"></i>
+      Bel SolarPlus
+    </a>
+    <a href="https://wa.me/32486328645?text=Hallo%20Yassir%2C%20ik%20heb%20een%20vraag%20over%20SolarPlus" target="_blank" rel="noopener" class="btn btn-whatsapp btn-sticky">
+      <i data-lucide="message-circle" class="icon-sm"></i>
+      WhatsApp
+    </a>
+  </div>
+
+  <!-- Marketing Consent Banner (Consent Mode v2) -->
+  <aside class="consent-banner" id="marketingConsentBanner" aria-labelledby="marketingConsentTitle" hidden>
+    <div class="consent-banner__copy">
+      <h2 id="marketingConsentTitle">Uw privacy, uw keuze</h2>
+      <p>Met uw toestemming gebruikt BenTech Solutions een Google Ads-tag om campagnes en websitebezoek te meten. Weigeren heeft geen invloed op de werking van deze website.</p>
+    </div>
+    <div class="consent-banner__actions">
+      <button type="button" class="btn btn-outline" id="rejectMarketingConsent">Alles weigeren</button>
+      <button type="button" class="btn btn-brand-primary" id="acceptMarketingConsent">Marketing toestaan</button>
+    </div>
+  </aside>
+
   <script>
+    function handleBrandFormSubmit(event, brandName) {
+      event.preventDefault();
+      const form = event.currentTarget;
+      const name = form.querySelector('[name="name"]')?.value || '';
+      const phone = form.querySelector('[name="phone"]')?.value || '';
+      const email = form.querySelector('[name="email"]')?.value || '';
+      const option = form.querySelector('[name="type"], [name="situation"], [name="locatie"], [name="urgentie"], [name="daktype"]')?.value || '';
+      const message = form.querySelector('[name="message"]')?.value || '';
+
+      const textLines = [
+        `AANVRAAG VIA ${brandName.toUpperCase()}`,
+        '',
+        `Naam: ${name}`,
+        `Telefoon: ${phone}`,
+        `E-mail: ${email || 'Niet opgegeven'}`,
+        `Type dak: ${option}`,
+        `Verbruik & Details: ${message || 'Geen extra details'}`
+      ];
+      const text = textLines.join('\n');
+      const waUrl = `https://wa.me/32486328645?text=${encodeURIComponent(text)}`;
+
+      let status = form.querySelector('.form-handoff-status');
+      if (!status) {
+        status = document.createElement('div');
+        status.className = 'form-handoff-status';
+        status.setAttribute('role', 'status');
+        form.appendChild(status);
+      }
+      const retry = document.createElement('a');
+      retry.href = waUrl;
+      retry.target = '_blank';
+      retry.rel = 'noopener noreferrer';
+      retry.textContent = 'Klik hier om direct door te gaan naar WhatsApp';
+
+      status.replaceChildren(
+        'Uw aanvraag staat klaar! ',
+        retry,
+        '. Heeft u geen WhatsApp? Bel ons gerust direct op +32 486 32 86 45.'
+      );
+
+      window.open(waUrl, '_blank', 'noopener,noreferrer');
+    }
+
     document.addEventListener('DOMContentLoaded', () => {
       if (window.lucide) {
         window.lucide.createIcons();
@@ -291,7 +401,13 @@
       if (mobileToggle && mainNav) {
         mobileToggle.addEventListener('click', () => {
           mainNav.classList.toggle('open');
-          mobileToggle.classList.toggle('active');
+          mobileToggle.classList.toggle('is-active');
+        });
+        mainNav.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            mainNav.classList.remove('open');
+            mobileToggle.classList.remove('is-active');
+          });
         });
       }
     });
