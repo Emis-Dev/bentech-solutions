@@ -471,6 +471,48 @@ body.theme-solarplus,
   box-shadow: var(--shadow-card);
 }
 
+.brand-contact-form label {
+  display: block;
+  font-size: 0.86rem;
+  font-weight: 600;
+  margin-bottom: 0.45rem;
+  color: var(--text-main);
+}
+
+.brand-contact-form input,
+.brand-contact-form select,
+.brand-contact-form textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  border: 1px solid var(--border-subtle);
+  background: #ffffff;
+  color: var(--text-main);
+  font-family: inherit;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  box-sizing: border-box;
+  transition: all var(--transition-fast);
+}
+
+.brand-contact-form input:focus,
+.brand-contact-form select:focus,
+.brand-contact-form textarea:focus {
+  outline: none;
+  border-color: var(--brand-primary);
+  box-shadow: 0 0 0 3px var(--brand-badge-bg);
+}
+
+.brand-contact-form input::placeholder,
+.brand-contact-form textarea::placeholder {
+  color: #94a3b8;
+}
+
+.brand-contact-form select option {
+  background: #ffffff;
+  color: var(--text-main);
+}
+
 /* Responsive adjustments */
 @media (max-width: 900px) {
   .service-hero-grid,

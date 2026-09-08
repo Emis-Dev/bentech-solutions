@@ -988,11 +988,29 @@ h2 { font-weight: 600; }
 
 .energy-service-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.25rem;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1rem;
 }
 
-.energy-service-grid .bento-card { min-height: 100%; }
+.energy-service-grid .bento-card {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1.35rem 1.15rem;
+}
+
+.energy-service-grid .bento-card .service-card-action {
+  margin-top: auto;
+  font-size: 0.82rem;
+  word-break: break-word;
+}
+
+@media (max-width: 1200px) {
+  .energy-service-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.15rem;
+  }
+}
 
 .energy-service-card {
   border-color: rgba(245, 158, 11, 0.28);

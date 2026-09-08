@@ -771,8 +771,8 @@ function initVantaHero() {
         minWidth: 200.00,
         scale: 1.00,
         scaleMobile: 1.00,
-        color: 0x00c875,
-        backgroundColor: 0x050a15
+        color: 0x047857,
+        backgroundColor: 0xf8fafc
       });
 
       const effectForHook = vantaEffect;
@@ -784,7 +784,7 @@ function initVantaHero() {
           effectForHook.p5.push();
           effectForHook.p5.resetMatrix();
           effectForHook.p5.noStroke();
-          effectForHook.p5.fill(5, 10, 21, 10);
+          effectForHook.p5.fill(248, 250, 252, 10);
           effectForHook.p5.rect(0, 0, effectForHook.p5.width, effectForHook.p5.height);
           effectForHook.p5.pop();
           originalDraw.call(this);

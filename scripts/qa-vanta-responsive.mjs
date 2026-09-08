@@ -20,7 +20,7 @@ assert.doesNotMatch(javascript, /window\.THREE\s*=/);
 assert.match(javascript, /mouseControls: true/);
 assert.match(javascript, /touchControls: true/);
 assert.match(javascript, /scaleMobile: 1\.00/);
-assert.match(javascript, /color: 0x00c875/);
-assert.match(javascript, /backgroundColor: 0x050a15/);
+assert.match(javascript, /color: 0x047857/);
+assert.match(javascript, /backgroundColor: 0xf8fafc/);
 
 console.log('Vanta responsive contract OK: review hero keeps the pinned desktop effect and excludes the mobile runtime.');

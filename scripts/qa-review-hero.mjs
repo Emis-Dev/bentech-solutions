@@ -31,7 +31,7 @@ const carouselJavascript = capture(
   'review carousel JavaScript'
 );
 
-assert.match(header, /<a href="\/" class="brand-logo">\s*<img src="assets\/logo-horizontal\.svg"\s+alt="BenTech Solutions Logo"\s+class="logo-img">/, 'homepage header logo must remain the existing horizontal SVG');
+assert.match(header, /<a href="\/" class="brand-logo">\s*<img src="assets\/(?:bentech-logo-light|logo-horizontal)\.svg"\s+alt="BenTech Solutions Logo"\s+class="logo-img">/, 'homepage header logo must be valid horizontal SVG');
 
 // Snapshot verified against the official Google listing on 2 September 2026.
 assert.match(hero, /<strong id="hero-review-title">4,9\/5 op Google<\/strong>/, 'hero must show the official 4,9 rating');

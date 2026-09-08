@@ -240,23 +240,23 @@
             <input type="hidden" name="brand" value="LaadPlus">
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem;">
               <div>
-                <label for="name" style="display: block; font-size: 0.86rem; font-weight: 600; margin-bottom: 0.4rem;">Uw Naam *</label>
-                <input type="text" id="name" name="name" required placeholder="bv. Thomas Verhoeven" style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border-subtle); background: #050a15; color: #fff;">
+                <label for="name">Uw Naam *</label>
+                <input type="text" id="name" name="name" required placeholder="bv. Thomas Verhoeven">
               </div>
               <div>
-                <label for="phone" style="display: block; font-size: 0.86rem; font-weight: 600; margin-bottom: 0.4rem;">Telefoonnummer *</label>
-                <input type="tel" id="phone" name="phone" required placeholder="bv. 0486 00 00 00" style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border-subtle); background: #050a15; color: #fff;">
+                <label for="phone">Telefoonnummer *</label>
+                <input type="tel" id="phone" name="phone" required placeholder="bv. 0486 00 00 00">
               </div>
             </div>
 
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem;">
               <div>
-                <label for="email" style="display: block; font-size: 0.86rem; font-weight: 600; margin-bottom: 0.4rem;">E-mailadres</label>
-                <input type="email" id="email" name="email" placeholder="bv. thomas@voorbeeld.be" style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border-subtle); background: #050a15; color: #fff;">
+                <label for="email">E-mailadres</label>
+                <input type="email" id="email" name="email" placeholder="bv. thomas@voorbeeld.be">
               </div>
               <div>
-                <label for="locatie" style="display: block; font-size: 0.86rem; font-weight: 600; margin-bottom: 0.4rem;">Installatie op *</label>
-                <select id="locatie" name="locatie" style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border-subtle); background: #050a15; color: #fff;">
+                <label for="locatie">Installatie op *</label>
+                <select id="locatie" name="locatie">
                   <option value="Particuliere woning">Particuliere woning (oprit of garage)</option>
                   <option value="Bedrijfspand">Bedrijfspand / kantoor / vloot</option>
                   <option value="Appartementsgebouw">Mede-eigendom / appartement</option>
@@ -265,8 +265,8 @@
             </div>
 
             <div>
-              <label for="message" style="display: block; font-size: 0.86rem; font-weight: 600; margin-bottom: 0.4rem;">Merk/model elektrische wagen en geschatte afstand tot meterkast</label>
-              <textarea id="message" name="message" rows="4" placeholder="bv. Tesla Model Y / BMW i4, meterkast bevindt zich op ca. 12 meter van de oprit..." style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border-subtle); background: #050a15; color: #fff;"></textarea>
+              <label for="message">Merk/model elektrische wagen en geschatte afstand tot meterkast</label>
+              <textarea id="message" name="message" rows="4" placeholder="bv. Tesla Model Y / BMW i4, meterkast bevindt zich op ca. 12 meter van de oprit..."></textarea>
             </div>
 
             <button type="submit" class="btn-brand-primary" style="justify-content: center; width: 100%; font-size: 1.05rem; padding: 1rem;">
@@ -282,7 +282,7 @@
   </main>
 
   <!-- Footer -->
-  <footer style="background: #03060e; border-top: 1px solid rgba(255, 255, 255, 0.08); padding: 3.5rem 0 2rem; font-size: 0.88rem;">
+  <footer style="background: var(--bg-secondary); border-top: 1px solid var(--border-subtle); padding: 3.5rem 0 2rem; font-size: 0.88rem;">
     <div class="container">
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2.5rem; margin-bottom: 2.5rem;">
         <div>
@@ -292,13 +292,13 @@
           </p>
         </div>
         <div>
-          <h4 style="font-size: 0.95rem; margin-bottom: 1rem; color: #fff;">Direct Contact</h4>
+          <h4 style="font-size: 0.95rem; margin-bottom: 1rem; color: var(--text-main);">Direct Contact</h4>
           <p style="color: var(--text-muted); margin-bottom: 0.5rem;"><i data-lucide="phone" class="icon-xs" style="color: var(--brand-primary); margin-right: 0.5rem;"></i>+32 486 32 86 45</p>
           <p style="color: var(--text-muted); margin-bottom: 0.5rem;"><i data-lucide="mail" class="icon-xs" style="color: var(--brand-primary); margin-right: 0.5rem;"></i>info@bentechsolutions.be</p>
           <p style="color: var(--text-muted);"><i data-lucide="map-pin" class="icon-xs" style="color: var(--brand-primary); margin-right: 0.5rem;"></i>Antwerpen &amp; omgeving (+60 km)</p>
         </div>
         <div>
-          <h4 style="font-size: 0.95rem; margin-bottom: 1rem; color: #fff;">BenTech Merken</h4>
+          <h4 style="font-size: 0.95rem; margin-bottom: 1rem; color: var(--text-main);">BenTech Merken</h4>
           <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.45rem; color: var(--text-muted);">
             <li><a href="https://klimaatplus.bentechsolutions.be">KlimaatPlus (Airco &amp; Warmtepomp)</a></li>
             <li><a href="https://batteryplus.bentechsolutions.be">BatteryPlus (Thuisbatterijen)</a></li>
@@ -308,7 +308,7 @@
           </ul>
         </div>
       </div>
-      <div style="border-top: 1px solid rgba(255, 255, 255, 0.06); padding-top: 1.5rem; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; color: var(--text-subtle); font-size: 0.8rem;">
+      <div style="border-top: 1px solid var(--border-subtle); padding-top: 1.5rem; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; color: var(--text-muted); font-size: 0.8rem;">
         <p>&copy; 2026 LaadPlus &bull; Een divisie van BenTech Solutions CommV (BTW BE 1025.714.523). Alle rechten voorbehouden.</p>
         <div style="display: flex; align-items: center; gap: 1.25rem;">
           <button type="button" class="footer-consent-button" id="manageMarketingConsent">Cookievoorkeuren</button>
