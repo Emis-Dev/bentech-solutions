@@ -303,6 +303,10 @@ body.theme-solarplus,
   display: block;
 }
 
+.theme-laadplus .brand-media-frame img {
+  object-position: center 20%;
+}
+
 .brand-media-badge {
   position: absolute;
   bottom: 1.25rem;
