@@ -77,13 +77,14 @@
             <i data-lucide="chevron-down" class="icon-xs" aria-hidden="true"></i>
           </button>
           <div class="services-dropdown" id="servicesDropdown" aria-label="Elektrische en slimme energiediensten">
-            <a href="#dienst-depannage" data-service-link="depannage">24/7 depannage</a>
+            <a href="https://serviceplus.bentechsolutions.be">ServicePlus 24/7 (Storingen)</a>
             <a href="#dienst-zekeringkasten" data-service-link="zekeringkasten">Zekeringkasten &amp; AREI</a>
             <a href="#dienst-herstellingen" data-service-link="herstellingen">Elektrische herstellingen</a>
             <a href="#dienst-installaties" data-service-link="installaties">Volledige installaties</a>
-            <a href="/laadpalen/">Laadpalen</a>
-            <a href="/thuisbatterijen/">Thuisbatterijen</a>
-            <a href="/zonnepanelen/">Zonnepanelen</a>
+            <a href="https://klimaatplus.bentechsolutions.be">KlimaatPlus (Airco &amp; Warmtepomp)</a>
+            <a href="/laadpalen/">Laadpalen (LaadPlus)</a>
+            <a href="/thuisbatterijen/">Thuisbatterijen (BatteryPlus)</a>
+            <a href="/zonnepanelen/">Zonnepanelen (SolarPlus)</a>
           </div>
         </div>
         <a href="#over">Over BenTech</a>
@@ -313,47 +314,91 @@
         <section class="energy-services-group" aria-labelledby="energy-services-title">
           <div class="energy-services-heading">
             <div>
-              <span class="energy-services-label"><i data-lucide="leaf" class="icon-xs" aria-hidden="true"></i> Energieoplossingen</span>
-              <h3 id="energy-services-title">Laden, opslaan en zelf opwekken</h3>
+              <span class="energy-services-label"><i data-lucide="layers" class="icon-xs" aria-hidden="true"></i> Gespecialiseerde Divisies</span>
+              <h3 id="energy-services-title">Onze 5 Vaste Merken &amp; Subdomeinen</h3>
             </div>
-            <p>Combineer laadpaal, thuisbatterij en zonnepanelen tot één slim systeem dat past bij uw verbruik, woning en toekomstplannen.</p>
+            <p>Voor elke specialistische tak biedt BenTech Solutions een toegewijd team met eigen subdomein, vakkennis en servicegarantie.</p>
           </div>
 
-          <div class="energy-service-grid">
-            <a href="/laadpalen/" id="dienst-laadpalen" class="bento-card service-card-link energy-service-card">
-              <div class="bento-icon"><i data-lucide="plug-zap" class="icon-lg"></i></div>
-              <h3>Laadpalen</h3>
-              <p>Slim en veilig laden bij u thuis of op het werk, inclusief professioneel advies, load balancing en app-configuratie.</p>
+          <div class="energy-service-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+            <!-- 1. KlimaatPlus -->
+            <a href="https://klimaatplus.bentechsolutions.be" id="dienst-klimaatplus" class="bento-card service-card-link energy-service-card" style="border-top: 3px solid #f97316;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <img src="/assets/brands/klimaatplus/logo.png" alt="KlimaatPlus" style="height: 38px; max-width: 140px; object-fit: contain;">
+                <span style="font-size: 0.72rem; padding: 0.2rem 0.5rem; border-radius: 9999px; background: rgba(249, 115, 22, 0.15); color: #fb923c; font-weight: 700;">klimaatplus.</span>
+              </div>
+              <h3>KlimaatPlus</h3>
+              <p>Comfort in elk seizoen. Installatie, periodiek onderhoud en service van kwalitatieve airco’s en warmtepompen.</p>
               <ul class="bento-feature-list">
-                <li>Advies en correcte dimensionering</li>
-                <li>Veilige aansluiting en keuring</li>
-                <li>Configuratie en uitleg bij oplevering</li>
+                <li>Split- &amp; multisplit aircosystemen</li>
+                <li>Duurzame warmtepompen</li>
+                <li>Technisch &amp; energetisch advies</li>
               </ul>
-              <span class="service-card-action">Bekijk laadpalen voor thuis en op het werk <i data-lucide="arrow-up-right" class="icon-xs" aria-hidden="true"></i></span>
+              <span class="service-card-action" style="color: #fb923c;">Naar klimaatplus.bentechsolutions.be <i data-lucide="arrow-up-right" class="icon-xs" aria-hidden="true"></i></span>
             </a>
 
-            <a href="/thuisbatterijen/" id="dienst-thuisbatterijen" class="bento-card service-card-link energy-service-card">
-              <div class="bento-icon"><i data-lucide="battery-charging" class="icon-lg"></i></div>
-              <h3>Thuisbatterijen</h3>
-              <p>Bewaar meer van uw eigen zonne-energie en gebruik die wanneer uw woning of onderneming ze werkelijk nodig heeft.</p>
+            <!-- 2. BatteryPlus -->
+            <a href="https://batteryplus.bentechsolutions.be" id="dienst-batteryplus" class="bento-card service-card-link energy-service-card" style="border-top: 3px solid #22c55e;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <img src="/assets/brands/batteryplus/logo.png" alt="BatteryPlus" style="height: 38px; max-width: 140px; object-fit: contain;">
+                <span style="font-size: 0.72rem; padding: 0.2rem 0.5rem; border-radius: 9999px; background: rgba(34, 197, 94, 0.15); color: #4ade80; font-weight: 700;">batteryplus.</span>
+              </div>
+              <h3>BatteryPlus</h3>
+              <p>Slim omgaan met energie. Bewaar meer van uw eigen zonnestroom en verlaag uw afhankelijkheid van het stroomnet.</p>
               <ul class="bento-feature-list">
-                <li>Analyse van verbruik en productie</li>
-                <li>Advies over passende batterijcapaciteit</li>
-                <li>Configuratie, ingebruikname en nazorg</li>
+                <li>Precieze capaciteitsanalyse (kWh)</li>
+                <li>Veilige AREI-aansluiting &amp; keuring</li>
+                <li>Slimme sturing &amp; piekreductie</li>
               </ul>
-              <span class="service-card-action">Ontdek thuisbatterijen op maat <i data-lucide="arrow-up-right" class="icon-xs" aria-hidden="true"></i></span>
+              <span class="service-card-action" style="color: #4ade80;">Naar batteryplus.bentechsolutions.be <i data-lucide="arrow-up-right" class="icon-xs" aria-hidden="true"></i></span>
             </a>
 
-            <a href="/zonnepanelen/" id="dienst-zonnepanelen" class="bento-card service-card-link energy-service-card">
-              <div class="bento-icon energy-solar-icon"><i data-lucide="sun" class="icon-lg"></i></div>
-              <h3>Zonnepanelen</h3>
-              <p>Verlaag uw afhankelijkheid van het net met een correct gedimensioneerde zonne-installatie, veilig aangesloten en getest.</p>
+            <!-- 3. LaadPlus -->
+            <a href="https://laadplus.bentechsolutions.be" id="dienst-laadplus" class="bento-card service-card-link energy-service-card" style="border-top: 3px solid #00c875;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <img src="/assets/brands/laadplus/logo.png" alt="LaadPlus" style="height: 38px; max-width: 140px; object-fit: contain;">
+                <span style="font-size: 0.72rem; padding: 0.2rem 0.5rem; border-radius: 9999px; background: rgba(0, 200, 117, 0.15); color: #33d491; font-weight: 700;">laadplus.</span>
+              </div>
+              <h3>LaadPlus</h3>
+              <p>Slim laden, zorgeloos rijden. Complete laadpaalinstallaties voor thuis en op het werk met load balancing.</p>
               <ul class="bento-feature-list">
-                <li>Persoonlijk advies en dimensionering</li>
-                <li>Professionele montage en aansluiting</li>
-                <li>Testen en duidelijke oplevering</li>
+                <li>Thuislaadpaal op maat van uw wagen</li>
+                <li>Bedrijfslaadpalen &amp; laadpleinen</li>
+                <li>Dynamic load balancing beveiliging</li>
               </ul>
-              <span class="service-card-action">Bekijk zonnepanelen voor woning of onderneming <i data-lucide="arrow-up-right" class="icon-xs" aria-hidden="true"></i></span>
+              <span class="service-card-action" style="color: #33d491;">Naar laadplus.bentechsolutions.be <i data-lucide="arrow-up-right" class="icon-xs" aria-hidden="true"></i></span>
+            </a>
+
+            <!-- 4. ServicePlus 24/7 -->
+            <a href="https://serviceplus.bentechsolutions.be" id="dienst-serviceplus" class="bento-card service-card-link energy-service-card" style="border-top: 3px solid #38bdf8;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <img src="/assets/brands/serviceplus/logo.png" alt="ServicePlus" style="height: 38px; max-width: 140px; object-fit: contain;">
+                <span style="font-size: 0.72rem; padding: 0.2rem 0.5rem; border-radius: 9999px; background: rgba(56, 189, 248, 0.15); color: #7dd3fc; font-weight: 700;">serviceplus.</span>
+              </div>
+              <h3>ServicePlus 24/7</h3>
+              <p>Storingen 24/7 opgelost. Snelle depannage bij acute stroomuitval, kortsluiting en technische pannes.</p>
+              <ul class="bento-feature-list">
+                <li>Direct telefonisch contact &amp; snelle komst</li>
+                <li>Uitgeruste servicewagen met wisselstukken</li>
+                <li>Oorzaakanalyse &amp; definitief herstel</li>
+              </ul>
+              <span class="service-card-action" style="color: #7dd3fc;">Naar serviceplus.bentechsolutions.be <i data-lucide="arrow-up-right" class="icon-xs" aria-hidden="true"></i></span>
+            </a>
+
+            <!-- 5. SolarPlus -->
+            <a href="https://solarplus.bentechsolutions.be" id="dienst-solarplus" class="bento-card service-card-link energy-service-card" style="border-top: 3px solid #f59e0b;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <img src="/assets/brands/solarplus/logo.png" alt="SolarPlus" style="height: 38px; max-width: 140px; object-fit: contain;">
+                <span style="font-size: 0.72rem; padding: 0.2rem 0.5rem; border-radius: 9999px; background: rgba(245, 158, 11, 0.15); color: #fbbf24; font-weight: 700;">solarplus.</span>
+              </div>
+              <h3>SolarPlus</h3>
+              <p>Haal meer uit de zon. Professioneel advies, dakontwerp en installatie van hoogrendement zonnepanelen.</p>
+              <ul class="bento-feature-list">
+                <li>Optimaal berekend dakrendement</li>
+                <li>Hoogwaardige panelen &amp; omvormers</li>
+                <li>Inclusief keuring &amp; opvolging</li>
+              </ul>
+              <span class="service-card-action" style="color: #fbbf24;">Naar solarplus.bentechsolutions.be <i data-lucide="arrow-up-right" class="icon-xs" aria-hidden="true"></i></span>
             </a>
           </div>
         </section>
@@ -852,13 +897,14 @@
       <div class="footer-col">
         <h4>Diensten</h4>
         <ul>
-          <li><a href="#dienst-depannage" data-service-link="depannage">Stroompanne &amp; Depannage</a></li>
+          <li><a href="https://serviceplus.bentechsolutions.be">ServicePlus (24/7 Storingen)</a></li>
           <li><a href="#dienst-zekeringkasten" data-service-link="zekeringkasten">Zekeringkasten &amp; AREI</a></li>
           <li><a href="#dienst-herstellingen" data-service-link="herstellingen">Elektrische Herstellingen</a></li>
           <li><a href="#dienst-installaties" data-service-link="installaties">Nieuwe Installaties</a></li>
-          <li><a href="/laadpalen/">Laadpalen</a></li>
-          <li><a href="/thuisbatterijen/">Thuisbatterijen</a></li>
-          <li><a href="/zonnepanelen/">Zonnepanelen</a></li>
+          <li><a href="https://klimaatplus.bentechsolutions.be">KlimaatPlus (Airco &amp; Warmtepomp)</a></li>
+          <li><a href="https://batteryplus.bentechsolutions.be">BatteryPlus (Thuisbatterijen)</a></li>
+          <li><a href="https://laadplus.bentechsolutions.be">LaadPlus (Laadpalen)</a></li>
+          <li><a href="https://solarplus.bentechsolutions.be">SolarPlus (Zonnepanelen)</a></li>
         </ul>
       </div>
 

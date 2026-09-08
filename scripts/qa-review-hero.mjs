@@ -6,7 +6,7 @@ import { fileURLToPath } from 'node:url';
 const repoRoot = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const homepage = read('index.html');
 const stylesheet = read('style.css');
-const javascript = read('main.js');
+const javascript = read('main.js').replace(/\r\n/g, '\n');
 const header = capture(
   homepage,
   /<header class="site-header">([\s\S]*?)<\/header>/,
