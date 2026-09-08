@@ -1,0 +1,290 @@
+[
+  {
+    "brand": "BenTech Solutions",
+    "variant": "beeldmerk",
+    "tone": "lichte-achtergrond",
+    "svg": "zonder-tekst/lichte-achtergrond/bentech-solutions-beeldmerk.svg",
+    "png": "zonder-tekst/lichte-achtergrond/bentech-solutions-beeldmerk.png",
+    "width": 2048
+  },
+  {
+    "brand": "BenTech Solutions",
+    "variant": "gestapeld",
+    "tone": "lichte-achtergrond",
+    "svg": "met-tekst/lichte-achtergrond/bentech-solutions-gestapeld.svg",
+    "png": "met-tekst/lichte-achtergrond/bentech-solutions-gestapeld.png",
+    "width": 2400
+  },
+  {
+    "brand": "BenTech Solutions",
+    "variant": "horizontaal",
+    "tone": "lichte-achtergrond",
+    "svg": "met-tekst/lichte-achtergrond/bentech-solutions-horizontaal.svg",
+    "png": "met-tekst/lichte-achtergrond/bentech-solutions-horizontaal.png",
+    "width": 2400
+  },
+  {
+    "brand": "BenTech Solutions",
+    "variant": "beeldmerk",
+    "tone": "donkere-achtergrond",
+    "svg": "zonder-tekst/donkere-achtergrond/bentech-solutions-beeldmerk.svg",
+    "png": "zonder-tekst/donkere-achtergrond/bentech-solutions-beeldmerk.png",
+    "width": 2048
+  },
+  {
+    "brand": "BenTech Solutions",
+    "variant": "gestapeld",
+    "tone": "donkere-achtergrond",
+    "svg": "met-tekst/donkere-achtergrond/bentech-solutions-gestapeld.svg",
+    "png": "met-tekst/donkere-achtergrond/bentech-solutions-gestapeld.png",
+    "width": 2400
+  },
+  {
+    "brand": "BenTech Solutions",
+    "variant": "horizontaal",
+    "tone": "donkere-achtergrond",
+    "svg": "met-tekst/donkere-achtergrond/bentech-solutions-horizontaal.svg",
+    "png": "met-tekst/donkere-achtergrond/bentech-solutions-horizontaal.png",
+    "width": 2400
+  },
+  {
+    "brand": "KlimaatPlus",
+    "variant": "beeldmerk",
+    "tone": "lichte-achtergrond",
+    "svg": "zonder-tekst/lichte-achtergrond/klimaatplus-beeldmerk.svg",
+    "png": "zonder-tekst/lichte-achtergrond/klimaatplus-beeldmerk.png",
+    "width": 2048
+  },
+  {
+    "brand": "KlimaatPlus",
+    "variant": "gestapeld",
+    "tone": "lichte-achtergrond",
+    "svg": "met-tekst/lichte-achtergrond/klimaatplus-gestapeld.svg",
+    "png": "met-tekst/lichte-achtergrond/klimaatplus-gestapeld.png",
+    "width": 2400
+  },
+  {
+    "brand": "KlimaatPlus",
+    "variant": "horizontaal",
+    "tone": "lichte-achtergrond",
+    "svg": "met-tekst/lichte-achtergrond/klimaatplus-horizontaal.svg",
+    "png": "met-tekst/lichte-achtergrond/klimaatplus-horizontaal.png",
+    "width": 2400
+  },
+  {
+    "brand": "KlimaatPlus",
+    "variant": "beeldmerk",
+    "tone": "donkere-achtergrond",
+    "svg": "zonder-tekst/donkere-achtergrond/klimaatplus-beeldmerk.svg",
+    "png": "zonder-tekst/donkere-achtergrond/klimaatplus-beeldmerk.png",
+    "width": 2048
+  },
+  {
+    "brand": "KlimaatPlus",
+    "variant": "gestapeld",
+    "tone": "donkere-achtergrond",
+    "svg": "met-tekst/donkere-achtergrond/klimaatplus-gestapeld.svg",
+    "png": "met-tekst/donkere-achtergrond/klimaatplus-gestapeld.png",
+    "width": 2400
+  },
+  {
+    "brand": "KlimaatPlus",
+    "variant": "horizontaal",
+    "tone": "donkere-achtergrond",
+    "svg": "met-tekst/donkere-achtergrond/klimaatplus-horizontaal.svg",
+    "png": "met-tekst/donkere-achtergrond/klimaatplus-horizontaal.png",
+    "width": 2400
+  },
+  {
+    "brand": "BatteryPlus",
+    "variant": "beeldmerk",
+    "tone": "lichte-achtergrond",
+    "svg": "zonder-tekst/lichte-achtergrond/batteryplus-beeldmerk.svg",
+    "png": "zonder-tekst/lichte-achtergrond/batteryplus-beeldmerk.png",
+    "width": 2048
+  },
+  {
+    "brand": "BatteryPlus",
+    "variant": "gestapeld",
+    "tone": "lichte-achtergrond",
+    "svg": "met-tekst/lichte-achtergrond/batteryplus-gestapeld.svg",
+    "png": "met-tekst/lichte-achtergrond/batteryplus-gestapeld.png",
+    "width": 2400
+  },
+  {
+    "brand": "BatteryPlus",
+    "variant": "horizontaal",
+    "tone": "lichte-achtergrond",
+    "svg": "met-tekst/lichte-achtergrond/batteryplus-horizontaal.svg",
+    "png": "met-tekst/lichte-achtergrond/batteryplus-horizontaal.png",
+    "width": 2400
+  },
+  {
+    "brand": "BatteryPlus",
+    "variant": "beeldmerk",
+    "tone": "donkere-achtergrond",
+    "svg": "zonder-tekst/donkere-achtergrond/batteryplus-beeldmerk.svg",
+    "png": "zonder-tekst/donkere-achtergrond/batteryplus-beeldmerk.png",
+    "width": 2048
+  },
+  {
+    "brand": "BatteryPlus",
+    "variant": "gestapeld",
+    "tone": "donkere-achtergrond",
+    "svg": "met-tekst/donkere-achtergrond/batteryplus-gestapeld.svg",
+    "png": "met-tekst/donkere-achtergrond/batteryplus-gestapeld.png",
+    "width": 2400
+  },
+  {
+    "brand": "BatteryPlus",
+    "variant": "horizontaal",
+    "tone": "donkere-achtergrond",
+    "svg": "met-tekst/donkere-achtergrond/batteryplus-horizontaal.svg",
+    "png": "met-tekst/donkere-achtergrond/batteryplus-horizontaal.png",
+    "width": 2400
+  },
+  {
+    "brand": "LaadPlus",
+    "variant": "beeldmerk",
+    "tone": "lichte-achtergrond",
+    "svg": "zonder-tekst/lichte-achtergrond/laadplus-beeldmerk.svg",
+    "png": "zonder-tekst/lichte-achtergrond/laadplus-beeldmerk.png",
+    "width": 2048
+  },
+  {
+    "brand": "LaadPlus",
+    "variant": "gestapeld",
+    "tone": "lichte-achtergrond",
+    "svg": "met-tekst/lichte-achtergrond/laadplus-gestapeld.svg",
+    "png": "met-tekst/lichte-achtergrond/laadplus-gestapeld.png",
+    "width": 2400
+  },
+  {
+    "brand": "LaadPlus",
+    "variant": "horizontaal",
+    "tone": "lichte-achtergrond",
+    "svg": "met-tekst/lichte-achtergrond/laadplus-horizontaal.svg",
+    "png": "met-tekst/lichte-achtergrond/laadplus-horizontaal.png",
+    "width": 2400
+  },
+  {
+    "brand": "LaadPlus",
+    "variant": "beeldmerk",
+    "tone": "donkere-achtergrond",
+    "svg": "zonder-tekst/donkere-achtergrond/laadplus-beeldmerk.svg",
+    "png": "zonder-tekst/donkere-achtergrond/laadplus-beeldmerk.png",
+    "width": 2048
+  },
+  {
+    "brand": "LaadPlus",
+    "variant": "gestapeld",
+    "tone": "donkere-achtergrond",
+    "svg": "met-tekst/donkere-achtergrond/laadplus-gestapeld.svg",
+    "png": "met-tekst/donkere-achtergrond/laadplus-gestapeld.png",
+    "width": 2400
+  },
+  {
+    "brand": "LaadPlus",
+    "variant": "horizontaal",
+    "tone": "donkere-achtergrond",
+    "svg": "met-tekst/donkere-achtergrond/laadplus-horizontaal.svg",
+    "png": "met-tekst/donkere-achtergrond/laadplus-horizontaal.png",
+    "width": 2400
+  },
+  {
+    "brand": "ServicePlus",
+    "variant": "beeldmerk",
+    "tone": "lichte-achtergrond",
+    "svg": "zonder-tekst/lichte-achtergrond/serviceplus-beeldmerk.svg",
+    "png": "zonder-tekst/lichte-achtergrond/serviceplus-beeldmerk.png",
+    "width": 2048
+  },
+  {
+    "brand": "ServicePlus",
+    "variant": "gestapeld",
+    "tone": "lichte-achtergrond",
+    "svg": "met-tekst/lichte-achtergrond/serviceplus-gestapeld.svg",
+    "png": "met-tekst/lichte-achtergrond/serviceplus-gestapeld.png",
+    "width": 2400
+  },
+  {
+    "brand": "ServicePlus",
+    "variant": "horizontaal",
+    "tone": "lichte-achtergrond",
+    "svg": "met-tekst/lichte-achtergrond/serviceplus-horizontaal.svg",
+    "png": "met-tekst/lichte-achtergrond/serviceplus-horizontaal.png",
+    "width": 2400
+  },
+  {
+    "brand": "ServicePlus",
+    "variant": "beeldmerk",
+    "tone": "donkere-achtergrond",
+    "svg": "zonder-tekst/donkere-achtergrond/serviceplus-beeldmerk.svg",
+    "png": "zonder-tekst/donkere-achtergrond/serviceplus-beeldmerk.png",
+    "width": 2048
+  },
+  {
+    "brand": "ServicePlus",
+    "variant": "gestapeld",
+    "tone": "donkere-achtergrond",
+    "svg": "met-tekst/donkere-achtergrond/serviceplus-gestapeld.svg",
+    "png": "met-tekst/donkere-achtergrond/serviceplus-gestapeld.png",
+    "width": 2400
+  },
+  {
+    "brand": "ServicePlus",
+    "variant": "horizontaal",
+    "tone": "donkere-achtergrond",
+    "svg": "met-tekst/donkere-achtergrond/serviceplus-horizontaal.svg",
+    "png": "met-tekst/donkere-achtergrond/serviceplus-horizontaal.png",
+    "width": 2400
+  },
+  {
+    "brand": "SolarPlus",
+    "variant": "beeldmerk",
+    "tone": "lichte-achtergrond",
+    "svg": "zonder-tekst/lichte-achtergrond/solarplus-beeldmerk.svg",
+    "png": "zonder-tekst/lichte-achtergrond/solarplus-beeldmerk.png",
+    "width": 2048
+  },
+  {
+    "brand": "SolarPlus",
+    "variant": "gestapeld",
+    "tone": "lichte-achtergrond",
+    "svg": "met-tekst/lichte-achtergrond/solarplus-gestapeld.svg",
+    "png": "met-tekst/lichte-achtergrond/solarplus-gestapeld.png",
+    "width": 2400
+  },
+  {
+    "brand": "SolarPlus",
+    "variant": "horizontaal",
+    "tone": "lichte-achtergrond",
+    "svg": "met-tekst/lichte-achtergrond/solarplus-horizontaal.svg",
+    "png": "met-tekst/lichte-achtergrond/solarplus-horizontaal.png",
+    "width": 2400
+  },
+  {
+    "brand": "SolarPlus",
+    "variant": "beeldmerk",
+    "tone": "donkere-achtergrond",
+    "svg": "zonder-tekst/donkere-achtergrond/solarplus-beeldmerk.svg",
+    "png": "zonder-tekst/donkere-achtergrond/solarplus-beeldmerk.png",
+    "width": 2048
+  },
+  {
+    "brand": "SolarPlus",
+    "variant": "gestapeld",
+    "tone": "donkere-achtergrond",
+    "svg": "met-tekst/donkere-achtergrond/solarplus-gestapeld.svg",
+    "png": "met-tekst/donkere-achtergrond/solarplus-gestapeld.png",
+    "width": 2400
+  },
+  {
+    "brand": "SolarPlus",
+    "variant": "horizontaal",
+    "tone": "donkere-achtergrond",
+    "svg": "met-tekst/donkere-achtergrond/solarplus-horizontaal.svg",
+    "png": "met-tekst/donkere-achtergrond/solarplus-horizontaal.png",
+    "width": 2400
+  }
+]

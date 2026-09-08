@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img"><title>KlimaatPlus beeldmerk</title><g fill="none">
+  
+  <g stroke-width="13" stroke-linecap="round" stroke-linejoin="round">
+    <g stroke="#0284C7">
+      <path d="M128 40 35 111"/>
+      <path d="M57 99v99a17 17 0 0 0 17 17h34"/>
+      <path d="M119 105v95M119 153l-36-30M119 153l-36 30M119 153H79" stroke-width="9"/>
+      <path d="m98 135-2-18m2 18-19-4m19 40-19 4m19-4-2 18" stroke-width="9"/>
+    </g>
+    <g stroke="#EA580C">
+      <path d="m128 40 93 71"/>
+      <path d="M199 99v99a17 17 0 0 1-17 17h-31"/>
+      <path d="M150 115c-20 27 20 44 0 73M176 115c-20 27 20 44 0 73"/>
+    </g>
+  </g>
+</g></svg>

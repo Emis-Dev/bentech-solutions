@@ -31,8 +31,9 @@ BenTech combines electrical troubleshooting with planned energy solutions and of
 
 - Custom static HTML, CSS, and JavaScript; no CMS or application build step.
 - Modern light architectural visual identity: clean white/slate surfaces with authoritative emerald signals, crisp typography, and high-trust proof patterns.
+- Transform homepage into 'Zes merken. Eén familie' portal hub routing visitors directly to dedicated subdomains.
 - Create dedicated pages for charging stations, home batteries, and solar panels.
-- Preserve the desktop-only Vanta homepage effect and the lean mobile runtime.
+- Preserve the desktop-only Vanta homepage effect and provide division-themed desktop Vanta topology effects across all 5 subdomains, while keeping mobile runtimes completely lean.
 - Known contact details: BenTech Solutions CommV, +32 486 32 86 45, info@bentechsolutions.be.
 - Do not invent brands, prices, grants, guarantees, accreditations, product specifications, installation ownership, or completed-project claims.
 - Public imagery is illustrative and must not be presented as a real founder, employee portrait or BenTech case study. Personal founder and charging-station photos are removed from this proposed presentation.

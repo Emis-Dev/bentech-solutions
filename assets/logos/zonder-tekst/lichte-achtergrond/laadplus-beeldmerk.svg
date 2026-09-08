@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img"><title>LaadPlus beeldmerk</title><g fill="none">
+  
+  <g stroke="#142C38" stroke-width="13" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M82 154V67a15 15 0 0 1 15-15h50a15 15 0 0 1 15 15v151h-48"/>
+    <path d="M162 91c18 0 30 12 30 31v63c0 29 29 29 29 0v-29c0-12-5-23-12-34"/>
+    <path d="M110 218h65"/>
+  </g>
+  <path d="m202 108 12 18-10 7-12-18a7 7 0 0 1 10-7Z" fill="#142C38"/>
+  <path d="M104 81h36" stroke="#078653" stroke-width="10" stroke-linecap="round"/>
+  <g fill="#078653">
+    <path d="m131 103-29 46h23l-12 35 34-48h-23l7-33Z"/>
+    <path d="M102 210c1-35-26-61-70-64 1 41 27 73 63 73l-40-48 47 39Z"/>
+  </g>
+</g></svg>

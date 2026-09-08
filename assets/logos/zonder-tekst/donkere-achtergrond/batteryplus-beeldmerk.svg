@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img"><title>BatteryPlus beeldmerk</title><g fill="none">
+  
+  <g stroke="#F4F8FA" stroke-width="13" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M35 114 126 40l91 74"/>
+    <path d="M59 116v83a17 17 0 0 0 17 17h51"/>
+    <path d="M190 92V64h-20"/>
+    <rect x="91" y="104" width="60" height="91" rx="9"/>
+  </g>
+  <path d="M110 91h22v13h-22z" fill="#F4F8FA"/>
+  <g fill="#3DCC93">
+    <rect x="103" y="117" width="36" height="17" rx="3"/>
+    <rect x="103" y="141" width="36" height="17" rx="3"/>
+    <rect x="103" y="165" width="36" height="17" rx="3"/>
+    <path d="M150 210c-1-35 26-61 70-64-1 41-27 73-63 73l40-48-47 39Z"/>
+  </g>
+</g></svg>

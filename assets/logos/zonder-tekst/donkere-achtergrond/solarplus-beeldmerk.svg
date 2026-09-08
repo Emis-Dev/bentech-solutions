@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img"><title>SolarPlus beeldmerk</title><g fill="none">
+  
+  <g stroke="#F8C447" stroke-width="10" stroke-linecap="round">
+    <path d="m82 30 1 10m-34 1 7 9m-22 19 11 3m69-34-5 10"/>
+  </g>
+  <path d="M56 99a32 32 0 1 1 62-14L56 99Z" fill="#F8C447"/>
+  <g stroke="#F4F8FA" stroke-width="13" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m158 92 63 65"/>
+    <path d="M115 187v29h90v-61"/>
+  </g>
+  <path d="m88 107 70-15-53 82-70 15 53-82Z" stroke="#F4F8FA" stroke-width="9" stroke-linejoin="round"/>
+  <path d="m111 102-53 82m76-87-53 82m-19-31 70-15" stroke="#F4F8FA" stroke-width="6"/>
+  <path d="M151 154h22v34h-22z" fill="#F4F8FA"/>
+</g></svg>
