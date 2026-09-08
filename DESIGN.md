@@ -1,20 +1,35 @@
 ---
 name: BenTech Solutions
-description: Directe, betrouwbare elektrische dienstverlening in een donker navy en emerald digitaal merklandschap.
+description: Directe, betrouwbare elektrische dienstverlening en hernieuwbare energie in een helder, redactioneel licht merklandschap.
 colors:
-  midnight: "#050a15"
-  navy-surface: "#0a1124"
-  navy-card: "#0d1629"
-  navy-card-hover: "#111e3a"
-  emerald: "#00c875"
-  emerald-light: "#33d491"
-  emerald-dark: "#009959"
-  proof-rail-surface: "#071022"
+  canvas: "#f8fafc"
+  surface: "#ffffff"
+  surface-secondary: "#f1f5f9"
+  surface-card: "#ffffff"
+  surface-card-hover: "#f8fafc"
+  border-hairline: "rgba(15, 23, 42, 0.08)"
+  border-subtle: "#e2e8f0"
+  border-emerald: "rgba(4, 120, 87, 0.25)"
+  emerald: "#047857"
+  emerald-vibrant: "#059669"
+  emerald-light: "#10b981"
+  emerald-tint: "#ecfdf5"
+  emerald-dark: "#065f46"
+  proof-rail-surface: "#ffffff"
   review-star: "#f59e0b"
-  text-main: "#e8edf5"
-  text-muted: "#8896ab"
-  text-subtle: "#576b83"
-  danger: "#ef4444"
+  text-primary: "#090d16"
+  text-secondary: "#475569"
+  text-muted: "#64748b"
+  danger: "#dc2626"
+  danger-dark: "#991b1b"
+  danger-deep: "#7f1d1d"
+  danger-tint: "#fef2f2"
+  whatsapp: "#25d366"
+  klimaatplus: "#ea580c"
+  batteryplus: "#15803d"
+  serviceplus: "#0284c7"
+  solarplus: "#d97706"
+  border-input: "#cbd5e1"
 typography:
   display:
     fontFamily: "Plus Jakarta Sans, system-ui, -apple-system, sans-serif"
@@ -37,11 +52,20 @@ typography:
     fontSize: "0.85rem"
     fontWeight: 700
     lineHeight: 1.2
+  caption:
+    fontFamily: "Plus Jakarta Sans, system-ui, -apple-system, sans-serif"
+    fontSize: "0.75rem"
+    fontWeight: 600
+    lineHeight: 1.4
 rounded:
+  sm: "6px"
   button: "8px"
+  md: "10px"
+  lg: "14px"
   card: "16px"
+  dialog: "18px"
   media: "22px 22px 96px 22px"
-  proof-rail: "2px"
+  proof-rail: "8px"
   pill: "9999px"
 spacing:
   xs: "0.5rem"
@@ -52,21 +76,21 @@ spacing:
 components:
   button-primary:
     backgroundColor: "{colors.emerald}"
-    textColor: "#041009"
+    textColor: "#ffffff"
     rounded: "{rounded.button}"
-    padding: "0.7rem 1.4rem"
+    padding: "0.75rem 1.5rem"
   button-outline:
-    backgroundColor: "rgba(13, 22, 41, 0.8)"
-    textColor: "{colors.text-main}"
+    backgroundColor: "{colors.surface}"
+    textColor: "{colors.text-primary}"
     rounded: "{rounded.button}"
-    padding: "0.7rem 1.4rem"
+    padding: "0.75rem 1.5rem"
   card:
-    backgroundColor: "{colors.navy-card}"
-    textColor: "{colors.text-main}"
+    backgroundColor: "{colors.surface-card}"
+    textColor: "{colors.text-primary}"
     rounded: "{rounded.card}"
   google-proof-rail:
     backgroundColor: "{colors.proof-rail-surface}"
-    textColor: "{colors.text-main}"
+    textColor: "{colors.text-primary}"
     rounded: "{rounded.proof-rail}"
 ---
 
@@ -74,159 +98,123 @@ components:
 
 ## Overview
 
-**Creative North Star: "The Green Circuit Editorial"**
+**Creative North Star: "The Architectural Energy Atelier"**
 
-BenTech combines a technical midnight-navy foundation with a deliberately scarce emerald signal color. The visual world should feel competent, direct and local: polished enough for planned energy projects, but fast and legible enough for visitors who need an electrician now.
+BenTech Solutions transitions from a dark-mode tech look to an authoritative, editorial light design architecture. The new visual world radiates professional reliability, crisp legibility, and architectural clarity: clean white and slate surfaces, high-contrast ink-slate typography, and a purposeful botanical circuit emerald accent.
 
-The dedicated service pages extend the incumbent brand rather than redesign it. Their editorial split layouts pair concise decision-oriented copy with one strong image, followed by structured proof, process, audience, related-service and quote sections. The decorative grid explored during implementation was removed because it competed with the content. Detector warnings about the incumbent Plus Jakarta Sans family were consciously accepted to preserve the established BenTech brand world.
+This direction deliberately strips away common "AI slop" tells:
+- **No dark glowing halos:** Replaces neon blur rings with natural, multi-layer diffuse ambient elevation.
+- **No simulated liveness gimmicks:** Replaces decorative pulsing dots with calm, high-contrast operational status tags.
+- **No decorative kickers:** Eliminates redundant label badges above headings, letting typography speak with genuine hierarchical weight.
+- **No muddy contrast:** Establishes rigorous WCAG AAA contrast for body typography (`#090d16` on white, secondary `#475569`), ensuring effortless readability under all ambient lighting conditions.
 
-The homepage extends that same world with the user-selected **Option A Google Proof Rail** as its signature trust component. The wide, solid navy rail places the current Google rating on the left, one manually swipeable attributed review in the middle and the official Google Maps link on the right. It replaces the hero portrait entirely while preserving the existing header identity and the canonical `assets/logo-horizontal.svg` artwork unchanged.
-
-**Key Characteristics:**
-
-- Dark navy tonal layers with emerald used for action, orientation and focus.
-- Large, compact headlines balanced by calm, readable body copy.
-- Editorial two-column layouts that collapse cleanly to one column.
-- A wide Google Proof Rail that makes sourced reputation evidence part of the first viewport.
-- Direct contact paths by phone, WhatsApp and quote form.
-- Factual, situation-led copy without unverified commercial claims.
+The signature **Google Proof Rail** is re-anchored as a pristine architectural white console with a hairline emerald anchor rule, crisp review typography, authentic star ratings, and direct links to the official Google Business Profile.
 
 ## Colors
 
-The palette is a tinted midnight hierarchy with one energetic emerald accent; surfaces carry depth while text remains cool and restrained.
+The light palette pairs luminous neutral foundations with a commanding botanical emerald signal.
 
 ### Primary
-
-- **Circuit Emerald** (`#00c875`): Primary calls to action, active navigation, icons, rules and focus rings.
-- **Signal Emerald** (`#33d491`): Hover states and highlighted labels on dark surfaces.
-- **Deep Emerald** (`#009959`): Darker supporting state; do not use as a second competing accent.
-
-### Secondary
-
-- **Review Amber** (`#f59e0b`): Star symbols inside Google review evidence only; it is not a second call-to-action color.
+- **Architectural Emerald** (`#047857`): Primary interactive elements, active route states, key structural rules, and focus outlines. Calibrated to deliver >5.1:1 contrast on white surfaces.
+- **Vibrant Emerald** (`#059669`): Hover states and micro-interaction accents.
+- **Emerald Tint** (`#ecfdf5`): Soft pill backgrounds, active dropdown states, and badge surfaces.
+- **Deep Emerald** (`#065f46`): Active button presses and high-emphasis boundaries.
 
 ### Neutral
+- **Canvas** (`#f8fafc`): Cool architectural slate-tinted canvas that prevents screen glare while feeling pure and modern.
+- **Pure White Surface** (`#ffffff`): Elevated cards, modals, navigation headers, and proof console.
+- **Section Secondary** (`#f1f5f9`): Alternating section rhythm and grouped technical panels.
+- **Obsidian Text** (`#090d16`): Primary headings and essential body text with maximum optical contrast.
+- **Slate Body** (`#475569`): High-legibility body copy and descriptions (exceeds WCAG AAA).
+- **Muted Slate** (`#64748b`): Secondary labels, timestamps, and supporting metadata.
+- **Hairline Border** (`rgba(15, 23, 42, 0.08)`): Crisp structural separation between cards and sections.
+- **Border Subtle** (`#e2e8f0`): Definite component borders and dividers.
 
-- **Midnight Canvas** (`#050a15`): Page background and deepest visual field.
-- **Navy Section** (`#0a1124`): Alternating sections and quieter grouped content.
-- **Navy Card** (`#0d1629`): Cards, forms and framed surfaces.
-- **Proof Rail Navy** (`#071022`): Solid homepage review rail; never turn it into glass or a photographic backdrop.
-- **Lifted Navy** (`#111e3a`): Hovered or subtly elevated cards.
-- **Cool White** (`#e8edf5`): Primary headings and high-priority text.
-- **Steel Text** (`#8896ab`): Secondary copy and supporting descriptions.
-- **Deep Steel** (`#576b83`): Low-priority metadata only.
+### Secondary & Semantic
+- **Review Amber** (`#f59e0b`): Official Google review star rating symbols only; never used decoratively elsewhere.
+- **Urgent Red** (`#dc2626`): 24/7 emergency electrical breakdown indicators and immediate-call triggers.
+- **Urgent Tint** (`#fef2f2`): Soft background tint for emergency callouts.
 
-**The Signal Rule.** Emerald identifies action or orientation; it must not become a decorative wash across every surface.
+**The Signal Rule:** Emerald is reserved for intentional action, verification, and orientation. It never floods the page as a decorative wash.
 
 ## Typography
 
-**Display Font:** Plus Jakarta Sans with system UI fallbacks  
-**Body Font:** Plus Jakarta Sans with system UI fallbacks
+**Display & Body Font:** Plus Jakarta Sans with clean system fallbacks (`system-ui, -apple-system, sans-serif`).
 
-**Character:** Contemporary and technical without becoming industrial. Weight, scale and spacing create hierarchy; the service pages do not introduce another font.
+The typography uses tight tracking on large headings, balanced proportional line heights, and relaxed, readable prose measure (capped near `65ch`).
 
 ### Hierarchy
+- **Display** (700, `clamp(2.8rem, 6.1vw, 5.55rem)`, line-height `0.98`, tracking `-0.04em`): Impactful service H1s, limited to concise editorial phrases.
+- **Headline** (600–700, `clamp(1.75rem, 3.5vw, 2.5rem)`, line-height `1.2`): Section headers and primary decision gates.
+- **Body** (400, `1rem`, line-height `1.65`): Informative Dutch prose with high-contrast slate coloring.
+- **Label** (700, `0.85rem`, line-height `1.2`): Operational badges, table headers, and form labels.
 
-- **Display** (700, `clamp(2.8rem, 6.1vw, 5.55rem)`, `0.98`): Service-page H1, normally capped near 12 characters per line.
-- **Headline** (600–700, responsive, `1.2`): Section titles and decision points.
-- **Body** (400, `1rem`, `1.65`): Explanatory copy, generally no wider than `65ch`.
-- **Label** (700, about `0.85rem`): Kicker, section labels and compact signals.
-
-**The One-Family Rule.** Preserve Plus Jakarta Sans across headings, controls and body copy; the detector font warning is an accepted incumbent-brand exception.
+**No Heading Kicker Rule:** Headings carry their own weight without decorative kicker tags above them.
 
 ## Layout
 
-The base container is `90%` wide with a `1200px` maximum. Dedicated service pages use editorial split grids: a near-even hero, a narrow context column beside a wider content column, and the same relationship for quote and FAQ sections. Section rhythm is generous (`clamp(4.5rem, 8vw, 7.25rem)`) and bounded by subtle borders rather than decorative separators.
-
-On wide screens the homepage Google Proof Rail is one horizontal, three-part composition: rating left, review carousel centre and source link right. At the mobile breakpoint (`768px` and below) those regions stack in that order, keeping the review controls and source link fully visible. The hero contains no portrait or other profile photograph.
-
-At `992px` and below, editorial grids become a single column and sticky quote copy returns to normal flow. At `768px` and below, primary actions become full-width, process steps become a vertical sequence, service-page hero media returns to a portrait crop, and the persistent call/WhatsApp bar owns the mobile conversion path. Content must remain usable above the sticky bar.
-
-The homepage Vanta Topology runtime remains gated to capable desktop contexts from `769px`; mobile keeps the intentionally lean solid-background fallback. The review rail must not alter that boundary.
-
-The shipped public routes are `/laadpalen/`, `/thuisbatterijen/` and `/zonnepanelen/`. They share `/style.css`, `/service-pages.css`, `/main.js`, `/consent.js` and `/assets/`. Nested pages must always use root-relative references so routes resolve identically in local QA and on Cloudflare Pages.
+- **Container:** Maximum width `1200px` with responsive `90%` fluid padding.
+- **Section Spacing:** Generous breathing room (`clamp(4.5rem, 8vw, 7.25rem)`) separated by hairline architectural rules rather than heavy dividers.
+- **Editorial Split Grids:** Balanced two-column compositions (context column + content column) that collapse cleanly to single-column flow below `992px`.
+- **Google Proof Rail:** Horizontal three-region trust bar on desktop (Rating Left · Swipeable Review Excerpts Center · Maps Link Right); stacks gracefully on mobile (`<=768px`).
+- **Mobile First Conversion:** Persistent bottom emergency/quote bar on mobile screens with dedicated touch targets.
 
 ## Elevation & Depth
 
-Depth is restrained and structural: tonal surface changes, one-pixel translucent borders and soft dark shadows separate important layers. The large hero photograph and quote form may carry deeper ambient shadows; routine sections remain flat. Emerald glow is reserved for interaction feedback.
-
-The Google Proof Rail is a solid navy plane bounded by one-pixel emerald top and bottom rules plus quiet inline borders. Its single ambient shadow may separate the rail from the Vanta field, but the component must never use glass blur, a photograph or a decorative glow wash.
-
-- **Card shadow** (`0 8px 24px -8px rgba(0, 0, 0, 0.5)`): General elevated cards.
-- **Hero-media shadow** (`20px 28px 70px -28px rgba(0, 0, 0, 0.8)`): Large service image only.
-- **Form shadow** (`12px 18px 52px -30px rgba(0, 0, 0, 0.8)`): Quote form separation.
-
-**The Flat-By-Default Rule.** Use shadow only when hierarchy or interaction requires it; do not turn every card into a floating tile.
+Depth in this light architecture is tactile and structural:
+- **Hairline Boundaries:** Crisp 1px borders (`rgba(15, 23, 42, 0.08)`) give cards and headers definite shape without visual clutter.
+- **Diffuse Ambient Elevation:** Multi-layered soft shadows replicate natural daylight rather than artificial dark glows.
+  - Card Shadow: `0 1px 3px rgba(15, 23, 42, 0.04), 0 10px 24px -4px rgba(15, 23, 42, 0.06)`
+  - Elevated Form / Hero Shadow: `0 4px 6px -1px rgba(15, 23, 42, 0.05), 0 20px 40px -6px rgba(15, 23, 42, 0.08)`
+  - Hover Transition: Subtle lift (`translateY(-2px)`) with expanded diffuse ambient shadow.
+- **Zero Glow Policy:** No colored blurred halos (`box-shadow: 0 0 25px rgba(...)`) or neon backdrops.
 
 ## Shapes
 
-Buttons use an `8px` radius, cards and forms generally use `16px`, and pills are reserved for compact statuses or intentional rounded controls. Service hero images use an asymmetric cropped frame (`22px 22px 96px 22px`, reduced responsively) as the signature silhouette. Thin translucent borders keep shapes legible without bright outlines.
-
-The Google Proof Rail deliberately contrasts with the softer cards: it uses an almost square `2px` radius, emerald block-axis rules and restrained internal dividers. Its broad, technical silhouette—not an oversized rounded card—is the signature.
+- **Buttons:** Clean `8px` radius for modern technical precision.
+- **Cards & Containers:** `16px` radius with crisp interior padding (`1.75rem` to `2.5rem`).
+- **Service Hero Media:** Asymmetric signature crop (`22px 22px 96px 22px`) providing bespoke editorial identity without generic rounded rectangles.
+- **Proof Rail Console:** Balanced `8px` radius with top emerald accent rule.
+- **Pills:** `9999px` reserved strictly for status chips and filter tags.
 
 ## Components
 
 ### Buttons
+- **Primary Action:** Solid Architectural Emerald (`#047857`), crisp white text (`#ffffff`), `8px` radius, subtle depth. Hover shifts to `#059669`.
+- **Outline / Secondary:** Pure white surface, subtle slate border (`#e2e8f0`), Obsidian text (`#090d16`). Hover tints background to Emerald Tint (`#ecfdf5`).
+- **WhatsApp Direct:** Clean WhatsApp channel branding (`#25D366`) with white text; strictly for functional channel recognition.
+- **Focus States:** High-visibility `2px solid #047857` outline with `2px` offset.
 
-- **Primary:** Circuit Emerald background, near-black text, `8px` radius and a minimum touch-friendly height in hero contexts.
-- **Outline:** Translucent navy background with a subtle border; hover shifts the border and surface toward emerald.
-- **WhatsApp:** The established WhatsApp green gradient is functional channel recognition, not a general brand color.
-- **Focus:** Every button receives a visible `2px` emerald `:focus-visible` outline and offset.
+### Navigation Header
+- Crisp semi-opaque white background (`rgba(255, 255, 255, 0.96)`) with `backdrop-filter: blur(12px)`.
+- Hairline bottom border (`#e2e8f0`).
+- Slate navigation links with emerald indicator on active route.
 
-### Cards / Containers
+### Google Proof Rail
+- Luminous white container surface with subtle ambient shadow and 1px hairline border.
+- Left block: Authentic Google rating (`4,9/5`) with 5 amber stars (`#f59e0b`) and review count.
+- Center block: Manually swipeable verified review cards with clear quote typography and attribution. No autoplay.
+- Right block: Direct link to the official Google Business Profile map listing.
 
-- Use navy-card backgrounds, subtle borders and `16px` corners.
-- Editorial sections should not be reduced to repetitive equal card grids when hierarchy can be expressed through layout and type.
-- Related-service links remain compact and navigational rather than promotional tiles.
-
-### Inputs / Fields
-
-- Quote forms sit on a navy-card surface with a visible boundary and comfortable internal padding.
-- Preserve semantic labels, clear required states and the shared emerald keyboard focus treatment.
-- Form behavior and service preselection must remain consistent across all three service pages.
-
-### Navigation
-
-- Desktop navigation retains the established header and services dropdown; the current route is marked in emerald.
-- Mobile navigation and the bottom sticky bar remain shared site behavior.
-- Telephone, WhatsApp and quote actions must remain immediately distinguishable.
-
-### Google Proof Rail (Option A)
-
-- **Composition:** A wide three-region rail with the current Google rating at left, one attributed review in the centre and the official Maps link at right. The existing BenTech logo remains `assets/logo-horizontal.svg`; the hero uses no profile photo.
-- **Interaction:** The middle region uses native horizontal overflow and scroll snapping. Visitors move between reviews by touch or trackpad swipe, previous/next buttons or the left/right arrow keys. There is no autoplay.
-- **Accessibility:** The viewport and controls remain keyboard operable with a visible emerald focus ring. Reduced-motion preferences disable smooth animated movement. Review metadata—including author, star count and relative date—uses at least Steel Text (`--text-muted`); never Deep Steel, so supporting text remains WCAG AA legible on the solid navy surface.
-- **Responsive:** The three regions stack at `768px` and below. The desktop-only Vanta gate begins at `769px` and remains independent from the review interaction.
-
-**The Manual Proof Rule.** The centre review changes only through explicit visitor input; the Proof Rail never autoplays.
-
-### Service Hero
-
-- Pair a bounded headline and short factual lead with one dominant image and a small explanatory caption.
-- `/laadpalen/` uses the authentic Yassir installation photograph and may identify it as such.
-- Battery and solar imagery is illustrative and must be captioned as illustrative, never presented as a completed BenTech case.
+### Forms & Inputs
+- Crisp white fields on subtle section backgrounds, with `1px solid #cbd5e1` borders.
+- Active focus state: Clean emerald border (`#047857`) with `0 0 0 3px rgba(4, 120, 87, 0.15)` focus ring.
+- Explicit validation states: Urgent Red (`#dc2626`) for error messaging.
 
 ## Do's and Don'ts
 
 ### Do:
-
-- **Do** preserve the navy/emerald palette, Plus Jakarta Sans and existing shared shell.
-- **Do** write from the visitor's situation and explain that advice follows an assessment of their installation and needs.
-- **Do** keep new service imagery explicitly classified as authentic or illustrative.
-- **Do** retain semantic HTML, visible keyboard focus, readable contrast and `prefers-reduced-motion` support.
-- **Do** preserve `assets/logo-horizontal.svg` and the existing header identity exactly; Option A changes the hero proof area, not the logo.
-- **Do** keep the Google Proof Rail manually swipeable, source-linked and free of autoplay.
-- **Do** use `--text-muted` or a lighter token for review authors, star counts and dates.
-- **Do** keep Google Ads and other marketing tracking consent-gated through `/consent.js`.
-- **Do** use root-relative assets and shared files on every nested route.
+- **Do** maintain high-contrast legibility: dark obsidian text on clean light surfaces.
+- **Do** use subtle, multi-layered diffuse ambient shadows instead of heavy dark blots.
+- **Do** keep emerald as a sharp, deliberate signal for calls-to-action and active states.
+- **Do** respect the established Dutch copy and authentic Belgian electrical service context.
+- **Do** maintain the manual-only interaction for the Google Proof Rail (no autoplay).
+- **Do** preserve semantic landmarks, visible keyboard focus rings, and WCAG AA contrast throughout.
 
 ### Don't:
-
-- **Don't** invent brands, prices, subsidies, guarantees, certifications, product capacities, case studies or scope commitments.
-- **Don't** describe generic battery or solar artwork as BenTech's own installation work.
-- **Don't** reintroduce the removed decorative grid or let background effects compete with conversion content.
-- **Don't** reintroduce a profile photograph in the homepage hero or replace the established BenTech logo.
-- **Don't** label Google reviews as verified, autoplay the review rail or hide its controls from keyboard users.
-- **Don't** use `--text-subtle` for review metadata on the Proof Rail.
-- **Don't** add a new font merely to satisfy an automated detector; the incumbent Plus Jakarta Sans choice is intentional.
-- **Don't** bypass consent for call-conversion or other marketing scripts.
+- **Don't** reintroduce dark background surfaces or saturated midnight layers.
+- **Don't** use colored neon glowing box-shadows or text-shadows.
+- **Don't** add decorative pulsing dots or artificial status animations.
+- **Don't** place kickers or eyebrow tags above headings.
+- **Don't** use low-contrast washed-out grays for secondary copy.
+- **Don't** invent fake credentials, partner logos, certifications, or fictitious founder identities.

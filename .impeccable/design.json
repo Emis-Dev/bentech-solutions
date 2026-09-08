@@ -1,32 +1,47 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-02T00:00:00+02:00",
+  "generatedAt": "2026-09-08T22:40:00+02:00",
   "title": "Design System: BenTech Solutions",
   "extensions": {
     "colorMeta": {
-      "midnight": { "role": "neutral", "displayName": "Midnight Canvas", "canonical": "#050a15", "tonalRamp": ["#020409", "#050a15", "#0b1425", "#17243a", "#34445d", "#68778b", "#aab4c1", "#eef2f7"] },
-      "navy-surface": { "role": "neutral", "displayName": "Navy Section", "canonical": "#0a1124", "tonalRamp": ["#030611", "#0a1124", "#121d36", "#20304a", "#3c4b64", "#6d7b90", "#adb7c5", "#eef2f7"] },
-      "navy-card": { "role": "neutral", "displayName": "Navy Card", "canonical": "#0d1629", "tonalRamp": ["#040711", "#0d1629", "#17233a", "#26354e", "#42516a", "#728096", "#b1bbc8", "#eff3f8"] },
-      "navy-card-hover": { "role": "neutral", "displayName": "Lifted Navy", "canonical": "#111e3a", "tonalRamp": ["#050813", "#111e3a", "#1b2b49", "#2c3d5a", "#485870", "#77859a", "#b4bdca", "#f0f3f8"] },
-      "emerald": { "role": "primary", "displayName": "Circuit Emerald", "canonical": "#00c875", "tonalRamp": ["#00301c", "#005232", "#007d4a", "#00a861", "#00c875", "#40dc9b", "#8bedc1", "#dcfaec"] },
-      "emerald-light": { "role": "primary", "displayName": "Signal Emerald", "canonical": "#33d491", "tonalRamp": ["#073622", "#0b5b39", "#138456", "#22ad73", "#33d491", "#65e4ae", "#9ff0ce", "#e0faef"] },
-      "emerald-dark": { "role": "primary", "displayName": "Deep Emerald", "canonical": "#009959", "tonalRamp": ["#002f1b", "#004c2d", "#006b3e", "#00864f", "#009959", "#3abd82", "#83dfb1", "#d7f5e8"] },
-      "proof-rail-surface": { "role": "neutral", "displayName": "Proof Rail Navy", "canonical": "#071022", "tonalRamp": ["#02050d", "#071022", "#111c34", "#202e47", "#3d4b63", "#6d7a8e", "#adb7c4", "#eef2f7"] },
-      "review-star": { "role": "secondary", "displayName": "Review Amber", "canonical": "#f59e0b", "tonalRamp": ["#3d2400", "#684000", "#985f00", "#c77e00", "#f59e0b", "#ffbd4a", "#ffda91", "#fff3da"] },
-      "text-main": { "role": "neutral", "displayName": "Cool White", "canonical": "#e8edf5", "tonalRamp": ["#20242a", "#3b414a", "#5b626d", "#7e8794", "#a3acb8", "#c3cad3", "#e8edf5", "#f8fafc"] },
-      "text-muted": { "role": "neutral", "displayName": "Steel Text", "canonical": "#8896ab", "tonalRamp": ["#1b2028", "#303946", "#495668", "#667489", "#8896ab", "#aab5c4", "#cdd4de", "#f1f4f7"] },
-      "text-subtle": { "role": "neutral", "displayName": "Deep Steel", "canonical": "#576b83", "tonalRamp": ["#12171d", "#222c37", "#344454", "#465b70", "#576b83", "#8292a5", "#b4bfcb", "#edf1f5"] },
-      "danger": { "role": "primary", "displayName": "Safety Red", "canonical": "#ef4444", "tonalRamp": ["#3a0b0b", "#681313", "#982020", "#c82e2e", "#ef4444", "#f87878", "#fbb0b0", "#fee5e5"] }
+      "canvas": { "role": "neutral", "displayName": "Light Canvas", "canonical": "#f8fafc", "tonalRamp": ["#ffffff", "#f8fafc", "#f1f5f9", "#e2e8f0", "#cbd5e1", "#94a3b8", "#64748b", "#334155"] },
+      "surface": { "role": "neutral", "displayName": "Pure White Surface", "canonical": "#ffffff", "tonalRamp": ["#ffffff", "#f8fafc", "#f1f5f9", "#e2e8f0", "#cbd5e1", "#94a3b8", "#64748b", "#1e293b"] },
+      "surface-secondary": { "role": "neutral", "displayName": "Section Secondary", "canonical": "#f1f5f9", "tonalRamp": ["#ffffff", "#f8fafc", "#f1f5f9", "#e2e8f0", "#cbd5e1", "#94a3b8", "#64748b", "#1e293b"] },
+      "surface-card": { "role": "neutral", "displayName": "Card Surface", "canonical": "#ffffff", "tonalRamp": ["#ffffff", "#f8fafc", "#f1f5f9", "#e2e8f0", "#cbd5e1", "#94a3b8", "#64748b", "#1e293b"] },
+      "surface-card-hover": { "role": "neutral", "displayName": "Card Hover Surface", "canonical": "#f8fafc", "tonalRamp": ["#ffffff", "#f8fafc", "#f1f5f9", "#e2e8f0", "#cbd5e1", "#94a3b8", "#64748b", "#1e293b"] },
+      "border-hairline": { "role": "neutral", "displayName": "Hairline Border", "canonical": "rgba(15, 23, 42, 0.08)", "tonalRamp": ["#ffffff", "#f8fafc", "#f1f5f9", "#e2e8f0", "#cbd5e1", "#94a3b8", "#64748b", "#0f172a"] },
+      "border-subtle": { "role": "neutral", "displayName": "Border Subtle", "canonical": "#e2e8f0", "tonalRamp": ["#ffffff", "#f8fafc", "#f1f5f9", "#e2e8f0", "#cbd5e1", "#94a3b8", "#64748b", "#0f172a"] },
+      "border-emerald": { "role": "primary", "displayName": "Border Emerald", "canonical": "rgba(4, 120, 87, 0.25)", "tonalRamp": ["#ecfdf5", "#d1fae5", "#a7f3d0", "#6ee7b7", "#34d399", "#10b981", "#059669", "#047857"] },
+      "emerald": { "role": "primary", "displayName": "Architectural Emerald", "canonical": "#047857", "tonalRamp": ["#ecfdf5", "#d1fae5", "#a7f3d0", "#6ee7b7", "#34d399", "#10b981", "#059669", "#047857"] },
+      "emerald-vibrant": { "role": "primary", "displayName": "Vibrant Emerald", "canonical": "#059669", "tonalRamp": ["#ecfdf5", "#d1fae5", "#a7f3d0", "#6ee7b7", "#34d399", "#10b981", "#059669", "#047857"] },
+      "emerald-light": { "role": "primary", "displayName": "Signal Emerald", "canonical": "#10b981", "tonalRamp": ["#ecfdf5", "#d1fae5", "#a7f3d0", "#6ee7b7", "#34d399", "#10b981", "#059669", "#047857"] },
+      "emerald-tint": { "role": "primary", "displayName": "Emerald Tint", "canonical": "#ecfdf5", "tonalRamp": ["#ffffff", "#f7fee7", "#ecfdf5", "#d1fae5", "#a7f3d0", "#6ee7b7", "#34d399", "#047857"] },
+      "emerald-dark": { "role": "primary", "displayName": "Deep Emerald", "canonical": "#065f46", "tonalRamp": ["#ecfdf5", "#d1fae5", "#a7f3d0", "#6ee7b7", "#10b981", "#059669", "#047857", "#065f46"] },
+      "proof-rail-surface": { "role": "neutral", "displayName": "Proof Rail Surface", "canonical": "#ffffff", "tonalRamp": ["#ffffff", "#f8fafc", "#f1f5f9", "#e2e8f0", "#cbd5e1", "#94a3b8", "#64748b", "#1e293b"] },
+      "review-star": { "role": "secondary", "displayName": "Review Amber", "canonical": "#f59e0b", "tonalRamp": ["#fffbeb", "#fef3c7", "#fde68a", "#fcd34d", "#fbbf24", "#f59e0b", "#d97706", "#b45309"] },
+      "text-primary": { "role": "neutral", "displayName": "Obsidian Text", "canonical": "#090d16", "tonalRamp": ["#f8fafc", "#e2e8f0", "#94a3b8", "#64748b", "#475569", "#334155", "#1e293b", "#090d16"] },
+      "text-secondary": { "role": "neutral", "displayName": "Slate Body", "canonical": "#475569", "tonalRamp": ["#f8fafc", "#e2e8f0", "#94a3b8", "#64748b", "#475569", "#334155", "#1e293b", "#090d16"] },
+      "text-muted": { "role": "neutral", "displayName": "Muted Slate", "canonical": "#64748b", "tonalRamp": ["#f8fafc", "#e2e8f0", "#cbd5e1", "#94a3b8", "#64748b", "#475569", "#334155", "#090d16"] },
+      "danger": { "role": "primary", "displayName": "Urgent Red", "canonical": "#dc2626", "tonalRamp": ["#fef2f2", "#fee2e2", "#fecaca", "#fca5a5", "#f87171", "#ef4444", "#dc2626", "#b91c1c"] },
+      "danger-dark": { "role": "primary", "displayName": "Urgent Dark Red", "canonical": "#991b1b", "tonalRamp": ["#fef2f2", "#fee2e2", "#fecaca", "#dc2626", "#b91c1c", "#991b1b", "#7f1d1d"] },
+      "danger-deep": { "role": "primary", "displayName": "Urgent Deep Red", "canonical": "#7f1d1d", "tonalRamp": ["#fef2f2", "#fee2e2", "#fecaca", "#dc2626", "#991b1b", "#7f1d1d", "#450a0a"] },
+      "danger-tint": { "role": "primary", "displayName": "Urgent Tint", "canonical": "#fef2f2", "tonalRamp": ["#ffffff", "#fef2f2", "#fee2e2", "#fecaca", "#f87171", "#ef4444", "#dc2626", "#991b1b"] },
+      "whatsapp": { "role": "secondary", "displayName": "WhatsApp Green", "canonical": "#25d366", "tonalRamp": ["#f0fdf4", "#dcfce7", "#86efac", "#4ade80", "#22c55e", "#25d366", "#16a34a", "#15803d"] },
+      "klimaatplus": { "role": "secondary", "displayName": "KlimaatPlus Orange", "canonical": "#ea580c", "tonalRamp": ["#fff7ed", "#ffedd5", "#fed7aa", "#fb923c", "#f97316", "#ea580c", "#c2410c", "#9a3412"] },
+      "batteryplus": { "role": "secondary", "displayName": "BatteryPlus Green", "canonical": "#15803d", "tonalRamp": ["#f0fdf4", "#dcfce7", "#bbf7d0", "#86efac", "#4ade80", "#22c55e", "#16a34a", "#15803d"] },
+      "serviceplus": { "role": "secondary", "displayName": "ServicePlus Blue", "canonical": "#0284c7", "tonalRamp": ["#f0f9ff", "#e0f2fe", "#bae6fd", "#7dd3fc", "#38bdf8", "#0ea5e9", "#0284c7", "#0369a1"] },
+      "solarplus": { "role": "secondary", "displayName": "SolarPlus Amber", "canonical": "#d97706", "tonalRamp": ["#fffbeb", "#fef3c7", "#fde68a", "#fcd34d", "#fbbf24", "#f59e0b", "#d97706", "#b45309"] },
+      "border-input": { "role": "neutral", "displayName": "Input Border", "canonical": "#cbd5e1", "tonalRamp": ["#ffffff", "#f8fafc", "#f1f5f9", "#e2e8f0", "#cbd5e1", "#94a3b8", "#64748b", "#0f172a"] }
     },
     "typographyMeta": {
-      "display": { "displayName": "Display", "purpose": "Large homepage and service hero headlines." },
-      "headline": { "displayName": "Headline", "purpose": "Section titles and decisive content headings." },
-      "body": { "displayName": "Body", "purpose": "Readable service explanations and form guidance." },
-      "label": { "displayName": "Label", "purpose": "Navigation, proof metadata and compact action labels." }
+      "display": { "displayName": "Display", "purpose": "High-impact service titles with tight tracking." },
+      "headline": { "displayName": "Headline", "purpose": "Section titles and decision gates." },
+      "body": { "displayName": "Body", "purpose": "High-contrast readable Dutch prose and descriptions." },
+      "label": { "displayName": "Label", "purpose": "Navigation, proof metadata and operational status labels." }
     },
     "shadows": [
-      { "name": "card", "value": "0 8px 24px -8px rgba(0, 0, 0, 0.5)", "purpose": "Restrained separation for important cards." },
-      { "name": "proof-rail", "value": "0 28px 80px -36px rgba(0, 0, 0, 0.9)", "purpose": "Ambient separation of the Google Proof Rail from the Vanta field." }
+      { "name": "card", "value": "0 1px 3px rgba(15, 23, 42, 0.04), 0 10px 24px -4px rgba(15, 23, 42, 0.06)", "purpose": "Soft, natural ambient depth for elevated cards." },
+      { "name": "proof-rail", "value": "0 4px 6px -1px rgba(15, 23, 42, 0.05), 0 20px 40px -6px rgba(15, 23, 42, 0.08)", "purpose": "Structural ambient separation for the Google Proof Rail." }
     ],
     "motion": [
       { "name": "ease-out", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Default state and reveal easing." },
@@ -34,7 +49,7 @@
     ],
     "breakpoints": [
       { "name": "mobile", "value": "768px" },
-      { "name": "vanta-desktop", "value": "769px" },
+      { "name": "desktop-gate", "value": "769px" },
       { "name": "editorial-stack", "value": "992px" },
       { "name": "wide-shell", "value": "1200px" }
     ]
@@ -44,88 +59,83 @@
       "name": "Primary Button",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "Direct, high-priority action for calls and submissions.",
+      "description": "High-contrast authoritative emerald button for calls and submissions.",
       "html": "<button class=\"ds-btn-primary\">Bel spoedlijn</button>",
-      "css": ".ds-btn-primary { min-height: 44px; padding: 0.7rem 1.4rem; border: 1px solid transparent; border-radius: 8px; background: var(--primary, #00c875); color: #041009; font: 600 0.9rem 'Plus Jakarta Sans', system-ui, sans-serif; cursor: pointer; transition: background-color 0.2s, box-shadow 0.2s, transform 0.1s; } .ds-btn-primary:hover { background: var(--primary-light, #33d491); box-shadow: 0 4px 20px rgba(0, 200, 117, 0.25); } .ds-btn-primary:focus-visible { outline: 2px solid var(--primary, #00c875); outline-offset: 2px; } .ds-btn-primary:active { transform: translateY(1px); }"
+      "css": ".ds-btn-primary { min-height: 44px; padding: 0.75rem 1.5rem; border: 1px solid transparent; border-radius: 8px; background: var(--primary, #047857); color: #ffffff; font: 600 0.9rem 'Plus Jakarta Sans', system-ui, sans-serif; cursor: pointer; transition: background-color 0.2s, box-shadow 0.2s, transform 0.1s; } .ds-btn-primary:hover { background: var(--primary-light, #059669); box-shadow: 0 4px 12px rgba(4, 120, 87, 0.2); } .ds-btn-primary:focus-visible { outline: 2px solid #047857; outline-offset: 2px; } .ds-btn-primary:active { transform: translateY(1px); }"
     },
     {
       "name": "Outline Button",
       "kind": "button",
       "refersTo": "button-outline",
-      "description": "Calmer secondary action beside a primary conversion path.",
+      "description": "Calm, architectural secondary button with crisp border.",
       "html": "<button class=\"ds-btn-outline\">Vraag offerte aan</button>",
-      "css": ".ds-btn-outline { min-height: 44px; padding: 0.7rem 1.4rem; border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; background: rgba(13,22,41,0.8); color: var(--text-main, #e8edf5); font: 600 0.9rem 'Plus Jakarta Sans', system-ui, sans-serif; cursor: pointer; transition: background-color 0.2s, border-color 0.2s; } .ds-btn-outline:hover { border-color: var(--primary, #00c875); background: rgba(0,200,117,0.08); } .ds-btn-outline:focus-visible { outline: 2px solid var(--primary, #00c875); outline-offset: 2px; }"
+      "css": ".ds-btn-outline { min-height: 44px; padding: 0.75rem 1.5rem; border: 1px solid #e2e8f0; border-radius: 8px; background: #ffffff; color: var(--text-primary, #090d16); font: 600 0.9rem 'Plus Jakarta Sans', system-ui, sans-serif; cursor: pointer; transition: background-color 0.2s, border-color 0.2s; } .ds-btn-outline:hover { border-color: #047857; background: #ecfdf5; } .ds-btn-outline:focus-visible { outline: 2px solid #047857; outline-offset: 2px; }"
     },
     {
       "name": "Text Field",
       "kind": "input",
       "refersTo": null,
-      "description": "Dark, bounded input for quote and contact forms.",
+      "description": "Crisp white input field on subtle section background.",
       "html": "<label class=\"ds-field\">Naam<input type=\"text\" placeholder=\"Uw naam\"></label>",
-      "css": ".ds-field { display: grid; gap: 0.45rem; color: var(--text-main, #e8edf5); font: 600 0.85rem 'Plus Jakarta Sans', system-ui, sans-serif; } .ds-field input { width: 100%; padding: 0.65rem 0.9rem; border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; background: var(--bg-main, #050a15); color: var(--text-main, #e8edf5); font: 400 0.9rem 'Plus Jakarta Sans', system-ui, sans-serif; } .ds-field input:focus-visible { outline: none; border-color: var(--primary, #00c875); box-shadow: 0 0 0 3px rgba(0,200,117,0.1); }"
+      "css": ".ds-field { display: grid; gap: 0.45rem; color: var(--text-primary, #090d16); font: 600 0.85rem 'Plus Jakarta Sans', system-ui, sans-serif; } .ds-field input { width: 100%; padding: 0.75rem 1rem; border: 1px solid #cbd5e1; border-radius: 8px; background: #ffffff; color: var(--text-primary, #090d16); font: 400 0.95rem 'Plus Jakarta Sans', system-ui, sans-serif; } .ds-field input:focus-visible { outline: none; border-color: #047857; box-shadow: 0 0 0 3px rgba(4, 120, 87, 0.15); }"
     },
     {
       "name": "Service Card",
       "kind": "card",
       "refersTo": "card",
-      "description": "Tonal service container with restrained interactive lift.",
+      "description": "Architectural white card with subtle diffuse elevation and hairline border.",
       "html": "<article class=\"ds-service-card\"><span>Elektrische hulp</span><h3>Gerichte diagnose</h3><p>Helder advies en een veilige volgende stap.</p></article>",
-      "css": ".ds-service-card { display: grid; gap: 0.65rem; padding: 1.5rem; border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; background: var(--bg-card, #0d1629); color: var(--text-main, #e8edf5); font-family: 'Plus Jakarta Sans', system-ui, sans-serif; transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s; } .ds-service-card span { color: var(--primary-light, #33d491); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; } .ds-service-card h3 { margin: 0; font-size: 1.1rem; } .ds-service-card p { margin: 0; color: var(--text-muted, #8896ab); line-height: 1.6; } .ds-service-card:hover { transform: translateY(-3px); border-color: rgba(0,200,117,0.25); box-shadow: 0 8px 24px -8px rgba(0,0,0,0.5); } .ds-service-card:focus-within { outline: 2px solid var(--primary, #00c875); outline-offset: 3px; }"
+      "css": ".ds-service-card { display: grid; gap: 0.65rem; padding: 1.75rem; border: 1px solid rgba(15, 23, 42, 0.08); border-radius: 16px; background: #ffffff; color: var(--text-primary, #090d16); font-family: 'Plus Jakarta Sans', system-ui, sans-serif; box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04), 0 10px 24px -4px rgba(15, 23, 42, 0.06); transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s; } .ds-service-card span { color: #047857; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; } .ds-service-card h3 { margin: 0; font-size: 1.15rem; color: #090d16; } .ds-service-card p { margin: 0; color: #475569; line-height: 1.6; } .ds-service-card:hover { transform: translateY(-2px); border-color: rgba(4, 120, 87, 0.3); box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.05), 0 20px 40px -6px rgba(15, 23, 42, 0.08); } .ds-service-card:focus-within { outline: 2px solid #047857; outline-offset: 3px; }"
     },
     {
-      "name": "Navigation Link",
+      "name": "Navigation Header",
       "kind": "nav",
       "refersTo": null,
-      "description": "Quiet shell navigation with an emerald orientation rule.",
+      "description": "Semi-opaque white navigation bar with hairline border and emerald active route indicator.",
       "html": "<nav class=\"ds-nav\" aria-label=\"Voorbeeld\"><a href=\"#\">Diensten</a></nav>",
-      "css": ".ds-nav { display: flex; align-items: center; min-height: 54px; background: var(--bg-main, #050a15); font-family: 'Plus Jakarta Sans', system-ui, sans-serif; } .ds-nav a { position: relative; padding: 0.8rem 0.2rem; color: var(--text-muted, #8896ab); font-size: 0.9rem; text-decoration: none; transition: color 0.2s; } .ds-nav a::after { content: ''; position: absolute; right: 0; bottom: 0.45rem; left: 0; height: 1px; background: var(--primary, #00c875); transform: scaleX(0); transform-origin: left; transition: transform 0.2s; } .ds-nav a:hover { color: var(--text-main, #e8edf5); } .ds-nav a:hover::after { transform: scaleX(1); } .ds-nav a:focus-visible { outline: 2px solid var(--primary, #00c875); outline-offset: 3px; }"
+      "css": ".ds-nav { display: flex; align-items: center; min-height: 58px; background: rgba(255, 255, 255, 0.96); backdrop-filter: blur(12px); border-bottom: 1px solid #e2e8f0; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; } .ds-nav a { position: relative; padding: 0.8rem 0.4rem; color: #475569; font-size: 0.9rem; text-decoration: none; transition: color 0.2s; } .ds-nav a::after { content: ''; position: absolute; right: 0; bottom: 0; left: 0; height: 2px; background: #047857; transform: scaleX(0); transform-origin: left; transition: transform 0.2s; } .ds-nav a:hover { color: #090d16; } .ds-nav a:hover::after { transform: scaleX(1); } .ds-nav a:focus-visible { outline: 2px solid #047857; outline-offset: 3px; }"
     },
     {
       "name": "Google Proof Rail",
       "kind": "custom",
       "refersTo": "google-proof-rail",
-      "description": "Option A signature trust rail: sourced rating, manually controlled review and official Maps path.",
+      "description": "Luminous white trust console: authentic rating, manually swipeable reviews and official Google Maps link.",
       "html": "<aside class=\"ds-proof\" aria-label=\"Google-reviews\"><div class=\"ds-proof-rating\"><strong>4,9/5 op Google</strong><span>12 van 13 zijn vijf sterren</span></div><figure><blockquote>“Enorm dankbaar! Top vakman”</blockquote><figcaption>Bouchra Abali · 5 sterren</figcaption></figure><a href=\"#\">Bekijk alle 13 reviews</a></aside>",
-      "css": ".ds-proof { display: grid; grid-template-columns: minmax(210px,.78fr) minmax(0,1.35fr) minmax(190px,.66fr); overflow: hidden; border-block: 1px solid rgba(0,200,117,.72); border-inline: 1px solid rgba(255,255,255,.08); border-radius: 2px; background: var(--proof-rail-surface, #071022); color: var(--text-main, #e8edf5); font-family: 'Plus Jakarta Sans', system-ui, sans-serif; box-shadow: 0 28px 80px -36px rgba(0,0,0,.9); } .ds-proof-rating, .ds-proof figure, .ds-proof a { min-width: 0; padding: 1.25rem 1.4rem; } .ds-proof-rating { display: flex; flex-direction: column; justify-content: center; } .ds-proof-rating strong { font-size: 1.05rem; } .ds-proof-rating span, .ds-proof figcaption { color: var(--text-muted, #8896ab); font-size: .75rem; } .ds-proof figure { margin: 0; border-inline: 1px solid rgba(255,255,255,.08); } .ds-proof blockquote { margin: 0 0 .6rem; font-weight: 600; } .ds-proof a { display: flex; align-items: center; color: var(--primary-light, #33d491); font-size: .82rem; font-weight: 700; text-decoration: none; } .ds-proof a:hover { color: #68e5ac; } .ds-proof a:focus-visible { outline: 2px solid var(--primary, #00c875); outline-offset: -3px; } @media (max-width: 768px) { .ds-proof { grid-template-columns: 1fr; } .ds-proof figure { border-block: 1px solid rgba(255,255,255,.08); border-inline: 0; } }"
+      "css": ".ds-proof { display: grid; grid-template-columns: minmax(210px,.78fr) minmax(0,1.35fr) minmax(190px,.66fr); overflow: hidden; border: 1px solid #e2e8f0; border-top: 2px solid #047857; border-radius: 8px; background: #ffffff; color: #090d16; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04), 0 10px 24px -4px rgba(15, 23, 42, 0.06); } .ds-proof-rating, .ds-proof figure, .ds-proof a { min-width: 0; padding: 1.25rem 1.4rem; } .ds-proof-rating { display: flex; flex-direction: column; justify-content: center; } .ds-proof-rating strong { font-size: 1.05rem; color: #090d16; } .ds-proof-rating span, .ds-proof figcaption { color: #64748b; font-size: .78rem; } .ds-proof figure { margin: 0; border-inline: 1px solid #e2e8f0; } .ds-proof blockquote { margin: 0 0 .6rem; font-weight: 600; color: #090d16; } .ds-proof a { display: flex; align-items: center; color: #047857; font-size: .85rem; font-weight: 700; text-decoration: none; } .ds-proof a:hover { color: #059669; } .ds-proof a:focus-visible { outline: 2px solid #047857; outline-offset: -3px; } @media (max-width: 768px) { .ds-proof { grid-template-columns: 1fr; } .ds-proof figure { border-block: 1px solid #e2e8f0; border-inline: 0; } }"
     }
   ],
   "narrative": {
-    "northStar": "The Green Circuit Editorial",
-    "overview": "BenTech combines a technical midnight-navy foundation with a deliberately scarce emerald signal color. The visual world should feel competent, direct and local: polished enough for planned energy projects, but fast and legible enough for visitors who need an electrician now.\n\nThe dedicated service pages extend the incumbent brand rather than redesign it. Their editorial split layouts pair concise decision-oriented copy with one strong image, followed by structured proof, process, audience, related-service and quote sections. The decorative grid explored during implementation was removed because it competed with the content. Detector warnings about the incumbent Plus Jakarta Sans family were consciously accepted to preserve the established BenTech brand world.\n\nThe homepage extends that same world with the user-selected **Option A Google Proof Rail** as its signature trust component. The wide, solid navy rail places the current Google rating on the left, one manually swipeable attributed review in the middle and the official Google Maps link on the right. It replaces the hero portrait entirely while preserving the existing header identity and the canonical `assets/logo-horizontal.svg` artwork unchanged.",
+    "northStar": "The Architectural Energy Atelier",
+    "overview": "BenTech Solutions transitions from a dark-mode tech look to an authoritative, editorial light design architecture. The new visual world radiates professional reliability, crisp legibility, and architectural clarity: clean white and slate surfaces, high-contrast ink-slate typography, and a purposeful botanical circuit emerald accent.\n\nThis direction deliberately strips away common 'AI slop' tells:\n- No dark glowing halos: Replaces neon blur rings with natural, multi-layer diffuse ambient elevation.\n- No simulated liveness gimmicks: Replaces decorative pulsing dots with calm, high-contrast operational status tags.\n- No decorative kickers: Eliminates redundant label badges above headings, letting typography speak with genuine hierarchical weight.\n- No muddy contrast: Establishes rigorous WCAG AAA contrast for body typography (#090d16 on white, secondary #475569), ensuring effortless readability under all ambient lighting conditions.\n\nThe signature Google Proof Rail is re-anchored as a pristine architectural white console with a hairline emerald anchor rule, crisp review typography, authentic star ratings, and direct links to the official Google Business Profile.",
     "keyCharacteristics": [
-      "Dark navy tonal layers with emerald used for action, orientation and focus.",
-      "Large, compact headlines balanced by calm, readable body copy.",
-      "Editorial two-column layouts that collapse cleanly to one column.",
-      "A wide Google Proof Rail that makes sourced reputation evidence part of the first viewport.",
-      "Direct contact paths by phone, WhatsApp and quote form.",
-      "Factual, situation-led copy without unverified commercial claims."
+      "Crisp architectural white surfaces with high-contrast slate typography.",
+      "Calibrated botanical emerald (#047857) providing accessible, high-contrast signals.",
+      "Multi-layered diffuse ambient shadows instead of heavy dark blots or neon halos.",
+      "A luminous Google Proof Rail console that foregrounds verifiable reputation.",
+      "Direct, distinct contact pathways for urgent troubleshooting and planned energy installations.",
+      "Factual, situational Dutch copy free from unverified marketing claims."
     ],
     "rules": [
-      { "name": "The Signal Rule", "body": "Emerald identifies action or orientation; it must not become a decorative wash across every surface.", "section": "colors" },
-      { "name": "The One-Family Rule", "body": "Preserve Plus Jakarta Sans across headings, controls and body copy; the detector font warning is an accepted incumbent-brand exception.", "section": "typography" },
-      { "name": "The Flat-By-Default Rule", "body": "Use shadow only when hierarchy or interaction requires it; do not turn every card into a floating tile.", "section": "elevation" },
+      { "name": "The Signal Rule", "body": "Emerald is reserved for intentional action, verification, and orientation. It never floods the page as a decorative wash.", "section": "colors" },
+      { "name": "The No-Kicker Rule", "body": "Headings carry their own weight without decorative kicker tags above them.", "section": "typography" },
+      { "name": "The Ambient Depth Rule", "body": "Depth is created through hairline structural boundaries and multi-layer diffuse shadows; zero-offset glowing halos are strictly banned.", "section": "elevation" },
       { "name": "The Manual Proof Rule", "body": "The centre review changes only through explicit visitor input; the Proof Rail never autoplays.", "section": "components" }
     ],
     "dos": [
-      "**Do** preserve the navy/emerald palette, Plus Jakarta Sans and existing shared shell.",
-      "**Do** write from the visitor's situation and explain that advice follows an assessment of their installation and needs.",
-      "**Do** keep new service imagery explicitly classified as authentic or illustrative.",
-      "**Do** retain semantic HTML, visible keyboard focus, readable contrast and `prefers-reduced-motion` support.",
-      "**Do** preserve `assets/logo-horizontal.svg` and the existing header identity exactly; Option A changes the hero proof area, not the logo.",
-      "**Do** keep the Google Proof Rail manually swipeable, source-linked and free of autoplay.",
-      "**Do** use `--text-muted` or a lighter token for review authors, star counts and dates.",
-      "**Do** keep Google Ads and other marketing tracking consent-gated through `/consent.js`.",
-      "**Do** use root-relative assets and shared files on every nested route."
+      "**Do** maintain high-contrast legibility: dark obsidian text on clean light surfaces.",
+      "**Do** use subtle, multi-layered diffuse ambient shadows instead of heavy dark blots.",
+      "**Do** keep emerald as a sharp, deliberate signal for calls-to-action and active states.",
+      "**Do** respect the established Dutch copy and authentic Belgian electrical service context.",
+      "**Do** maintain the manual-only interaction for the Google Proof Rail (no autoplay).
+      "**Do** preserve semantic landmarks, visible keyboard focus rings, and WCAG AA contrast throughout."
     ],
     "donts": [
-      "**Don't** invent brands, prices, subsidies, guarantees, certifications, product capacities, case studies or scope commitments.",
-      "**Don't** describe generic battery or solar artwork as BenTech's own installation work.",
-      "**Don't** reintroduce the removed decorative grid or let background effects compete with conversion content.",
-      "**Don't** reintroduce a profile photograph in the homepage hero or replace the established BenTech logo.",
-      "**Don't** label Google reviews as verified, autoplay the review rail or hide its controls from keyboard users.",
-      "**Don't** use `--text-subtle` for review metadata on the Proof Rail.",
-      "**Don't** add a new font merely to satisfy an automated detector; the incumbent Plus Jakarta Sans choice is intentional.",
-      "**Don't** bypass consent for call-conversion or other marketing scripts."
+      "**Don't** reintroduce dark background surfaces or saturated midnight layers.",
+      "**Don't** use colored neon glowing box-shadows or text-shadows.",
+      "**Don't** add decorative pulsing dots or artificial status animations.",
+      "**Don't** place kickers or eyebrow tags above headings.",
+      "**Don't** use low-contrast washed-out grays for secondary copy.",
+      "**Don't** invent fake credentials, partner logos, certifications, or fictitious founder identities."
     ]
   }
 }

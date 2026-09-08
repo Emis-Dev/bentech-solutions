@@ -4,7 +4,7 @@
 
 ## Platform
 
-Responsive static website on Cloudflare Pages, written in Dutch (`nl-BE`).
+web
 
 ## Users
 
@@ -30,7 +30,7 @@ BenTech combines electrical troubleshooting with planned energy solutions and of
 ## Capabilities and constraints
 
 - Custom static HTML, CSS, and JavaScript; no CMS or application build step.
-- Existing navy and emerald visual identity, header, footer, form, and contact patterns remain the design baseline.
+- Modern light architectural visual identity: clean white/slate surfaces with authoritative emerald signals, crisp typography, and high-trust proof patterns.
 - Create dedicated pages for charging stations, home batteries, and solar panels.
 - Preserve the desktop-only Vanta homepage effect and the lean mobile runtime.
 - Known contact details: BenTech Solutions CommV, +32 486 32 86 45, info@bentechsolutions.be.
@@ -41,7 +41,7 @@ BenTech combines electrical troubleshooting with planned energy solutions and of
 
 - Direct and practical Dutch copy.
 - Clear distinction between urgent interventions and planned energy projects.
-- Existing dark navy surfaces, emerald accent, and Plus Jakarta Sans typography.
+- Crisp architectural light canvas and surfaces, refined emerald accents, and Plus Jakarta Sans typography.
 - Mobile-first contact options without hiding essential information.
 
 ## Evidence on hand
