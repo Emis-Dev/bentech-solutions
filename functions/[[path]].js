@@ -49,6 +49,15 @@ export async function onRequest(context) {
                   url.pathname === '/brand-themes.css' ||
                   url.pathname === '/consent.js' ||
                   url.pathname === '/main.js' ||
+                  url.pathname === '/brand-vanta.js' ||
+                  url.pathname.endsWith('.js') ||
+                  url.pathname.endsWith('.css') ||
+                  url.pathname.endsWith('.svg') ||
+                  url.pathname.endsWith('.png') ||
+                  url.pathname.endsWith('.webp') ||
+                  url.pathname.endsWith('.jpg') ||
+                  url.pathname.endsWith('.jpeg') ||
+                  url.pathname.endsWith('.woff2') ||
                   url.pathname === '/robots.txt' ||
                   url.pathname === '/sitemap.xml' ||
                   url.pathname === '/_headers';
