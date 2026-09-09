@@ -79,6 +79,27 @@ export async function onRequest(context) {
     }
   }
 
+  // Handle apex & www legacy redirects to dedicated subdomains
+  if (!subdomain) {
+    const cleanPath = url.pathname.replace(/\/+$/, '') || '/';
+    const legacyRedirects = {
+      '/laadpalen': 'https://laadplus.bentechsolutions.be/',
+      '/thuisbatterijen': 'https://batteryplus.bentechsolutions.be/',
+      '/zonnepanelen': 'https://solarplus.bentechsolutions.be/',
+      '/klimaatplus': 'https://klimaatplus.bentechsolutions.be/',
+      '/batteryplus': 'https://batteryplus.bentechsolutions.be/',
+      '/laadplus': 'https://laadplus.bentechsolutions.be/',
+      '/serviceplus': 'https://serviceplus.bentechsolutions.be/',
+      '/solarplus': 'https://solarplus.bentechsolutions.be/'
+    };
+
+    for (const [prefix, dest] of Object.entries(legacyRedirects)) {
+      if (cleanPath === prefix || cleanPath.startsWith(prefix + '/')) {
+        return Response.redirect(dest, 301);
+      }
+    }
+  }
+
   // Handle subdomain routing
   if (subdomain && brandSubdomainMap[subdomain]) {
     const targetFolder = brandSubdomainMap[subdomain];

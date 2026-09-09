@@ -98,6 +98,9 @@ for (const brand of brands) {
   assert.match(html, /1025\.714\.523/, `${brand.name}: missing VAT number in footer`);
   assert.match(html, /web\.tom\.cool/, `${brand.name}: missing web.tom.cool credit in footer`);
 
+  // Verify zero parentheses in brand names
+  assert.doesNotMatch(html, /KlimaatPlus\s*\([^)]+\)|BatteryPlus\s*\([^)]+\)|LaadPlus\s*\([^)]+\)|ServicePlus\s*\([^)]+\)|SolarPlus\s*\([^)]+\)/, `${brand.name}: footer or page must NOT have parentheses in brand links`);
+
   // Mobile hamburger animation class
   assert.match(html, /is-active/, `${brand.name}: script missing is-active toggle for hamburger animation`);
 

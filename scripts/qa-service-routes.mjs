@@ -9,6 +9,8 @@ const routes = [
   {
     path: 'laadpalen/index.html',
     route: '/laadpalen/',
+    canonicalUrl: 'https://laadplus.bentechsolutions.be/',
+    subdomain: 'laadplus',
     title: 'Laadpaal installeren in Antwerpen | BenTech Solutions',
     h1: 'Laadpalen voor thuis en op het werk',
     service: 'Laadpaal'
@@ -16,6 +18,8 @@ const routes = [
   {
     path: 'thuisbatterijen/index.html',
     route: '/thuisbatterijen/',
+    canonicalUrl: 'https://batteryplus.bentechsolutions.be/',
+    subdomain: 'batteryplus',
     title: 'Thuisbatterij in Antwerpen | BenTech Solutions',
     h1: 'Een thuisbatterij afgestemd op uw verbruik',
     service: 'Thuisbatterij'
@@ -23,6 +27,8 @@ const routes = [
   {
     path: 'zonnepanelen/index.html',
     route: '/zonnepanelen/',
+    canonicalUrl: 'https://solarplus.bentechsolutions.be/',
+    subdomain: 'solarplus',
     title: 'Zonnepanelen in Antwerpen | BenTech Solutions',
     h1: 'Zonnepanelen voor uw woning of onderneming',
     service: 'Zonnepanelen'
@@ -35,7 +41,6 @@ const headings = new Set();
 
 for (const page of routes) {
   const html = read(page.path);
-  const expectedUrl = `https://bentechsolutions.be${page.route}`;
   const title = capture(html, /<title>([^<]+)<\/title>/, `${page.path}: title`);
   const description = capture(html, /<meta\s+name="description"\s+content="([^"]+)"/, `${page.path}: meta description`);
   const canonical = capture(html, /<link\s+rel="canonical"\s+href="([^"]+)"/, `${page.path}: canonical`);
@@ -44,52 +49,33 @@ for (const page of routes) {
 
   assert.equal(title, page.title, `${page.path}: unexpected title`);
   assert.ok(description.length >= 90 && description.length <= 165, `${page.path}: description should be concise and useful`);
-  assert.equal(canonical, expectedUrl, `${page.path}: canonical must match the route`);
-  assert.equal(ogUrl, expectedUrl, `${page.path}: og:url must match the route`);
+  assert.equal(canonical, page.canonicalUrl, `${page.path}: canonical must redirect to subdomain`);
+  assert.equal(ogUrl, page.canonicalUrl, `${page.path}: og:url must redirect to subdomain`);
+  assert.match(html, new RegExp(`<meta http-equiv="refresh" content="0; url=${escapeRegex(page.canonicalUrl)}">`), `${page.path}: missing instant refresh`);
+  assert.match(html, new RegExp(`window\\.location\\.replace\\("${escapeRegex(page.canonicalUrl)}"\\);`), `${page.path}: missing JS redirect fallback`);
   assert.equal(h1, page.h1, `${page.path}: unexpected H1`);
   assert.doesNotMatch(html, /id="home"/, `${page.path}: service pages must not activate the Vanta homepage runtime`);
   assert.doesNotMatch(html, /(?:src|href)="(?:assets|style\.css|service-pages\.css|main\.js|consent\.js)/, `${page.path}: nested routes need root-relative local assets`);
-  assert.match(html, /<script src="\/consent\.js\?v=googleads-call-20260819"><\/script>/, `${page.path}: consent loader missing`);
-  assert.match(html, /<link rel="stylesheet" href="\/style\.css\?v=site-clarity-20260905">/, `${page.path}: current base stylesheet missing`);
-  assert.match(html, /<link rel="stylesheet" href="\/service-pages\.css\?v=energy-pages-20260902">/, `${page.path}: service stylesheet missing`);
-  assert.match(html, /<script src="\/main\.js\?v=site-clarity-20260905"><\/script>/, `${page.path}: current shared JavaScript missing`);
-  assert.match(html, /href="tel:\+32486328645"/, `${page.path}: telephone CTA missing`);
-  assert.match(html, /id="marketingConsentBanner"/, `${page.path}: consent banner missing`);
-  assert.match(html, /id="acceptMarketingConsent"/, `${page.path}: consent accept action missing`);
-  assert.match(html, /id="rejectMarketingConsent"/, `${page.path}: consent reject action missing`);
-  assert.match(html, /id="manageMarketingConsent"/, `${page.path}: consent settings action missing`);
-  assert.match(html, /onsubmit="handleFormSubmit\(event, 'offerte'\)"/, `${page.path}: WhatsApp quote handler missing`);
-  for (const id of ['q-name', 'q-phone', 'q-email', 'q-service', 'q-details']) {
-    assert.match(html, new RegExp(`id="${id}"`), `${page.path}: form field #${id} missing`);
-  }
-  assert.match(html, new RegExp(`<option value="${page.service}" selected>`), `${page.path}: service selection is not preselected`);
-  assert.match(html, /spoed binnen 60 km/, `${page.path}: current work area missing`);
-  assertLocalReferencesExist(html, page.path);
+
+  // Verify that destination subdomain contains the merged rich content & FAQ
+  const subHtml = read(`${page.subdomain}/index.html`);
+  assert.match(subHtml, /id="faq"/, `${page.subdomain}: missing merged FAQ accordion`);
+  assert.match(subHtml, /id="werkwijze"|id="werking"/, `${page.subdomain}: missing process steps`);
 
   titles.add(title);
   canonicals.add(canonical);
   headings.add(h1);
 }
 
-assert.match(
-  read('zonnepanelen/index.html'),
-  /<h2>Bespreek uw project<\/h2>/,
-  'solar quote heading must fit its narrow desktop column'
-);
-assert.match(
-  read('service-pages.css'),
-  /\.service-quote-copy h2\s*\{[^}]*overflow-wrap:\s*break-word;/s,
-  'service quote headings need a safe wrapping fallback'
-);
-
-assert.equal(titles.size, routes.length, 'service-page titles must be unique');
-assert.equal(canonicals.size, routes.length, 'service-page canonicals must be unique');
-assert.equal(headings.size, routes.length, 'service-page H1 headings must be unique');
-
+// Check Cloudflare Edge Router redirects
+const router = read('functions/[[path]].js');
 for (const page of routes) {
-  assert.match(homepage, new RegExp(`href="${escapeRegex(page.route)}"`), `homepage must link to ${page.route}`);
+  assert.match(router, new RegExp(`'${page.route.replace(/\/$/, '')}':\\s*'${escapeRegex(page.canonicalUrl)}'`), `router missing 301 redirect for ${page.route}`);
 }
-assert.doesNotMatch(homepage, /id="dienst-(?:laadpalen|thuisbatterijen|zonnepanelen)"[^>]+data-service-link/, 'energy cards must navigate to dedicated pages');
+
+// Homepage navigation checks: no parentheses in brand names, no duplicate links
+assert.doesNotMatch(homepage, /KlimaatPlus\s*\([^)]+\)|BatteryPlus\s*\([^)]+\)|LaadPlus\s*\([^)]+\)|ServicePlus\s*\([^)]+\)|SolarPlus\s*\([^)]+\)/, 'homepage must NOT have parentheses in brand links');
+assert.doesNotMatch(homepage, /Laadpalen Gids|Thuisbatterijen Gids|Zonnepanelen Gids/, 'homepage must NOT have redundant guide links in dropdown');
 assert.match(homepage, /style\.css\?v=site-clarity-20260905/, 'homepage must use the current base stylesheet version');
 assert.match(homepage, /main\.js\?v=site-clarity-20260905/, 'homepage must use the current shared JavaScript version');
 assert.match(homepage, /Antwerpen en omgeving/, 'homepage must communicate the current work area');
@@ -100,11 +86,13 @@ assert.match(robots, /^Allow: \/$/m);
 assert.match(robots, /^Sitemap: https:\/\/bentechsolutions\.be\/sitemap\.xml$/m);
 
 const sitemap = read('sitemap.xml');
-for (const route of ['/', ...routes.map(page => page.route)]) {
-  assert.match(sitemap, new RegExp(`<loc>https://bentechsolutions\\.be${escapeRegex(route)}</loc>`), `sitemap missing ${route}`);
+assert.match(sitemap, /<loc>https:\/\/bentechsolutions\.be\/<\/loc>/);
+for (const page of routes) {
+  assert.match(sitemap, new RegExp(`<loc>${escapeRegex(page.canonicalUrl)}</loc>`), `sitemap missing ${page.canonicalUrl}`);
+  assert.doesNotMatch(sitemap, new RegExp(`<loc>https://bentechsolutions\\.be${escapeRegex(page.route)}</loc>`), `sitemap must NOT contain redirected legacy URL ${page.route}`);
 }
 
-console.log('Service route contract OK: three distinct pages, valid internal assets, forms, consent, SEO and discovery files.');
+console.log('Service route & subdomain consolidation contract OK: 301 edge redirects, canonical subdomains, zero parentheses, and merged content.');
 
 function read(relativePath) {
   const absolutePath = resolve(repoRoot, relativePath);
