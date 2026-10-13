@@ -102,7 +102,7 @@ for (const brand of brands) {
   assert.doesNotMatch(html, /KlimaatPlus\s*\([^)]+\)|BatteryPlus\s*\([^)]+\)|LaadPlus\s*\([^)]+\)|ServicePlus\s*\([^)]+\)|SolarPlus\s*\([^)]+\)/, `${brand.name}: footer or page must NOT have parentheses in brand links`);
 
   // Mobile hamburger animation class
-  assert.match(html, /is-active/, `${brand.name}: script missing is-active toggle for hamburger animation`);
+  assert.match(read('contact.js'), /is-active/, `${brand.name}: script missing is-active toggle for hamburger animation`);
 
   // Zero broken nav anchors
   const navMatch = html.match(/<nav class="main-nav"[^>]*>([\s\S]*?)<\/nav>/);
@@ -128,7 +128,7 @@ for (const brand of brands) {
 // 4. Verify Sitemap
 const sitemap = read('sitemap.xml');
 for (const brand of brands) {
-  assert.match(sitemap, new RegExp(`<loc>${escapeRegex(brand.expectedUrl)}</loc>`), `sitemap.xml missing ${brand.expectedUrl}`);
+  assert.match(read(`${brand.subdomain}/sitemap.xml`), new RegExp(`<loc>${escapeRegex(brand.expectedUrl)}</loc>`), `sitemap.xml missing ${brand.expectedUrl}`);
 }
 
 console.log('Subdomains & Multi-Brand contract OK: all 5 divisions verified with exact brand subdomains, logos, themes and edge router.');

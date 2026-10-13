@@ -19,7 +19,7 @@
   <link rel="canonical" href="https://bentechsolutions.be/">
 
   <!-- Google Ads tag: loaded only after explicit marketing consent -->
-  <script src="consent.js?v=googleads-call-20260819"></script>
+  <script src="consent.js?v=improvements-20261013"></script>
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/logo.png">
@@ -37,7 +37,8 @@
 
   <!-- The desktop-only Vanta hero runtime is loaded conditionally by main.js. -->
 
-  <link rel="stylesheet" href="style.css?v=site-clarity-20260905">
+  <link rel="stylesheet" href="style.css?v=improvements-20261013">
+  <link rel="stylesheet" href="/improvements.css?v=improvements-20261013">
 </head>
 <body>
 
@@ -68,23 +69,23 @@
         <img src="assets/bentech-logo-light.svg" alt="BenTech Solutions Logo" class="logo-img" width="132" height="50">
       </a>
 
-      <nav class="main-nav" id="mainNav">
+      <nav class="main-nav" id="mainNav" aria-label="Hoofdnavigatie BenTech Solutions">
         <a href="#home">Home</a>
         <div class="nav-dropdown">
-          <a href="#merken" class="nav-dropdown-link">Specialisaties</a>
+          <a href="#merken" class="nav-dropdown-link">Diensten</a>
           <button class="nav-dropdown-toggle" id="servicesDropdownToggle" type="button" aria-label="Toon submenu met specialisaties" aria-expanded="false" aria-controls="servicesDropdown">
             <i data-lucide="chevron-down" class="icon-xs" aria-hidden="true"></i>
           </button>
-          <div class="services-dropdown" id="servicesDropdown" aria-label="BenTech Gespecialiseerde Divisies">
-            <a href="https://klimaatplus.bentechsolutions.be">KlimaatPlus — Airco &amp; Warmtepomp</a>
-            <a href="https://batteryplus.bentechsolutions.be">BatteryPlus — Thuisbatterijen</a>
-            <a href="https://laadplus.bentechsolutions.be">LaadPlus — Laadpalen</a>
-            <a href="https://serviceplus.bentechsolutions.be">ServicePlus 24/7 — Storingen &amp; AREI</a>
-            <a href="https://solarplus.bentechsolutions.be">SolarPlus — Zonnepanelen</a>
+          <div class="services-dropdown" id="servicesDropdown" aria-label="Diensten van BenTech Solutions">
+            <a href="/elektrische-installaties/">Elektrische installaties</a>
+            <a href="https://klimaatplus.bentechsolutions.be">Airconditioning &amp; warmtepompen</a>
+            <a href="https://batteryplus.bentechsolutions.be">Thuisbatterijen</a>
+            <a href="https://laadplus.bentechsolutions.be">Laadpalen</a>
+            <a href="https://serviceplus.bentechsolutions.be">Elektrische depannage</a>
+            <a href="https://solarplus.bentechsolutions.be">Zonnepanelen</a>
           </div>
         </div>
-        <a href="#over">Over BenTech</a>
-        <a href="#werkwijze">Werkwijze</a>
+        <a href="/over-ons/">Over BenTech</a>
         <a href="#reviews">Reviews</a>
         <a href="#offerte">Contact</a>
       </nav>
@@ -94,7 +95,7 @@
           <i data-lucide="phone" class="icon-sm"></i>
           Bel Spoedlijn
         </a>
-        <button class="mobile-toggle" id="mobileToggle" aria-label="Menu openen">
+        <button class="mobile-toggle" id="mobileToggle" type="button" aria-label="Menu openen">
           <span></span><span></span><span></span>
         </button>
       </div>
@@ -121,24 +122,24 @@
         </div>
 
         <h1 class="lamp-hero-title">
-          Uw elektricien voor <span class="hero-title-accent">storingen én energie</span>
+          Elektrische installaties en <span class="hero-title-accent">slimme energie in Antwerpen</span>
         </h1>
 
         <p class="lamp-hero-subtitle">
-          Rechtstreeks contact bij stroomuitval, kortsluiting of zekeringproblemen, én advies voor laadpalen, thuisbatterijen en zonnepanelen. Voor particulieren en kmo’s in Antwerpen en daarbuiten op aanvraag.
+          BenTech Solutions helpt particulieren en bedrijven met elektriciteitswerken, zonnepanelen, thuisbatterijen, laadpalen en airconditioning. Van advies en offerte tot installatie en uitleg bij oplevering.
         </p>
 
-        <p class="hero-area-note">Spoed: Antwerpen en omgeving binnen 60 km. Een project verder weg? Vraag naar de mogelijkheden. De haalbare aankomsttijd bespreken we telefonisch.</p>
+        <p class="hero-area-note">Spoed binnen 60 km rond Antwerpen; de haalbare timing spreken we telefonisch af. Geplande projecten verder weg op aanvraag.</p>
         <div class="lamp-hero-actions">
-          <a href="tel:+32486328645" class="btn btn-lg btn-emerald rounded-full">
-            <i data-lucide="phone" class="icon-sm"></i>
-            Bel Spoed: +32 486 32 86 45
-          </a>
-          <a href="#offerte" class="btn btn-lg btn-outline rounded-full">
-            <i data-lucide="file-text" class="icon-sm"></i>
-            Vraag Offerte Aan
-          </a>
+          <a href="#offerte" data-quote-service="" class="btn btn-lg btn-emerald">Vraag een offerte aan</a>
+          <a href="#merken" class="btn btn-lg btn-outline">Ontdek onze diensten</a>
         </div>
+        <ul class="hero-benefits">
+          <li><i data-lucide="check" class="icon-sm" aria-hidden="true"></i>Eén aanspreekpunt</li>
+          <li><i data-lucide="check" class="icon-sm" aria-hidden="true"></i>Afspraken vooraf</li>
+          <li><i data-lucide="check" class="icon-sm" aria-hidden="true"></i>Woning en onderneming</li>
+        </ul>
+        <a class="hero-urgent-link" href="tel:+32486328645"><i data-lucide="phone" class="icon-sm" aria-hidden="true"></i>Stroompanne? Bel +32 486 32 86 45</a>
       </div>
 
       <aside class="hero-review-showcase" aria-labelledby="hero-review-title">
@@ -155,6 +156,7 @@
             <strong id="hero-review-title">4,9/5 op Google</strong>
             <span class="sr-only">4,9 van 5 sterren</span>
             <span>12 van 13 zijn vijf sterren</span>
+            <p class="review-snapshot">Momentopname: 2 september 2026</p>
           </div>
         </div>
 
@@ -163,23 +165,23 @@
             <div class="hero-review-track">
               <figure class="hero-review-slide" data-review-slide>
                 <blockquote>“Enorm dankbaar! Top vakman”</blockquote>
-                <figcaption><cite>Bouchra Abali</cite><span>5 sterren · 3 weken geleden</span></figcaption>
+                <figcaption><cite>Bouchra Abali</cite><span>5 sterren · broncontrole 2 september 2026</span></figcaption>
               </figure>
               <figure class="hero-review-slide" data-review-slide>
                 <blockquote>“Betrouwbare werkkracht. Doet wat hij zegt en zegt wat hij doet.”</blockquote>
-                <figcaption><cite>Eduardo Bilterijst</cite><span>5 sterren · 5 maanden geleden</span></figcaption>
+                <figcaption><cite>Eduardo Bilterijst</cite><span>5 sterren · broncontrole 2 september 2026</span></figcaption>
               </figure>
               <figure class="hero-review-slide" data-review-slide>
                 <blockquote>“Top service! Snel bereikbaar en direct gekomen na mijn telefoontje.”</blockquote>
-                <figcaption><cite>Ikram Ikram</cite><span>5 sterren · 7 maanden geleden</span></figcaption>
+                <figcaption><cite>Ikram Ikram</cite><span>5 sterren · broncontrole 2 september 2026</span></figcaption>
               </figure>
               <figure class="hero-review-slide" data-review-slide>
                 <blockquote>“Top elektricien! Weet wat hij doet! Prijs en kwaliteit uitstekend!”</blockquote>
-                <figcaption><cite>Walid Milad</cite><span>5 sterren · 7 maanden geleden</span></figcaption>
+                <figcaption><cite>Walid Milad</cite><span>5 sterren · broncontrole 2 september 2026</span></figcaption>
               </figure>
               <figure class="hero-review-slide" data-review-slide>
                 <blockquote>“Onmiddellijke hulp! Goed geholpen!”</blockquote>
-                <figcaption><cite>Jeanine Servaes</cite><span>5 sterren · 8 maanden geleden</span></figcaption>
+                <figcaption><cite>Jeanine Servaes</cite><span>5 sterren · broncontrole 2 september 2026</span></figcaption>
               </figure>
             </div>
           </div>
@@ -203,6 +205,72 @@
   </section>
 
   <!-- Emergency Selector -->
+  <section class="portal-brands-section" id="merken">
+    <div id="diensten" aria-hidden="true"></div>
+    <div class="container">
+      <div class="section-header text-center">
+        <h2 class="portal-title">Waarmee kunnen we u helpen?</h2>
+        <p class="portal-subtitle">Zes diensten, één aanspreekpunt: BenTech Solutions. Kies uw project of storing en ontdek de aanpak.</p>
+      </div>
+      <div class="brand-portal-grid">
+        <article class="brand-portal-card">
+          <div class="brand-portal-stage"><img src="assets/logos/met-tekst/lichte-achtergrond/bentech-solutions-gestapeld.svg" alt="BenTech Solutions" loading="lazy" width="140" height="72"></div>
+          <div class="brand-portal-body">
+            <h3>Elektrische installaties</h3><span class="brand-portal-chip">BenTech Solutions</span>
+            <p>Nieuwe installatie, renovatie of uitbreiding: bespreek uw elektrische plannen rechtstreeks met BenTech.</p>
+            <ul class="brand-portal-checklist"><li><i data-lucide="check" class="icon-sm" aria-hidden="true"></i>Stopcontacten, verlichting en bekabeling</li><li><i data-lucide="check" class="icon-sm" aria-hidden="true"></i>Zekeringkast, schema’s en voorbereiding op keuring</li></ul>
+            <div class="brand-portal-action"><a href="/elektrische-installaties/" class="btn btn-outline">Bekijk elektriciteitswerken<i data-lucide="arrow-right" class="icon-sm" aria-hidden="true"></i></a></div>
+          </div>
+        </article>
+        <article class="brand-portal-card">
+          <div class="brand-portal-stage"><img src="assets/logos/met-tekst/lichte-achtergrond/solarplus-gestapeld.svg" alt="SolarPlus · BenTech Solutions" loading="lazy" width="140" height="72"></div>
+          <div class="brand-portal-body">
+            <h3>Zonnepanelen</h3><span class="brand-portal-chip">SolarPlus · BenTech Solutions</span>
+            <p>Een zonne-installatie begint bij uw dak, verbruik en wensen. Bespreek een voorstel voor uw woning of onderneming.</p>
+            <ul class="brand-portal-checklist"><li><i data-lucide="check" class="icon-sm" aria-hidden="true"></i>Advies over panelen en omvormer</li><li><i data-lucide="check" class="icon-sm" aria-hidden="true"></i>Combineren met batterij en laadpaal</li></ul>
+            <div class="brand-portal-action"><a href="https://solarplus.bentechsolutions.be/" class="btn btn-outline">Bekijk zonnepanelen<i data-lucide="arrow-right" class="icon-sm" aria-hidden="true"></i></a></div>
+          </div>
+        </article>
+        <article class="brand-portal-card">
+          <div class="brand-portal-stage"><img src="assets/logos/met-tekst/lichte-achtergrond/batteryplus-gestapeld.svg" alt="BatteryPlus · BenTech Solutions" loading="lazy" width="140" height="72"></div>
+          <div class="brand-portal-body">
+            <h3>Thuisbatterijen</h3><span class="brand-portal-chip">BatteryPlus · BenTech Solutions</span>
+            <p>Gebruik meer van uw eigen zonnestroom. BenTech bekijkt welke opslag past bij uw verbruik en bestaande installatie.</p>
+            <ul class="brand-portal-checklist"><li><i data-lucide="check" class="icon-sm" aria-hidden="true"></i>Capaciteit op basis van uw verbruik</li><li><i data-lucide="check" class="icon-sm" aria-hidden="true"></i>Aansluiting en instellingen bespreken</li></ul>
+            <div class="brand-portal-action"><a href="https://batteryplus.bentechsolutions.be/" class="btn btn-outline">Bekijk thuisbatterijen<i data-lucide="arrow-right" class="icon-sm" aria-hidden="true"></i></a></div>
+          </div>
+        </article>
+        <article class="brand-portal-card">
+          <div class="brand-portal-stage"><img src="assets/logos/met-tekst/lichte-achtergrond/laadplus-gestapeld.svg" alt="LaadPlus · BenTech Solutions" loading="lazy" width="140" height="72"></div>
+          <div class="brand-portal-body">
+            <h3>Laadpalen</h3><span class="brand-portal-chip">LaadPlus · BenTech Solutions</span>
+            <p>Thuis of op het werk laden met een oplossing afgestemd op uw wagen, aansluiting en beschikbare vermogen.</p>
+            <ul class="brand-portal-checklist"><li><i data-lucide="check" class="icon-sm" aria-hidden="true"></i>Plaatsing en kabelroute op maat</li><li><i data-lucide="check" class="icon-sm" aria-hidden="true"></i>Slimme sturing wanneer passend</li></ul>
+            <div class="brand-portal-action"><a href="https://laadplus.bentechsolutions.be/" class="btn btn-outline">Bekijk laadpalen<i data-lucide="arrow-right" class="icon-sm" aria-hidden="true"></i></a></div>
+          </div>
+        </article>
+        <article class="brand-portal-card">
+          <div class="brand-portal-stage"><img src="assets/logos/met-tekst/lichte-achtergrond/serviceplus-gestapeld.svg" alt="ServicePlus · BenTech Solutions" loading="lazy" width="140" height="72"></div>
+          <div class="brand-portal-body">
+            <h3>Elektrische depannage</h3><span class="brand-portal-chip">ServicePlus · BenTech Solutions</span>
+            <p>Stroomuitval, kortsluiting of een zekering die blijft uitschakelen? Bel voor een inschatting van urgentie en timing.</p>
+            <ul class="brand-portal-checklist"><li><i data-lucide="check" class="icon-sm" aria-hidden="true"></i>24/7 telefonisch bereikbaar</li><li><i data-lucide="check" class="icon-sm" aria-hidden="true"></i>Spoed binnen 60 km rond Antwerpen</li></ul>
+            <div class="brand-portal-action"><a href="https://serviceplus.bentechsolutions.be/" class="btn btn-outline">Bekijk depannage<i data-lucide="arrow-right" class="icon-sm" aria-hidden="true"></i></a></div>
+          </div>
+        </article>
+        <article class="brand-portal-card">
+          <div class="brand-portal-stage"><img src="assets/logos/met-tekst/lichte-achtergrond/klimaatplus-gestapeld.svg" alt="KlimaatPlus · BenTech Solutions" loading="lazy" width="140" height="72"></div>
+          <div class="brand-portal-body">
+            <h3>Airconditioning</h3><span class="brand-portal-chip">KlimaatPlus · BenTech Solutions</span>
+            <p>Bespreek koeling, verwarming en de geschikte oplossing voor uw ruimtes met de klimaatdivisie van BenTech.</p>
+            <ul class="brand-portal-checklist"><li><i data-lucide="check" class="icon-sm" aria-hidden="true"></i>Airco en warmtepompen</li><li><i data-lucide="check" class="icon-sm" aria-hidden="true"></i>Plaatsing en onderhoud bespreken</li></ul>
+            <div class="brand-portal-action"><a href="https://klimaatplus.bentechsolutions.be/" class="btn btn-outline">Bekijk airconditioning<i data-lucide="arrow-right" class="icon-sm" aria-hidden="true"></i></a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <section class="emergency-selector-section" id="spoed">
     <div class="container">
       <div class="section-header text-center">
@@ -259,167 +327,7 @@
   </section>
 
   <!-- Zes Merken. Eén Familie. Portal Hub -->
-  <section class="portal-brands-section" id="merken">
-    <div id="diensten" style="position: relative; top: -90px; height: 0; width: 0; pointer-events: none;" aria-hidden="true"></div>
-    <div class="container">
-      <div class="section-header text-center">
-        <div class="portal-eyebrow">
-          <span class="portal-eyebrow-dot"></span>
-          BenTech Solutions &bull; Visuele Identiteit
-        </div>
-        <h2 class="portal-title">Zes merken. Eén familie.</h2>
-        <p class="portal-subtitle">
-          Herkenbare symbolen, heldere typografie en een vaste kleur per specialisme. Kies hieronder direct het gewenste domein voor specialistisch advies en gerichte offertes.
-        </p>
-      </div>
 
-      <div class="brand-portal-grid">
-        <!-- 1. BenTech Solutions (Overkoepelend) -->
-        <article class="brand-portal-card">
-          <div class="brand-portal-stage">
-            <img src="assets/logos/met-tekst/lichte-achtergrond/bentech-solutions-gestapeld.svg" alt="BenTech Solutions" width="220" height="150" loading="lazy">
-          </div>
-          <div class="brand-portal-body">
-            <div class="brand-portal-chip" style="background: rgba(7, 134, 83, 0.08); color: #078653; border-color: rgba(7, 134, 83, 0.2);">
-              Hoofdzetel &bull; Totaalprojecten
-            </div>
-            <h3>BenTech Solutions</h3>
-            <p>Uw elektrotechnische partner en coördinator voor complexe energieprojecten, combinaties en algehele elektrische infrastructuur.</p>
-            <ul class="brand-portal-checklist">
-              <li><i data-lucide="check" class="icon-xs"></i>Eén aanspreekpunt voor uw complete installatie</li>
-              <li><i data-lucide="check" class="icon-xs"></i>Combinatie van zonnepanelen, batterij &amp; laadpaal</li>
-              <li><i data-lucide="check" class="icon-xs"></i>Gespreide betaling mogelijk bij totaalprojecten</li>
-            </ul>
-            <div class="brand-portal-action">
-              <a href="#offerte" class="btn btn-outline btn-portal-cta">
-                Bespreek Totaalproject <i data-lucide="arrow-down" class="icon-xs"></i>
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- 2. KlimaatPlus -->
-        <article class="brand-portal-card">
-          <div class="brand-portal-stage">
-            <img src="assets/logos/met-tekst/lichte-achtergrond/klimaatplus-gestapeld.svg" alt="KlimaatPlus" width="220" height="150" loading="lazy">
-          </div>
-          <div class="brand-portal-body">
-            <div class="brand-portal-chip" style="background: rgba(234, 88, 12, 0.08); color: #ea580c; border-color: rgba(234, 88, 12, 0.2);">
-              Airconditioning &bull; Warmtepompen
-            </div>
-            <h3>KlimaatPlus</h3>
-            <p>Fluisterstille split- en multisplit aircosystemen en energiezuinige warmtepompen voor een behaaglijk binnenklimaat in elk seizoen.</p>
-            <ul class="brand-portal-checklist">
-              <li><i data-lucide="check" class="icon-xs"></i>Koelen in de zomer, zuinig verwarmen in de winter</li>
-              <li><i data-lucide="check" class="icon-xs"></i>Hoogste energielabels (A+++) van betrouwbare fabrikanten</li>
-              <li><i data-lucide="check" class="icon-xs"></i>Professionele plaatsing, onderhoud en snelle service</li>
-            </ul>
-            <div class="brand-portal-action">
-              <a href="https://klimaatplus.bentechsolutions.be" class="btn btn-portal-primary" style="background: #c2410c; border-color: #c2410c; color: #ffffff;">
-                Naar KlimaatPlus <i data-lucide="arrow-up-right" class="icon-xs"></i>
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- 3. BatteryPlus -->
-        <article class="brand-portal-card">
-          <div class="brand-portal-stage">
-            <img src="assets/logos/met-tekst/lichte-achtergrond/batteryplus-gestapeld.svg" alt="BatteryPlus" width="220" height="150" loading="lazy">
-          </div>
-          <div class="brand-portal-body">
-            <div class="brand-portal-chip" style="background: rgba(7, 134, 83, 0.08); color: #078653; border-color: rgba(7, 134, 83, 0.2);">
-              Thuisbatterijen &bull; Energieopslag
-            </div>
-            <h3>BatteryPlus</h3>
-            <p>Sla uw opgewekte zonne-energie slim op en verlaag uw afhankelijkheid van het stroomnet met een exact gedimensioneerde thuisbatterij.</p>
-            <ul class="brand-portal-checklist">
-              <li><i data-lucide="check" class="icon-xs"></i>Verbruiks- en capaciteitsanalyse via Mijn Fluvius</li>
-              <li><i data-lucide="check" class="icon-xs"></i>Merkonafhankelijk advies (o.a. Huawei, BYD, SolarEdge)</li>
-              <li><i data-lucide="check" class="icon-xs"></i>Volledige AREI-conforme aansluiting &amp; keuring</li>
-            </ul>
-            <div class="brand-portal-action">
-              <a href="https://batteryplus.bentechsolutions.be" class="btn btn-portal-primary" style="background: #15803d; border-color: #15803d; color: #ffffff;">
-                Naar BatteryPlus <i data-lucide="arrow-up-right" class="icon-xs"></i>
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- 4. LaadPlus -->
-        <article class="brand-portal-card">
-          <div class="brand-portal-stage">
-            <img src="assets/logos/met-tekst/lichte-achtergrond/laadplus-gestapeld.svg" alt="LaadPlus" width="220" height="150" loading="lazy">
-          </div>
-          <div class="brand-portal-body">
-            <div class="brand-portal-chip" style="background: rgba(4, 120, 87, 0.08); color: #047857; border-color: rgba(4, 120, 87, 0.2);">
-              Laadpalen &bull; Load Balancing
-            </div>
-            <h3>LaadPlus</h3>
-            <p>Veilige, intelligente laadstations voor thuis en bedrijven, uitgerust met slimme sturing tegen overbelasting van de hoofdzekering.</p>
-            <ul class="brand-portal-checklist">
-              <li><i data-lucide="check" class="icon-xs"></i>Dynamic load balancing voor 100% veilig laden</li>
-              <li><i data-lucide="check" class="icon-xs"></i>Zonneladen op eigen overtollige stroom</li>
-              <li><i data-lucide="check" class="icon-xs"></i>Split-billing en automatische kWh-verrekening</li>
-            </ul>
-            <div class="brand-portal-action">
-              <a href="https://laadplus.bentechsolutions.be" class="btn btn-portal-primary" style="background: #047857; border-color: #047857; color: #ffffff;">
-                Naar LaadPlus <i data-lucide="arrow-up-right" class="icon-xs"></i>
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- 5. ServicePlus -->
-        <article class="brand-portal-card">
-          <div class="brand-portal-stage">
-            <img src="assets/logos/met-tekst/lichte-achtergrond/serviceplus-gestapeld.svg" alt="ServicePlus" width="220" height="150" loading="lazy">
-          </div>
-          <div class="brand-portal-body">
-            <div class="brand-portal-chip" style="background: rgba(2, 132, 199, 0.08); color: #0284c7; border-color: rgba(2, 132, 199, 0.2);">
-              24/7 Storingen &bull; AREI &bull; Herstellingen
-            </div>
-            <h3>ServicePlus 24/7</h3>
-            <p>Dag en nacht paraat bij acute stroomuitval, kortsluiting of defecte zekeringkasten. Plus AREI-conform maken van afgekeurde installaties.</p>
-            <ul class="brand-portal-checklist">
-              <li><i data-lucide="check" class="icon-xs"></i>24/7 storingsdienst binnen 60 km rond Antwerpen</li>
-              <li><i data-lucide="check" class="icon-xs"></i>Zekeringkasten vernieuwen &amp; herkeuring</li>
-              <li><i data-lucide="check" class="icon-xs"></i>Foutopsporing en herstelling van bedrading</li>
-            </ul>
-            <div class="brand-portal-action">
-              <a href="https://serviceplus.bentechsolutions.be" class="btn btn-portal-primary" style="background: #0369a1; border-color: #0369a1; color: #ffffff;">
-                Naar ServicePlus <i data-lucide="arrow-up-right" class="icon-xs"></i>
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- 6. SolarPlus -->
-        <article class="brand-portal-card">
-          <div class="brand-portal-stage">
-            <img src="assets/logos/met-tekst/lichte-achtergrond/solarplus-gestapeld.svg" alt="SolarPlus" width="220" height="150" loading="lazy">
-          </div>
-          <div class="brand-portal-body">
-            <div class="brand-portal-chip" style="background: rgba(231, 160, 8, 0.08); color: #b45309; border-color: rgba(231, 160, 8, 0.25);">
-              Zonnepanelen &bull; Zonne-energie
-            </div>
-            <h3>SolarPlus</h3>
-            <p>Haal maximaal rendement uit de zon met hoogwaardige zonnepanelen en betrouwbare omvormers, vakkundig geïnstalleerd en aangesloten.</p>
-            <ul class="brand-portal-checklist">
-              <li><i data-lucide="check" class="icon-xs"></i>Nauwkeurige dak- en rendementsberekening</li>
-              <li><i data-lucide="check" class="icon-xs"></i>A-merk panelen en omvormers met lange garantie</li>
-              <li><i data-lucide="check" class="icon-xs"></i>Klaar voor koppeling met thuisbatterij en laadpaal</li>
-            </ul>
-            <div class="brand-portal-action">
-              <a href="https://solarplus.bentechsolutions.be" class="btn btn-portal-primary" style="background: #b45309; border-color: #b45309; color: #ffffff;">
-                Naar SolarPlus <i data-lucide="arrow-up-right" class="icon-xs"></i>
-              </a>
-            </div>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
 
   <!-- Google Reviews Section -->
   <section class="reviews-section" id="reviews">
@@ -438,7 +346,7 @@
           <span class="google-review-count">13 Google-reviews</span>
         </div>
         <h2 class="section-title">Wat klanten echt op Google zeggen</h2>
-        <p class="section-subtitle">Uitgelichte fragmenten uit de officiële Google-vermelding, met naam en relatieve publicatiedatum zoals Google die toont.</p>
+        <p class="section-subtitle">Fragmenten uit de officiële Google-vermelding, gecontroleerd op 2 september 2026. Bekijk de actuele beoordelingen bij Google.</p>
 
         <div class="google-cta-group">
           <a href="https://www.google.com/maps?cid=5783644159230400203" target="_blank" rel="noopener" class="btn btn-emerald rounded-full">
@@ -468,7 +376,7 @@
           <blockquote class="review-text">“Betrouwbare werkkracht. Doet wat hij zegt en zegt wat hij doet. Fijn om mee samen te werken!”</blockquote>
           <div class="review-author">
             <cite>Eduardo Bilterijst</cite>
-            <span>5 sterren · 5 maanden geleden</span>
+            <span>5 sterren · broncontrole 2 september 2026</span>
           </div>
         </a>
 
@@ -489,7 +397,7 @@
           <blockquote class="review-text">“Top service! Snel bereikbaar en direct gekomen na mijn telefoontje 👌🏽”</blockquote>
           <div class="review-author">
             <cite>Ikram Ikram</cite>
-            <span>5 sterren · 7 maanden geleden</span>
+            <span>5 sterren · broncontrole 2 september 2026</span>
           </div>
         </a>
 
@@ -510,7 +418,7 @@
           <blockquote class="review-text">“Top elektricien! Weet wat hij doet! Prijs en kwaliteit uitstekend!”</blockquote>
           <div class="review-author">
             <cite>Walid Milad</cite>
-            <span>5 sterren · 7 maanden geleden</span>
+            <span>5 sterren · broncontrole 2 september 2026</span>
           </div>
         </a>
 
@@ -531,7 +439,7 @@
           <blockquote class="review-text">“Onmiddellijke hulp! Goed geholpen!”</blockquote>
           <div class="review-author">
             <cite>Jeanine Servaes</cite>
-            <span>5 sterren · 8 maanden geleden</span>
+            <span>5 sterren · broncontrole 2 september 2026</span>
           </div>
         </a>
       </div>
@@ -578,8 +486,8 @@
           <div class="value-item">
             <div class="value-icon"><i data-lucide="award" class="icon-md"></i></div>
             <div>
-              <h3>AREI Conform &amp; Gecertificeerd</h3>
-              <p>Alle werken conform de Belgische veiligheidsnormen.</p>
+              <h3>Veiligheid &amp; duidelijke scope</h3>
+              <p>BenTech bespreekt de vereiste aanpassingen, schema’s en keuring vooraf in uw offerte.</p>
             </div>
           </div>
         </div>
@@ -692,20 +600,20 @@
       <div class="request-box-wrapper">
         <div class="request-header text-center">
           <h2 class="section-title">Waarmee kan BenTech u helpen?</h2>
-          <p>Kies tussen dringende depannage of een vrijblijvende offerte aanvraag. Mailt u liever? <a href="mailto:info@bentechsolutions.be" class="contact-email-inline">info@bentechsolutions.be</a></p>
+          <p>Kies tussen dringende depannage of een vrijblijvende offerteaanvraag. Mailt u liever? <a href="mailto:info@bentechsolutions.be" class="contact-email-inline">info@bentechsolutions.be</a></p>
         </div>
 
-        <div class="form-tabs">
-          <button class="tab-btn active" id="tabEmergencyBtn" onclick="switchTab('emergency')">
+        <div class="form-tabs" role="group" aria-label="Soort aanvraag">
+          <button class="tab-btn" id="tabEmergencyBtn" type="button" aria-pressed="false" aria-controls="tabEmergency" onclick="switchTab('emergency')">
             <i data-lucide="siren" class="icon-sm"></i> Dringende Depannage
           </button>
-          <button class="tab-btn" id="tabQuoteBtn" onclick="switchTab('quote')">
+          <button class="tab-btn active" id="tabQuoteBtn" type="button" aria-pressed="true" aria-controls="tabQuote" onclick="switchTab('quote')">
             <i data-lucide="clipboard-list" class="icon-sm"></i> Offerte Aanvragen
           </button>
         </div>
 
         <!-- Emergency Tab -->
-        <div class="tab-content active" id="tabEmergency">
+        <div class="tab-content" id="tabEmergency">
           <div class="emergency-dispatch-banner">
             <div class="dispatch-info">
               <h3>Direct telefonisch contact is het snelst.</h3>
@@ -722,47 +630,48 @@
             <div class="form-grid">
               <div class="form-group">
                 <label for="em-name">Uw Naam *</label>
-                <input type="text" id="em-name" autocomplete="name" required placeholder="Jan Peeters">
+                <input type="text" id="em-name" name="name" autocomplete="name" required placeholder="Jan Peeters">
               </div>
               <div class="form-group">
                 <label for="em-phone">Telefoonnummer *</label>
-                <input type="tel" id="em-phone" autocomplete="tel" required placeholder="0486 32 86 45">
+                <input type="tel" id="em-phone" name="phone" autocomplete="tel" required placeholder="0486 32 86 45">
               </div>
               <div class="form-group full-width">
                 <label for="em-location">Adres / Gemeente *</label>
-                <input type="text" id="em-location" autocomplete="street-address" required placeholder="Straat + Gemeente">
+                <input type="text" id="em-location" name="location" autocomplete="street-address" required placeholder="Straat + Gemeente">
               </div>
               <div class="form-group full-width">
                 <label for="em-issue">Omschrijf het probleem *</label>
-                <textarea id="em-issue" rows="3" required placeholder="Zekering springt telkens uit, geen stroom meer in de keuken..."></textarea>
+                <textarea id="em-issue" name="message" maxlength="1000" rows="3" required placeholder="Zekering springt telkens uit, geen stroom meer in de keuken..."></textarea>
               </div>
             </div>
             <button type="submit" class="btn btn-lg btn-emerald form-submit-btn">
               <i data-lucide="send" class="icon-sm"></i> Open aanvraag in WhatsApp
             </button>
-            <p class="form-handoff-note">WhatsApp opent met uw ingevulde bericht. Controleer het daar en tik zelf op verzenden. Er is nog niets verstuurd wanneer u op deze knop klikt.</p>
+            <button type="submit" data-channel="email" class="btn btn-outline contact-secondary">Open aanvraag in e-mail</button>
+            <p class="form-handoff-note">Kies WhatsApp of e-mail. Uw bericht wordt ingevuld; controleer het en druk daar zelf op verzenden. BenTech ontvangt pas daarna uw aanvraag.</p>
           </form>
         </div>
 
         <!-- Quote Tab -->
-        <div class="tab-content" id="tabQuote">
+        <div class="tab-content active" id="tabQuote">
           <form class="contact-form" id="quoteForm" onsubmit="handleFormSubmit(event, 'offerte')">
             <div class="form-grid">
               <div class="form-group">
                 <label for="q-name">Uw Naam *</label>
-                <input type="text" id="q-name" autocomplete="name" required placeholder="Sarah Devos">
+                <input type="text" id="q-name" name="name" autocomplete="name" required placeholder="Sarah Devos">
               </div>
               <div class="form-group">
                 <label for="q-phone">Telefoonnummer *</label>
-                <input type="tel" id="q-phone" autocomplete="tel" required placeholder="0486 32 86 45">
+                <input type="tel" id="q-phone" name="phone" autocomplete="tel" required placeholder="0486 32 86 45">
               </div>
               <div class="form-group">
                 <label for="q-email">E-mailadres *</label>
-                <input type="email" id="q-email" autocomplete="email" required placeholder="sarah@example.com">
+                <input type="email" id="q-email" name="email" autocomplete="email" required placeholder="sarah@example.com">
               </div>
               <div class="form-group">
                 <label for="q-service">Type Dienst *</label>
-                <select id="q-service" required>
+                <select id="q-service" name="service" required>
                   <option value="">-- Selecteer --</option>
                   <option value="Dringende depannage / stroompanne">Stroompanne / Depannage</option>
                   <option value="Zekeringkast vernieuwen / AREI Keuring">Zekeringkast / AREI Keuring</option>
@@ -771,19 +680,25 @@
                   <option value="Laadpaal">Laadpaal</option>
                   <option value="Thuisbatterij">Thuisbatterij</option>
                   <option value="Zonnepanelen">Zonnepanelen</option>
+                  <option value="Airconditioning / warmtepomp">Airconditioning / warmtepomp</option>
                   <option value="Energie-totaalproject">Energie-totaalproject</option>
                   <option value="Andere elektrische werken">Andere Werken</option>
                 </select>
               </div>
               <div class="form-group full-width">
+                <label for="q-location">Postcode of gemeente *</label>
+                <input type="text" id="q-location" name="location" autocomplete="address-level2" required maxlength="100" placeholder="Bijvoorbeeld 2000 Antwerpen">
+              </div>
+              <div class="form-group full-width">
                 <label for="q-details">Projectomschrijving</label>
-                <textarea id="q-details" rows="4" placeholder="Vertel ons meer over het probleem, de gewenste werken of timing..."></textarea>
+                <textarea id="q-details" name="message" maxlength="1000" rows="4" placeholder="Vertel ons meer over het probleem, de gewenste werken of timing..."></textarea>
               </div>
             </div>
             <button type="submit" class="btn btn-lg btn-emerald form-submit-btn">
               <i data-lucide="send" class="icon-sm"></i> Open aanvraag in WhatsApp
             </button>
-            <p class="form-handoff-note">WhatsApp opent met uw ingevulde bericht. Controleer het daar en tik zelf op verzenden. Er is nog niets verstuurd wanneer u op deze knop klikt.</p>
+            <button type="submit" data-channel="email" class="btn btn-outline contact-secondary">Open aanvraag in e-mail</button>
+            <p class="form-handoff-note">Kies WhatsApp of e-mail. Uw bericht wordt ingevuld; controleer het en druk daar zelf op verzenden. BenTech ontvangt pas daarna uw aanvraag.</p>
           </form>
         </div>
       </div>
@@ -810,14 +725,14 @@
         <details class="faq-item">
           <summary class="faq-question">Bent u ook 's nachts en in het weekend bereikbaar?</summary>
           <div class="faq-answer">
-            <p>Ja. Mijn noodlijn is 24/7 bereikbaar, inclusief zon- en feestdagen, voor acute depannages.</p>
+            <p>Ja. De noodlijn is 24/7 bereikbaar, inclusief zon- en feestdagen, voor acute depannages.</p>
           </div>
         </details>
 
         <details class="faq-item">
           <summary class="faq-question">Krijg ik vooraf een duidelijke prijsopgave?</summary>
           <div class="faq-answer">
-            <p>Absoluut. Voor de werken bespreekt BenTech het tarief, zodat u nooit voor verrassingen komt te staan.</p>
+            <p>Absoluut. Voor de werken bespreekt BenTech het tarief, en welke werken daarbij zijn inbegrepen.</p>
           </div>
         </details>
 
@@ -848,8 +763,8 @@
         <h3>Navigatie</h3>
         <ul>
           <li><a href="#home">Home</a></li>
-          <li><a href="#merken">Merken &amp; Divisies</a></li>
-          <li><a href="#over">Over BenTech</a></li>
+          <li><a href="#merken">Diensten</a></li>
+          <li><a href="/over-ons/">Over BenTech</a></li>
           <li><a href="#werkwijze">Werkwijze</a></li>
           <li><a href="#reviews">Reviews</a></li>
           <li><a href="#betalingsvoorwaarden">Betalingsvoorwaarden</a></li>
@@ -860,11 +775,11 @@
       <div class="footer-col">
         <h3>Gespecialiseerde Merken</h3>
         <ul>
-          <li><a href="https://klimaatplus.bentechsolutions.be">KlimaatPlus — Airco &amp; Warmtepomp</a></li>
-          <li><a href="https://batteryplus.bentechsolutions.be">BatteryPlus — Thuisbatterijen</a></li>
-          <li><a href="https://laadplus.bentechsolutions.be">LaadPlus — Laadpalen</a></li>
-          <li><a href="https://serviceplus.bentechsolutions.be">ServicePlus 24/7 — Storingen &amp; AREI</a></li>
-          <li><a href="https://solarplus.bentechsolutions.be">SolarPlus — Zonnepanelen</a></li>
+          <li><a href="https://klimaatplus.bentechsolutions.be">Airconditioning &amp; warmtepompen</a></li>
+          <li><a href="https://batteryplus.bentechsolutions.be">Thuisbatterijen</a></li>
+          <li><a href="https://laadplus.bentechsolutions.be">Laadpalen</a></li>
+          <li><a href="https://serviceplus.bentechsolutions.be">Elektrische depannage</a></li>
+          <li><a href="https://solarplus.bentechsolutions.be">Zonnepanelen</a></li>
         </ul>
       </div>
 
@@ -906,9 +821,9 @@
       <i data-lucide="phone" class="icon-sm"></i>
       Bel Spoedlijn
     </a>
-    <a href="https://wa.me/32486328645?text=Hallo%20BenTech%20Solutions" target="_blank" rel="noopener" class="btn btn-whatsapp btn-sticky">
-      <i data-lucide="message-circle" class="icon-sm"></i>
-      WhatsApp
+    <a href="#offerte" data-quote-service="" class="btn btn-outline btn-sticky">
+      <i data-lucide="file-text" class="icon-sm"></i>
+      Vraag offerte
     </a>
   </div>
 
@@ -923,6 +838,7 @@
     </div>
   </aside>
 
-  <script src="main.js?v=site-clarity-20260905"></script>
+  <script src="/contact.js?v=improvements-20261013"></script>
+  <script src="main.js?v=improvements-20261013"></script>
 </body>
 </html>

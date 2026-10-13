@@ -82,6 +82,15 @@
   // Track every current and future telephone link only after marketing consent.
   // Event delegation also covers the telephone CTA populated in the service dialog.
   document.addEventListener('click', (event) => {
+    const contactLink = event.target.closest?.('a[href]');
+    if (contactLink && consentState === CONSENT_GRANTED) {
+      const href = contactLink.getAttribute('href');
+      const channel = /^https:\/\/wa\.me\//.test(href) ? 'whatsapp' : /^mailto:/.test(href) ? 'email' : null;
+      if (channel) window.gtag('event', 'contact_click', {
+        contact_channel: channel,
+        service: document.body.dataset.service || 'algemeen'
+      });
+    }
     const phoneLink = event.target.closest?.('a[href^="tel:"]');
     if (!phoneLink || event.defaultPrevented || consentState !== CONSENT_GRANTED) return;
 
@@ -103,6 +112,15 @@
 
     // Never leave a visitor waiting if Google is unavailable or blocked.
     window.setTimeout(continueToPhone, 1000);
+  });
+
+  document.addEventListener('bentech:contact-handoff', (event) => {
+    if (consentState !== CONSENT_GRANTED) return;
+    window.gtag('event', 'quote_handoff', {
+      contact_channel: event.detail.channel,
+      service: event.detail.service,
+      form_id: event.detail.form_id
+    });
   });
 
   function setConsent(nextState) {

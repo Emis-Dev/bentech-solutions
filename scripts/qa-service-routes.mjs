@@ -76,8 +76,8 @@ for (const page of routes) {
 // Homepage navigation checks: no parentheses in brand names, no duplicate links
 assert.doesNotMatch(homepage, /KlimaatPlus\s*\([^)]+\)|BatteryPlus\s*\([^)]+\)|LaadPlus\s*\([^)]+\)|ServicePlus\s*\([^)]+\)|SolarPlus\s*\([^)]+\)/, 'homepage must NOT have parentheses in brand links');
 assert.doesNotMatch(homepage, /Laadpalen Gids|Thuisbatterijen Gids|Zonnepanelen Gids/, 'homepage must NOT have redundant guide links in dropdown');
-assert.match(homepage, /style\.css\?v=site-clarity-20260905/, 'homepage must use the current base stylesheet version');
-assert.match(homepage, /main\.js\?v=site-clarity-20260905/, 'homepage must use the current shared JavaScript version');
+assert.match(homepage, /style\.css\?v=improvements-20261013/, 'homepage must use the current base stylesheet version');
+assert.match(homepage, /main\.js\?v=improvements-20261013/, 'homepage must use the current shared JavaScript version');
 assert.match(homepage, /Antwerpen en omgeving/, 'homepage must communicate the current work area');
 
 const robots = read('robots.txt');
@@ -88,7 +88,7 @@ assert.match(robots, /^Sitemap: https:\/\/bentechsolutions\.be\/sitemap\.xml$/m)
 const sitemap = read('sitemap.xml');
 assert.match(sitemap, /<loc>https:\/\/bentechsolutions\.be\/<\/loc>/);
 for (const page of routes) {
-  assert.match(sitemap, new RegExp(`<loc>${escapeRegex(page.canonicalUrl)}</loc>`), `sitemap missing ${page.canonicalUrl}`);
+  assert.match(read(`${page.subdomain}/sitemap.xml`), new RegExp(`<loc>${escapeRegex(page.canonicalUrl)}</loc>`), `sitemap missing ${page.canonicalUrl}`);
   assert.doesNotMatch(sitemap, new RegExp(`<loc>https://bentechsolutions\\.be${escapeRegex(page.route)}</loc>`), `sitemap must NOT contain redirected legacy URL ${page.route}`);
 }
 

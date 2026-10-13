@@ -1,0 +1,69 @@
+/* BenTech service hierarchy and shared contact improvements, 13 October 2026. */
+html { scroll-padding-top: 100px; }
+body { caret-color: #047857; }
+::selection { background: #d1fae5; color: #090d16; }
+.lamp-hero-title { font-size: clamp(2.5rem, 5.5vw, 4.5rem); line-height: 1.08; max-width: 20ch; }
+.lamp-hero-kicker { display: none; }
+.lamp-hero-section { padding: clamp(2.25rem, 5vw, 4rem) 0; }
+.mobile-toggle { min-width: 44px; min-height: 44px; border: 0; border-radius: 8px; background: transparent; align-items: center; justify-content: center; }
+#manageMarketingConsent { min-height: 44px; }
+.nav-dropdown-toggle { min-width: 44px; min-height: 44px; }
+.hero-review-control { width: 44px; height: 44px; }
+.btn-whatsapp { background: #047857; color: #fff; }
+.btn-emergency-pulse { animation: none; box-shadow: none; }
+.hero-benefits { display: flex; flex-wrap: wrap; gap: .6rem 1.5rem; padding: 0; margin: 1.3rem 0 0; list-style: none; color: #334155; font-size: .9rem; }
+.hero-benefits li { display: flex; align-items: center; gap: .4rem; }
+.hero-urgent-link { display: inline-flex; align-items: center; gap: .4rem; margin-top: 1rem; color: #991b1b; font-weight: 700; text-underline-offset: .2em; min-height: 44px; }
+.review-snapshot { color: #475569; font-size: .78rem; margin-top: .5rem; }
+.portal-eyebrow { display: none; }
+.portal-subtitle, .brand-portal-body p { color: #475569; }
+.brand-portal-stage { height: 96px; padding: 1rem; border-bottom: 0; justify-content: flex-start; }
+.brand-portal-stage img { max-width: 140px; }
+.brand-portal-body { padding-top: .5rem; }
+.brand-portal-chip { margin-top: .4rem; order: 1; border: 0; padding: 0; color: #475569 !important; background: transparent !important; }
+.brand-portal-body h3 { order: 0; }
+.brand-portal-body p { order: 2; }
+.brand-portal-checklist { order: 3; }
+.brand-portal-action { order: 4; margin-top: auto; }
+.brand-hero-media figcaption { color: #475569; font-size: .8rem; margin-top: .65rem; }
+.brand-hero .brand-kicker, .section-heading > .brand-kicker, .brand-quote-grid > div > .brand-kicker { display: none; }
+.brand-contact-form input, .brand-contact-form select, .brand-contact-form textarea,
+.contact-form input, .contact-form select, .contact-form textarea { font-size: 1rem !important; min-height: 44px; }
+.contact-secondary { min-height: 48px; width: 100%; justify-content: center; }
+.form-handoff-note { font-size: .85rem; color: #475569; line-height: 1.6; }
+.form-handoff-status { background: #ecfdf5; color: #065f46; padding: 1rem; border-radius: 8px; line-height: 1.6; }
+.form-handoff-status a { color: #065f46; text-decoration: underline; text-underline-offset: .2em; }
+.form-handoff-status:focus-visible { outline: 2px solid #047857; outline-offset: 3px; }
+.site-info-page { padding: 4rem 0 5rem; }
+.site-info-page .page-intro { max-width: 72ch; margin-bottom: 2.5rem; }
+.site-info-page h1 { font-size: clamp(2.2rem, 5vw, 4rem); line-height: 1.12; letter-spacing: -.03em; margin-bottom: 1.2rem; }
+.site-info-page h2 { font-size: clamp(1.5rem, 3vw, 2.25rem); line-height: 1.2; margin: 2.8rem 0 1rem; }
+.site-info-page p, .site-info-page li { max-width: 72ch; color: #475569; }
+.site-info-page ul, .site-info-page ol { padding-left: 1.4rem; }
+.site-info-page li { margin-bottom: .75rem; }
+.site-info-page figure { margin: 2rem 0; max-width: 760px; }
+.site-info-page figure img { width: 100%; max-height: 420px; object-fit: cover; border-radius: 14px; }
+.site-info-page figcaption { color: #475569; font-size: .85rem; margin-top: .6rem; }
+.site-info-page .page-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin: 1.6rem 0; }
+.related-services { display: flex; flex-wrap: wrap; gap: .5rem 1.2rem; margin-top: 2rem; }
+.related-services a { min-height: 44px; display: inline-flex; align-items: center; text-decoration: underline; text-underline-offset: .2em; }
+.brand-card, .brand-quote-grid > *, .brand-grid-2col > *, .brand-grid-3col > * { min-width: 0; }
+@media (max-width: 992px) {
+  .main-nav.open { max-height: calc(100dvh - 140px); overflow-y: auto; overscroll-behavior: contain; }
+}
+@media (max-width: 639px) {
+  .header-actions > a { display: none; }
+  .brand-contact-form > div[style*="grid"] { grid-template-columns: minmax(0, 1fr) !important; }
+  .brand-quote-grid, .brand-grid-2col, .brand-grid-3col { grid-template-columns: minmax(0, 1fr); }
+  .lamp-hero-section { padding-top: 2.25rem; }
+  .lamp-hero-actions { gap: .65rem; }
+  .lamp-hero-actions .btn { width: 100%; justify-content: center; }
+  .lamp-hero-actions .btn-emerald { display: inline-flex; }
+  .brand-portal-stage { height: 74px; }
+  .brand-portal-stage img { max-width: 110px; }
+  .hero-benefits { gap: .4rem; flex-direction: column; }
+  .site-info-page { padding-top: 2.5rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}

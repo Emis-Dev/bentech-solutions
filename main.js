@@ -197,25 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Mobile Navigation Toggle
-function initMobileMenu() {
-  const mobileToggle = document.getElementById('mobileToggle');
-  const mainNav = document.getElementById('mainNav');
-
-  if (mobileToggle && mainNav) {
-    mobileToggle.addEventListener('click', () => {
-      mainNav.classList.toggle('open');
-      // Animate hamburger to X
-      mobileToggle.classList.toggle('is-active');
-    });
-
-    mainNav.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        mainNav.classList.remove('open');
-        mobileToggle.classList.remove('is-active');
-      });
-    });
-  }
-}
+function initMobileMenu() { window.initBenTechMobileMenu?.(); }
 
 // Services dropdown is shared by the homepage and the dedicated service pages.
 function initServicesDropdown() {
@@ -243,6 +225,10 @@ function initServicesDropdown() {
     if (event.detail > 0) dropdownLink.blur();
   });
 
+  dropdown.addEventListener('keydown', event => {
+    if (event.key === 'Escape') { closeDropdown(); dropdownToggle.focus(); }
+  });
+
   dropdown.querySelectorAll('.services-dropdown a').forEach(link => {
     link.addEventListener('click', closeDropdown);
   });
@@ -266,7 +252,7 @@ function initSmoothScroll() {
           if (window.location.hash !== href) {
             window.history.pushState({}, '', href);
           }
-          target.scrollIntoView({ behavior: 'smooth' });
+          target.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
         }
       }
     });
@@ -620,6 +606,10 @@ function switchTab(tabName) {
   const emergencyBtn = document.getElementById('tabEmergencyBtn');
   const quoteBtn = document.getElementById('tabQuoteBtn');
 
+  if (!emergencyTab || !quoteTab) return;
+  emergencyBtn.setAttribute('aria-pressed', String(tabName === 'emergency'));
+  quoteBtn.setAttribute('aria-pressed', String(tabName !== 'emergency'));
+
   if (tabName === 'emergency') {
     emergencyTab.classList.add('active');
     quoteTab.classList.remove('active');
@@ -631,49 +621,6 @@ function switchTab(tabName) {
     quoteBtn.classList.add('active');
     emergencyBtn.classList.remove('active');
   }
-}
-
-// Form Handler — Redirects to WhatsApp
-function handleFormSubmit(event, formType) {
-  event.preventDefault();
-
-  const phone = '32486328645';
-  let message = '';
-
-  if (formType === 'spoed') {
-    const name = document.getElementById('em-name').value;
-    const tel = document.getElementById('em-phone').value;
-    const location = document.getElementById('em-location').value;
-    const issue = document.getElementById('em-issue').value;
-
-    message = `SPOEDMELDING\n\nNaam: ${name}\nTelefoon: ${tel}\nLocatie: ${location}\nProbleem: ${issue}`;
-  } else {
-    const name = document.getElementById('q-name').value;
-    const tel = document.getElementById('q-phone').value;
-    const email = document.getElementById('q-email').value;
-    const service = document.getElementById('q-service').value;
-    const details = document.getElementById('q-details').value;
-
-    message = `OFFERTE AANVRAAG\n\nNaam: ${name}\nTelefoon: ${tel}\nE-mail: ${email}\nDienst: ${service}\nDetails: ${details || 'Geen extra details'}`;
-  }
-
-  const encoded = encodeURIComponent(message);
-  const url = `https://wa.me/${phone}?text=${encoded}`;
-  const form = event.currentTarget;
-  let status = form.querySelector('.form-handoff-status');
-  if (!status) {
-    status = document.createElement('p');
-    status.className = 'form-handoff-status';
-    status.setAttribute('role', 'status');
-    form.append(status);
-  }
-  const retry = document.createElement('a');
-  retry.href = url;
-  retry.target = '_blank';
-  retry.rel = 'noopener noreferrer';
-  retry.textContent = 'Open uw bericht opnieuw';
-  status.replaceChildren('Uw bericht staat klaar. Verstuur het zelf in WhatsApp. Opent WhatsApp niet? ', retry, '. U kunt ook bellen of mailen via de contactgegevens op deze pagina.');
-  window.open(url, '_blank', 'noopener,noreferrer');
 }
 
 // Vanta Topology hero: restore the original desktop effect without shipping its
