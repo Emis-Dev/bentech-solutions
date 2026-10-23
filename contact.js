@@ -96,6 +96,9 @@
       });
     });
     form?.addEventListener('submit', event => handoff(event, select.value));
+    // Enable personal-data fields only after the no-network submit handler is bound.
+    const fields = form?.querySelector('fieldset');
+    if (fields) fields.disabled = false;
     if (window.location.hash === '#offerte' && panel) panel.open = true;
     const requested = new URLSearchParams(window.location.search).get('dienst');
     if (requested && select && Array.from(select.options).some(option => option.value === requested)) {

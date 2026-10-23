@@ -81,7 +81,25 @@ try{
   assert.ok(await page.locator('h1').innerText());
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
   await page.screenshot({path:`${out}/${path.includes('privacy')?'privacy':'404'}-mobile.png`,fullPage:true});
+  await page.setViewportSize({width:1440,height:1000});
+  assert.equal(await page.locator('.nav-quote use').getAttribute('href'),'#i-arrow');
+  assert.equal(await page.locator('#i-arrow').count(),1);
+  await page.screenshot({path:`${out}/${path.includes('privacy')?'privacy':'404'}-desktop.png`,fullPage:true});
+  await page.setViewportSize({width:390,height:844});
  }
+ const noScript=await browser.newContext({javaScriptEnabled:false,viewport:{width:390,height:844}});
+ const fallback=await noScript.newPage();
+ await fallback.goto(base);
+ await fallback.locator('#offerte summary').click();
+ assert.equal(await fallback.locator('#q-name').isDisabled(),true);
+ assert.equal(await fallback.locator('button[data-channel="email"]').isDisabled(),true);
+ assert.equal(await fallback.locator('noscript').isVisible(),true);
+ assert.equal(await fallback.locator('#quoteForm').getAttribute('method'),'post');
+ assert.ok(await fallback.locator('a[href="mailto:info@bentechsolutions.be"]').count());
+ await fallback.evaluate(()=>scrollTo(0,0));
+ await fallback.screenshot({path:`${out}/no-script-mobile.png`,fullPage:true});
+ await noScript.close();
+ report.noScript={fieldsDisabled:true,submitDisabled:true,directContactAvailable:true,noPersonalDataInURL:true};
  assert.equal(report.errors.length,0,JSON.stringify(report.errors));
  report.consent={defaultBlocked:true,refusal:true,grant:true,revocation:true,googleRequestsMocked:google.length};
  await writeFile(`${out}/browser-qa.json`,JSON.stringify(report,null,2));
