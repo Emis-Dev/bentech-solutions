@@ -118,11 +118,11 @@ The system is restrained and specific: broad tonal fields, inset content, fine b
 - Electric blue identifies action, focus and technical emphasis.
 - Self-hosted Manrope gives headings a compact, geometric voice.
 - The controller hero uses a real licensed photograph, with linked author and CC BY-SA credit. Application illustrations remain visibly illustrative.
-- Borders and tonal layering carry depth; motion is brief.
+- Borders and tonal layering carry depth. The hero has one authored signal sequence; supporting interaction feedback stays brief.
 
 ## Colors
 
-The palette pairs deep industrial navy with cool paper and a blue action signal. Frontmatter values are normative; the source is `automation.css`.
+The palette pairs deep industrial navy with cool paper and a blue action signal. Frontmatter values are normative; shared styles are in `automation.css`, with the hero signal and review proof in `proof-motion.css`. The review field is cool blue (`#eaf1f6`); the signal surface (`#0c1d2b`) and its cyan wires extend the existing navy/blue world.
 
 ### Primary
 
@@ -171,7 +171,7 @@ The wide container is capped at 1280px, with 56px side gutters. Gutters become 3
 
 The standard desktop section split uses a 280px introduction, 50px gap and a flexible content region. At 1200px it becomes 240px with a 30px gap; at 992px it becomes one column. Three service/application columns collapse at 600px. The four-step horizontal sequence becomes a vertical line on mobile. The capability rail becomes two columns at 992px.
 
-Section padding is 82px, reducing to 58px through 992px and 46px through 600px. The header is 94px high, becoming 80px at the menu breakpoint. The current hero has a 565px minimum content height; mobile stacks copy above the controller crop. These are observed surface dimensions, not fixed requirements for unrelated pages.
+Section padding is 82px, reducing to 58px through 992px and 46px through 600px. The header is 94px high, becoming 80px at the menu breakpoint. The current hero has a 620px minimum content height, growing to 660px on wide screens; mobile stacks copy above the controller crop and compact signal diagram. These are observed surface dimensions, not fixed requirements for unrelated pages.
 
 ## Elevation & Depth
 
@@ -215,7 +215,11 @@ A floating white panel with soft shadow contains equally available refusal and p
 
 ### Motion and Focus
 
-The hero image settles once over 1.4 seconds with the source easing curve. Button color transitions last 0.18 seconds. Reduced-motion preferences remove animation, transitions and smooth scrolling. Global keyboard focus uses the electric focus color; do not replace it with a hover-only cue.
+The hero photograph pans and scales gently over 24 seconds, alternating direction. A bounded SVG sequence traces input signals into logic and then outputs on a 6.4-second cycle. The figure identifies it as an illustration of control logic. A visible 44px pause/resume control controls both motions and preserves the visitor's pause choice across scrolling. IntersectionObserver and document visibility suspend loops outside the viewport and in hidden tabs. Without JavaScript, the photograph and diagram remain still and the inactive control is hidden. Reduced-motion preferences remove animation, transitions and smooth scrolling. Button color transitions last 0.18 seconds. Global keyboard focus uses the electric focus color; do not replace it with a hover-only cue.
+
+### Google Review Proof
+
+A small text link in the hero gives the sourced Google score and leads to the review section near the quote action. The cool-blue review field uses an editorial split: one prominent Eduardo quote and two shorter historical reviews, with no carousel or embedded widget. Reviewer names, original text, original Google source links, the earlier-service context and the checked date stay together. The layout stacks on mobile. Review scores use tabular numerals; stars are drawn SVG symbols in the existing blue. No portfolio or PLC-experience claim is inferred from these reviews.
 
 ## Do's and Don'ts
 

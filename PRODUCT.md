@@ -40,6 +40,8 @@ BenTech translates the customer's functional description into Siemens PLC or LOG
 - BenTech is an independent service provider; Siemens and LOGO! are their owners' trademarks.
 - The hero uses a real photograph of a Siemens LOGO! 8 by MakeMagazinDE, licensed CC BY-SA 4.0, with visible linked attribution and resize/crop disclosure. Application images remain visibly illustrative. Neither is BenTech project evidence or an employee/founder portrait.
 - No AI service references, old energy offers, invented projects, reviews, statistics, accreditations, guarantees or 24/7 promises.
+- The homepage displays BenTech's existing Google reputation (4.9/5, 13 reviews, checked 24 October 2026). Eduardo Bilterijst's review is featured, with historical reviews by Ikram Ikram and Walid Milad. The source links and visible earlier-electrical-service context must remain; these reviews do not establish PLC/LOGO! project experience. No self-serving review schema or Google widget is used.
+- The real product photograph moves gently behind an illustrative input–logic–output signal sequence. It is a diagram, not a hardware connection or a customer project. Visitors can pause it; reduced motion, hidden tabs and offscreen states stop the loops. No new runtime dependency or raster is required.
 - Contract, customer finance and billing information has no place on public pages.
 
 ## Evidence and acceptance boundaries

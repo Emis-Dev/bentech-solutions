@@ -243,7 +243,7 @@ input:focus-visible,textarea:focus-visible,select:focus-visible {
   position:absolute;
   inset:0 0 0 18%;
   z-index:-2;
-  animation:hero-settle 1.4s var(--ease) both
+  transform:scale(1.035)
 }
 .hero-picture img {
   width:100%;
@@ -260,7 +260,7 @@ input:focus-visible,textarea:focus-visible,select:focus-visible {
 }
 .hero-inner {
   position:relative;
-  min-height:565px;
+  min-height:620px;
   padding-block:65px 70px;
   display:flex;
   align-items:center
@@ -802,19 +802,9 @@ input:focus-visible,textarea:focus-visible,select:focus-visible {
 .error-page .button {
   margin-top:25px
 }
-@keyframes hero-settle {
-  from {
-    transform:scale(1.035);
-    filter:brightness(.85)
-  }
-  to {
-    transform:scale(1);
-    filter:brightness(1)
-  }
-}
 @media(min-width:1600px) {
   .hero-inner {
-    min-height:625px
+    min-height:660px
   }
   .hero-copy {
     width:620px
@@ -1042,10 +1032,10 @@ input:focus-visible,textarea:focus-visible,select:focus-visible {
     font-size:8px
   }
   .hero-inner {
-    min-height:760px;
+    min-height:880px;
     display:block;
     padding-top:37px;
-    padding-bottom:310px
+    padding-bottom:410px
   }
   .hero-copy {
     max-width:100%;
@@ -1075,7 +1065,7 @@ input:focus-visible,textarea:focus-visible,select:focus-visible {
   }
   .hero-picture {
     inset:auto -10% 0 -20%;
-    height:345px;
+    height:425px;
     opacity:1
   }
   .hero-picture img {
@@ -1324,7 +1314,7 @@ input:focus-visible,textarea:focus-visible,select:focus-visible {
     font-size:36px
   }
   .hero-inner {
-    min-height:750px
+    min-height:900px
   }
   .hero-actions {
     gap:14px

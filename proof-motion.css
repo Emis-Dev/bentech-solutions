@@ -1,0 +1,345 @@
+/* Sourced Google proof and the illustrative hero signal sequence. */
+.hero-proof {
+  display:inline-flex;
+  align-items:center;
+  gap:12px;
+  margin-top:25px;
+  padding-block:8px;
+  color:#dbe6ee;
+  text-decoration:none;
+  font-size:12px;
+  line-height:1.6
+}
+.hero-proof strong,.hero-proof>span>span {
+  display:block
+}
+.hero-proof strong {
+  color:#fff;
+  font-weight:700;
+  font-size:13px
+}
+.hero-proof .icon:first-child {
+  color:#64c7ff;
+  fill:currentColor;
+  width:25px;
+  height:25px
+}
+.hero-proof .proof-arrow {
+  width:18px;
+  height:18px
+}
+.hero-proof:hover strong {
+  text-decoration:underline
+}
+.signal-console {
+  position:absolute;
+  right:0;
+  bottom:76px;
+  width:44%;
+  max-width:440px;
+  padding:13px 20px 15px;
+  background:#0c1d2b;
+  border-top:1px solid #55798f
+}
+.signal-heading {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  align-items:center;
+  gap:4px 12px;
+  font-size:14px;
+  font-weight:700
+}
+.motion-toggle {
+  display:inline-flex;
+  align-items:center;
+  gap:5px;
+  min-height:44px;
+  padding:0;
+  border:0;
+  background:transparent;
+  color:#d7e8f4;
+  font-size:11px;
+  font-weight:400
+}
+.motion-toggle[hidden] {
+  display:none
+}
+.motion-toggle:hover {
+  color:#fff;
+  text-decoration:underline;
+  text-underline-offset:4px
+}
+.motion-toggle .icon {
+  width:17px;
+  height:17px
+}
+.signal-diagram {
+  display:block;
+  width:100%;
+  height:auto;
+  margin-block:4px 6px;
+  stroke-width:1.5
+}
+.signal-tracks {
+  stroke:#536f82
+}
+.signal-flow {
+  stroke:#55c4ff;
+  stroke-width:3;
+  stroke-linecap:round;
+  stroke-dasharray:100;
+  stroke-dashoffset:0
+}
+.signal-terminals {
+  fill:#0c1d2b;
+  stroke:#8bc9eb;
+  stroke-width:2
+}
+.signal-processor {
+  fill:#102f44;
+  stroke:#6bcaff
+}
+.signal-chip {
+  stroke:#d2efff
+}
+.signal-labels {
+  display:flex;
+  justify-content:space-between;
+  color:#e6f2fa;
+  font-size:11px;
+  padding-inline:2px
+}
+.signal-console>p {
+  color:#b5c9d7;
+  font-size:11px;
+  margin-top:9px
+}
+.motion-ready .hero-picture {
+  animation:hero-drift 24s ease-in-out infinite alternate;
+  animation-play-state:paused
+}
+.motion-ready .signal-flow {
+  animation:signal-travel 6.4s linear infinite;
+  animation-play-state:paused
+}
+.motion-ready .signal-output {
+  animation-name:signal-response
+}
+[data-motion="running"] .hero-picture,[data-motion="running"] .signal-flow {
+  animation-play-state:running
+}
+@keyframes hero-drift {
+  from { transform:translate3d(-.7%,0,0) scale(1.045) }
+  to { transform:translate3d(.7%,-.6%,0) scale(1.075) }
+}
+@keyframes signal-travel {
+  0%,8% { stroke-dashoffset:100 }
+  36%,70% { stroke-dashoffset:0 }
+  94%,100% { stroke-dashoffset:-100 }
+}
+@keyframes signal-response {
+  0%,34% { stroke-dashoffset:100 }
+  62%,76% { stroke-dashoffset:0 }
+  98%,100% { stroke-dashoffset:-100 }
+}
+.reviews {
+  background:#eaf1f6;
+  margin-bottom:64px
+}
+.reviews-header {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:30px;
+  margin-bottom:36px
+}
+.reviews-header p {
+  color:var(--muted);
+  font-size:14px;
+  max-width:54ch;
+  margin-top:15px
+}
+.google-rating {
+  display:flex;
+  align-items:center;
+  flex-shrink:0;
+  gap:18px;
+  text-decoration:none
+}
+.rating-number {
+  font-size:56px;
+  line-height:1;
+  font-weight:800;
+  letter-spacing:-.035em;
+  font-variant-numeric:tabular-nums
+}
+.rating-number>span {
+  font-size:18px;
+  font-weight:500;
+  letter-spacing:0;
+  color:var(--muted)
+}
+.google-rating strong {
+  display:block;
+  font-size:12px;
+  margin-top:5px
+}
+.review-stars {
+  display:flex;
+  gap:3px;
+  color:#006eaa
+}
+.review-stars svg {
+  fill:currentColor;
+  width:15px;
+  height:15px
+}
+.rating-source {
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  color:#00649d;
+  font-size:11px;
+  min-height:35px
+}
+.rating-source .icon,.reviews figcaption .icon {
+  width:15px;
+  height:15px
+}
+.google-rating:hover .rating-source {
+  text-decoration:underline
+}
+.reviews-layout {
+  display:grid;
+  grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);
+  gap:60px;
+  border-top:1px solid #b7c8d4;
+  padding-top:34px
+}
+.reviews blockquote {
+  margin:0
+}
+.review-featured blockquote {
+  margin-top:20px;
+  font-size:30px;
+  line-height:1.45;
+  letter-spacing:-.025em;
+  font-weight:600;
+  max-width:35ch
+}
+.reviews figcaption {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:4px 18px;
+  margin-top:20px;
+  font-size:12px
+}
+.reviews cite {
+  font-style:normal;
+  font-weight:800
+}
+.reviews figcaption a {
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  color:#00649d;
+  min-height:44px;
+  text-decoration:none
+}
+.reviews figcaption a:hover {
+  text-decoration:underline
+}
+.review-history figure+figure {
+  margin-top:22px;
+  border-top:1px solid #b7c8d4;
+  padding-top:22px
+}
+.review-history blockquote {
+  font-size:17px;
+  line-height:1.7;
+  max-width:46ch
+}
+.review-history figcaption {
+  margin-top:8px
+}
+.review-context {
+  color:var(--muted);
+  font-size:12px;
+  max-width:90ch;
+  margin-top:30px
+}
+@media(max-width:992px) {
+  .signal-console {
+    width:38%;
+    padding-inline:14px;
+    bottom:66px
+  }
+  .signal-heading {
+    font-size:13px
+  }
+  .reviews-layout {
+    gap:35px
+  }
+  .review-featured blockquote {
+    font-size:25px
+  }
+}
+@media(max-width:600px) {
+  .signal-console {
+    width:100%;
+    max-width:none;
+    bottom:76px;
+    padding:7px 16px 12px
+  }
+  .signal-diagram {
+    margin-top:0;
+    max-height:84px
+  }
+  .signal-console>p {
+    margin-top:5px
+  }
+  .signal-heading {
+    font-size:13px
+  }
+  .hero-proof {
+    margin-top:17px;
+    font-size:11px
+  }
+  .hero-proof strong {
+    font-size:12px
+  }
+  .reviews {
+    margin-bottom:36px
+  }
+  .reviews-header {
+    align-items:flex-start;
+    flex-direction:column;
+    gap:25px;
+    margin-bottom:22px
+  }
+  .reviews-header p {
+    font-size:13px;
+    margin-top:12px
+  }
+  .reviews-layout {
+    grid-template-columns:1fr;
+    gap:28px;
+    padding-top:26px
+  }
+  .review-featured blockquote {
+    font-size:25px
+  }
+  .review-history {
+    border-top:1px solid #b7c8d4;
+    padding-top:25px
+  }
+  .review-history blockquote {
+    font-size:16px
+  }
+  .review-context {
+    font-size:11px
+  }
+}
