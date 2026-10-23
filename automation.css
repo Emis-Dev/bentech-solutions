@@ -303,7 +303,12 @@ input:focus-visible,textarea:focus-visible,select:focus-visible {
   color:#d3dfe8;
   background:#09141eb8;
   padding:2px 9px;
-  border-radius:3px
+  border-radius:3px;
+  max-width:100%
+}
+.image-label a {
+  color:inherit;
+  text-underline-offset:2px
 }
 .capability-rail {
   background:#111f2b;

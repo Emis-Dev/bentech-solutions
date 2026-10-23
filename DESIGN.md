@@ -117,7 +117,7 @@ The system is restrained and specific: broad tonal fields, inset content, fine b
 - Navy and light surfaces alternate with a clear reading order.
 - Electric blue identifies action, focus and technical emphasis.
 - Self-hosted Manrope gives headings a compact, geometric voice.
-- Controller and application rasters remain visibly illustrative.
+- The controller hero uses a real licensed photograph, with linked author and CC BY-SA credit. Application illustrations remain visibly illustrative.
 - Borders and tonal layering carry depth; motion is brief.
 
 ## Colors
