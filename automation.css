@@ -639,7 +639,8 @@ input:focus-visible,textarea:focus-visible,select:focus-visible {
   font-size:11px;
   margin-top:15px
 }
-.form-handoff-status {
+.form-handoff-status,
+.form-delivery-status {
   padding:17px;
   background:#e7f5ff;
   color:#0b334d;
@@ -1364,3 +1365,6 @@ input:focus-visible,textarea:focus-visible,select:focus-visible {
   background:#476174;
   color:#fff
 }
+
+.contact-honeypot { display: none; }
+.form-handoff-status[hidden], .form-delivery-status[hidden] { display: none; }

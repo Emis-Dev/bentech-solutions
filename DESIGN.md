@@ -195,7 +195,7 @@ Service cards use a white surface, a one-pixel technical line, the card radius a
 
 ### Inputs / Fields
 
-Fields use the field ground, a one-pixel field border and the field radius. Minimum height is 47px; textareas start at 120px and resize vertically. Keyboard outlines have a two-pixel offset. Native user-invalid fields receive a two-pixel warm border. The disabled fieldset is dimmed until the handoff handler is ready.
+Fields use the field ground, a one-pixel field border and the field radius. Minimum height is 47px; textareas start at 120px and resize vertically. Keyboard outlines have a two-pixel offset. Native user-invalid fields receive a two-pixel warm border. The form works natively without scripting. During a pending submission the primary button is disabled; returning to the page restores it.
 
 ### Navigation
 
@@ -203,7 +203,7 @@ The dark header has a brand lockup, compact text links and an outlined quote act
 
 ### Quote Disclosure
 
-An inset dark gradient strip contains the brand, short project invitation and blue action. Native details/summary exposes a two-column introduction and form; the layout stacks on mobile. Open state adds a fine separator and rotates the arrow. Handoff feedback uses a pale blue panel with readable dark text and a link to the prepared message.
+An inset dark gradient strip contains the brand, short project invitation and blue action. Native details/summary exposes a two-column introduction and form; the layout stacks on mobile. Open state adds a fine separator and rotates the arrow. Pending-delivery and WhatsApp handoff feedback use a pale blue panel with readable dark text. A pending submission must not be presented as received.
 
 ### Process Sequence
 

@@ -26,9 +26,10 @@ BenTech translates the customer's functional description into Siemens PLC or LOG
 - Four delivery steps: functional description and scope; programming; simulation and test; delivery of the agreed program and dossier.
 - The homepage, privacy page and 404 page use custom static HTML, CSS and JavaScript. A Pages Function handles canonical routing, retired routes, robots and sitemap responses.
 - The current relaunch replaces the former electrician and energy presentation. Former service paths and division hosts route to the new services. They do not establish continuing offers.
-- Visitors choose a service and describe their hardware, required behaviour and timing. The form can prepare an email or WhatsApp draft; the visitor checks and sends it in that application.
-- The website does not send, receive or store enquiries and must never confirm that BenTech received a request.
-- Personal-data fields start disabled and become usable only after the JavaScript handoff handler is attached. Direct email, telephone and WhatsApp links remain available; the form explains the JavaScript requirement when scripts are unavailable.
+- Visitors choose a service and describe their hardware, required behaviour and timing. The proposed primary route uses a native POST to FormSubmit, including spam checking, an owner notification and a submitter autoresponse with a copy. AJAX and disabled CAPTCHA must not replace this route because the provider excludes autoresponses in those modes.
+- FormSubmit documents a 30-day submission archive. The site has no local form database. The return page alone is not proof of email delivery. Inbox receipt and confirmation remain unverified until an authorised live test after mailbox activation.
+- The native POST works without JavaScript. WhatsApp is an optional draft handoff; direct email/telephone/WhatsApp links remain available.
+- Deployment gate: provider mailbox activation, real owner notification and sender confirmation must be verified before merging this proposed route to production. Current live production still uses the prior draft handoff until that gate is met.
 - Google marketing measurement requires explicit opt-in. A handoff is an interaction, not a received lead. Contact analytics carry channel, service and form identifiers, never names, email addresses, telephone numbers or the project description.
 - Internal product/design documentation and raster provenance sidecars are blocked from public routing.
 

@@ -103,8 +103,13 @@
       <summary><span class="brand cta-brand"><img src="/assets/automation/mark.svg" width="35" height="45" alt=""><span>BENTECH<small>SOLUTIONS</small></span></span><span class="cta-copy"><strong>Klaar om uw project te bespreken?</strong><span>Vertel ons wat uw besturing moet doen.</span></span><span class="button button-primary">Offerte aanvragen <svg class="icon"><use href="#i-arrow"/></svg></span></summary>
       <div class="quote-content">
         <div class="quote-intro"><h2>Uw project begint<br> met een beschrijving.</h2><p>Vermeld de gewenste werking, de beschikbare PLC of LOGO! en eventueel de foutmelding. Hebt u een schema of functionele beschrijving? Voeg die daarna toe in uw e-mail of WhatsApp.</p><p>We bespreken de haalbaarheid, scope en prijs voordat de programmering start.</p><a href="mailto:info@bentechsolutions.be">info@bentechsolutions.be</a></div>
-        <form id="quoteForm" method="post">
-          <fieldset class="quote-fields" disabled>
+        <form id="quoteForm" method="post" action="https://formsubmit.co/info@bentechsolutions.be" accept-charset="UTF-8">
+          <input type="hidden" name="_subject" value="Nieuwe aanvraag via bentechsolutions.be">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="https://bentechsolutions.be/bedankt/">
+          <input type="hidden" name="_autoresponse" value="Bedankt voor uw aanvraag aan BenTech Solutions. Hieronder vindt u een kopie van uw bericht. BenTech neemt contact met u op om uw vraag of project te bespreken. Wilt u iets toevoegen? Mail naar info@bentechsolutions.be of bel +32 486 32 86 45.">
+          <div class="contact-honeypot" aria-hidden="true"><label for="q-website">Laat dit veld leeg</label><input type="text" name="_honey" id="q-website" tabindex="-1" autocomplete="off"></div>
+          <fieldset class="quote-fields">
           <div class="form-grid">
             <div class="field full"><label for="q-service">Waarmee kunnen we helpen?</label><select id="q-service" name="service" required><option value="">Kies een dienst</option><option>PLC-automatisering</option><option>LOGO!-domotica</option><option>Troubleshooting PLC / LOGO!</option></select></div>
             <div class="field"><label for="q-name">Naam *</label><input id="q-name" name="name" autocomplete="name" maxlength="100" required></div>
@@ -113,10 +118,11 @@
             <div class="field"><label for="q-phone">Telefoon</label><input type="tel" id="q-phone" name="phone" autocomplete="tel" maxlength="40"></div>
             <div class="field full"><label for="q-details">Wat moet uw besturing doen? *</label><textarea id="q-details" name="description" rows="4" maxlength="2000" required placeholder="Beschrijf de werking, uw hardware en de gewenste timing."></textarea></div>
           </div>
-          <div class="form-actions"><button type="submit" class="button button-primary" data-channel="email">Open aanvraag in e-mail <svg class="icon"><use href="#i-arrow"/></svg></button><button type="submit" class="button button-outline" data-channel="whatsapp">Open in WhatsApp</button></div>
+          <div class="form-actions"><button type="submit" class="button button-primary" data-channel="server"><span data-submit-label>Aanvraag versturen</span> <svg class="icon"><use href="#i-arrow"/></svg></button><a href="https://wa.me/32486328645" target="_blank" rel="noopener noreferrer" class="button button-outline" data-channel="whatsapp">Of via WhatsApp</a></div>
           </fieldset>
-          <noscript><p>Het formulier werkt met JavaScript. Mail rechtstreeks naar <a href="mailto:info@bentechsolutions.be">info@bentechsolutions.be</a> of gebruik de WhatsApp-link hieronder.</p></noscript>
-          <p class="form-note">Uw bericht wordt klaargezet in uw mailprogramma of WhatsApp. Controleer het en druk daar zelf op verzenden. BenTech ontvangt uw aanvraag pas daarna. <a href="/privacy/">Privacy</a></p>
+          <noscript><p>Dit formulier werkt ook zonder JavaScript. U doorloopt vóór verzending een spamcontrole.</p></noscript>
+          <p id="formDeliveryStatus" class="form-delivery-status" role="status" hidden></p>
+          <p class="form-note">Na de spamcontrole verstuurt FormSubmit uw aanvraag naar BenTech. U ontvangt ook een bevestigingsmail met een kopie van uw bericht. <a href="/privacy/">Privacy</a></p>
         </form>
       </div>
     </details>
