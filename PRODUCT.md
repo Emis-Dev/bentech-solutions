@@ -38,7 +38,7 @@ BenTech translates the customer's functional description into Siemens PLC or LOG
 - The client-selected dark industrial reference: navy, electric blue, bold Manrope and tangible controller imagery.
 - Public identity remains BenTech Solutions CommV, BTW BE 1025.714.523, +32 486 32 86 45, info@bentechsolutions.be and https://bentechsolutions.be/.
 - BenTech is an independent service provider; Siemens and LOGO! are their owners' trademarks.
-- Illustrative controller and application images are visibly described as illustrations. They are not BenTech project evidence or employee/founder portraits.
+- The hero uses a real photograph of a Siemens LOGO! 8 by MakeMagazinDE, licensed CC BY-SA 4.0, with visible linked attribution and resize/crop disclosure. Application images remain visibly illustrative. Neither is BenTech project evidence or an employee/founder portrait.
 - No AI service references, old energy offers, invented projects, reviews, statistics, accreditations, guarantees or 24/7 promises.
 - Contract, customer finance and billing information has no place on public pages.
 
@@ -46,7 +46,7 @@ BenTech translates the customer's functional description into Siemens PLC or LOG
 
 - The visual authority and current scope are recorded in `.impeccable/surfaces/automation.md`; the signed and archived customer addendum is retained in the customer dossier.
 - The implemented system is recorded in `DESIGN.md` and `.impeccable/design.json`.
-- Both shipping raster files under `assets/automation` have exact prompt provenance sidecars. Font files are self-hosted Manrope with the OFL licence.
+- Shipping rasters under `assets/automation` retain source or exact prompt provenance sidecars. Font files are self-hosted Manrope with the OFL licence.
 - Rendered review states and browser evidence are under `.impeccable/review`. Source, local QA and review artifacts do not by themselves establish production publication or enquiry receipt.
 - This relaunch does not authorise DNS, email, billing or customer-account changes.
 
