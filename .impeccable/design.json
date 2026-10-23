@@ -1,57 +1,271 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-08T22:40:00+02:00",
+  "generatedAt": "2026-10-23T19:28:23.092Z",
   "title": "Design System: BenTech Solutions",
   "extensions": {
     "colorMeta": {
-      "canvas": { "role": "neutral", "displayName": "Light Canvas", "canonical": "#f8fafc", "tonalRamp": ["#ffffff", "#f8fafc", "#f1f5f9", "#e2e8f0", "#cbd5e1", "#94a3b8", "#64748b", "#334155"] },
-      "surface": { "role": "neutral", "displayName": "Pure White Surface", "canonical": "#ffffff", "tonalRamp": ["#ffffff", "#f8fafc", "#f1f5f9", "#e2e8f0", "#cbd5e1", "#94a3b8", "#64748b", "#1e293b"] },
-      "surface-secondary": { "role": "neutral", "displayName": "Section Secondary", "canonical": "#f1f5f9", "tonalRamp": ["#ffffff", "#f8fafc", "#f1f5f9", "#e2e8f0", "#cbd5e1", "#94a3b8", "#64748b", "#1e293b"] },
-      "surface-card": { "role": "neutral", "displayName": "Card Surface", "canonical": "#ffffff", "tonalRamp": ["#ffffff", "#f8fafc", "#f1f5f9", "#e2e8f0", "#cbd5e1", "#94a3b8", "#64748b", "#1e293b"] },
-      "surface-card-hover": { "role": "neutral", "displayName": "Card Hover Surface", "canonical": "#f8fafc", "tonalRamp": ["#ffffff", "#f8fafc", "#f1f5f9", "#e2e8f0", "#cbd5e1", "#94a3b8", "#64748b", "#1e293b"] },
-      "border-hairline": { "role": "neutral", "displayName": "Hairline Border", "canonical": "rgba(15, 23, 42, 0.08)", "tonalRamp": ["#ffffff", "#f8fafc", "#f1f5f9", "#e2e8f0", "#cbd5e1", "#94a3b8", "#64748b", "#0f172a"] },
-      "border-subtle": { "role": "neutral", "displayName": "Border Subtle", "canonical": "#e2e8f0", "tonalRamp": ["#ffffff", "#f8fafc", "#f1f5f9", "#e2e8f0", "#cbd5e1", "#94a3b8", "#64748b", "#0f172a"] },
-      "border-emerald": { "role": "primary", "displayName": "Border Emerald", "canonical": "rgba(4, 120, 87, 0.25)", "tonalRamp": ["#ecfdf5", "#d1fae5", "#a7f3d0", "#6ee7b7", "#34d399", "#10b981", "#059669", "#047857"] },
-      "emerald": { "role": "primary", "displayName": "Architectural Emerald", "canonical": "#047857", "tonalRamp": ["#ecfdf5", "#d1fae5", "#a7f3d0", "#6ee7b7", "#34d399", "#10b981", "#059669", "#047857"] },
-      "emerald-vibrant": { "role": "primary", "displayName": "Vibrant Emerald", "canonical": "#059669", "tonalRamp": ["#ecfdf5", "#d1fae5", "#a7f3d0", "#6ee7b7", "#34d399", "#10b981", "#059669", "#047857"] },
-      "emerald-light": { "role": "primary", "displayName": "Signal Emerald", "canonical": "#10b981", "tonalRamp": ["#ecfdf5", "#d1fae5", "#a7f3d0", "#6ee7b7", "#34d399", "#10b981", "#059669", "#047857"] },
-      "emerald-tint": { "role": "primary", "displayName": "Emerald Tint", "canonical": "#ecfdf5", "tonalRamp": ["#ffffff", "#f7fee7", "#ecfdf5", "#d1fae5", "#a7f3d0", "#6ee7b7", "#34d399", "#047857"] },
-      "emerald-dark": { "role": "primary", "displayName": "Deep Emerald", "canonical": "#065f46", "tonalRamp": ["#ecfdf5", "#d1fae5", "#a7f3d0", "#6ee7b7", "#10b981", "#059669", "#047857", "#065f46"] },
-      "proof-rail-surface": { "role": "neutral", "displayName": "Proof Rail Surface", "canonical": "#ffffff", "tonalRamp": ["#ffffff", "#f8fafc", "#f1f5f9", "#e2e8f0", "#cbd5e1", "#94a3b8", "#64748b", "#1e293b"] },
-      "review-star": { "role": "secondary", "displayName": "Review Amber", "canonical": "#f59e0b", "tonalRamp": ["#fffbeb", "#fef3c7", "#fde68a", "#fcd34d", "#fbbf24", "#f59e0b", "#d97706", "#b45309"] },
-      "text-primary": { "role": "neutral", "displayName": "Obsidian Text", "canonical": "#090d16", "tonalRamp": ["#f8fafc", "#e2e8f0", "#94a3b8", "#64748b", "#475569", "#334155", "#1e293b", "#090d16"] },
-      "text-secondary": { "role": "neutral", "displayName": "Slate Body", "canonical": "#475569", "tonalRamp": ["#f8fafc", "#e2e8f0", "#94a3b8", "#64748b", "#475569", "#334155", "#1e293b", "#090d16"] },
-      "text-muted": { "role": "neutral", "displayName": "Muted Slate", "canonical": "#64748b", "tonalRamp": ["#f8fafc", "#e2e8f0", "#cbd5e1", "#94a3b8", "#64748b", "#475569", "#334155", "#090d16"] },
-      "danger": { "role": "primary", "displayName": "Urgent Red", "canonical": "#dc2626", "tonalRamp": ["#fef2f2", "#fee2e2", "#fecaca", "#fca5a5", "#f87171", "#ef4444", "#dc2626", "#b91c1c"] },
-      "danger-dark": { "role": "primary", "displayName": "Urgent Dark Red", "canonical": "#991b1b", "tonalRamp": ["#fef2f2", "#fee2e2", "#fecaca", "#dc2626", "#b91c1c", "#991b1b", "#7f1d1d"] },
-      "danger-deep": { "role": "primary", "displayName": "Urgent Deep Red", "canonical": "#7f1d1d", "tonalRamp": ["#fef2f2", "#fee2e2", "#fecaca", "#dc2626", "#991b1b", "#7f1d1d", "#450a0a"] },
-      "danger-tint": { "role": "primary", "displayName": "Urgent Tint", "canonical": "#fef2f2", "tonalRamp": ["#ffffff", "#fef2f2", "#fee2e2", "#fecaca", "#f87171", "#ef4444", "#dc2626", "#991b1b"] },
-      "whatsapp": { "role": "secondary", "displayName": "WhatsApp Green", "canonical": "#25d366", "tonalRamp": ["#f0fdf4", "#dcfce7", "#86efac", "#4ade80", "#22c55e", "#25d366", "#16a34a", "#15803d"] },
-      "klimaatplus": { "role": "secondary", "displayName": "KlimaatPlus Orange", "canonical": "#ea580c", "tonalRamp": ["#fff7ed", "#ffedd5", "#fed7aa", "#fb923c", "#f97316", "#ea580c", "#c2410c", "#9a3412"] },
-      "batteryplus": { "role": "secondary", "displayName": "BatteryPlus Green", "canonical": "#15803d", "tonalRamp": ["#f0fdf4", "#dcfce7", "#bbf7d0", "#86efac", "#4ade80", "#22c55e", "#16a34a", "#15803d"] },
-      "serviceplus": { "role": "secondary", "displayName": "ServicePlus Blue", "canonical": "#0284c7", "tonalRamp": ["#f0f9ff", "#e0f2fe", "#bae6fd", "#7dd3fc", "#38bdf8", "#0ea5e9", "#0284c7", "#0369a1"] },
-      "solarplus": { "role": "secondary", "displayName": "SolarPlus Amber", "canonical": "#d97706", "tonalRamp": ["#fffbeb", "#fef3c7", "#fde68a", "#fcd34d", "#fbbf24", "#f59e0b", "#d97706", "#b45309"] },
-      "border-input": { "role": "neutral", "displayName": "Input Border", "canonical": "#cbd5e1", "tonalRamp": ["#ffffff", "#f8fafc", "#f1f5f9", "#e2e8f0", "#cbd5e1", "#94a3b8", "#64748b", "#0f172a"] }
+      "ink": {
+        "role": "neutral",
+        "displayName": "Technical Ink",
+        "tonalRamp": [
+          "oklch(15% 0.0335 249.4)",
+          "oklch(27% 0.0335 249.4)",
+          "oklch(38% 0.0335 249.4)",
+          "oklch(50% 0.0335 249.4)",
+          "oklch(61% 0.0335 249.4)",
+          "oklch(73% 0.0335 249.4)",
+          "oklch(84% 0.0335 249.4)",
+          "oklch(95% 0.0335 249.4)"
+        ]
+      },
+      "navy": {
+        "role": "neutral",
+        "displayName": "Industrial Navy",
+        "tonalRamp": [
+          "oklch(15% 0.0261 247.0)",
+          "oklch(27% 0.0261 247.0)",
+          "oklch(38% 0.0261 247.0)",
+          "oklch(50% 0.0261 247.0)",
+          "oklch(61% 0.0261 247.0)",
+          "oklch(73% 0.0261 247.0)",
+          "oklch(84% 0.0261 247.0)",
+          "oklch(95% 0.0261 247.0)"
+        ]
+      },
+      "blue": {
+        "role": "primary",
+        "displayName": "Control Blue",
+        "tonalRamp": [
+          "oklch(15% 0.1419 246.0)",
+          "oklch(27% 0.1419 246.0)",
+          "oklch(38% 0.1419 246.0)",
+          "oklch(50% 0.1419 246.0)",
+          "oklch(61% 0.1419 246.0)",
+          "oklch(73% 0.1419 246.0)",
+          "oklch(84% 0.1419 246.0)",
+          "oklch(95% 0.1419 246.0)"
+        ]
+      },
+      "blue-hover": {
+        "role": "primary",
+        "displayName": "Control Blue Hover",
+        "tonalRamp": [
+          "oklch(15% 0.1272 246.3)",
+          "oklch(27% 0.1272 246.3)",
+          "oklch(38% 0.1272 246.3)",
+          "oklch(50% 0.1272 246.3)",
+          "oklch(61% 0.1272 246.3)",
+          "oklch(73% 0.1272 246.3)",
+          "oklch(84% 0.1272 246.3)",
+          "oklch(95% 0.1272 246.3)"
+        ]
+      },
+      "bright": {
+        "role": "primary",
+        "displayName": "Electric Focus",
+        "tonalRamp": [
+          "oklch(15% 0.1647 244.0)",
+          "oklch(27% 0.1647 244.0)",
+          "oklch(38% 0.1647 244.0)",
+          "oklch(50% 0.1647 244.0)",
+          "oklch(61% 0.1647 244.0)",
+          "oklch(73% 0.1647 244.0)",
+          "oklch(84% 0.1647 244.0)",
+          "oklch(95% 0.1647 244.0)"
+        ]
+      },
+      "display-blue": {
+        "role": "primary",
+        "displayName": "Programming Blue",
+        "tonalRamp": [
+          "oklch(15% 0.1562 239.5)",
+          "oklch(27% 0.1562 239.5)",
+          "oklch(38% 0.1562 239.5)",
+          "oklch(50% 0.1562 239.5)",
+          "oklch(61% 0.1562 239.5)",
+          "oklch(73% 0.1562 239.5)",
+          "oklch(84% 0.1562 239.5)",
+          "oklch(95% 0.1562 239.5)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Slate Copy",
+        "tonalRamp": [
+          "oklch(15% 0.0324 248.5)",
+          "oklch(27% 0.0324 248.5)",
+          "oklch(38% 0.0324 248.5)",
+          "oklch(50% 0.0324 248.5)",
+          "oklch(61% 0.0324 248.5)",
+          "oklch(73% 0.0324 248.5)",
+          "oklch(84% 0.0324 248.5)",
+          "oklch(95% 0.0324 248.5)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Technical Line",
+        "tonalRamp": [
+          "oklch(15% 0.0111 243.7)",
+          "oklch(27% 0.0111 243.7)",
+          "oklch(38% 0.0111 243.7)",
+          "oklch(50% 0.0111 243.7)",
+          "oklch(61% 0.0111 243.7)",
+          "oklch(73% 0.0111 243.7)",
+          "oklch(84% 0.0111 243.7)",
+          "oklch(95% 0.0111 243.7)"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Cool Paper",
+        "tonalRamp": [
+          "oklch(15% 0.0034 247.9)",
+          "oklch(27% 0.0034 247.9)",
+          "oklch(38% 0.0034 247.9)",
+          "oklch(50% 0.0034 247.9)",
+          "oklch(61% 0.0034 247.9)",
+          "oklch(73% 0.0034 247.9)",
+          "oklch(84% 0.0034 247.9)",
+          "oklch(95% 0.0034 247.9)"
+        ]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "White",
+        "tonalRamp": [
+          "oklch(15% 0.0000 0.0)",
+          "oklch(27% 0.0000 0.0)",
+          "oklch(38% 0.0000 0.0)",
+          "oklch(50% 0.0000 0.0)",
+          "oklch(61% 0.0000 0.0)",
+          "oklch(73% 0.0000 0.0)",
+          "oklch(84% 0.0000 0.0)",
+          "oklch(95% 0.0000 0.0)"
+        ]
+      },
+      "field": {
+        "role": "neutral",
+        "displayName": "Field Ground",
+        "tonalRamp": [
+          "oklch(15% 0.0062 255.5)",
+          "oklch(27% 0.0062 255.5)",
+          "oklch(38% 0.0062 255.5)",
+          "oklch(50% 0.0062 255.5)",
+          "oklch(61% 0.0062 255.5)",
+          "oklch(73% 0.0062 255.5)",
+          "oklch(84% 0.0062 255.5)",
+          "oklch(95% 0.0062 255.5)"
+        ]
+      },
+      "field-border": {
+        "role": "neutral",
+        "displayName": "Field Border",
+        "tonalRamp": [
+          "oklch(15% 0.0476 239.3)",
+          "oklch(27% 0.0476 239.3)",
+          "oklch(38% 0.0476 239.3)",
+          "oklch(50% 0.0476 239.3)",
+          "oklch(61% 0.0476 239.3)",
+          "oklch(73% 0.0476 239.3)",
+          "oklch(84% 0.0476 239.3)",
+          "oklch(95% 0.0476 239.3)"
+        ]
+      },
+      "outline-border": {
+        "role": "neutral",
+        "displayName": "Outline Border",
+        "tonalRamp": [
+          "oklch(15% 0.0286 244.8)",
+          "oklch(27% 0.0286 244.8)",
+          "oklch(38% 0.0286 244.8)",
+          "oklch(50% 0.0286 244.8)",
+          "oklch(61% 0.0286 244.8)",
+          "oklch(73% 0.0286 244.8)",
+          "oklch(84% 0.0286 244.8)",
+          "oklch(95% 0.0286 244.8)"
+        ]
+      }
     },
     "typographyMeta": {
-      "display": { "displayName": "Display", "purpose": "High-impact service titles with tight tracking." },
-      "headline": { "displayName": "Headline", "purpose": "Section titles and decision gates." },
-      "body": { "displayName": "Body", "purpose": "High-contrast readable Dutch prose and descriptions." },
-      "label": { "displayName": "Label", "purpose": "Navigation, proof metadata and operational status labels." }
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero heading; responsive sizes are documented in DESIGN.md."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Primary section headings."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Service-card headings."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Base prose and section introductions."
+      },
+      "button": {
+        "displayName": "Button",
+        "purpose": "Primary and secondary action text."
+      },
+      "field": {
+        "displayName": "Field",
+        "purpose": "Form input, select and textarea values."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Form labels and compact capability names."
+      },
+      "caption": {
+        "displayName": "Caption",
+        "purpose": "Illustration labels and supporting information."
+      }
     },
     "shadows": [
-      { "name": "card", "value": "0 1px 3px rgba(15, 23, 42, 0.04), 0 10px 24px -4px rgba(15, 23, 42, 0.06)", "purpose": "Soft, natural ambient depth for elevated cards." },
-      { "name": "proof-rail", "value": "0 4px 6px -1px rgba(15, 23, 42, 0.05), 0 20px 40px -6px rgba(15, 23, 42, 0.08)", "purpose": "Structural ambient separation for the Google Proof Rail." }
+      {
+        "name": "consent-overlay",
+        "value": "0 10px 45px #001e3c38",
+        "purpose": "Floating white consent panel."
+      },
+      {
+        "name": "mobile-navigation",
+        "value": "0 20px 35px #0005",
+        "purpose": "Dropdown separation from the hero."
+      }
     ],
     "motion": [
-      { "name": "ease-out", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Default state and reveal easing." },
-      { "name": "fast", "value": "0.2s cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Hover and focus feedback." }
+      {
+        "name": "hero-settle",
+        "value": "1.4s cubic-bezier(.16,1,.3,1)",
+        "purpose": "One image settle from scale(1.035)/brightness(.85) to scale(1)/brightness(1). Disabled under reduced motion."
+      },
+      {
+        "name": "button-state",
+        "value": ".18s",
+        "purpose": "Background, text and border color transitions. Disabled under reduced motion."
+      }
     ],
     "breakpoints": [
-      { "name": "mobile", "value": "768px" },
-      { "name": "desktop-gate", "value": "769px" },
-      { "name": "editorial-stack", "value": "992px" },
-      { "name": "wide-shell", "value": "1200px" }
+      {
+        "name": "wide",
+        "value": "1600px"
+      },
+      {
+        "name": "compact-desktop",
+        "value": "1200px"
+      },
+      {
+        "name": "menu-and-stack",
+        "value": "992px"
+      },
+      {
+        "name": "mobile",
+        "value": "600px"
+      },
+      {
+        "name": "small-mobile",
+        "value": "359px"
+      }
     ]
   },
   "components": [
@@ -59,83 +273,108 @@
       "name": "Primary Button",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "High-contrast authoritative emerald button for calls and submissions.",
-      "html": "<button class=\"ds-btn-primary\">Bel spoedlijn</button>",
-      "css": ".ds-btn-primary { min-height: 44px; padding: 0.75rem 1.5rem; border: 1px solid transparent; border-radius: 8px; background: var(--primary, #047857); color: #ffffff; font: 600 0.9rem 'Plus Jakarta Sans', system-ui, sans-serif; cursor: pointer; transition: background-color 0.2s, box-shadow 0.2s, transform 0.1s; } .ds-btn-primary:hover { background: var(--primary-light, #059669); box-shadow: 0 4px 12px rgba(4, 120, 87, 0.2); } .ds-btn-primary:focus-visible { outline: 2px solid #047857; outline-offset: 2px; } .ds-btn-primary:active { transform: translateY(1px); }"
+      "description": "Filled quote or handoff action.",
+      "html": "<button class=\"ds-primary\" type=\"button\">Offerte aanvragen <svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 12h16m-6-6 6 6-6 6\"/></svg></button>",
+      "css": ".ds-primary{display:inline-flex;align-items:center;justify-content:center;gap:14px;min-height:48px;padding:13px 22px;border:1px solid transparent;border-radius:7px;font:700 13px/1.4 Manrope,sans-serif;text-decoration:none;cursor:pointer;transition:background-color .18s,color .18s,border-color .18s;background:var(--blue,#0077bf);color:#fff}.ds-primary:hover{background:#0065a4}.ds-primary:focus-visible{outline:3px solid var(--bright,#079ef3);outline-offset:5px}.ds-primary:disabled{background:#476174;cursor:not-allowed}@media(prefers-reduced-motion:reduce){.ds-primary{transition:none}}"
     },
     {
       "name": "Outline Button",
       "kind": "button",
       "refersTo": "button-outline",
-      "description": "Calm, architectural secondary button with crisp border.",
-      "html": "<button class=\"ds-btn-outline\">Vraag offerte aan</button>",
-      "css": ".ds-btn-outline { min-height: 44px; padding: 0.75rem 1.5rem; border: 1px solid #e2e8f0; border-radius: 8px; background: #ffffff; color: var(--text-primary, #090d16); font: 600 0.9rem 'Plus Jakarta Sans', system-ui, sans-serif; cursor: pointer; transition: background-color 0.2s, border-color 0.2s; } .ds-btn-outline:hover { border-color: #047857; background: #ecfdf5; } .ds-btn-outline:focus-visible { outline: 2px solid #047857; outline-offset: 2px; }"
+      "description": "Secondary action on a dark surface.",
+      "html": "<div class=\"ds-dark\"><button class=\"ds-outline\" type=\"button\">Open in WhatsApp <svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 12h16m-6-6 6 6-6 6\"/></svg></button></div>",
+      "css": ".ds-dark{background:var(--navy,#09141e);padding:22px;color:#fff}.ds-outline{display:inline-flex;align-items:center;justify-content:center;gap:14px;min-height:48px;padding:13px 22px;border:1px solid transparent;border-radius:7px;font:700 13px/1.4 Manrope,sans-serif;text-decoration:none;cursor:pointer;transition:background-color .18s,color .18s,border-color .18s;background:transparent;border-color:#a5b6c5;color:inherit}.ds-outline:hover{background:#fff;color:var(--navy,#09141e);border-color:#fff}.ds-outline:focus-visible{outline:3px solid var(--bright,#079ef3);outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-outline{transition:none}}"
     },
     {
-      "name": "Text Field",
+      "name": "Project Field",
       "kind": "input",
-      "refersTo": null,
-      "description": "Crisp white input field on subtle section background.",
-      "html": "<label class=\"ds-field\">Naam<input type=\"text\" placeholder=\"Uw naam\"></label>",
-      "css": ".ds-field { display: grid; gap: 0.45rem; color: var(--text-primary, #090d16); font: 600 0.85rem 'Plus Jakarta Sans', system-ui, sans-serif; } .ds-field input { width: 100%; padding: 0.75rem 1rem; border: 1px solid #cbd5e1; border-radius: 8px; background: #ffffff; color: var(--text-primary, #090d16); font: 400 0.95rem 'Plus Jakarta Sans', system-ui, sans-serif; } .ds-field input:focus-visible { outline: none; border-color: #047857; box-shadow: 0 0 0 3px rgba(4, 120, 87, 0.15); }"
+      "refersTo": "input",
+      "description": "Labelled field used inside the dark quote disclosure.",
+      "html": "<div class=\"ds-field-wrap\"><label class=\"ds-label\" for=\"ds-project-name\">Naam *</label><input class=\"ds-input\" id=\"ds-project-name\" autocomplete=\"name\" required placeholder=\"Uw naam\"></div>",
+      "css": ".ds-field-wrap{background:var(--navy,#09141e);color:#fff;padding:22px;max-width:340px;font-family:Manrope,sans-serif}.ds-label{display:block;font-size:12px;font-weight:700;line-height:1.7;margin-bottom:6px}.ds-input{width:100%;min-width:0;min-height:47px;background:#f8fbff;color:var(--ink,#111f2d);border:1px solid #7b9ab0;border-radius:5px;padding:11px 12px;font:400 13px/1.7 Manrope,sans-serif;caret-color:#007cc7}.ds-input::placeholder{color:#536474}.ds-input:focus-visible{outline:3px solid var(--bright,#079ef3);outline-offset:5px;outline-offset:2px}.ds-input:user-invalid{border:2px solid #ff9e8f}.ds-input:disabled{opacity:.65}"
+    },
+    {
+      "name": "Header Navigation",
+      "kind": "nav",
+      "description": "Compact dark navigation with a restrained active indicator.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Voorbeeldnavigatie\"><a class=\"ds-nav-link\" href=\"#home\" aria-current=\"page\">Home</a><a class=\"ds-nav-link\" href=\"#diensten\">Diensten</a><a class=\"ds-nav-link\" href=\"#werkwijze\">Werkwijze</a><a class=\"ds-nav-link\" href=\"#contact\">Contact</a></nav>",
+      "css": ".ds-nav{display:flex;flex-wrap:wrap;align-items:center;gap:31px;background:var(--navy,#09141e);color:#fff;padding:22px;font:400 12px/1.7 Manrope,sans-serif}.ds-nav-link{min-height:44px;display:inline-flex;align-items:center;text-decoration:none;color:inherit;position:relative}.ds-nav-link:hover{color:#62c6ff}.ds-nav-link[aria-current]{color:#6accff}.ds-nav-link[aria-current]:after{content:'';position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--bright,#079ef3)}.ds-nav-link:focus-visible{outline:3px solid var(--bright,#079ef3);outline-offset:5px}"
     },
     {
       "name": "Service Card",
       "kind": "card",
-      "refersTo": "card",
-      "description": "Architectural white card with subtle diffuse elevation and hairline border.",
-      "html": "<article class=\"ds-service-card\"><span>Elektrische hulp</span><h3>Gerichte diagnose</h3><p>Helder advies en een veilige volgende stap.</p></article>",
-      "css": ".ds-service-card { display: grid; gap: 0.65rem; padding: 1.75rem; border: 1px solid rgba(15, 23, 42, 0.08); border-radius: 16px; background: #ffffff; color: var(--text-primary, #090d16); font-family: 'Plus Jakarta Sans', system-ui, sans-serif; box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04), 0 10px 24px -4px rgba(15, 23, 42, 0.06); transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s; } .ds-service-card span { color: #047857; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; } .ds-service-card h3 { margin: 0; font-size: 1.15rem; color: #090d16; } .ds-service-card p { margin: 0; color: #475569; line-height: 1.6; } .ds-service-card:hover { transform: translateY(-2px); border-color: rgba(4, 120, 87, 0.3); box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.05), 0 20px 40px -6px rgba(15, 23, 42, 0.08); } .ds-service-card:focus-within { outline: 2px solid #047857; outline-offset: 3px; }"
+      "refersTo": "service-card",
+      "description": "A flat service container with technical icon and explicit discussion action.",
+      "html": "<article class=\"ds-service\"><span class=\"ds-service-icon\"><svg viewBox=\"0 0 24 24\" width=\"36\" height=\"36\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"5\" y=\"5\" width=\"14\" height=\"14\" rx=\"2\"/><path d=\"M9 1v4m6-4v4M9 19v4m6-4v4M1 9h4m-4 6h4m14-6h4m-4 6h4M9 9h6v6H9z\"/></svg></span><h3 class=\"ds-service-title\">PLC-automatisering</h3><p class=\"ds-service-copy\">Siemens PLC-programma’s op maat voor uw machine of proces, op basis van uw functionele beschrijving.</p><a class=\"ds-service-link\" href=\"#offerte\">PLC-project bespreken <svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 12h16m-6-6 6 6-6 6\"/></svg></a></article>",
+      "css": ".ds-service{padding:29px 22px 23px;border:1px solid var(--line,#dce3e9);border-radius:12px;background:#fff;color:var(--ink,#111f2d);display:flex;flex-direction:column;align-items:flex-start;max-width:300px;font-family:Manrope,sans-serif}.ds-service-icon{color:#086d9f;margin-bottom:26px}.ds-service-title{margin:0;font-size:19px;font-weight:800;line-height:1.3;letter-spacing:-.025em}.ds-service-copy{font-size:13px;line-height:1.8;color:var(--muted,#526272);margin:16px 0 23px}.ds-service-link{display:flex;align-items:center;justify-content:space-between;gap:9px;min-height:44px;font-size:11px;font-weight:800;color:#0067a8;margin-top:auto;text-decoration:none;width:100%}.ds-service-link svg{width:17px}.ds-service-link:hover{text-decoration:underline}.ds-service-link:focus-visible{outline:3px solid var(--bright,#079ef3);outline-offset:5px}"
     },
     {
-      "name": "Navigation Header",
-      "kind": "nav",
-      "refersTo": null,
-      "description": "Semi-opaque white navigation bar with hairline border and emerald active route indicator.",
-      "html": "<nav class=\"ds-nav\" aria-label=\"Voorbeeld\"><a href=\"#\">Diensten</a></nav>",
-      "css": ".ds-nav { display: flex; align-items: center; min-height: 58px; background: rgba(255, 255, 255, 0.96); backdrop-filter: blur(12px); border-bottom: 1px solid #e2e8f0; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; } .ds-nav a { position: relative; padding: 0.8rem 0.4rem; color: #475569; font-size: 0.9rem; text-decoration: none; transition: color 0.2s; } .ds-nav a::after { content: ''; position: absolute; right: 0; bottom: 0; left: 0; height: 2px; background: #047857; transform: scaleX(0); transform-origin: left; transition: transform 0.2s; } .ds-nav a:hover { color: #090d16; } .ds-nav a:hover::after { transform: scaleX(1); } .ds-nav a:focus-visible { outline: 2px solid #047857; outline-offset: 3px; }"
-    },
-    {
-      "name": "Google Proof Rail",
+      "name": "Delivery Step",
       "kind": "custom",
-      "refersTo": "google-proof-rail",
-      "description": "Luminous white trust console: authentic rating, manually swipeable reviews and official Google Maps link.",
-      "html": "<aside class=\"ds-proof\" aria-label=\"Google-reviews\"><div class=\"ds-proof-rating\"><strong>4,9/5 op Google</strong><span>12 van 13 zijn vijf sterren</span></div><figure><blockquote>“Enorm dankbaar! Top vakman”</blockquote><figcaption>Bouchra Abali · 5 sterren</figcaption></figure><a href=\"#\">Bekijk alle 13 reviews</a></aside>",
-      "css": ".ds-proof { display: grid; grid-template-columns: minmax(210px,.78fr) minmax(0,1.35fr) minmax(190px,.66fr); overflow: hidden; border: 1px solid #e2e8f0; border-top: 2px solid #047857; border-radius: 8px; background: #ffffff; color: #090d16; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04), 0 10px 24px -4px rgba(15, 23, 42, 0.06); } .ds-proof-rating, .ds-proof figure, .ds-proof a { min-width: 0; padding: 1.25rem 1.4rem; } .ds-proof-rating { display: flex; flex-direction: column; justify-content: center; } .ds-proof-rating strong { font-size: 1.05rem; color: #090d16; } .ds-proof-rating span, .ds-proof figcaption { color: #64748b; font-size: .78rem; } .ds-proof figure { margin: 0; border-inline: 1px solid #e2e8f0; } .ds-proof blockquote { margin: 0 0 .6rem; font-weight: 600; color: #090d16; } .ds-proof a { display: flex; align-items: center; color: #047857; font-size: .85rem; font-weight: 700; text-decoration: none; } .ds-proof a:hover { color: #059669; } .ds-proof a:focus-visible { outline: 2px solid #047857; outline-offset: -3px; } @media (max-width: 768px) { .ds-proof { grid-template-columns: 1fr; } .ds-proof figure { border-block: 1px solid #e2e8f0; border-inline: 0; } }"
+      "description": "Numbered technical step from the connected delivery sequence.",
+      "html": "<div class=\"ds-step\"><span class=\"ds-step-number\">2</span><span class=\"ds-step-icon\"><svg viewBox=\"0 0 24 24\" width=\"36\" height=\"36\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"5\" y=\"5\" width=\"14\" height=\"14\" rx=\"2\"/><path d=\"M9 1v4m6-4v4M9 19v4m6-4v4M1 9h4m-4 6h4m14-6h4m-4 6h4M9 9h6v6H9z\"/></svg></span><h3 class=\"ds-step-title\">Programmering</h3><p class=\"ds-step-copy\">We werken de afgesproken logica uit in een PLC- of LOGO!-programma.</p></div>",
+      "css": ".ds-step{position:relative;background:linear-gradient(110deg,#0a151d,#1a2c3b);color:#fff;padding:24px;max-width:240px;font-family:Manrope,sans-serif}.ds-step-number{display:flex;align-items:center;justify-content:center;width:35px;height:35px;border:1px solid #0aabff;border-radius:50%;color:#58c6ff;font-size:13px;font-weight:800;margin-bottom:27px;background:#0d1e2b}.ds-step-icon{display:block;color:#f3f7fb;margin-bottom:21px}.ds-step-icon svg{width:30px;height:30px}.ds-step-title{margin:0;font-size:14px;line-height:1.4;letter-spacing:-.015em;font-weight:800}.ds-step-copy{font-size:12px;line-height:1.8;color:#c6d3dd;margin:10px 0 0}"
+    },
+    {
+      "name": "Quote Disclosure",
+      "kind": "custom",
+      "description": "Native disclosure with dark tonal depth and an explicit quote action.",
+      "html": "<details class=\"ds-quote\"><summary class=\"ds-quote-summary\"><span><strong class=\"ds-quote-title\">Klaar om uw project te bespreken?</strong><span class=\"ds-quote-copy\">Vertel ons wat uw besturing moet doen.</span></span><span class=\"ds-quote-action\">Offerte aanvragen <svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 12h16m-6-6 6 6-6 6\"/></svg></span></summary><p class=\"ds-quote-body\">Uw bericht wordt klaargezet in uw mailprogramma of WhatsApp. Controleer het en druk daar zelf op verzenden.</p></details>",
+      "css": ".ds-quote{background:linear-gradient(110deg,#061019,#172f43);color:#fff;border-radius:15px;overflow:hidden;font-family:Manrope,sans-serif;max-width:760px}.ds-quote-summary{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:30px;padding:32px 37px;list-style:none;cursor:pointer}.ds-quote-summary::-webkit-details-marker{display:none}.ds-quote-title{display:block;font-size:20px;line-height:1.5;font-weight:800;letter-spacing:-.025em}.ds-quote-copy{display:block;font-size:13px;color:#d7e4ef;margin-top:5px}.ds-quote-action{display:inline-flex;align-items:center;justify-content:center;gap:14px;min-height:48px;padding:13px 22px;border:1px solid transparent;border-radius:7px;font:700 13px/1.4 Manrope,sans-serif;text-decoration:none;cursor:pointer;transition:background-color .18s,color .18s,border-color .18s;background:var(--blue,#0077bf);color:#fff}.ds-quote-summary:hover .ds-quote-action{background:#0065a4}.ds-quote-summary:focus-visible{outline:3px solid var(--bright,#079ef3);outline-offset:5px;outline-offset:-5px}.ds-quote[open] .ds-quote-summary{border-bottom:1px solid #36556d}.ds-quote[open] .ds-quote-action svg{transform:rotate(-90deg)}.ds-quote-body{padding:24px 37px;margin:0;font-size:13px;line-height:1.8;color:#d0dce6}@media(prefers-reduced-motion:reduce){.ds-quote-action{transition:none}}"
+    },
+    {
+      "name": "Consent Panel",
+      "kind": "custom",
+      "description": "Floating consent treatment with refusal and permission equally available.",
+      "html": "<aside class=\"ds-consent\" aria-label=\"Privacykeuze\"><h2 class=\"ds-consent-title\">Uw privacy, uw keuze</h2><p class=\"ds-consent-copy\">Met uw toestemming gebruikt BenTech een Google Ads-tag om campagnes en websitebezoek te meten.</p><div class=\"ds-consent-actions\"><button class=\"ds-consent-reject\" type=\"button\">Alles weigeren</button><button class=\"ds-consent-accept\" type=\"button\">Marketing toestaan</button></div></aside>",
+      "css": ".ds-consent{background:#fff;color:var(--ink,#111f2d);border-radius:12px;padding:22px 25px;box-shadow:0 10px 45px #001e3c38;max-width:540px;font-family:Manrope,sans-serif}.ds-consent-title{font-size:17px;font-weight:800;line-height:1.16;letter-spacing:-.02em;margin:0}.ds-consent-copy{font-size:11px;color:var(--muted,#526272);line-height:1.8;margin:6px 0 0}.ds-consent-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:15px}.ds-consent-accept,.ds-consent-reject{display:inline-flex;align-items:center;justify-content:center;gap:14px;min-height:48px;padding:13px 22px;border:1px solid transparent;border-radius:7px;font:700 13px/1.4 Manrope,sans-serif;text-decoration:none;cursor:pointer;transition:background-color .18s,color .18s,border-color .18s;font-size:11px;padding:12px 15px}.ds-consent-accept{background:var(--blue,#0077bf);color:#fff}.ds-consent-accept:hover{background:#0065a4}.ds-consent-reject{background:transparent;color:var(--ink,#111f2d);border-color:#9aaebb}.ds-consent-reject:hover{background:#e9f2f8}.ds-consent-accept:focus-visible,.ds-consent-reject:focus-visible{outline:3px solid var(--bright,#079ef3);outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-consent-accept,.ds-consent-reject{transition:none}}"
     }
   ],
   "narrative": {
-    "northStar": "The Architectural Energy Atelier",
-    "overview": "BenTech Solutions transitions from a dark-mode tech look to an authoritative, editorial light design architecture. The new visual world radiates professional reliability, crisp legibility, and architectural clarity: clean white and slate surfaces, high-contrast ink-slate typography, and a purposeful botanical circuit emerald accent.\n\nThis direction deliberately strips away common 'AI slop' tells:\n- No dark glowing halos: Replaces neon blur rings with natural, multi-layer diffuse ambient elevation.\n- No simulated liveness gimmicks: Replaces decorative pulsing dots with calm, high-contrast operational status tags.\n- No decorative kickers: Eliminates redundant label badges above headings, letting typography speak with genuine hierarchical weight.\n- No muddy contrast: Establishes rigorous WCAG AAA contrast for body typography (#090d16 on white, secondary #475569), ensuring effortless readability under all ambient lighting conditions.\n\nThe signature Google Proof Rail is re-anchored as a pristine architectural white console with a hairline emerald anchor rule, crisp review typography, authentic star ratings, and direct links to the official Google Business Profile.",
+    "northStar": "Industrial programming made tangible",
+    "overview": "The selected world puts tangible controllers and clear technical language inside an inky navy frame. Electric blue marks actions and programming emphasis; cool light sections keep service explanations easy to scan. Bold geometric Manrope and thin SVG strokes connect the photographic hardware to the interface.\n\nThe system is restrained and specific: broad tonal fields, inset content, fine borders and rounded technical containers. The current homepage expresses this world through a controller hero, services, a connected delivery sequence, illustrative applications and a quote disclosure. That page sequence belongs to its surface contract rather than becoming a mandatory template for every future page.",
     "keyCharacteristics": [
-      "Crisp architectural white surfaces with high-contrast slate typography.",
-      "Calibrated botanical emerald (#047857) providing accessible, high-contrast signals.",
-      "Multi-layered diffuse ambient shadows instead of heavy dark blots or neon halos.",
-      "A luminous Google Proof Rail console that foregrounds verifiable reputation.",
-      "Direct, distinct contact pathways for urgent troubleshooting and planned energy installations.",
-      "Factual, situational Dutch copy free from unverified marketing claims."
+      "Navy and light surfaces alternate with a clear reading order.",
+      "Electric blue identifies action, focus and technical emphasis.",
+      "Self-hosted Manrope gives headings a compact, geometric voice.",
+      "Controller and application rasters remain visibly illustrative.",
+      "Borders and tonal layering carry depth; motion is brief."
     ],
     "rules": [
-      { "name": "The Signal Rule", "body": "Emerald is reserved for intentional action, verification, and orientation. It never floods the page as a decorative wash.", "section": "colors" },
-      { "name": "The No-Kicker Rule", "body": "Headings carry their own weight without decorative kicker tags above them.", "section": "typography" },
-      { "name": "The Ambient Depth Rule", "body": "Depth is created through hairline structural boundaries and multi-layer diffuse shadows; zero-offset glowing halos are strictly banned.", "section": "elevation" },
-      { "name": "The Manual Proof Rule", "body": "The centre review changes only through explicit visitor input; the Proof Rail never autoplays.", "section": "components" }
+      {
+        "name": "The Blue Signal Rule",
+        "body": "Use blue for an action, a focus cue or a technical emphasis already represented in the system. Keep long-form copy neutral.",
+        "section": "colors"
+      },
+      {
+        "name": "The Legible Ground Rule",
+        "body": "Put light text on dark fields and ink text on light fields. When controller imagery sits behind copy, retain enough dark negative space for the complete heading.",
+        "section": "colors"
+      },
+      {
+        "name": "The Complete Phrase Rule",
+        "body": "Responsive wrapping must preserve words and spaces. A hidden hard line break must not join adjacent words.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Content Rule",
+        "body": "Keep service containers flat; reserve elevation for the floating consent panel and navigation.",
+        "section": "elevation"
+      }
     ],
     "dos": [
-      "**Do** maintain high-contrast legibility: dark obsidian text on clean light surfaces.",
-      "**Do** use subtle, multi-layered diffuse ambient shadows instead of heavy dark blots.",
-      "**Do** keep emerald as a sharp, deliberate signal for calls-to-action and active states.",
-      "**Do** respect the established Dutch copy and authentic Belgian electrical service context.",
-      "**Do** maintain the manual-only interaction for the Google Proof Rail (no autoplay).
-      "**Do** preserve semantic landmarks, visible keyboard focus rings, and WCAG AA contrast throughout."
+      "**Do** keep the navy and cool-light contrast, with blue used for meaningful emphasis.",
+      "**Do** use self-hosted Manrope and preserve the complete heading at every breakpoint.",
+      "**Do** keep content containers inset within full-width tonal sections.",
+      "**Do** use inline SVG for technical icons and retain visible illustration disclosures.",
+      "**Do** preserve keyboard focus, meaningful control heights and reduced-motion behaviour."
     ],
     "donts": [
-      "**Don't** reintroduce dark background surfaces or saturated midnight layers.",
-      "**Don't** use colored neon glowing box-shadows or text-shadows.",
-      "**Don't** add decorative pulsing dots or artificial status animations.",
-      "**Don't** place kickers or eyebrow tags above headings.",
-      "**Don't** use low-contrast washed-out grays for secondary copy.",
-      "**Don't** invent fake credentials, partner logos, certifications, or fictitious founder identities."
+      "**Don't** reuse the superseded emerald, electrician or energy visual identity.",
+      "**Don't** turn illustrative imagery into claimed customer projects or personal portraits.",
+      "**Don't** add invented ratings, metrics, credentials, decorative status signals or heading kickers.",
+      "**Don't** add service-card lift shadows, gradient lettering or a Vanta/WebGL backdrop.",
+      "**Don't** let a headline cross the controller's identifying face or remove spaces when reflowing copy."
     ]
   }
 }

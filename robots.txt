@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
 Sitemap: https://bentechsolutions.be/sitemap.xml
