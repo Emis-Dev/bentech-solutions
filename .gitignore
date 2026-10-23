@@ -8,3 +8,5 @@ package-lock.json
 .impeccable/qa/
 .impeccable/generate-og.cjs
 .wrangler/
+.impeccable/review/
+.impeccable/assets/*.ttf

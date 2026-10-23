@@ -2,6 +2,12 @@
 export async function onRequest(context) {
   const url = new URL(context.request.url);
   const hostname = url.hostname.toLowerCase();
+  // Development briefs and asset provenance stay in source control, not public pages.
+  if (/^\/(?:\.|scripts(?:\/|$))/.test(url.pathname) ||
+      /^\/(?:PRODUCT|DESIGN|README)\.md$/i.test(url.pathname) ||
+      url.pathname.endsWith('.webp.json')) {
+    return new Response('Pagina niet gevonden', { status: 404 });
+  }
   const formerBrands = new Set([
     'klimaatplus', 'klimaat', 'airco', 'warmtepomp',
     'batteryplus', 'chargeplus', 'batterij', 'thuisbatterij', 'thuisbatterijen',

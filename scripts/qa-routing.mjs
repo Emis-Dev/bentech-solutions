@@ -17,6 +17,9 @@ for (const path of ['elektrische-installaties', 'over-ons', 'klimaatplus', 'batt
 }
 const www = await request('https://www.bentechsolutions.be/privacy/?a=1');
 assert.equal(www.headers.get('location'), 'https://bentechsolutions.be/privacy/?a=1');
+for (const path of ['/.impeccable/surfaces/automation.md', '/.git/config', '/PRODUCT.md', '/DESIGN.md', '/README.md', '/scripts/qa-content.mjs', '/assets/automation/hero.webp.json']) {
+  assert.equal((await request(`https://bentechsolutions.be${path}`)).status, 404, path);
+}
 for (const host of ['bentechsolutions.be', 'bentech-solutions.pages.dev', 'feature.bentech-solutions.pages.dev', 'localhost']) {
   for (const path of ['/', '/automation.css', '/assets/automation/hero.webp', '/privacy/', '/unknown/']) {
     assert.equal(await (await request(`https://${host}${path}`)).text(), 'static');

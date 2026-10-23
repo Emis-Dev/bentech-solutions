@@ -35,7 +35,7 @@
     if (!form.reportValidity()) return;
     const lines = ['AANVRAAG BENTECH SOLUTIONS', '', `Dienst: ${service}`];
     for (const field of form.querySelectorAll('input:not([type="hidden"]), select, textarea')) {
-      if (!field.name || !field.value.trim()) continue;
+      if (!field.name || field.name === 'service' || !field.value.trim()) continue;
       const label = form.querySelector(`label[for="${field.id}"]`)?.textContent.replace(/\s*\*\s*$/, '').trim() || field.name;
       lines.push(`${label}: ${field.value.trim()}`);
     }
@@ -69,35 +69,38 @@
       `Uw bericht staat klaar. Controleer het in ${channel === 'email' ? 'uw mailprogramma' : 'WhatsApp'} en druk daar op verzenden. BenTech heeft uw aanvraag nog niet ontvangen. `,
       retry, ' of ', fallback, '. Lukt het niet? Bel +32 486 32 86 45.'
     );
-    status.focus({ preventScroll: true });
+    status.focus();
     // This is a handoff, never a confirmed lead or sale. No personal data in events.
     const serviceNames = {
-      'Laadpaal': 'laadpalen', 'Thuisbatterij': 'thuisbatterijen',
-      'Zonnepanelen': 'zonnepanelen', 'Volledige elektriciteitsinstallatie': 'elektrische-installaties',
-      'Dringende depannage / stroompanne': 'depannage',
-      'Zekeringkast vernieuwen / AREI Keuring': 'zekeringkast',
-      'Elektrische herstellingen': 'herstellingen',
-      'Airconditioning / warmtepomp': 'airconditioning', 'Energie-totaalproject': 'totaalproject'
+      'PLC-automatisering': 'plc', 'LOGO!-domotica': 'logo',
+      'Troubleshooting PLC / LOGO!': 'troubleshooting'
     };
     document.dispatchEvent(new CustomEvent('bentech:contact-handoff', { detail: {
-      channel, service: form.dataset.service || document.body.dataset.service || serviceNames[service] || 'algemeen', form_id: form.id
+      channel, service: serviceNames[service] || 'algemeen', form_id: form.id
     } }));
     if (channel === 'email') window.location.href = email;
     else window.open(whatsapp, '_blank', 'noopener,noreferrer');
   }
 
-  window.handleBrandFormSubmit = (event, brand) => handoff(event, brand);
-  window.handleFormSubmit = (event, type) => handoff(event,
-    type === 'spoed' ? 'Elektrische depannage' : document.getElementById('q-service').value);
-
   document.addEventListener('DOMContentLoaded', () => {
     window.initBenTechMobileMenu();
-    if (window.lucide) window.lucide.createIcons();
-    const requested = new URLSearchParams(window.location.search).get('dienst');
+    const panel = document.getElementById('offerte');
+    const form = document.getElementById('quoteForm');
     const select = document.getElementById('q-service');
+    document.querySelectorAll('a[href="#offerte"]').forEach(link => {
+      link.addEventListener('click', () => {
+        if (!panel || !select) return;
+        panel.open = true;
+        if (link.dataset.serviceChoice) select.value = link.dataset.serviceChoice;
+        requestAnimationFrame(() => select.focus({ preventScroll: true }));
+      });
+    });
+    form?.addEventListener('submit', event => handoff(event, select.value));
+    if (window.location.hash === '#offerte' && panel) panel.open = true;
+    const requested = new URLSearchParams(window.location.search).get('dienst');
     if (requested && select && Array.from(select.options).some(option => option.value === requested)) {
       select.value = requested;
-      if (typeof window.switchTab === 'function') window.switchTab('quote');
+      if (panel) panel.open = true;
     }
   });
 })();
