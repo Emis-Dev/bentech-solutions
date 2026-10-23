@@ -3,7 +3,7 @@ import {readFile,stat} from 'node:fs/promises';
 const html=await readFile('index.html','utf8');
 for(const service of ['PLC-automatisering','Siemens LOGO!','Troubleshooting','Simulatie &amp; test','Oplevering']) assert.ok(html.includes(service),service);
 assert.doesNotMatch(html,/met AI|24\/7|laadpaal|zonnepaneel|thuisbatterij|airco|klimaatplus|solarplus|hero-profile|reviews/i);
-for(const path of ['index.html','privacy/index.html','404.html']){
+for(const path of ['index.html','privacy/index.html','404.html','bedankt/index.html']){
  const body=await readFile(path,'utf8');
  assert.equal([...body.matchAll(/<h1[ >]/g)].length,1,path);
  for(const [,url] of body.matchAll(/(?:src|href)="(\/[^"#?]+)(?:[?#][^"]*)?"/g)) {

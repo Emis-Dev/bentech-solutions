@@ -95,10 +95,35 @@
         requestAnimationFrame(() => select.focus({ preventScroll: true }));
       });
     });
-    form?.addEventListener('submit', event => handoff(event, select.value));
-    // Enable personal-data fields only after the no-network submit handler is bound.
-    const fields = form?.querySelector('fieldset');
-    if (fields) fields.disabled = false;
+    // Use a native POST: this provider does not send autoresponses for AJAX forms.
+    const sendButton = form?.querySelector('button[data-channel="server"]');
+    const sendLabel = sendButton?.querySelector('[data-submit-label]');
+    const deliveryStatus = document.getElementById('formDeliveryStatus');
+    const resetDelivery = () => {
+      if (!form || !sendButton) return;
+      delete form.dataset.submitting;
+      sendButton.disabled = false;
+      if (sendLabel) sendLabel.textContent = 'Aanvraag versturen';
+      if (deliveryStatus) deliveryStatus.hidden = true;
+    };
+    window.addEventListener('pageshow', resetDelivery);
+    form?.addEventListener('submit', event => {
+      if (form.dataset.submitting || !form.reportValidity()) {
+        event.preventDefault();
+        return;
+      }
+      form.dataset.submitting = 'true';
+      if (sendButton) sendButton.disabled = true;
+      if (sendLabel) sendLabel.textContent = 'Naar spamcontrole…';
+      if (deliveryStatus) {
+        deliveryStatus.textContent = 'U gaat naar de spamcontrole. De verzending is nog niet bevestigd.';
+        deliveryStatus.hidden = false;
+      }
+    });
+    form?.querySelector('a[data-channel="whatsapp"]')?.addEventListener('click', event => {
+      handoff({ preventDefault: () => event.preventDefault(), currentTarget: form,
+        submitter: { dataset: { channel: 'whatsapp' } } }, select.value);
+    });
     if (window.location.hash === '#offerte' && panel) panel.open = true;
     const requested = new URLSearchParams(window.location.search).get('dienst');
     if (requested && select && Array.from(select.options).some(option => option.value === requested)) {
