@@ -2,10 +2,17 @@
 export async function onRequest(context) {
   const url = new URL(context.request.url);
   const hostname = url.hostname.toLowerCase();
+  let publicPath;
+  try {
+    const decoded = decodeURIComponent(url.pathname).replaceAll('\\', '/').replace(/^\/+/, '/');
+    publicPath = new URL(`https://route.invalid${decoded}`).pathname;
+  } catch {
+    return new Response('Ongeldig adres', { status: 400 });
+  }
   // Development briefs and asset provenance stay in source control, not public pages.
-  if (/^\/(?:\.|scripts(?:\/|$))/.test(url.pathname) ||
-      /^\/(?:PRODUCT|DESIGN|README)\.md$/i.test(url.pathname) ||
-      url.pathname.endsWith('.webp.json')) {
+  if (/^\/(?:\.|(?:scripts|scratch)(?:\/|$))/.test(publicPath) ||
+      /^\/(?:PRODUCT|DESIGN|README)\.md$/i.test(publicPath) ||
+      publicPath.endsWith('.webp.json')) {
     return new Response('Pagina niet gevonden', { status: 404 });
   }
   const formerBrands = new Set([
