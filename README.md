@@ -9,7 +9,7 @@ Static website for Siemens PLC programming, LOGO! domotics and PLC/LOGO! trouble
 - `node scripts/qa-content.mjs`: current services, claim boundaries, metadata and asset references.
 - `node scripts/qa-browser.mjs`: responsive layout, menu, quote handoff, validation, consent and errors. Requires the Playwright Node module (`PLAYWRIGHT_MODULE` may point to a managed installation) and installed Chrome. It mocks analytics and WhatsApp opening; it sends no enquiries. Set `BENTECH_QA_URL` and `BENTECH_QA_OUT` for preview/production checks and separate evidence.
 
-- `node scripts/qa-proof-motion.mjs`: sourced historical review links, centred layouts from 320 to 3440px, actual hero movement, keyboard pause, offscreen suspension, reduced-motion changes and static no-script fallback. Uses the same environment variables and managed Chrome runtime as browser QA.
+- `node scripts/qa-proof-motion.mjs`: sourced historical review links, centred layouts from 320 to 3440px, actual hero movement, image rotation, arrows/direct selection/keyboard/swipe, failed-image recovery, offscreen suspension, reduced-motion changes and static no-script fallback. Uses the same environment variables and managed Chrome runtime as browser QA.
 
 The old energy-service/Vanta assertions were retired with those product features. The October Google proof section retains original older electrical-service reviews with visible historical context; it does not establish PLC/LOGO! project experience. Replacement checks preserve canonical-host, consent, form, responsive and factual-claim coverage for the new three-service scope. Historical sources and evidence remain in Git history.
 

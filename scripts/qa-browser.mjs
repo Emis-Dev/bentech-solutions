@@ -74,17 +74,17 @@ try{
  assert.equal(await page.locator('html').getAttribute('data-marketing-consent'),'denied');
  assert.equal(google.length,1,'Revocation reload must not load Google');
  await page.emulateMedia({reducedMotion:'reduce'});await page.goto(base);
- assert.equal(await page.locator('.hero-picture').evaluate(e=>getComputedStyle(e).animationName),'none');
- for(const path of ['/privacy/','/does-not-exist/']){
+ assert.equal(await page.locator('.hero-slide.is-active img').evaluate(e=>getComputedStyle(e).animationName),'none');
+ for(const path of ['/privacy/','/fotocredits/','/does-not-exist/']){
   const response=await page.goto(base+path,{waitUntil:'networkidle'});
   assert.equal(response.status(),path.includes('does-not')?404:200);
   assert.ok(await page.locator('h1').innerText());
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
-  await page.screenshot({path:`${out}/${path.includes('privacy')?'privacy':'404'}-mobile.png`,fullPage:true});
+  await page.screenshot({path:`${out}/${path.includes('privacy')?'privacy':path.includes('fotocredits')?'fotocredits':'404'}-mobile.png`,fullPage:true});
   await page.setViewportSize({width:1440,height:1000});
   assert.equal(await page.locator('.nav-quote use').getAttribute('href'),'#i-arrow');
   assert.equal(await page.locator('#i-arrow').count(),1);
-  await page.screenshot({path:`${out}/${path.includes('privacy')?'privacy':'404'}-desktop.png`,fullPage:true});
+  await page.screenshot({path:`${out}/${path.includes('privacy')?'privacy':path.includes('fotocredits')?'fotocredits':'404'}-desktop.png`,fullPage:true});
   await page.setViewportSize({width:390,height:844});
  }
  const noScript=await browser.newContext({javaScriptEnabled:false,viewport:{width:390,height:844}});

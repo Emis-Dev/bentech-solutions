@@ -241,9 +241,10 @@ input:focus-visible,textarea:focus-visible,select:focus-visible {
 }
 .hero-picture {
   position:absolute;
-  inset:0 0 0 18%;
+  inset:0;
   z-index:-2;
-  transform:scale(1.035)
+  max-width:1600px;
+  margin-inline:auto
 }
 .hero-picture img {
   width:100%;
@@ -294,21 +295,6 @@ input:focus-visible,textarea:focus-visible,select:focus-visible {
 .hero-actions .button {
   border-radius:30px;
   padding-inline:26px
-}
-.image-label {
-  position:absolute;
-  bottom:15px;
-  right:0;
-  font-size:11px;
-  color:#d3dfe8;
-  background:#09141eb8;
-  padding:2px 9px;
-  border-radius:3px;
-  max-width:100%
-}
-.image-label a {
-  color:inherit;
-  text-underline-offset:2px
 }
 .capability-rail {
   background:#111f2b;
@@ -812,9 +798,6 @@ input:focus-visible,textarea:focus-visible,select:focus-visible {
   .hero h1 {
     font-size:68px
   }
-  .hero-picture {
-    left:20%
-  }
 }
 @media(max-width:1200px) {
   .container {
@@ -946,7 +929,6 @@ input:focus-visible,textarea:focus-visible,select:focus-visible {
     max-width:330px
   }
   .hero-picture {
-    left:18%;
     opacity:.85
   }
   .hero:after {
@@ -1032,10 +1014,10 @@ input:focus-visible,textarea:focus-visible,select:focus-visible {
     font-size:8px
   }
   .hero-inner {
-    min-height:880px;
+    min-height:800px;
     display:block;
     padding-top:37px;
-    padding-bottom:410px
+    padding-bottom:380px
   }
   .hero-copy {
     max-width:100%;
@@ -1064,8 +1046,8 @@ input:focus-visible,textarea:focus-visible,select:focus-visible {
     font-size:12px
   }
   .hero-picture {
-    inset:auto -10% 0 -20%;
-    height:425px;
+    inset:auto 0 80px;
+    height:330px;
     opacity:1
   }
   .hero-picture img {
@@ -1073,10 +1055,6 @@ input:focus-visible,textarea:focus-visible,select:focus-visible {
   }
   .hero:after {
     background:linear-gradient(180deg,#09141e 0%,#09141e 49%,#09141e00 72%)
-  }
-  .image-label {
-    bottom:10px;
-    font-size:11px
   }
   .capability-list {
     gap:22px 16px;
@@ -1314,7 +1292,7 @@ input:focus-visible,textarea:focus-visible,select:focus-visible {
     font-size:36px
   }
   .hero-inner {
-    min-height:900px
+    min-height:820px
   }
   .hero-actions {
     gap:14px

@@ -12,15 +12,15 @@
   <meta property="og:title" content="BenTech Solutions | Siemens PLC &amp; LOGO! programming">
   <meta property="og:description" content="Van uw beschrijving naar een programma op maat. PLC-automatisering, LOGO!-domotica en troubleshooting.">
   <meta property="og:url" content="https://bentechsolutions.be/">
-  <meta property="og:image" content="https://bentechsolutions.be/assets/automation/hero-logo8.webp">
-  <meta property="og:image:alt" content="Foto van een Siemens LOGO! 8 met voeding">
+  <meta property="og:image" content="https://bentechsolutions.be/assets/automation/hero-s7-scene.webp">
+  <meta property="og:image:alt" content="Illustratief productbeeld van een Siemens SIMATIC S7-1200">
   <link rel="icon" href="/assets/automation/mark.svg" type="image/svg+xml">
   <link rel="preload" href="/assets/automation/manrope-variable.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="stylesheet" href="/automation.css?v=20261024-proof-motion">
-  <link rel="stylesheet" href="/proof-motion.css?v=20261024">
+  <link rel="stylesheet" href="/automation.css?v=20261024-hero-slider">
+  <link rel="stylesheet" href="/proof-motion.css?v=20261024-slider">
   <script src="/consent.js?v=20261023" defer></script>
   <script src="/contact.js?v=20261023" defer></script>
-  <script src="/hero-motion.js?v=20261024" defer></script>
+  <script src="/hero-motion.js?v=20261024-slider" defer></script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"BenTech Solutions","legalName":"BenTech Solutions CommV","url":"https://bentechsolutions.be/","telephone":"+32486328645","email":"info@bentechsolutions.be","taxID":"BE1025714523","description":"Siemens PLC-programmering, Siemens LOGO!-domotica en troubleshooting voor PLC- en LOGO!-besturingen.","hasOfferCatalog":{"@type":"OfferCatalog","name":"Automatisering","itemListElement":[{"@type":"OfferCatalog","name":"PLC-automatisering"},{"@type":"OfferCatalog","name":"Siemens LOGO!-domotica"},{"@type":"OfferCatalog","name":"Troubleshooting PLC & LOGO!"}]}}</script>
 </head>
 <body data-service="automatisering">
@@ -53,7 +53,11 @@
   <main id="inhoud">
   <div class="hero-shell" id="hero">
       <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-picture"><img src="/assets/automation/hero-logo8.webp" width="2200" height="1438" alt="Siemens LOGO! 8 met voeding, gefotografeerd door MakeMagazinDE" fetchpriority="high"></div>
+        <div class="hero-picture" id="heroPhotos" role="region" aria-roledescription="carrousel" aria-label="Productbeelden van Siemens-besturingen" aria-live="off">
+          <div class="hero-slide is-active" data-title="Siemens S7-1200" role="group" aria-roledescription="dia" aria-label="1 van 3"><picture><source media="(max-width:600px)" srcset="/assets/automation/hero-s7-scene-mobile.webp"><img src="/assets/automation/hero-s7-scene.webp" width="1600" height="900" alt="Illustratief productbeeld van een Siemens SIMATIC S7-1200 in een donkere industriële omgeving" fetchpriority="high"></picture></div>
+          <div class="hero-slide" data-title="Siemens LOGO!" role="group" aria-roledescription="dia" aria-label="2 van 3" aria-hidden="true"><picture><source media="(max-width:600px)" srcset="/assets/automation/hero-logo-scene-mobile.webp"><img src="/assets/automation/hero-logo-scene.webp" width="1600" height="900" alt="Illustratief productbeeld van een Siemens LOGO! met voeding in een donkere industriële omgeving" fetchpriority="low" decoding="async"></picture></div>
+          <div class="hero-slide cabinet-slide" data-title="Siemens PLC-besturing" role="group" aria-roledescription="dia" aria-label="3 van 3" aria-hidden="true"><picture><source media="(max-width:600px)" srcset="/assets/automation/hero-s7-1500-mobile.webp"><img src="/assets/automation/hero-s7-1500.webp" width="1600" height="1200" alt="Een echte Siemens SIMATIC S7-1500 met aangesloten besturingsmodules" fetchpriority="low" decoding="async"></picture></div>
+        </div>
         <div class="container hero-inner">
           <div class="hero-copy">
             <h1 id="hero-title">Siemens PLC &amp;<br> LOGO! <span>programming.</span></h1>
@@ -61,20 +65,16 @@
             <div class="hero-actions"><a class="button button-primary" href="#offerte">Offerte aanvragen <svg class="icon"><use href="#i-arrow"/></svg></a><a class="text-link light-link" href="#diensten">Onze diensten</a></div>
             <a class="hero-proof" href="#ervaringen"><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg><span><strong>4,9/5 op Google</strong><span>13 reviews over eerdere dienstverlening</span></span><svg class="icon proof-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
           </div>
-          <figure class="signal-console">
-            <figcaption class="signal-heading"><span>Van signaal naar actie.</span><button class="motion-toggle" id="heroMotionToggle" type="button" aria-pressed="false" hidden><svg class="icon" aria-hidden="true"><use href="#i-pause"/></svg><span>Beweging pauzeren</span></button></figcaption>
-            <svg class="signal-diagram" viewBox="0 0 440 104" aria-hidden="true" fill="none">
-              <g class="signal-tracks"><path d="M24 28h80q16 0 16 16v8q0 16 16 16h44"/><path d="M24 88h80q16 0 16-16v-4h60"/><path d="M260 68h44q16 0 16-16v-8q0-16 16-16h80"/><path d="M260 68h44q16 0 16 16v4h96"/></g>
-              <g class="signal-flow signal-input"><path pathLength="100" d="M24 28h80q16 0 16 16v8q0 16 16 16h44"/><path pathLength="100" d="M24 88h80q16 0 16-16v-4h60"/></g>
-              <g class="signal-flow signal-output"><path pathLength="100" d="M260 68h44q16 0 16-16v-8q0-16 16-16h80"/><path pathLength="100" d="M260 68h44q16 0 16 16v4h96"/></g>
-              <g class="signal-terminals"><circle cx="24" cy="28" r="5"/><circle cx="24" cy="88" r="5"/><circle cx="416" cy="28" r="5"/><circle cx="416" cy="88" r="5"/></g>
-              <rect class="signal-processor" x="180" y="32" width="80" height="64" rx="5"/>
-              <path class="signal-chip" d="M208 50h24v28h-24zm6-7v7m12-7v7m-12 28v7m12-7v7m-25-28h7m-7 14h7m24-14h7m-7 14h7"/>
-            </svg>
-            <div class="signal-labels" aria-hidden="true"><span>Ingang</span><span>Logica</span><span>Uitgang</span></div>
-            <p>Illustratie van besturingslogica</p>
-          </figure>
-          <span class="image-label">Siemens LOGO! 8 · Foto: <a href="https://commons.wikimedia.org/wiki/File:Siemens_sps_logo_8_12-24_RCE-03.jpg">MakeMagazinDE</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · verkleind en uitgesneden</span>
+          <div class="hero-gallery-controls" id="heroGalleryControls" role="group" aria-label="Herofotos bedienen" hidden>
+            <div class="gallery-heading"><strong id="heroPhotoName">Siemens S7-1200</strong><span id="heroPhotoCount" aria-hidden="true">1 / 3</span></div>
+            <div class="gallery-buttons">
+              <button type="button" class="gallery-arrow" id="heroPrevious" aria-label="Vorige foto" aria-controls="heroPhotos"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+              <div class="gallery-dots"><button type="button" data-slide="0" aria-label="Foto 1: Siemens S7-1200" aria-pressed="true" aria-controls="heroPhotos"><span></span></button><button type="button" data-slide="1" aria-label="Foto 2: Siemens LOGO!" aria-pressed="false" aria-controls="heroPhotos"><span></span></button><button type="button" data-slide="2" aria-label="Foto 3: Siemens PLC-besturing" aria-pressed="false" aria-controls="heroPhotos"><span></span></button></div>
+              <button type="button" class="gallery-arrow" id="heroNext" aria-label="Volgende foto" aria-controls="heroPhotos"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+              <button class="motion-toggle" id="heroMotionToggle" type="button" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#i-pause"/></svg><span>Beweging pauzeren</span></button>
+            </div>
+            <p class="gallery-status" id="heroSlideStatus" role="status" aria-live="polite"></p>
+          </div>
         </div>
       </section>
       <div class="capability-rail">
@@ -157,7 +157,7 @@
   </main>
   <footer class="site-footer container">
     <div><p>© 2026 BenTech Solutions CommV <span>·</span> BTW BE 1025.714.523</p><p class="trademark-note">Siemens en LOGO! zijn merknamen van hun respectieve eigenaar. BenTech Solutions is een onafhankelijke dienstverlener.</p></div>
-    <div class="footer-links"><a href="/privacy/">Privacy</a><button type="button" id="manageMarketingConsent">Cookievoorkeuren</button><a href="https://web.tom.cool" target="_blank" rel="noopener noreferrer">Website door tom.cool</a></div>
+    <div class="footer-links"><a href="/privacy/">Privacy</a><a href="/fotocredits/">Fotocredits</a><button type="button" id="manageMarketingConsent">Cookievoorkeuren</button><a href="https://web.tom.cool" target="_blank" rel="noopener noreferrer">Website door tom.cool</a></div>
   </footer>
   <aside class="consent-banner" id="marketingConsentBanner" aria-labelledby="marketingConsentTitle" hidden>
     <div><h2 id="marketingConsentTitle">Uw privacy, uw keuze</h2><p>Met uw toestemming gebruikt BenTech een Google Ads-tag om campagnes en websitebezoek te meten. Weigeren heeft geen invloed op de werking. <a href="/privacy/">Meer over privacy</a></p></div>

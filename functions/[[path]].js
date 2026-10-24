@@ -44,8 +44,8 @@ export async function onRequest(context) {
     });
   }
   if (url.pathname === '/sitemap.xml') {
-    const paths = ['/', '/privacy/'];
-    const urls = paths.map(path => `<url><loc>https://bentechsolutions.be${path}</loc><lastmod>2026-10-23</lastmod></url>`).join('');
+    const paths = ['/', '/privacy/', '/fotocredits/'];
+    const urls = paths.map(path => `<url><loc>https://bentechsolutions.be${path}</loc><lastmod>2026-10-24</lastmod></url>`).join('');
     return new Response(`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls}</urlset>`, {
       headers: { 'Content-Type': 'application/xml; charset=utf-8' }
     });

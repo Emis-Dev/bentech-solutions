@@ -6,13 +6,15 @@ assert.doesNotMatch(html,/met AI|24\/7|laadpaal|zonnepaneel|thuisbatterij|airco|
 assert.match(html,/13 reviews op Google/);
 assert.match(html,/4,9/);
 assert.match(html,/Eduardo Bilterijst/);
+assert.doesNotMatch(html,/image-label|MakeMagazinDE|signal-console/);
+assert.match(html,/href="\/fotocredits\/"/);
 assert.match(html,/niet specifiek over PLC- of LOGO!-programmering/);
-for(const path of ['index.html','privacy/index.html','404.html']){
+for(const path of ['index.html','privacy/index.html','404.html','fotocredits/index.html']){
  const body=await readFile(path,'utf8');
  assert.equal([...body.matchAll(/<h1[ >]/g)].length,1,path);
- for(const [,url] of body.matchAll(/(?:src|href)="(\/[^"#?]+)(?:[?#][^"]*)?"/g)) {
+ for(const [,url] of body.matchAll(/(?:src|srcset|href)="(\/[^"#?]+)(?:[?#][^"]*)?"/g)) {
   if(url==='/'||url==='/privacy/') continue;
-  assert.ok((await stat('.'+url)).isFile(),`${path}: ${url}`);
+  assert.ok((await stat('.'+url+(url.endsWith('/')?'index.html':''))).isFile(),`${path}: ${url}`);
  }
  assert.ok(body.includes('manageMarketingConsent'));
  assert.ok(body.includes('marketingConsentBanner'));
