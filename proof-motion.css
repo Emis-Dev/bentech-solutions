@@ -212,12 +212,6 @@
 .review-history figcaption {
   margin-top:8px
 }
-.review-context {
-  color:var(--muted);
-  font-size:12px;
-  max-width:90ch;
-  margin-top:30px
-}
 @media(max-width:992px) {
   .hero-picture { left:10%; right:-10% }
   .hero-gallery-controls { width:38% }
@@ -269,9 +263,6 @@
   }
   .review-history blockquote {
     font-size:16px
-  }
-  .review-context {
-    font-size:11px
   }
 }
 
