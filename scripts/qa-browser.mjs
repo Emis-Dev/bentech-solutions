@@ -37,7 +37,7 @@ try{
    await page.keyboard.press('Escape');assert.equal(await page.locator('#mobileToggle').getAttribute('aria-expanded'),'false');
    assert.equal(await page.locator('#mobileToggle').evaluate(e=>e===document.activeElement),true);
   }
-  await page.locator('[data-service-choice="LOGO!-domotica"]').click();
+  await page.locator('.service-grid [data-service-choice="LOGO!-domotica"]').click();
   assert.equal(await page.locator('#offerte').getAttribute('open'),'');
   assert.equal(await page.locator('#q-service').inputValue(),'LOGO!-domotica');
   await page.locator('button[data-channel="email"]').click();

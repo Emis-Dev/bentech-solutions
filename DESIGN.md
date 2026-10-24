@@ -242,3 +242,12 @@ A small text link in the hero gives the sourced Google score and leads to the re
 - **Don't** add invented ratings, metrics, credentials, decorative status signals or heading kickers.
 - **Don't** add service-card lift shadows, gradient lettering or a Vanta/WebGL backdrop.
 - **Don't** let a headline cross the controller's identifying face or remove spaces when reflowing copy.
+
+## Project guidance components — 24 October 2026
+
+- Audience entry points use an editorial definition list with one-pixel horizontal rules. Preserve the existing navy/blue identity and the three service categories.
+- The delivery overview uses a paper surface with one fine border; its rows describe agreed scope, not a fabricated project or compulsory extras. Stack labels above explanations on mobile.
+- The project starter is a navy section with full-width native disclosures and a text-file download. Expanded desktop guidance has two text columns; mobile uses a single reading column. Keep the examples explicitly illustrative.
+- FAQs use native details/summary with authored geometric plus/minus strokes, keyboard focus and visible answers without JavaScript. Do not add entrance effects or new motion loops to these sections.
+- The form retains the explicit email/WhatsApp handoff. The copy action uses the same message and provides a selectable read-only textarea when clipboard permission is unavailable. Preserve existing visitor text when using examples.
+- Verified location and business hours are plain contact information, never a live availability badge. New content uses 12–17px body/control text with existing Manrope, inset containers and 320px support.
