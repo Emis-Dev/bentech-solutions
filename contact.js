@@ -97,11 +97,16 @@
     const form = document.getElementById('quoteForm');
     const select = document.getElementById('q-service');
     document.querySelectorAll('a[href="#offerte"]').forEach(link => {
-      link.addEventListener('click', () => {
+      link.addEventListener('click', event => {
         if (!panel || !select) return;
+        if (event.button || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+        event.preventDefault();
         panel.open = true;
         if (link.dataset.serviceChoice) select.value = link.dataset.serviceChoice;
-        requestAnimationFrame(() => select.focus({ preventScroll: true }));
+        if (window.location.hash !== '#offerte') history.pushState(null, '', '#offerte');
+        const target = link.dataset.projectExample ? document.getElementById('q-details') : select;
+        target?.focus({ preventScroll: true });
+        target?.scrollIntoView({ behavior: 'instant', block: 'center' });
       });
     });
     form?.addEventListener('submit', event => handoff(event, select.value));

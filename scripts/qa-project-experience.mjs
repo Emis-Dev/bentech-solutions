@@ -40,6 +40,7 @@ try{
   assert.equal(await page.locator('#offerte').getAttribute('open'),'');
   assert.equal(await page.locator('#q-service').inputValue(),service);
   assert.ok((await page.locator('#q-details').inputValue()).includes(phrase));
+  assert.equal(await page.locator('#q-details').evaluate(e=>e===document.activeElement),true);
  }
  const draft='Geheime QA <script>voorbeeld</script> '+ 'x'.repeat(1950);
  await page.locator('#q-details').fill(draft);
@@ -48,6 +49,10 @@ try{
  assert.equal(await page.locator('#q-details').inputValue(),draft,'Existing draft must never be overwritten or appended past its limit');
  assert.match(await page.locator('#starterFeedback').innerText(),/behouden/);
  await page.locator('#q-name').fill('QA <voorbeeld>');await page.locator('#q-email').fill('qa@example.invalid');
+ await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
+ assert.equal(await page.locator('#q-name').inputValue(),'QA <voorbeeld>','Delayed autofocus must not steal typed name');
+ assert.equal(await page.locator('#q-email').inputValue(),'qa@example.invalid');
+ assert.equal(await page.locator('#q-details').inputValue(),draft,'Rapid field entry must not end up in the project description');
  await page.evaluate(()=>{window.__copied='';Object.defineProperty(navigator,'clipboard',{configurable:true,value:{writeText:async t=>{await new Promise(resolve=>setTimeout(resolve,80));window.__copied=t;}}});});
  await page.click('#copyRequest');
  await page.waitForFunction(()=>window.__copied.length>0);
@@ -62,7 +67,7 @@ try{
  assert.equal(await page.locator('.copy-fallback').getAttribute('readonly'),'');
  assert.equal(await page.locator('.form-handoff-status script').count(),0,'User text must not become markup');
  assert.deepEqual(dataRequests,[],'Copy/preparation must never transmit enquiry data');
- report.intake={threeExamples:true,servicePreselected:true,existingDraftPreserved:true,copy:true,clipboardDeniedFallback:true,noTransmission:true};
+ report.intake={threeExamples:true,servicePreselected:true,existingDraftPreserved:true,rapidFieldEntryPreserved:true,copy:true,clipboardDeniedFallback:true,noTransmission:true};
  const fiche=await context.request.get(base+'/assets/automation/projectfiche-bentech.txt');
  assert.equal(fiche.status(),200);assert.match(await fiche.text(),/info@bentechsolutions.be/);
  report.download={projectFiche:true};
