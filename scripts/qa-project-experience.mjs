@@ -48,13 +48,16 @@ try{
  assert.equal(await page.locator('#q-details').inputValue(),draft,'Existing draft must never be overwritten or appended past its limit');
  assert.match(await page.locator('#starterFeedback').innerText(),/behouden/);
  await page.locator('#q-name').fill('QA <voorbeeld>');await page.locator('#q-email').fill('qa@example.invalid');
- await page.evaluate(()=>{window.__copied='';Object.defineProperty(navigator,'clipboard',{configurable:true,value:{writeText:async t=>{window.__copied=t;}}});});
+ await page.evaluate(()=>{window.__copied='';Object.defineProperty(navigator,'clipboard',{configurable:true,value:{writeText:async t=>{await new Promise(resolve=>setTimeout(resolve,80));window.__copied=t;}}});});
  await page.click('#copyRequest');
+ await page.waitForFunction(()=>window.__copied.length>0);
+ await page.locator('.form-handoff-status').filter({hasText:'Aanvraag gekopieerd'}).waitFor();
  const text=await page.evaluate(()=>window.__copied);
  assert.ok(text.includes(draft)&&text.includes('PLC-automatisering'));
  assert.match(await page.locator('.form-handoff-status').innerText(),/nog niet ontvangen/);
  await page.evaluate(()=>{navigator.clipboard.writeText=async()=>{throw new Error('denied');};});
  await page.click('#copyRequest');
+ await page.locator('.copy-fallback').waitFor();
  assert.equal(await page.locator('.copy-fallback').inputValue(),text);
  assert.equal(await page.locator('.copy-fallback').getAttribute('readonly'),'');
  assert.equal(await page.locator('.form-handoff-status script').count(),0,'User text must not become markup');
