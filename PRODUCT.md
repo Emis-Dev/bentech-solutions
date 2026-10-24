@@ -20,6 +20,15 @@ Help visitors understand BenTech's three automation services, the path from func
 
 BenTech translates the customer's functional description into Siemens PLC or LOGO! logic, simulates the agreed operation, and supplies the agreed program with its documentation dossier.
 
+## Project guidance
+
+- Address machine builders/technical teams, installers/building managers, and owners of existing Siemens PLC or LOGO! logic. These are intended visitors, not claims of completed projects or qualifications.
+- Explain the possible program, operating description, agreed test points and handover documentation. Exact scope and dossier content are agreed before work; do not imply all extras or commissioning are automatically included.
+- Three project examples can prepare a local description and select the corresponding service. Preserve any existing visitor description, including near-limit drafts. Examples remain explicitly illustrative.
+- A downloadable plain-text project fiche and eight native FAQ disclosures help visitors prepare. FAQ and download work without JavaScript.
+- A copy-request action shares the same request-text builder as email/WhatsApp. Clipboard failure shows a selectable, read-only fallback. Copying or opening an application never means BenTech received a request. Nothing is stored by these helpers.
+- Tom confirmed on 24 October 2026: work can be remote or on site; BenTech is based in Temse. Hours: Monday–Friday 08:00–18:00, Saturday 09:00–14:00, Sunday closed. Do not turn these hours into a response-time or emergency-availability promise.
+
 ## Capabilities and constraints
 
 - Exactly three services: Siemens PLC programming, Siemens LOGO! domotics, and PLC/LOGO! troubleshooting.

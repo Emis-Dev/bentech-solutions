@@ -1,0 +1,42 @@
+BENTECH SOLUTIONS — PROJECTFICHE
+Siemens PLC-programmering, LOGO! en troubleshooting
+
+Vul in wat u al weet. Dit is een hulpmiddel voor uw aanvraag,
+geen opdrachtbevestiging of uitgewerkt technisch ontwerp.
+
+1. UW PROJECT
+Naam / bedrijf:
+Contactgegevens:
+Nieuwe besturing, LOGO!-toepassing of bestaande logica nakijken:
+Locatie van de installatie:
+Gewenste timing:
+
+2. GEWENSTE WERKING
+Wat moet de machine of installatie doen?
+Wat start de cyclus of schakeling?
+In welke volgorde moeten acties gebeuren?
+Wanneer moet iets stoppen?
+Wat moet gebeuren bij een afwijkende situatie?
+
+3. BESCHIKBARE INFORMATIE
+PLC- of LOGO!-type (indien bekend):
+Softwareversie (indien bekend):
+Beschikbare sensoren / ingangen / uitgangen:
+Bestaand programma, schema of functionele beschrijving:
+Bij een probleem: verwacht gedrag, werkelijk gedrag, foutmelding:
+
+4. AF TE SPREKEN VOOR DE START
+Welke functies horen bij de opdracht?
+Welk programma en welke documentatie wilt u ontvangen?
+Welke simulatie- en testpunten zijn nodig?
+Welke controles vragen aanwezigheid op locatie?
+Welke prijs en planning zijn afgesproken?
+
+BEZORG UW VRAAG
+E-mail: info@bentechsolutions.be
+Telefoon / WhatsApp: +32 486 32 86 45
+Website: https://bentechsolutions.be/
+
+Voeg bestanden rechtstreeks toe aan uw e-mail of WhatsApp.
+De website ontvangt of bewaart deze fiche niet.
+Deel geen wachtwoorden, toegangscodes of onnodige persoonsgegevens.
