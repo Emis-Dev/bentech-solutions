@@ -117,8 +117,8 @@ The system is restrained and specific: broad tonal fields, inset content, fine b
 - Navy and light surfaces alternate with a clear reading order.
 - Electric blue identifies action, focus and technical emphasis.
 - Self-hosted Manrope gives headings a compact, geometric voice.
-- The controller hero uses a real licensed photograph, with linked author and CC BY-SA credit. Application illustrations remain visibly illustrative.
-- Borders and tonal layering carry depth. The hero has one authored signal sequence; supporting interaction feedback stays brief.
+- The controller hero uses three licensed-source product images in the client-selected dark workshop mood. Attribution and adaptation details sit on the footer-linked photo credits page. Application illustrations remain visibly illustrative.
+- Borders and tonal layering carry depth. The hero has one authored photo sequence; supporting interaction feedback stays brief.
 
 ## Colors
 
@@ -215,7 +215,11 @@ A floating white panel with soft shadow contains equally available refusal and p
 
 ### Motion and Focus
 
-The hero photograph pans and scales gently over 24 seconds, alternating direction. A bounded SVG sequence traces input signals into logic and then outputs on a 6.4-second cycle. The figure identifies it as an illustration of control logic. A visible 44px pause/resume control controls both motions and preserves the visitor's pause choice across scrolling. IntersectionObserver and document visibility suspend loops outside the viewport and in hidden tabs. Without JavaScript, the photograph and diagram remain still and the inactive control is hidden. Reduced-motion preferences remove animation, transitions and smooth scrolling. Button color transitions last 0.18 seconds. Global keyboard focus uses the electric focus color; do not replace it with a hover-only cue.
+Three product images form the hero sequence: S7-1200, LOGO!, and a real S7-1500 detail. The first two scenes use the customer reference's dark workshop, restrained blue light and product emphasis. Each image drifts gently over 24 seconds while active; eight-second rotation uses a 0.9-second crossfade. The headline and quote action stay fixed. The former SVG-console overlay is removed to let the hardware lead.
+
+A compact, inset navy control bar contains the current photo name, count, previous/next controls, three direct selectors and pause/resume. Manual selection, keyboard arrows and horizontal swipe pause autoplay. Reduced motion disables automatic rotation, camera motion and spatial transitions while preserving manual photo choice. Hidden tabs, offscreen states and hover over controls suspend motion. A failed image is skipped. Without JavaScript the first image remains visible and controls stay hidden. Source text is absent from the hero; the footer's Fotocredits route retains the sources and licences.
+
+On tablet the controller frame shifts right to keep identifying product faces clear of the headline. At 740px and below, copy, image and controls stack; full mobile product framing uses dedicated 960px variants. Focus is visible and all arrow/pause targets are 44px; tablet direct selectors are 32 by 44px, becoming 44 by 44px when stacked. This is scoped browser validation, not general accessibility certification.
 
 ### Google Review Proof
 

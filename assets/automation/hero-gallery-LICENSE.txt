@@ -1,0 +1,22 @@
+BenTech hero gallery source credits
+
+hero-s7-scene.webp and hero-s7-scene-mobile.webp:
+Based on Simatic S7-1200.JPG by UlrichAAB.
+https://commons.wikimedia.org/wiki/File:Simatic_S7-1200.JPG
+CC BY-SA 3.0: https://creativecommons.org/licenses/by-sa/3.0/
+Digitally composed environment/lighting; resized and encoded as WebP.
+Derivative remains CC BY-SA 3.0. No author/manufacturer endorsement implied.
+
+hero-logo-scene.webp and hero-logo-scene-mobile.webp:
+Based on Siemens sps logo 8 12-24 RCE-03.jpg by MakeMagazinDE.
+https://commons.wikimedia.org/wiki/File:Siemens_sps_logo_8_12-24_RCE-03.jpg
+CC BY-SA 4.0: https://creativecommons.org/licenses/by-sa/4.0/
+Digitally composed environment/lighting; resized and encoded as WebP.
+Derivative remains CC BY-SA 4.0. No author/manufacturer endorsement implied.
+
+hero-s7-1500.webp and hero-s7-1500-mobile.webp:
+S71500.JPG by Palatinatian.
+https://commons.wikimedia.org/wiki/File:S71500.JPG
+CC BY 3.0: https://creativecommons.org/licenses/by/3.0/
+Resized and encoded as WebP; responsive CSS crop/overlay, no hardware retouch.
+No BenTech project or author/manufacturer endorsement claim.
