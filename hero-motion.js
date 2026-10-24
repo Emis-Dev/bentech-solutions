@@ -106,3 +106,44 @@
   window.addEventListener('pageshow', sync);
   window.addEventListener('pagehide', () => { clearTimeout(timer); hero.dataset.motion = 'paused'; });
 })();
+
+// One short signal follows the delivery steps; all copy stays visible and still.
+(() => {
+  'use strict';
+  const steps = document.querySelector('.process-steps');
+  if (!steps || !('IntersectionObserver' in window)) return;
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let started = false;
+  let visible = false;
+  let suspended = false;
+  let complete = false;
+  const finish = () => {
+    complete = true;
+    steps.classList.remove('process-motion-ready');
+    steps.dataset.processMotion = 'complete';
+    observer.disconnect();
+  };
+  const sync = () => {
+    if (complete) return;
+    if (reduced.matches) { finish(); return; }
+    steps.dataset.processMotion = started && visible && !document.hidden && !suspended ? 'running' : 'paused';
+  };
+  const observer = new IntersectionObserver(entries => {
+    const entry = entries[0];
+    visible = entry.isIntersecting;
+    if (!started && entry.intersectionRatio >= 0.3 && !reduced.matches) {
+      started = true;
+      steps.classList.add('process-motion-ready');
+    }
+    sync();
+  }, { threshold: [0, 0.3] });
+  observer.observe(steps);
+  steps.addEventListener('animationend', event => {
+    if (event.animationName === 'process-node' && event.target === steps.lastElementChild.querySelector('.step-number')) finish();
+  });
+  document.addEventListener('visibilitychange', sync);
+  reduced.addEventListener('change', sync);
+  window.addEventListener('pagehide', () => { suspended = true; sync(); });
+  window.addEventListener('pageshow', () => { suspended = false; sync(); });
+  sync();
+})();
