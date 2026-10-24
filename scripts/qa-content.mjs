@@ -8,7 +8,7 @@ assert.match(html,/4,9/);
 assert.match(html,/Eduardo Bilterijst/);
 assert.doesNotMatch(html,/image-label|MakeMagazinDE|signal-console/);
 assert.match(html,/href="\/fotocredits\/"/);
-assert.match(html,/niet specifiek over PLC- of LOGO!-programmering/);
+assert.match(html,/Google-reviews over onze eerdere elektrotechnische dienstverlening\./);
 for(const path of ['index.html','privacy/index.html','404.html','fotocredits/index.html']){
  const body=await readFile(path,'utf8');
  assert.equal([...body.matchAll(/<h1[ >]/g)].length,1,path);
