@@ -17,3 +17,5 @@ FORM: retained prototype composition selected directly by Tom; no new visual dir
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
 
 Acceptance: thresholds, retained pump state, missing-signal output, schedule/manual lighting, keyboard tabs, reduced motion, visibility pause, no-script, shared menu/consent, responsive layout and production source parity. No new rasters, dependencies or data collection.
+
+Responsive refinement: below 950px the small labels within the scaled pump SVG are replaced by a 12px HTML legend directly below the drawing. The large numeric readout stays in the diagram. The lighting diagram's duplicate small phrase is hidden while its readable caption and rule remain. The run button uses the existing #0077bf brand surface for readable white text.

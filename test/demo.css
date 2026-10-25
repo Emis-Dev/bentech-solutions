@@ -181,4 +181,9 @@
 .demo-page .demo-note{max-width:none}
 .demo-page .scene-caption{font-size:11px;flex-wrap:wrap}
 .demo-page .demo-note,.demo-page .inputs .motion-note{font-size:12px}
-
+.demo-page .run{background:#0077bf}
+.demo-page .diagram-legend{display:none}
+@media(max-width:950px){
+ .demo-page .plant .diagram-label,.demo-page .plant .plc-label,.demo-page .plant .threshold,.demo-page .light-scene .diagram-label{display:none}
+ .demo-page .diagram-legend{display:block;max-width:none;margin:0;padding:4px 20px 14px;color:#b2c6d5;font-size:12px;line-height:1.7}
+}

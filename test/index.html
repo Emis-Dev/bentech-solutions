@@ -46,6 +46,7 @@
        <rect class="plc" x="635" y="110" width="130" height="314" rx="5"/><path class="plc-divider" d="M635 155H765M635 360H765"/><text class="plc-label" x="651" y="138">BESTURING</text>
        <circle class="led" id="led-high" cx="655" cy="200" r="5"/><text class="plc-label" x="671" y="204">Hoog</text><circle class="led" id="led-low" cx="655" cy="250" r="5"/><text class="plc-label" x="671" y="254">Laag</text><circle class="led" id="led-pump" cx="655" cy="310" r="5"/><text class="plc-label" x="671" y="314">Pomp</text><text class="plc-label muted" x="651" y="393">I/O · DEMO</text>
       </svg>
+      <p class="diagram-legend">Water stroomt via de pomp naar de tank.<br>Niveaus: laag &lt;25% · hoog &gt;75%.<br>Besturingssignalen van boven naar onder: hoog, laag, pomp.</p>
       <div class="scene-caption"><span>Ingang → logica → uitgang</span><span id="simulation-state">Simulatie gepauzeerd</span></div>
      </div>
      <div class="result"><div class="result-label">De reactie</div><p class="output-state" id="pump-state">Pomp aan</p><p id="pump-explanation">Het niveau is laag. De voorbeeldlogica schakelt de pomp in.</p><div class="rule"><h3>De regel erachter</h3><p>Onder 25% → aan.<br>Boven 75% → uit.<br>Daartussen blijft de vorige toestand behouden.</p></div><p class="fault-explanation" id="fault-explanation" hidden>In deze demo blokkeert een ontbrekend signaal de pomp. De juiste foutreactie voor een echte installatie wordt per project bepaald.</p><div class="sr-status" id="pump-announcement" role="status" aria-live="polite"></div></div>
