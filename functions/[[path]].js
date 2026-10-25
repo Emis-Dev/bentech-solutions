@@ -38,6 +38,10 @@ export async function onRequest(context) {
     url.hostname = 'bentechsolutions.be';
     return Response.redirect(url.href, 301);
   }
+  if (url.pathname === '/test' || url.pathname === '/test/index.html') {
+    url.pathname = '/test/';
+    return Response.redirect(url.href, 301);
+  }
   if (url.pathname === '/robots.txt') {
     return new Response('User-agent: *\nAllow: /\nSitemap: https://bentechsolutions.be/sitemap.xml\n', {
       headers: { 'Content-Type': 'text/plain; charset=utf-8' }

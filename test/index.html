@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="nl-BE">
+<head>
+ <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+ <title>PLC &amp; LOGO! — interactieve demo | BenTech Solutions</title>
+ <meta name="description" content="Probeer zelf voorbeeldlogica voor pompsturing en LOGO!-verlichting. Verander een ingang en bekijk hoe de uitgang reageert.">
+ <meta name="robots" content="noindex,follow"><meta name="theme-color" content="#09141e">
+ <link rel="canonical" href="https://bentechsolutions.be/test/">
+ <link rel="icon" href="/assets/automation/mark.svg" type="image/svg+xml">
+ <link rel="preload" href="/assets/automation/manrope-variable.ttf" as="font" type="font/ttf" crossorigin>
+ <link rel="stylesheet" href="/automation.css?v=20261024-hero-slider">
+ <link rel="stylesheet" href="/test/demo.css?v=20261025">
+ <script src="/consent.js?v=20261023" defer></script>
+ <script src="/contact.js?v=20261024-project2" defer></script>
+ <script src="/test/demo.js?v=20261025" type="module"></script>
+</head>
+<body>
+<svg class="icon-definitions" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs><symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></symbol></defs></svg><a class="skip-link" href="#inhoud">Naar de inhoud</a>  <div class="hero-shell" id="home">
+    <header class="site-header container">
+      <a class="brand" href="/#home" aria-label="BenTech Solutions, home"><img src="/assets/automation/mark.svg" width="35" height="45" alt=""><span>BENTECH<small>SOLUTIONS</small></span></a>
+      <button class="menu-toggle" type="button" id="mobileToggle" aria-label="Menu openen" aria-controls="mainNav" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="main-nav" id="mainNav" aria-label="Hoofdnavigatie">
+        <a href="/#home" >Home</a><a href="/#diensten">Diensten</a><a href="/#werkwijze">Werkwijze</a><a href="/#toepassingen">Toepassingen</a><a href="/test/" aria-current="page">Demo</a><a href="/#contact">Contact</a>
+        <a class="button button-outline nav-quote" href="/#offerte">Offerte aanvragen <svg class="icon"><use href="#i-arrow"/></svg></a>
+      </nav>
+    </header>
+  </div>
+<main class="demo-page" id="inhoud">
+  <section class="shell intro" aria-labelledby="title"><div><h1 id="title">PLC-logica,<br><span>zichtbaar gemaakt.</span></h1></div><div class="intro-copy"><p>Verander een ingang. Bekijk hoe de uitgang reageert.</p><p>Twee interactieve voorbeelden maken tastbaar wat BenTech programmeert voor machines en compacte LOGO!-toepassingen.</p><a href="#demo">Probeer het zelf <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16m-6-6 6 6 6-6"/></svg></a></div></section>
+  <section class="shell lab" id="demo" aria-label="Interactieve voorbeeldlogica">
+   <fieldset id="demo-controls" disabled><legend class="sr-status">Interactieve voorbeelden</legend>
+   <div class="lab-top"><div role="tablist" aria-label="Kies een voorbeeld"><button id="tab-pump" type="button" role="tab" aria-selected="true" aria-controls="pump-panel">Pompsturing</button><button id="tab-light" type="button" role="tab" aria-selected="false" aria-controls="light-panel" tabindex="-1">LOGO! verlichting</button></div><span class="local-note"><span aria-hidden="true"></span> Alleen in uw browser</span></div>
+   <div id="pump-panel" role="tabpanel" aria-labelledby="tab-pump">
+    <div class="demo-grid">
+     <div class="inputs"><h2>Uw ingangen</h2><p>Een laag niveau start de pomp. Een hoog niveau stopt ze.</p><label for="level">Waterniveau <output id="level-value" for="level">20%</output></label><input id="level" type="range" min="0" max="100" value="20" step="1"><div class="range-labels"><span>Leeg</span><span>Vol</span></div><label class="check-row"><input id="consumption" type="checkbox" checked><span>Simuleer waterverbruik</span></label><label class="check-row"><input id="fault" type="checkbox"><span>Simuleer ontbrekend signaal</span></label><button class="run" id="run" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 4 12 8-12 8Z"/></svg><span>Start simulatie</span></button><button class="reset" id="reset" type="button">Terug naar het begin</button><p class="motion-note" id="motion-note">Versnelde voorbeeldwerking. U bepaalt wanneer de beweging start.</p></div>
+     <div class="machine" id="pump-stage" data-pump="on" data-moving="false" data-fault="false">
+      <svg class="plant" viewBox="0 0 800 500" role="img" aria-labelledby="plant-title plant-desc"><title id="plant-title">Illustratieve pompsturing met niveausignalen</title><desc id="plant-desc">Een tank, pomp en besturing. Het waterniveau is instelbaar; de pomp start onder 25 procent en stopt boven 75 procent. Het resultaat staat ook in tekst naast de tekening.</desc><defs><linearGradient id="water" x2="0" y2="1"><stop stop-color="#0786bb"/><stop offset="1" stop-color="#084266"/></linearGradient><clipPath id="tank-clip"><rect x="322" y="125" width="236" height="285" rx="8"/></clipPath></defs>
+       <path class="pipe" d="M45 430H160V145H322"/><path class="flow" d="M45 430H160V145H322"/>
+       <path class="tank" d="M312 110H568V412Q568 424 556 424H324Q312 424 312 412Z"/>
+       <g clip-path="url(#tank-clip)"><rect id="water-fill" x="322" y="125" width="236" height="285" fill="url(#water)"/></g>
+       <path class="tank-lip" d="M302 110H578"/>
+       <path class="signal-wire" d="M568 200H635M568 340H635"/><circle class="sensor" id="sensor-high" cx="568" cy="200" r="7"/><circle class="sensor" id="sensor-low" cx="568" cy="340" r="7"/>
+       <text class="threshold" x="587" y="184">75%</text><text class="threshold" x="587" y="324">25%</text>
+       <rect class="readout-bg" x="377" y="251" width="126" height="68" rx="6"/><text class="tank-level" id="tank-level" x="440" y="298" text-anchor="middle">20%</text>
+       <circle class="pump-ring" cx="160" cy="330" r="43"/><g class="rotor"><path d="M160 305V355M135 330H185"/><circle cx="160" cy="330" r="11"/></g><text class="diagram-label" x="160" y="400" text-anchor="middle">POMP</text><text class="diagram-label muted" x="45" y="468">AANVOER</text>
+       <rect class="plc" x="635" y="110" width="130" height="314" rx="5"/><path class="plc-divider" d="M635 155H765M635 360H765"/><text class="plc-label" x="651" y="138">BESTURING</text>
+       <circle class="led" id="led-high" cx="655" cy="200" r="5"/><text class="plc-label" x="671" y="204">Hoog</text><circle class="led" id="led-low" cx="655" cy="250" r="5"/><text class="plc-label" x="671" y="254">Laag</text><circle class="led" id="led-pump" cx="655" cy="310" r="5"/><text class="plc-label" x="671" y="314">Pomp</text><text class="plc-label muted" x="651" y="393">I/O · DEMO</text>
+      </svg>
+      <p class="diagram-legend">Water stroomt via de pomp naar de tank.<br>Niveaus: laag &lt;25% · hoog &gt;75%.<br>Besturingssignalen van boven naar onder: hoog, laag, pomp.</p>
+      <div class="scene-caption"><span>Ingang → logica → uitgang</span><span id="simulation-state">Simulatie gepauzeerd</span></div>
+     </div>
+     <div class="result"><div class="result-label">De reactie</div><p class="output-state" id="pump-state">Pomp aan</p><p id="pump-explanation">Het niveau is laag. De voorbeeldlogica schakelt de pomp in.</p><div class="rule"><h3>De regel erachter</h3><p>Onder 25% → aan.<br>Boven 75% → uit.<br>Daartussen blijft de vorige toestand behouden.</p></div><p class="fault-explanation" id="fault-explanation" hidden>In deze demo blokkeert een ontbrekend signaal de pomp. De juiste foutreactie voor een echte installatie wordt per project bepaald.</p><div class="sr-status" id="pump-announcement" role="status" aria-live="polite"></div></div>
+    </div>
+   </div>
+   <div id="light-panel" role="tabpanel" aria-labelledby="tab-light" hidden>
+    <div class="demo-grid">
+     <div class="inputs"><h2>Uw schakelmoment</h2><p>Een tijdschema en een handmatige keuze werken samen.</p><label for="hour">Tijdstip <output id="hour-value" for="hour">20:00</output></label><input id="hour" type="range" min="0" max="23" value="20"><div class="range-labels"><span>00:00</span><span>23:00</span></div><label class="check-row"><input id="manual" type="checkbox"><span>Handmatig inschakelen</span></label><p class="schedule">Voorbeeldschema<br><strong>18:00 tot 23:00</strong></p><a class="service-link" href="/?dienst=LOGO!%2Ddomotica#offerte">Een LOGO!-vraag bespreken <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></a></div>
+     <div class="machine light-scene" id="light-stage" data-light="on"><svg viewBox="0 0 800 500" role="img" aria-label="Illustratie van verlichting die reageert op het tijdschema en de handmatige schakelaar"><path class="building" d="M135 410V180L400 80l265 100v230Z"/><path class="building-line" d="M135 180H665M400 80v100M200 410V270h70v140M555 410V270h70v140"/><g class="light-beams"><path d="m260 235-50 130h100Zm140 0-50 130h100Zm140 0-50 130h100Z"/></g><g class="lamps"><path d="M260 180v40m-27 15h54l-14-15h-26Zm140-55v40m-27 15h54l-14-15h-26Zm140-55v40m-27 15h54l-14-15h-26Z"/></g><rect class="readout-bg" x="330" y="300" width="140" height="65" rx="6"/><text class="tank-level" x="400" y="344" text-anchor="middle" id="clock">20:00</text><text class="diagram-label" x="400" y="458" text-anchor="middle">SCHEMA OF HANDMATIGE BEDIENING</text></svg><div class="scene-caption"><span>Compacte schakellogica</span><span>LOGO! · voorbeeld</span></div></div>
+     <div class="result"><div class="result-label">De reactie</div><p class="output-state" id="light-state">Verlichting aan</p><p id="light-explanation">Het is tussen 18:00 en 23:00. Het tijdschema schakelt de verlichting in.</p><div class="rule"><h3>De regel erachter</h3><p>Tijdschema actief<br>of handmatig ingeschakeld<br>→ verlichting aan.</p></div><div class="sr-status" id="light-announcement" role="status" aria-live="polite"></div></div>
+    </div>
+   </div>
+   </fieldset>
+   <p class="demo-note">Dit is illustratieve softwarelogica. De pagina is niet verbonden met een PLC, LOGO! of echte installatie.</p>
+   <noscript><p class="nojs">De interactieve demonstratie heeft JavaScript nodig. BenTech helpt met PLC-programmering, LOGO!-toepassingen en troubleshooting. <a href="/#diensten">Bekijk de diensten op de website.</a></p></noscript>
+  </section>
+  <section class="shell next" aria-labelledby="next-title"><div><h2 id="next-title">En wat moet úw<br>besturing doen?</h2><p>Een pompsturing, machinevolgorde of compacte gebouwfunctie begint bij de gewenste werking. BenTech bespreekt de scope, programmeert de afgesproken logica en levert het programma met documentatie.</p></div><div class="next-actions"><a class="cta" id="project-link" href="/?dienst=PLC-automatisering#offerte">Bespreek uw toepassing <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></a><a class="plain-link" href="/#werkwijze">Zo werkt BenTech</a></div></section>
+ </main>
+  <footer class="site-footer container">
+    <div><p>© 2026 BenTech Solutions CommV <span>·</span> BTW BE 1025.714.523</p><p class="trademark-note">Siemens en LOGO! zijn merknamen van hun respectieve eigenaar. BenTech Solutions is een onafhankelijke dienstverlener.</p></div>
+    <div class="footer-links"><a href="/privacy/">Privacy</a><a href="/fotocredits/">Fotocredits</a><button type="button" id="manageMarketingConsent">Cookievoorkeuren</button><a href="https://web.tom.cool" target="_blank" rel="noopener noreferrer">Website door tom.cool</a></div>
+  </footer>
+  <aside class="consent-banner" id="marketingConsentBanner" aria-labelledby="marketingConsentTitle" hidden>
+    <div><h2 id="marketingConsentTitle">Uw privacy, uw keuze</h2><p>Met uw toestemming gebruikt BenTech een Google Ads-tag om campagnes en websitebezoek te meten. Weigeren heeft geen invloed op de werking. <a href="/privacy/">Meer over privacy</a></p></div>
+    <div class="consent-actions"><button type="button" class="button button-outline" id="rejectMarketingConsent">Alles weigeren</button><button type="button" class="button button-primary" id="acceptMarketingConsent">Marketing toestaan</button></div>
+  </aside>
+
+</body>
+</html>
