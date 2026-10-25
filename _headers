@@ -22,3 +22,7 @@
 /*
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
+
+/test/*
+  Cache-Control: no-cache
+  X-Robots-Tag: noindex, follow

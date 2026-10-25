@@ -40,6 +40,7 @@ BenTech translates the customer's functional description into Siemens PLC or LOG
 - Personal-data fields start disabled and become usable only after the JavaScript handoff handler is attached. Direct email, telephone and WhatsApp links remain available; the form explains the JavaScript requirement when scripts are unavailable.
 - Google marketing measurement requires explicit opt-in. A handoff is an interaction, not a received lead. Contact analytics carry channel, service and form identifiers, never names, email addresses, telephone numbers or the project description.
 - Internal product/design documentation and raster provenance sidecars are blocked from public routing.
+- `/test/` is a public, noindex review page with local illustrative pump and LOGO! lighting logic. It reuses the site navigation, consent and footer; makes no hardware connection; stores no demo input; and links to the existing quote handoff. It is omitted from the sitemap while it remains a test page.
 
 ## Brand commitments
 
