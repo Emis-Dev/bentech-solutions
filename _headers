@@ -20,8 +20,19 @@
   Cache-Control: no-cache
 
 /*
+  Content-Security-Policy: base-uri 'none'; frame-ancestors 'none'; form-action 'self'; object-src 'none'
+  Permissions-Policy: camera=(), geolocation=(), microphone=(), payment=(), usb=()
   X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  X-Permitted-Cross-Domain-Policies: none
   Referrer-Policy: strict-origin-when-cross-origin
+  Strict-Transport-Security: max-age=31536000
+
+https://bentech-solutions.pages.dev/*
+  X-Robots-Tag: noindex, follow
+
+https://:version.bentech-solutions.pages.dev/*
+  X-Robots-Tag: noindex, follow
 
 /test/*
   Cache-Control: no-cache
