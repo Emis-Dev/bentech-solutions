@@ -8,72 +8,80 @@ web
 
 ## Users
 
-- People and businesses with a Siemens PLC or Siemens LOGO! application to program.
-- Visitors with an existing PLC or LOGO! program that behaves unexpectedly.
-- Visitors who can describe the required operation and want to discuss scope before requesting a quote.
+- Particulieren in and around Antwerp who need electrical help or a planned energy installation.
+- Small and medium-sized businesses in the same region.
+- Mobile visitors arriving from Google Search or Google Ads who want to call, use WhatsApp, or request a quote.
 
 ## Product purpose
 
-Help visitors understand BenTech's three automation services, the path from functional description to delivered program, and the direct route to discuss their application.
+Help visitors quickly recognise the relevant BenTech service and take the right next step: call for urgent electrical help, or request advice and a quote for a planned installation.
 
 ## Positioning
 
-BenTech translates the customer's functional description into Siemens PLC or LOGO! logic, simulates the agreed operation, and supplies the agreed program with its documentation dossier.
+BenTech combines electrical troubleshooting with planned energy solutions and offers direct contact through one local business.
 
-## Project guidance
+## Operating context
 
-- Address machine builders/technical teams, installers/building managers, and owners of existing Siemens PLC or LOGO! logic. These are intended visitors, not claims of completed projects or qualifications.
-- Explain the possible program, operating description, agreed test points and handover documentation. Exact scope and dossier content are agreed before work; do not imply all extras or commissioning are automatically included.
-- Three project examples can prepare a local description and select the corresponding service. Preserve any existing visitor description, including near-limit drafts. Examples remain explicitly illustrative.
-- A downloadable plain-text project fiche and eight native FAQ disclosures help visitors prepare. FAQ and download work without JavaScript.
-- A copy-request action shares the same request-text builder as email/WhatsApp. Clipboard failure shows a selectable, read-only fallback. Copying or opening an application never means BenTech received a request. Nothing is stored by these helpers.
-- Tom confirmed on 24 October 2026: work can be remote or on site; BenTech is based in Temse. Hours: Monday–Friday 08:00–18:00, Saturday 09:00–14:00, Sunday closed. Do not turn these hours into a response-time or emergency-availability promise.
+- Emergency visitors need a fast, prominent call path.
+- Visitors researching charging stations, home batteries, or solar panels need a focused explanation and a low-friction quote path.
+- The practical service area used for current marketing is a radius of about 60 kilometres around Antwerp, with 70 kilometres as the outer limit.
+- Marketing and conversion tracking must remain consent-gated.
 
 ## Capabilities and constraints
 
-- Exactly three services: Siemens PLC programming, Siemens LOGO! domotics, and PLC/LOGO! troubleshooting.
-- Four delivery steps: functional description and scope; programming; simulation and test; delivery of the agreed program and dossier.
-- The homepage, privacy page and 404 page use custom static HTML, CSS and JavaScript. A Pages Function handles canonical routing, retired routes, robots and sitemap responses.
-- The current relaunch replaces the former electrician and energy presentation. Former service paths and division hosts route to the new services. They do not establish continuing offers.
-- Visitors choose a service and describe their hardware, required behaviour and timing. The form can prepare an email or WhatsApp draft; the visitor checks and sends it in that application.
-- The website does not send, receive or store enquiries and must never confirm that BenTech received a request.
-- Personal-data fields start disabled and become usable only after the JavaScript handoff handler is attached. Direct email, telephone and WhatsApp links remain available; the form explains the JavaScript requirement when scripts are unavailable.
-- Google marketing measurement requires explicit opt-in. A handoff is an interaction, not a received lead. Contact analytics carry channel, service and form identifiers, never names, email addresses, telephone numbers or the project description.
-- Internal product/design documentation and raster provenance sidecars are blocked from public routing.
-- `/test/` is a public, noindex review page with local illustrative pump and LOGO! lighting logic. It reuses the site navigation, consent and footer; makes no hardware connection; stores no demo input; and links to the existing quote handoff. It is omitted from the sitemap while it remains a test page.
+- Custom static HTML, CSS, and JavaScript; no CMS or application build step.
+- Modern light architectural visual identity: clean white/slate surfaces with authoritative emerald signals, crisp typography, and high-trust proof patterns.
+- Homepage leads with six plain-language services under BenTech Solutions. Division names are secondary, while their existing subdomains remain available.
+- Quote requests use a short form with service, name, phone, email and postcode or municipality. WhatsApp and email are explicit handoffs; the website does not send or store requests and cannot confirm receipt.
+- Dedicated apex pages cover electrical installations and the company. Real project galleries require actual installation photographs and publication evidence.
+- Create dedicated pages for charging stations, home batteries, and solar panels.
+- Preserve the desktop-only Vanta homepage effect and provide division-themed desktop Vanta topology effects across all 5 subdomains, while keeping mobile runtimes completely lean.
+- Known contact details: BenTech Solutions CommV, +32 486 32 86 45, info@bentechsolutions.be.
+- Do not invent brands, prices, grants, guarantees, accreditations, product specifications, installation ownership, or completed-project claims.
+- Public imagery is illustrative and must not be presented as a real founder, employee portrait or BenTech case study. Personal founder and charging-station photos are removed from this proposed presentation.
 
 ## Brand commitments
 
-- Direct, practical Dutch copy.
-- The client-selected dark industrial reference: navy, electric blue, bold Manrope and tangible controller imagery.
-- Public identity remains BenTech Solutions CommV, BTW BE 1025.714.523, +32 486 32 86 45, info@bentechsolutions.be and https://bentechsolutions.be/.
-- BenTech is an independent service provider; Siemens and LOGO! are their owners' trademarks.
-- The hero cycles through three Siemens product images inspired by the customer-supplied dark industrial examples. The S7-1200 and LOGO! scenes are digitally composed product illustrations based on licensed real photographs; the S7-1500 image is an actual photograph. Author, source, licence and modification details are on /fotocredits/, linked discreetly from the footer. No source-credit overlay sits on the hero. These images are not BenTech project evidence, certifications or an employee portrait.
-- No AI service references, old energy offers, invented projects, reviews, statistics, accreditations, guarantees or 24/7 promises.
-- The homepage displays BenTech's existing Google reputation (4.9/5, 13 reviews, checked 24 October 2026). Eduardo Bilterijst's review is featured, with historical reviews by Ikram Ikram and Walid Milad. The source links and visible earlier-electrical-service context must remain; these reviews do not establish PLC/LOGO! project experience. No self-serving review schema or Google widget is used.
-- A native three-image hero carousel replaces the former diagram overlay. Pictures crossfade every eight seconds with gentle camera motion; next/previous, direct selection, keyboard arrows and horizontal swipe work. Manual navigation pauses autoplay until explicitly resumed. Reduced motion keeps manual switching available while disabling autoplay and camera motion; hidden/offscreen states stop the timer and loops. No-script shows the first image with no dead controls. No external carousel runtime or hardware connection is used. Responsive mobile image variants keep the gallery small.
-- Contract, customer finance and billing information has no place on public pages.
+- Direct and practical Dutch copy.
+- Clear distinction between urgent interventions and planned energy projects.
+- Crisp architectural light canvas and surfaces, refined emerald accents, and Plus Jakarta Sans typography.
+- Mobile-first contact options without hiding essential information.
 
-## Evidence and acceptance boundaries
+## Evidence on hand
 
-- The visual authority and current scope are recorded in `.impeccable/surfaces/automation.md`; the signed and archived customer addendum is retained in the customer dossier.
-- The implemented system is recorded in `DESIGN.md` and `.impeccable/design.json`.
-- Shipping rasters under `assets/automation` retain source or exact prompt provenance sidecars. Font files are self-hosted Manrope with the OFL licence.
-- Rendered review states and browser evidence are under `.impeccable/review`. Source, local QA and review artifacts do not by themselves establish production publication or enquiry receipt.
-- This relaunch does not authorise DNS, email, billing or customer-account changes.
+- Existing homepage content and service descriptions.
+- Illustrative installer image at `assets/installateur-sfeerbeeld-20260904.webp` (AI-generated on 4 September 2026).
+- Illustrative service images for home batteries and solar panels.
+- Existing quote form, telephone links, WhatsApp links, consent controls, and Google Ads call-conversion implementation.
+- Official Google Business Profile checked on 2 September 2026 at `https://www.google.com/maps?cid=5783644159230400203`: 4.9 out of 5 from 13 reviews, comprising twelve five-star reviews and one four-star review.
+- Short attributed review excerpts may be shown as a dated snapshot when they link back to the official Google listing; reviewer names and relative dates must match the source at the time of the check.
 
 ## Product principles
 
-1. Keep the three services and the delivery model understandable before asking for contact details.
-2. Use the functional description to establish scope; do not imply unspecified hardware installation, commissioning, response times or support coverage.
-3. Make only claims supported by current customer facts.
-4. Keep direct contact usable on small screens and when form scripting is unavailable.
-5. Keep consent optional and handoff status explicit.
+1. Give each visitor one clear route based on their intent.
+2. Keep urgent help and planned projects visibly separate.
+3. Make only claims supported by known project facts.
+4. Keep direct contact and quote requests easy on mobile.
+5. Load marketing tracking only after explicit consent.
 
 ## Accessibility and inclusion
 
-- Semantic headings, landmarks, labels and native form validation.
-- Keyboard-operable navigation and quote disclosure, visible focus states and an Escape path from the mobile menu.
-- Responsive layouts down to 320px and readable content without horizontal overflow.
-- Reduced-motion support and descriptive illustration text.
-- Browser evidence is scoped acceptance evidence, not a comprehensive assistive-technology audit.
+- Semantic headings and landmarks.
+- Keyboard-operable navigation and forms with visible focus states.
+- Sufficient colour contrast and readable responsive type.
+- Respect reduced-motion preferences.
+- Descriptive image text and meaningful link labels.
+
+## Open product decisions
+
+- Preferred equipment brands and product ranges.
+- Financing, grants, warranties, maintenance plans, and exact lead times.
+- Whether BenTech performs every installation entirely in-house or uses partners for parts of the work.
+- Reviewer permission for broader testimonial reuse, an automated Google review feed, certifications, and project case studies for these services.
+
+## Company presentation - proposed 4 September 2026
+
+- Tom requested removal of personal photos and name references on behalf of the client.
+- This implementation uses BenTech as the public speaker and labels the new installer visual as illustrative.
+- A fictional Joris is not asserted to be the real founder. That part of the requested identity substitution remains unimplemented.
+- Existing source-attributed reviews and legal company details remain intact.

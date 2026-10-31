@@ -1,3 +1,8 @@
+/**
+ * Cloudflare Pages Functions Edge Router
+ * Routes subdomains (e.g. klimaatplus.bentechsolutions.be) to their dedicated division folder (/klimaatplus/)
+ */
+
 export const SECURITY_HEADERS = Object.freeze({
   'Content-Security-Policy': "base-uri 'none'; frame-ancestors 'none'; form-action 'self'; object-src 'none'",
   'Permissions-Policy': 'camera=(), geolocation=(), microphone=(), payment=(), usb=()',
@@ -8,78 +13,167 @@ export const SECURITY_HEADERS = Object.freeze({
   'X-Permitted-Cross-Domain-Policies': 'none'
 });
 
-function withSecurityHeaders(response, url) {
+// Preserve the response protection added after the historical site release.
+export async function onRequest(context) {
+  const url = new URL(context.request.url);
+  const response = await routeRequest(context, url);
   const headers = new Headers(response.headers);
   for (const [name, value] of Object.entries(SECURITY_HEADERS)) headers.set(name, value);
   if (url.hostname.endsWith('.pages.dev') || /^\/test(?:\/|$)/.test(url.pathname)) {
     headers.set('X-Robots-Tag', 'noindex, follow');
   }
-  return new Response(response.body, {
-    status: response.status,
-    statusText: response.statusText,
-    headers
-  });
+  return new Response(response.body, { status: response.status, statusText: response.statusText, headers });
 }
 
-function secureRedirect(url) {
-  return withSecurityHeaders(Response.redirect(url.href, 301), url);
-}
-
-/** Canonical host and retirement of the former energy-service site. */
-export async function onRequest(context) {
-  const url = new URL(context.request.url);
+async function routeRequest(context, url) {
   const hostname = url.hostname.toLowerCase();
+
   let publicPath;
   try {
     const decoded = decodeURIComponent(url.pathname).replaceAll('\\', '/').replace(/^\/+/, '/');
     publicPath = new URL(`https://route.invalid${decoded}`).pathname;
   } catch {
-    return withSecurityHeaders(new Response('Ongeldig adres', { status: 400 }), url);
+    return new Response('Ongeldig adres', { status: 400 });
   }
-  // Development briefs and asset provenance stay in source control, not public pages.
   if (/^\/(?:\.|(?:scripts|scratch)(?:\/|$))/.test(publicPath) ||
       /^\/(?:PRODUCT|DESIGN|README)\.md$/i.test(publicPath) ||
-      publicPath.endsWith('.webp.json')) {
-    return withSecurityHeaders(new Response('Pagina niet gevonden', { status: 404 }), url);
+      publicPath.endsWith('.webp.json') ||
+      /^\/(?:test|fotocredits|privacy)(?:\/|$)/.test(publicPath)) {
+    return new Response('Pagina niet gevonden', { status: 404 });
   }
-  const formerBrands = new Set([
-    'klimaatplus', 'klimaat', 'airco', 'warmtepomp',
-    'batteryplus', 'chargeplus', 'batterij', 'thuisbatterij', 'thuisbatterijen',
-    'laadplus', 'laadpaal', 'laadpalen', 'serviceplus', 'service', 'storing',
-    'storingen', 'spoed', 'solarplus', 'solar', 'zonnepanelen'
-  ]);
-  const retiredPaths = new Set([
-    'elektrische-installaties', 'over-ons', 'klimaatplus', 'batteryplus',
-    'laadplus', 'serviceplus', 'solarplus', 'laadpalen', 'thuisbatterijen', 'zonnepanelen'
-  ]);
-  const brand = hostname.endsWith('.bentechsolutions.be') && formerBrands.has(hostname.split('.')[0]);
-  const retired = retiredPaths.has(url.pathname.split('/')[1]);
-  if (brand || retired) {
-    url.protocol = 'https:';
-    url.host = 'bentechsolutions.be';
-    url.pathname = '/';
-    url.hash = 'diensten';
-    return secureRedirect(url);
-  }
+
+  // Keep one canonical public host. Query and path survive this redirect.
   if (hostname === 'www.bentechsolutions.be') {
     url.hostname = 'bentechsolutions.be';
-    return secureRedirect(url);
+    return Response.redirect(url.href, 301);
   }
-  if (url.pathname === '/test' || url.pathname === '/test/index.html') {
-    url.pathname = '/test/';
-    return secureRedirect(url);
-  }
-  if (url.pathname === '/robots.txt') {
-    return withSecurityHeaders(new Response('User-agent: *\nAllow: /\nSitemap: https://bentechsolutions.be/sitemap.xml\n', {
-      headers: { 'Content-Type': 'text/plain; charset=utf-8' }
-    }), url);
-  }
-  if (url.pathname === '/sitemap.xml') {
-    const paths = ['/', '/privacy/', '/fotocredits/'];
-    const urls = paths.map(path => `<url><loc>https://bentechsolutions.be${path}</loc><lastmod>2026-10-24</lastmod></url>`).join('');
-    return withSecurityHeaders(new Response(`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls}</urlset>`, {
+
+  // Subdomain to folder mapping
+  const brandSubdomainMap = {
+    // 1. KlimaatPlus (Airco & Warmtepompen)
+    'klimaatplus': '/klimaatplus',
+    'klimaat': '/klimaatplus',
+    'airco': '/klimaatplus',
+    'warmtepomp': '/klimaatplus',
+
+    // 2. BatteryPlus (Thuisbatterijen)
+    'batteryplus': '/batteryplus',
+    'chargeplus': '/batteryplus',
+    'batterij': '/batteryplus',
+    'thuisbatterij': '/batteryplus',
+    'thuisbatterijen': '/batteryplus',
+
+    // 3. LaadPlus (Laadpalen)
+    'laadplus': '/laadplus',
+    'laadpaal': '/laadplus',
+    'laadpalen': '/laadplus',
+
+    // 4. ServicePlus (24/7 Depannage & Storingen)
+    'serviceplus': '/serviceplus',
+    'service': '/serviceplus',
+    'storing': '/serviceplus',
+    'storingen': '/serviceplus',
+    'spoed': '/serviceplus',
+
+    // 5. SolarPlus (Zonnepanelen)
+    'solarplus': '/solarplus',
+    'solar': '/solarplus',
+    'zonnepanelen': '/solarplus'
+  };
+
+  // Every sitemap contains only this host's canonical URLs. A cross-host
+  // sitemap otherwise needs separate Search Console ownership evidence.
+  const publicBrand = hostname.endsWith('.bentechsolutions.be')
+    ? brandSubdomainMap[hostname.split('.')[0]]?.slice(1) : null;
+  if (url.pathname === '/sitemap.xml' || url.pathname === '/robots.txt') {
+    const canonicalHost = publicBrand ? `${publicBrand}.bentechsolutions.be` : 'bentechsolutions.be';
+    if (url.pathname === '/robots.txt') {
+      return new Response(`User-agent: *\nAllow: /\nSitemap: https://${canonicalHost}/sitemap.xml\n`, {
+        headers: { 'Content-Type': 'text/plain; charset=utf-8' }
+      });
+    }
+    const paths = publicBrand ? ['/'] : ['/', '/elektrische-installaties/', '/over-ons/'];
+    const urls = paths.map(path => `<url><loc>https://${canonicalHost}${path}</loc><lastmod>2026-10-13</lastmod></url>`).join('');
+    return new Response(`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls}</urlset>`, {
       headers: { 'Content-Type': 'application/xml; charset=utf-8' }
-    }), url);
+    });
   }
-  return withSecurityHeaders(await context.next(), url);
+
+  // Skip asset files and existing static files
+  const isAsset = url.pathname.startsWith('/assets/') ||
+                  url.pathname === '/favicon.ico' ||
+                  url.pathname === '/site.webmanifest' ||
+                  url.pathname === '/style.css' ||
+                  url.pathname === '/service-pages.css' ||
+                  url.pathname === '/brand-themes.css' ||
+                  url.pathname === '/consent.js' ||
+                  url.pathname === '/main.js' ||
+                  url.pathname === '/brand-vanta.js' ||
+                  url.pathname.endsWith('.js') ||
+                  url.pathname.endsWith('.css') ||
+                  url.pathname.endsWith('.svg') ||
+                  url.pathname.endsWith('.png') ||
+                  url.pathname.endsWith('.webp') ||
+                  url.pathname.endsWith('.jpg') ||
+                  url.pathname.endsWith('.jpeg') ||
+                  url.pathname.endsWith('.woff2') ||
+                  url.pathname === '/robots.txt' ||
+                  url.pathname === '/sitemap.xml' ||
+                  url.pathname === '/_headers';
+
+  if (isAsset) {
+    return context.next();
+  }
+
+  // Detect subdomain prefix
+  const parts = hostname.split('.');
+  let subdomain = null;
+
+  // e.g. klimaatplus.bentechsolutions.be (parts: ['klimaatplus', 'bentechsolutions', 'be'])
+  // or klimaatplus.bentech-solutions.pages.dev
+  if (parts.length >= 3) {
+    // Exclude 'www' and apex
+    if (parts[0] !== 'www') {
+      subdomain = parts[0];
+    }
+  }
+
+  // Handle apex & www legacy redirects to dedicated subdomains
+  if (!subdomain) {
+    const cleanPath = url.pathname.replace(/\/+$/, '') || '/';
+    const legacyRedirects = {
+      '/laadpalen': 'https://laadplus.bentechsolutions.be/',
+      '/thuisbatterijen': 'https://batteryplus.bentechsolutions.be/',
+      '/zonnepanelen': 'https://solarplus.bentechsolutions.be/',
+      '/klimaatplus': 'https://klimaatplus.bentechsolutions.be/',
+      '/batteryplus': 'https://batteryplus.bentechsolutions.be/',
+      '/laadplus': 'https://laadplus.bentechsolutions.be/',
+      '/serviceplus': 'https://serviceplus.bentechsolutions.be/',
+      '/solarplus': 'https://solarplus.bentechsolutions.be/'
+    };
+
+    for (const [prefix, dest] of Object.entries(legacyRedirects)) {
+      if (cleanPath === prefix || cleanPath.startsWith(prefix + '/')) {
+        return Response.redirect(dest, 301);
+      }
+    }
+  }
+
+  // Handle subdomain routing
+  if (subdomain && brandSubdomainMap[subdomain]) {
+    const targetFolder = brandSubdomainMap[subdomain];
+
+    // If root request or nested page inside subdomain
+    if (url.pathname === '/' || url.pathname === '') {
+      const rewrittenUrl = new URL(`${targetFolder}/index.html`, url);
+      return context.env.ASSETS.fetch(rewrittenUrl);
+    }
+
+    if (!url.pathname.startsWith(targetFolder)) {
+      const rewrittenUrl = new URL(`${targetFolder}${url.pathname}`, url);
+      return context.env.ASSETS.fetch(rewrittenUrl);
+    }
+  }
+
+  return context.next();
 }

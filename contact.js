@@ -29,17 +29,20 @@
     });
   };
 
-  function requestText(form, service) {
+  function handoff(event, service) {
+    event.preventDefault();
+    const form = event.currentTarget;
+    if (!form.reportValidity()) return;
     const lines = ['AANVRAAG BENTECH SOLUTIONS', '', `Dienst: ${service}`];
     for (const field of form.querySelectorAll('input:not([type="hidden"]), select, textarea')) {
-      if (!field.name || field.name === 'service' || !field.value.trim()) continue;
+      if (!field.name || !field.value.trim()) continue;
       const label = form.querySelector(`label[for="${field.id}"]`)?.textContent.replace(/\s*\*\s*$/, '').trim() || field.name;
       lines.push(`${label}: ${field.value.trim()}`);
     }
-    return lines.join('\n');
-  }
-
-  function requestStatus(form) {
+    const text = lines.join('\n');
+    const whatsapp = `https://wa.me/32486328645?text=${encodeURIComponent(text)}`;
+    const email = `mailto:info@bentechsolutions.be?subject=${encodeURIComponent(`Aanvraag: ${service}`)}&body=${encodeURIComponent(text)}`;
+    const channel = event.submitter?.dataset.channel === 'email' ? 'email' : 'whatsapp';
     let status = form.querySelector('.form-handoff-status');
     if (!status) {
       status = document.createElement('div');
@@ -48,18 +51,6 @@
       status.tabIndex = -1;
       form.append(status);
     }
-    return status;
-  }
-
-  function handoff(event, service) {
-    event.preventDefault();
-    const form = event.currentTarget;
-    if (!form.reportValidity()) return;
-    const text = requestText(form, service);
-    const whatsapp = `https://wa.me/32486328645?text=${encodeURIComponent(text)}`;
-    const email = `mailto:info@bentechsolutions.be?subject=${encodeURIComponent(`Aanvraag: ${service}`)}&body=${encodeURIComponent(text)}`;
-    const channel = event.submitter?.dataset.channel === 'email' ? 'email' : 'whatsapp';
-    const status = requestStatus(form);
     const retry = document.createElement('a');
     retry.href = channel === 'email' ? email : whatsapp;
     if (channel === 'whatsapp') {
@@ -78,66 +69,35 @@
       `Uw bericht staat klaar. Controleer het in ${channel === 'email' ? 'uw mailprogramma' : 'WhatsApp'} en druk daar op verzenden. BenTech heeft uw aanvraag nog niet ontvangen. `,
       retry, ' of ', fallback, '. Lukt het niet? Bel +32 486 32 86 45.'
     );
-    status.focus();
+    status.focus({ preventScroll: true });
     // This is a handoff, never a confirmed lead or sale. No personal data in events.
     const serviceNames = {
-      'PLC-automatisering': 'plc', 'LOGO!-domotica': 'logo',
-      'Troubleshooting PLC / LOGO!': 'troubleshooting'
+      'Laadpaal': 'laadpalen', 'Thuisbatterij': 'thuisbatterijen',
+      'Zonnepanelen': 'zonnepanelen', 'Volledige elektriciteitsinstallatie': 'elektrische-installaties',
+      'Dringende depannage / stroompanne': 'depannage',
+      'Zekeringkast vernieuwen / AREI Keuring': 'zekeringkast',
+      'Elektrische herstellingen': 'herstellingen',
+      'Airconditioning / warmtepomp': 'airconditioning', 'Energie-totaalproject': 'totaalproject'
     };
     document.dispatchEvent(new CustomEvent('bentech:contact-handoff', { detail: {
-      channel, service: serviceNames[service] || 'algemeen', form_id: form.id
+      channel, service: form.dataset.service || document.body.dataset.service || serviceNames[service] || 'algemeen', form_id: form.id
     } }));
     if (channel === 'email') window.location.href = email;
     else window.open(whatsapp, '_blank', 'noopener,noreferrer');
   }
 
+  window.handleBrandFormSubmit = (event, brand) => handoff(event, brand);
+  window.handleFormSubmit = (event, type) => handoff(event,
+    type === 'spoed' ? 'Elektrische depannage' : document.getElementById('q-service').value);
+
   document.addEventListener('DOMContentLoaded', () => {
     window.initBenTechMobileMenu();
-    const panel = document.getElementById('offerte');
-    const form = document.getElementById('quoteForm');
-    const select = document.getElementById('q-service');
-    document.querySelectorAll('a[href="#offerte"]').forEach(link => {
-      link.addEventListener('click', event => {
-        if (!panel || !select) return;
-        if (event.button || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
-        event.preventDefault();
-        panel.open = true;
-        if (link.dataset.serviceChoice) select.value = link.dataset.serviceChoice;
-        if (window.location.hash !== '#offerte') history.pushState(null, '', '#offerte');
-        const target = link.dataset.projectExample ? document.getElementById('q-details') : select;
-        target?.focus({ preventScroll: true });
-        target?.scrollIntoView({ behavior: 'instant', block: 'center' });
-      });
-    });
-    form?.addEventListener('submit', event => handoff(event, select.value));
-    document.getElementById('copyRequest')?.addEventListener('click', async () => {
-      if (!form.reportValidity()) return;
-      const text = requestText(form, select.value);
-      const status = requestStatus(form);
-      try {
-        await navigator.clipboard.writeText(text);
-        status.textContent = 'Aanvraag gekopieerd. Plak en verzend ze in uw e-mail of WhatsApp. BenTech heeft uw aanvraag nog niet ontvangen.';
-        status.focus();
-      } catch {
-        status.textContent = 'Automatisch kopiëren lukt hier niet. Selecteer en kopieer uw aanvraag hieronder en verzend ze zelf. BenTech heeft uw aanvraag nog niet ontvangen.';
-        const fallback = document.createElement('textarea');
-        fallback.className = 'copy-fallback';
-        fallback.readOnly = true;
-        fallback.setAttribute('aria-label', 'Uw aanvraag om te kopiëren');
-        fallback.value = text;
-        status.append(fallback);
-        fallback.focus();
-        fallback.select();
-      }
-    });
-    // Enable personal-data fields only after the no-network submit handler is bound.
-    const fields = form?.querySelector('fieldset');
-    if (fields) fields.disabled = false;
-    if (window.location.hash === '#offerte' && panel) panel.open = true;
+    if (window.lucide) window.lucide.createIcons();
     const requested = new URLSearchParams(window.location.search).get('dienst');
+    const select = document.getElementById('q-service');
     if (requested && select && Array.from(select.options).some(option => option.value === requested)) {
       select.value = requested;
-      if (panel) panel.open = true;
+      if (typeof window.switchTab === 'function') window.switchTab('quote');
     }
   });
 })();
