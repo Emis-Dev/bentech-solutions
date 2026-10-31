@@ -1,7 +1,0 @@
-Siemens LOGO! 8 12/24 RCE + Power 6EP3331-6SB00-0AY0
-Author: MakeMagazinDE, 11 April 2019
-Source: https://commons.wikimedia.org/wiki/File:Siemens_sps_logo_8_12-24_RCE-03.jpg
-Original: https://upload.wikimedia.org/wikipedia/commons/5/5f/Siemens_sps_logo_8_12-24_RCE-03.jpg
-License: Creative Commons Attribution-ShareAlike 4.0 International
-https://creativecommons.org/licenses/by-sa/4.0/
-Changes: resized to 2200 pixels wide, converted to WebP. Responsive crop and dark overlay applied by website CSS. This adapted image is distributed under CC BY-SA 4.0. No endorsement by the photographer or manufacturer is implied.

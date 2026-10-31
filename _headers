@@ -4,19 +4,13 @@
 /*.html
   Cache-Control: no-cache
 
-/automation.css
+/style.css
   Cache-Control: no-cache
 
-/contact.js
+/main.js
   Cache-Control: no-cache
 
 /consent.js
-  Cache-Control: no-cache
-
-/hero-motion.js
-  Cache-Control: no-cache
-
-/proof-motion.css
   Cache-Control: no-cache
 
 /*
@@ -32,8 +26,4 @@ https://bentech-solutions.pages.dev/*
   X-Robots-Tag: noindex, follow
 
 https://:version.bentech-solutions.pages.dev/*
-  X-Robots-Tag: noindex, follow
-
-/test/*
-  Cache-Control: no-cache
   X-Robots-Tag: noindex, follow

@@ -1,24 +1,23 @@
 # BenTech Solutions
 
-Static website for Siemens PLC programming, LOGO! domotics and PLC/LOGO! troubleshooting. The 23 October 2026 relaunch follows the customer's supplied dark industrial reference.
+The public site restores the last release before the PLC/LOGO! switch:
+`acff26a2f4b2f68f53ce94785f602942887806c4` (13 October 2026, PR #11).
+It includes six electrical/energy services, five Plus subdomains, and local
+WhatsApp/email quote handoffs. The site does not receive or store enquiries.
 
-## Run and verify
+The response security headers, development-file protection and Pages-origin
+noindex policy added on 28 October remain active. The retired automation demo,
+privacy and photo-credit routes return 404 rather than the homepage fallback.
 
-- `node scripts/serve.mjs`: local preview at http://127.0.0.1:8788 (loopback only).
-- `node scripts/qa-routing.mjs`: old hosts/routes, canonical host, preview/origin indexing policy, sitemap and security headers on static and Function responses.
-- `node scripts/qa-content.mjs`: current services, claim boundaries, metadata and asset references.
-- `node scripts/qa-browser.mjs`: responsive layout, menu, quote handoff, validation, consent and errors. Requires the Playwright Node module (`PLAYWRIGHT_MODULE` may point to a managed installation) and installed Chrome. It mocks analytics and WhatsApp opening; it sends no enquiries. Set `BENTECH_QA_URL` and `BENTECH_QA_OUT` for preview/production checks and separate evidence.
+Run each `scripts/qa-*.mjs` with Node. Browser acceptance must cover the homepage,
+five subdomains, electrical installations and About page on desktop and mobile,
+including consent, navigation and intercepted quote handoffs without sending.
 
-- `node scripts/qa-proof-motion.mjs`: sourced historical review links, centred layouts from 320 to 3440px, actual hero movement, image rotation, arrows/direct selection/keyboard/swipe, failed-image recovery, offscreen suspension, reduced-motion changes and static no-script fallback. Uses the same environment variables and managed Chrome runtime as browser QA.
+Publish through a feature PR and successful exact-head Cloudflare Pages preview,
+then merge to main using the existing Pages Git integration. Verify production
+routes, source assets and rendered behavior. DNS, mail, provider configuration,
+Google Business and billing are outside this restoration.
 
-The old energy-service/Vanta assertions were retired with those product features. The October Google proof section retains original older electrical-service reviews with visible historical context; it does not establish PLC/LOGO! project experience. Replacement checks preserve canonical-host, consent, form, responsive and factual-claim coverage for the new three-service scope. Historical sources and evidence remain in Git history.
-
-## Security boundaries
-
-The site has no login, server-side form receiver, database, upload, webhook or AI endpoint. Contact details are prepared locally for email or WhatsApp; the browser does not claim delivery. The Pages Function applies the same HSTS, clickjacking, MIME-sniffing, referrer and browser-feature restrictions to static, redirect, generated and blocked-path responses. The fixed Pages origin and deployment previews are marked `noindex`; `bentechsolutions.be` remains the canonical indexable host.
-
-## Publish
-
-Feature branch and review → main merge → existing Cloudflare Pages Git integration → independently verify bentechsolutions.be. No build command or framework. Do not change DNS, mail, Pages bindings or credentials as part of a content release.
-
-No form server or database: contact.js creates an email/WhatsApp draft on the visitor's device; the visitor sends it in the selected app. consent.js loads Google only after permission. New rasters are illustrations; prompt sidecars retain provenance. Manrope is self-hosted under the included OFL licence.
+Recovery uses a reviewed revert PR based on current main. Previous production
+source: `047374932c35322647f1b18555950147c20fa221`, deployment
+`e930f6c3-1b64-4f19-b7f4-6407e2a72e3b`.
